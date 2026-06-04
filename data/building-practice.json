@@ -38,8 +38,7 @@
           "fileName": "111年臺中市建管作業參考手冊_221226_132843.pdf",
           "size": "13244 KB",
           "officialUrl": "https://www.ud.taichung.gov.tw/media/895076/111年臺中市建管作業參考手冊_221226_132843.pdf",
-          "localFile": "assets/regulations/building-practice/taichung/111年臺中市建管作業參考手冊_221226_132843.pdf",
-          "thumbnail": "assets/regulations/building-practice/thumbs/taichung-01.jpg"
+          "localFile": "assets/regulations/building-practice/taichung/111年臺中市建管作業參考手冊_221226_132843.pdf"
         },
         {
           "id": "taichung-02",
@@ -49,8 +48,7 @@
           "fileName": "20200122臺中市政府建造執照及雜項執照簽證案件現況照片_九項.pdf",
           "size": "106 KB",
           "officialUrl": "https://www.ud.taichung.gov.tw/media/657389/20200122臺中市政府建造執照及雜項執照簽證案件現況照片_九項.pdf",
-          "localFile": "assets/regulations/building-practice/taichung/20200122臺中市政府建造執照及雜項執照簽證案件現況照片_九項.pdf",
-          "thumbnail": "assets/regulations/building-practice/thumbs/taichung-02.jpg"
+          "localFile": "assets/regulations/building-practice/taichung/20200122臺中市政府建造執照及雜項執照簽證案件現況照片_九項.pdf"
         },
         {
           "id": "taichung-03",
@@ -60,8 +58,7 @@
           "fileName": "附錄一-臺中市建築物地籍套繪圖電子檔著色圖例.pdf",
           "size": "1711 KB",
           "officialUrl": "https://www.ud.taichung.gov.tw/media/176756/55142010774.pdf",
-          "localFile": "assets/regulations/building-practice/taichung/附錄一-臺中市建築物地籍套繪圖電子檔著色圖例.pdf",
-          "thumbnail": "assets/regulations/building-practice/thumbs/taichung-03.jpg"
+          "localFile": "assets/regulations/building-practice/taichung/附錄一-臺中市建築物地籍套繪圖電子檔著色圖例.pdf"
         },
         {
           "id": "taichung-04",
@@ -71,8 +68,7 @@
           "fileName": "附錄二-申請補照審核流程(1050523版本).pdf",
           "size": "216 KB",
           "officialUrl": "https://www.ud.taichung.gov.tw/media/720306/附錄二-申請補照審核流程-1050523版本.pdf",
-          "localFile": "assets/regulations/building-practice/taichung/附錄二-申請補照審核流程(1050523版本).pdf",
-          "thumbnail": "assets/regulations/building-practice/thumbs/taichung-04.jpg"
+          "localFile": "assets/regulations/building-practice/taichung/附錄二-申請補照審核流程(1050523版本).pdf"
         },
         {
           "id": "taichung-05",
@@ -82,8 +78,7 @@
           "fileName": "(大樓)面積計算表-1040615.pdf",
           "size": "83 KB",
           "officialUrl": "https://www.ud.taichung.gov.tw/media/176759/56249462846.pdf",
-          "localFile": "assets/regulations/building-practice/taichung/(大樓)面積計算表-1040615.pdf",
-          "thumbnail": "assets/regulations/building-practice/thumbs/taichung-05.jpg"
+          "localFile": "assets/regulations/building-practice/taichung/(大樓)面積計算表-1040615.pdf"
         },
         {
           "id": "taichung-06",
@@ -93,11 +88,9 @@
           "fileName": "公告錯誤及常見問題.pdf",
           "size": "68 KB",
           "officialUrl": "https://www.ud.taichung.gov.tw/media/176760/581717141599.pdf",
-          "localFile": "assets/regulations/building-practice/taichung/公告錯誤及常見問題.pdf",
-          "thumbnail": "assets/regulations/building-practice/thumbs/taichung-06.jpg"
+          "localFile": "assets/regulations/building-practice/taichung/公告錯誤及常見問題.pdf"
         }
-      ],
-      "thumbnail": "assets/regulations/building-practice/thumbs/taichung-01.jpg"
+      ]
     }
   ]
 }
