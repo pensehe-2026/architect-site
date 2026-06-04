@@ -1,0 +1,57 @@
+name: Update website data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 03:00 Asia/Taipei
+    - cron: "0 19 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-site-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Fetch public data and publish changes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch Taichung regulations
+        run: python scripts/fetch_taichung_laws.py
+
+      - name: Fetch building practice files
+        run: python scripts/fetch_building_practice_files.py
+
+      - name: Sync latest announcements to site content
+        run: python scripts/update_taichung_site_data.py
+
+      - name: Sync JSON data to browser scripts
+        run: python scripts/sync_json_to_js.py
+
+      - name: Regenerate SEO assets
+        run: python scripts/generate_seo_assets.py
+
+      - name: Commit changes
+        shell: bash
+        run: |
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No fetched data changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/regulations data sitemap.xml robots.txt
+          git commit -m "Update fetched website data"
+          git push
