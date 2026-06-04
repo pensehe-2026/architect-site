@@ -998,6 +998,133 @@ h1 {
   min-width: 520px;
 }
 
+.about-main {
+  display: grid;
+  gap: 28px;
+}
+
+.about-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::after {
+  content: "";
+  position: absolute;
+  right: clamp(24px, 6vw, 80px);
+  bottom: clamp(24px, 5vw, 64px);
+  width: min(320px, 34vw);
+  aspect-ratio: 16 / 10;
+  border: 1px solid rgba(199, 204, 212, 0.6);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(15, 98, 254, 0.18), rgba(255, 255, 255, 0)),
+    url("assets/ho-chung-yang-hero.png") center / cover;
+  opacity: 0.9;
+}
+
+.about-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.32fr) minmax(0, 1fr);
+  gap: clamp(24px, 5vw, 64px);
+  padding: 34px 0;
+  border-top: 1px solid var(--line);
+}
+
+.about-section-heading h2 {
+  margin: 0;
+  font-family: "TASA Explorer", system-ui, sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.about-panel,
+.about-card,
+.about-timeline article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(15, 98, 254, 0.05), rgba(255, 255, 255, 0)),
+    #fff;
+}
+
+.about-panel {
+  padding: clamp(24px, 4vw, 42px);
+}
+
+.about-message {
+  max-width: 860px;
+}
+
+.about-message p {
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.about-message p:last-child {
+  margin-bottom: 0;
+}
+
+.about-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.about-card {
+  padding: 22px;
+}
+
+.about-card span,
+.about-timeline span {
+  display: block;
+  color: var(--cobalt);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.about-card h3,
+.about-timeline h3 {
+  margin: 10px 0 8px;
+  font-size: 20px;
+}
+
+.about-card p,
+.about-timeline p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.about-timeline {
+  display: grid;
+  gap: 12px;
+}
+
+.about-timeline article {
+  position: relative;
+  padding: 22px 22px 22px 34px;
+}
+
+.about-timeline article::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 24px;
+  bottom: 24px;
+  width: 3px;
+  border-radius: 999px;
+  background: var(--cobalt);
+}
+
 .detail-card-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1804,6 +1931,8 @@ code {
 
   .metrics,
   .trust-grid,
+  .about-section,
+  .about-card-grid,
   .project-category-grid,
   .regulation-grid,
   .link-grid,

@@ -40,6 +40,7 @@ def main() -> None:
 
     urls: list[tuple[str, str, str]] = [
         (url("index.html"), "1.0", "weekly"),
+        (url("about.html"), "0.9", "monthly"),
         (url("projects.html"), "0.9", "monthly"),
         (url("central-interpretations.html"), "0.8", "monthly"),
         (url("nlma-regulations.html"), "0.8", "weekly"),
