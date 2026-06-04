@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>台中建築服務項目 | 何中揚建築師事務所</title>
+    <meta name="description" content="何中揚建築師事務所提供台中建築設計、公共工程、老屋延壽、都市更新整建維護、室內裝修許可與建築法規顧問服務。" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="建築服務項目 | 何中揚建築師事務所" />
+    <meta property="og:description" content="查看土地開發、公共工程、老屋延壽、室內裝修與建築許可申請等服務內容。" />
+    <link rel="stylesheet" href="styles.css?v=20260602-taichung-laws" />
+  </head>
+  <body class="detail-page">
+    <header class="site-header detail-header" aria-label="網站導覽">
+      <a class="brand" href="index.html#top" aria-label="回到首頁">
+        <span class="brand-mark">H</span>
+        <span class="brand-copy">
+          <strong>何中揚建築師事務所</strong>
+          <span>HO CHUNG YANG Architecture firm</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="主要選單">
+        <a href="projects.html">作品集</a>
+        <a href="index.html#regulations">法規</a>
+        <a href="index.html#services">服務</a>
+        <a href="index.html#contact">聯絡</a>
+      </nav>
+    </header>
+    <main class="detail-main">
+      <a class="back-link" href="index.html#services">回服務項目</a>
+      <section class="detail-shell">
+        <p class="eyebrow">Service</p>
+        <h1 id="serviceTitle">服務項目</h1>
+        <p id="serviceDescription"></p>
+        <div class="detail-highlights" id="serviceHighlights"></div>
+        <div class="detail-actions">
+          <a class="button primary detail-button" href="index.html#contact">聯絡諮詢</a>
+          <a class="button secondary detail-button" href="index.html#regulations">查看法規專區</a>
+        </div>
+      </section>
+      <section class="service-detail-content" id="serviceDetailContent"></section>
+    </main>
+    <script src="data/site-content.js?v=20260602-taichung-laws"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get("item");
+      const escapeHTML = (value = "") =>
+        String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+
+      const renderList = (items = []) => items.map((item) => `<li>${escapeHTML(item)}</li>`).join("");
+
+      const renderDetail = (service) => {
+        const detail = service.detail;
+        const highlights = document.querySelector("#serviceHighlights");
+        const content = document.querySelector("#serviceDetailContent");
+
+        if (!detail) {
+          highlights.innerHTML = "";
+          content.innerHTML = "";
+          return;
+        }
+
+        document.querySelector(".detail-shell .eyebrow").textContent = detail.kicker || "Service";
+        document.querySelector("#serviceDescription").textContent = detail.lead || service.description;
+        highlights.innerHTML = (detail.highlights || [])
+          .map(
+            (item) => `
+              <article>
+                <span>${escapeHTML(item.label)}</span>
+                <strong>${escapeHTML(item.value)}</strong>
+              </article>
+            `,
+          )
+          .join("");
+
+        const process = (detail.process || [])
+          .map(
+            (item) => `
+              <article class="process-step">
+                <span>${escapeHTML(item.step)}</span>
+                <div>
+                  <h3>${escapeHTML(item.title)}</h3>
+                  <p>${escapeHTML(item.text)}</p>
+                </div>
+              </article>
+            `,
+          )
+          .join("");
+
+        const sections = (detail.sections || [])
+          .map(
+            (section) => `
+              <article class="detail-info-card">
+                <h2>${escapeHTML(section.title)}</h2>
+                <ul>${renderList(section.items)}</ul>
+              </article>
+            `,
+          )
+          .join("");
+
+        const documents = renderList(detail.documents || []);
+        const resources = (detail.resources || [])
+          .map(
+            (resource) => `
+              <a class="resource-link" href="${escapeHTML(resource.href)}" target="_blank" rel="noreferrer">
+                ${escapeHTML(resource.title)}
+              </a>
+            `,
+          )
+          .join("");
+
+        content.innerHTML = `
+          <section class="detail-section">
+            <div class="detail-section-heading">
+              <p class="eyebrow">Process</p>
+              <h2>申請流程</h2>
+            </div>
+            <div class="process-grid">${process}</div>
+          </section>
+
+          <section class="detail-section split-section">
+            <div>
+              <p class="eyebrow">Original Flow</p>
+              <h2>原始流程圖</h2>
+              <p>保留主管機關流程圖作為查核依據；手機閱讀則以上方流程卡快速理解。</p>
+            </div>
+            <a class="source-image-link" href="${escapeHTML(detail.sourceImage)}" target="_blank" rel="noreferrer">
+              <img src="${escapeHTML(detail.sourceImage)}" alt="老宅延壽補助申請流程圖" />
+            </a>
+          </section>
+
+          <section class="detail-section detail-card-grid">${sections}</section>
+
+          <section class="detail-section split-section">
+            <div>
+              <p class="eyebrow">Checklist</p>
+              <h2>申請前可先準備</h2>
+              <ul class="document-list">${documents}</ul>
+            </div>
+            <div class="consult-box">
+              <h2>先諮詢，再決定怎麼做</h2>
+              <p>若不確定是否符合補助、住戶同意比例如何處理、需要哪些技師或施工廠商，可先聯絡本所協助做第一輪判斷。</p>
+              <a class="button primary detail-button" href="index.html#contact">預約顧問諮詢</a>
+            </div>
+          </section>
+
+          <section class="detail-section">
+            <div class="detail-section-heading">
+              <p class="eyebrow">Resources</p>
+              <h2>相關資料</h2>
+            </div>
+            <div class="resource-grid">${resources}</div>
+          </section>
+        `;
+      };
+
+      const renderService = (content) => {
+        const service = content.services.find((item) => item.slug === slug) || content.services[0];
+        const seoTitle = `台中${service.title} | 何中揚建築師事務所`;
+        const seoDescription = `${service.title}服務：${service.detail?.lead || service.description} 由何中揚建築師事務所協助評估、規劃、申請與法規顧問。`;
+        document.title = seoTitle;
+        document.querySelector('meta[name="description"]')?.setAttribute("content", seoDescription);
+        document.querySelector('meta[property="og:title"]')?.setAttribute("content", seoTitle);
+        document.querySelector('meta[property="og:description"]')?.setAttribute("content", seoDescription);
+        document.querySelector("#serviceTitle").textContent = service.title;
+        document.querySelector("#serviceDescription").textContent = service.description;
+        const schema = {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": `台中${service.title}`,
+          "description": seoDescription,
+          "provider": {
+            "@type": "Architect",
+            "name": "何中揚建築師事務所",
+            "telephone": "+886-4-2229-1885",
+            "email": "Hodesign2013@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "西區自由路一段101號20樓202室",
+              "addressLocality": "台中市",
+              "addressCountry": "TW"
+            }
+          },
+          "areaServed": "台中市"
+        };
+        const schemaNode = document.createElement("script");
+        schemaNode.type = "application/ld+json";
+        schemaNode.textContent = JSON.stringify(schema);
+        document.head.appendChild(schemaNode);
+        renderDetail(service);
+      };
+
+      if (window.location.protocol === "file:" && window.SITE_CONTENT) {
+        renderService(window.SITE_CONTENT);
+      } else {
+        fetch(`data/site-content.json?t=${Date.now()}`, { cache: "no-store" })
+          .then((response) => response.json())
+          .then(renderService)
+          .catch(() => {
+            if (window.SITE_CONTENT) renderService(window.SITE_CONTENT);
+          });
+      }
+    </script>
+  </body>
+</html>

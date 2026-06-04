@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>台中市建築管理與地方自治規定 | 何中揚建築師事務所</title>
+    <link rel="stylesheet" href="styles.css?v=20260602-taichung-laws" />
+  </head>
+  <body class="detail-page regulation-index-page">
+    <header class="site-header detail-header" aria-label="網站導覽">
+      <a class="brand" href="index.html#top" aria-label="回到首頁">
+        <span class="brand-mark">H</span>
+        <span class="brand-copy">
+          <strong>何中揚建築師事務所</strong>
+          <span>HO CHUNG YANG Architecture firm + Yu-Yi Interior Design</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="主要選單">
+        <a href="projects.html">作品集</a>
+        <a href="index.html#updates">動態</a>
+        <a href="index.html#regulations">法規</a>
+        <a href="index.html#services">服務</a>
+        <a href="index.html#contact">聯絡</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <a class="back-link" href="index.html#regulations">回法規專區</a>
+      <section class="detail-shell">
+        <p class="eyebrow">Taichung Local Laws</p>
+        <h1>台中市建築管理與地方自治規定</h1>
+        <p>依臺中市政府主管法規查詢系統都市發展類整理，分為自治條例、自治規則、行政規則、公告與實質意義法規命令。點入大項目後可查看各標題與內文。</p>
+        <div class="detail-highlights" id="taichungSummary"></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading">
+          <div>
+            <p class="eyebrow">Categories</p>
+            <h2>地方規定大項目</h2>
+          </div>
+        </div>
+        <div class="nlma-category-grid" id="taichungCategoryGrid"></div>
+      </section>
+    </main>
+
+    <script src="data/taichung-regulations.js?v=20260602-taichung-laws"></script>
+    <script>
+      const escapeHTML = (value = "") =>
+        String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+
+      const data = window.TAICHUNG_REGULATIONS;
+      document.querySelector("#taichungSummary").innerHTML = [
+        { label: "大項目", value: `${data.categories.length} 類` },
+        { label: "標題數", value: `${data.total} 筆` },
+        { label: "資料來源", value: "臺中市政府主管法規查詢系統" },
+      ]
+        .map((item) => `<article><span>${escapeHTML(item.label)}</span><strong>${escapeHTML(item.value)}</strong></article>`)
+        .join("");
+
+      document.querySelector("#taichungCategoryGrid").innerHTML = data.categories
+        .map(
+          (category) => `
+            <a class="nlma-category-card" href="taichung-regulation-category.html?category=${encodeURIComponent(category.slug)}">
+              <span>${escapeHTML(category.name)}</span>
+              <strong>${category.count} 筆</strong>
+              <p>依官方清單日期由新到舊排列，點入查看標題、發文字號、內文與附件。</p>
+            </a>
+          `,
+        )
+        .join("");
+    </script>
+  </body>
+</html>

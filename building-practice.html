@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>建管實務 | 何中揚建築師事務所</title>
+    <meta name="description" content="建管實務子網站，整理臺中市與中部地區建築管理作業參考手冊、申請流程、圖說表單與常見問題。" />
+    <link rel="stylesheet" href="styles.css?v=20260603-practice-preview-admin" />
+  </head>
+  <body class="practice-site">
+    <header class="practice-header">
+      <a class="brand" href="index.html#top" aria-label="回首頁">
+        <span class="brand-mark">H</span>
+        <span class="brand-copy">
+          <strong>何中揚建築師事務所</strong>
+          <span>HO CHUNG YANG Architecture firm + Yu-Yi Interior Design</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="建管實務選單">
+        <a href="index.html#regulations">法規專區</a>
+        <a href="taichung-regulations.html">台中法規</a>
+        <a href="admin/">後台編輯</a>
+        <a href="building-practice-admin.html">本機編輯器</a>
+        <a href="index.html#contact">諮詢</a>
+      </nav>
+    </header>
+
+    <main class="practice-layout">
+      <aside class="practice-sidebar">
+        <p class="eyebrow">Building Practice</p>
+        <h1>建管實務</h1>
+        <p>把建管申請常用手冊、圖說、表單與補照流程整理成可長期累積的實務筆記區。</p>
+        <div class="practice-source">
+          <span>目前資料來源</span>
+          <strong>臺中市政府都市發展局</strong>
+          <a href="https://www.ud.taichung.gov.tw/28928/29030/29033/349764" target="_blank" rel="noreferrer">開啟官方頁面</a>
+        </div>
+        <div class="practice-categories" id="practiceCategories"></div>
+      </aside>
+
+      <section class="practice-feed" aria-labelledby="practiceFeedTitle">
+        <div class="practice-feed-head">
+          <div>
+            <p class="eyebrow">Practice Notes</p>
+            <h2 id="practiceFeedTitle">實務筆記與下載</h2>
+          </div>
+          <a class="button secondary detail-button" href="index.html#contact">建管案件諮詢</a>
+        </div>
+        <div id="practicePosts"></div>
+      </section>
+    </main>
+
+    <script src="data/building-practice.js?v=20260603-practice-preview-admin"></script>
+    <script>
+      const escapeHTML = (value = "") =>
+        String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+
+      const data = window.BUILDING_PRACTICE;
+      document.querySelector("#practiceCategories").innerHTML = data.categories
+        .map(
+          (category) => `
+            <a href="#${escapeHTML(category.slug)}">
+              <span>${escapeHTML(category.name)}</span>
+              <strong>${escapeHTML(category.count)} 筆</strong>
+            </a>
+          `,
+        )
+        .join("");
+
+      document.querySelector("#practicePosts").innerHTML = data.posts
+        .map(
+          (post) => `
+            <article class="practice-post" id="${escapeHTML(post.id)}">
+              <div class="practice-post-meta">
+                <span>${escapeHTML(post.city)}</span>
+                <time>${escapeHTML(post.date)}</time>
+              </div>
+              <h3>${escapeHTML(post.title)}</h3>
+              <figure class="practice-post-cover">
+                <img src="${escapeHTML(post.thumbnail || post.files?.[0]?.thumbnail || "")}" alt="${escapeHTML(post.title)}縮圖預覽" />
+              </figure>
+              <p>${escapeHTML(post.summary)}</p>
+              <div class="practice-file-list">
+                ${post.files
+                  .map(
+                    (file) => `
+                      <a class="practice-file" href="${escapeHTML(file.localFile)}" target="_blank" rel="noreferrer">
+                        <img src="${escapeHTML(file.thumbnail || post.thumbnail || "")}" alt="${escapeHTML(file.title)}預覽縮圖" />
+                        <span>${escapeHTML(file.category)}</span>
+                        <div>
+                          <strong>${escapeHTML(file.title)}</strong>
+                          <em>${escapeHTML(file.size || "PDF")}</em>
+                        </div>
+                        <b>繼續閱讀</b>
+                      </a>
+                    `,
+                  )
+                  .join("")}
+              </div>
+            </article>
+          `,
+        )
+        .join("");
+    </script>
+  </body>
+</html>

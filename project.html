@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>建築作品案例 | 何中揚建築師事務所</title>
+    <meta name="description" content="何中揚建築師事務所建築作品案例，整理作品類型、地點、設計重點、圖像與媒體資料。" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="建築作品案例 | 何中揚建築師事務所" />
+    <meta property="og:description" content="查看建築設計、共生宅、商業建築與室內裝修案例研究。" />
+    <link rel="stylesheet" href="styles.css?v=20260602-taichung-laws" />
+  </head>
+  <body class="detail-page">
+    <header class="site-header detail-header" aria-label="網站導覽">
+      <a class="brand" href="index.html#top" aria-label="回到首頁">
+        <span class="brand-mark">H</span>
+        <span class="brand-copy">
+          <strong>何中揚建築師事務所</strong>
+          <span>HO CHUNG YANG Architecture firm</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="主要選單">
+        <a href="projects.html">作品集</a>
+        <a href="index.html#regulations">法規</a>
+        <a href="index.html#services">服務</a>
+        <a href="index.html#contact">聯絡</a>
+      </nav>
+    </header>
+    <main class="detail-main">
+      <a class="back-link" href="projects.html">回作品集</a>
+      <section class="detail-shell project-hero-shell">
+        <p class="eyebrow" id="projectKicker">Project</p>
+        <h1 id="projectTitle">作品集</h1>
+        <p id="projectLead"></p>
+        <div class="detail-highlights" id="projectHighlights"></div>
+      </section>
+      <section class="service-detail-content" id="projectDetailContent"></section>
+    </main>
+
+    <script src="data/site-content.js?v=20260602-taichung-laws"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get("item");
+      const escapeHTML = (value = "") =>
+        String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+
+      const renderList = (items = []) => items.map((item) => `<li>${escapeHTML(item)}</li>`).join("");
+
+      const renderProject = (content) => {
+        const project = content.projects.find((item) => item.slug === slug) || content.projects[0];
+        const detail = project.detail || {};
+        const seoTitle = `${project.name} | 台中建築作品案例 | 何中揚建築師事務所`;
+        const seoDescription = `${project.name}：${detail.lead || project.summary} 類型為${project.type || "建築作品"}，地點${project.location || "中部地區"}。`;
+        document.title = seoTitle;
+        document.querySelector('meta[name="description"]')?.setAttribute("content", seoDescription);
+        document.querySelector('meta[property="og:title"]')?.setAttribute("content", seoTitle);
+        document.querySelector('meta[property="og:description"]')?.setAttribute("content", seoDescription);
+        document.querySelector("#projectKicker").textContent = detail.kicker || project.category || "Project";
+        document.querySelector("#projectTitle").textContent = project.name;
+        document.querySelector("#projectLead").textContent = detail.lead || project.summary;
+        document.querySelector("#projectHighlights").innerHTML = (detail.highlights || [
+          { label: "類型", value: project.type },
+          { label: "地點", value: project.location },
+          { label: "年份", value: project.year },
+        ])
+          .map(
+            (item) => `
+              <article>
+                <span>${escapeHTML(item.label)}</span>
+                <strong>${escapeHTML(item.value)}</strong>
+              </article>
+            `,
+          )
+          .join("");
+
+        const gallery = (detail.gallery || [{ src: project.image, caption: project.name }])
+          .map(
+            (item) => `
+              <figure class="project-gallery-item">
+                <img src="${escapeHTML(item.src)}" alt="${escapeHTML(item.caption || project.name)}">
+                <figcaption>${escapeHTML(item.caption || project.name)}</figcaption>
+              </figure>
+            `,
+          )
+          .join("");
+
+        const sections = (detail.sections || [])
+          .map(
+            (section) => `
+              <article class="detail-info-card">
+                <h2>${escapeHTML(section.title)}</h2>
+                <ul>${renderList(section.items)}</ul>
+              </article>
+            `,
+          )
+          .join("");
+
+        const resources = (detail.resources || [])
+          .map(
+            (resource) => `
+              <a class="resource-link" href="${escapeHTML(resource.href)}" target="_blank" rel="noreferrer">
+                ${escapeHTML(resource.title)}
+              </a>
+            `,
+          )
+          .join("");
+
+        document.querySelector("#projectDetailContent").innerHTML = `
+          <section class="detail-section">
+            <div class="detail-section-heading">
+              <p class="eyebrow">Gallery</p>
+              <h2>作品圖像</h2>
+            </div>
+            <div class="project-gallery">${gallery}</div>
+          </section>
+          <section class="detail-section detail-card-grid">${sections}</section>
+          <section class="detail-section">
+            <div class="detail-section-heading">
+              <p class="eyebrow">Media / Archive</p>
+              <h2>媒體與作品集資料</h2>
+            </div>
+            <div class="resource-grid">${resources}</div>
+          </section>
+        `;
+      };
+
+      if (window.location.protocol === "file:" && window.SITE_CONTENT) {
+        renderProject(window.SITE_CONTENT);
+      } else {
+        fetch(`data/site-content.json?t=${Date.now()}`, { cache: "no-store" })
+          .then((response) => response.json())
+          .then(renderProject)
+          .catch(() => {
+            if (window.SITE_CONTENT) renderProject(window.SITE_CONTENT);
+          });
+      }
+    </script>
+  </body>
+</html>

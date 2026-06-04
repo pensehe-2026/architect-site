@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+  command = "python scripts/sync_json_to_js.py"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"

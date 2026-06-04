@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Portfolio placeholder</title>
+  <desc id="desc">Architectural placeholder illustration for future portfolio categories.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f8fc"/>
+      <stop offset="1" stop-color="#dce5f2"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f62fe"/>
+      <stop offset="1" stop-color="#8fb8ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <path d="M0 492h960" fill="none" stroke="#c7ccd4" stroke-width="2"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M236 492V178l168-74 168 74v314" stroke="#1e2633" stroke-width="10"/>
+    <path d="M404 104v388" stroke="#1e2633" stroke-width="8"/>
+    <path d="M572 216h154v276" stroke="#1e2633" stroke-width="10"/>
+    <path d="M236 216h336" stroke="#1e2633" stroke-width="8"/>
+    <path d="M276 250h80M452 250h80M276 306h80M452 306h80M276 362h80M452 362h80" stroke="#7d8795" stroke-width="7"/>
+    <path d="M620 260h58M620 316h58M620 372h58" stroke="#7d8795" stroke-width="7"/>
+    <path d="M170 492h620" stroke="#0f62fe" stroke-width="12"/>
+    <path d="M154 422c62-44 120-66 174-66 64 0 122 32 176 96 34-44 73-66 116-66 48 0 93 24 136 72" stroke="url(#blue)" stroke-width="8"/>
+  </g>
+  <circle cx="752" cy="160" r="46" fill="#0f62fe" opacity=".14"/>
+  <circle cx="808" cy="142" r="12" fill="#0f62fe"/>
+</svg>

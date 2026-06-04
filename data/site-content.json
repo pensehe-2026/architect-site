@@ -1,0 +1,599 @@
+{
+    "studioName": "何中揚建築師事務所",
+    "studioTagline": "HO CHUNG YANG Architecture firm + Yu-Yi Interior Design",
+    "heroEyebrow": "Architectural Intelligence / Design Delivery / Regulation Strategy",
+    "heroTitle": "聆聽您的渴望，整合複雜的維度。我們將您的想像，化為地景上的真實。",
+    "heroText": "展示產品化服務、案例研究與法規知識庫，讓土地開發、公共工程、建築設計、室內整合與建物管理都有清楚可信的下一步。",
+    "introTitle": "用建築設計、法規顧問與工程整合能力，建立可被信任的專業決策平台。",
+    "studioIntro": "何中揚建築師事務所與宇邑空間設計以企業級資訊架構呈現服務能力：從基地評估、建築設計、公共工程、老屋延壽、都市更新、室內設計、工程承攬到公共安全檢查，將作品、流程、法規與表單集中整理，協助業主快速判斷風險、成本與可執行路徑。",
+    "contactTitle": "把基地條件、建物現況、申請需求或設計想法寄來，我們會協助整理可執行的下一步。",
+    "version": "2026.06.02-taichung-laws",
+    "lastUpdated": "2026-06-02T17:30:00+08:00",
+    "metrics": [
+        {
+            "value": "2",
+            "label": "建築師事務所與室內設計團隊整合服務，提供單一窗口判斷"
+        },
+        {
+            "value": "10+",
+            "label": "建築、申請、檢查、室內與工程產品化服務"
+        },
+        {
+            "value": "1站式",
+            "label": "從土地評估到設計施工的可靠執行流程"
+        }
+    ],
+    "projects": [
+        {
+            "name": "蒙恩堂",
+            "category": "公共 / 醫療工程",
+            "type": "宗教建築",
+            "location": "中部地區",
+            "year": "作品集資料",
+            "summary": "以垂直立面、光線與彩繪玻璃語彙形成清楚的精神性入口與都市識別。",
+            "image": "assets/projects/meng-en-church.jpg"
+        },
+        {
+            "name": "霧峰黃宅",
+            "category": "建築設計",
+            "type": "自宅設計",
+            "location": "霧峰",
+            "year": "作品集資料",
+            "summary": "住宅外觀與平面規畫，透過陽台、露台與立面細節整合家庭生活尺度。",
+            "image": "assets/projects/wufeng-huang-house.jpg"
+        },
+        {
+            "name": "豐原林先生店鋪住宅",
+            "category": "建築設計",
+            "type": "店鋪住宅",
+            "location": "豐原",
+            "year": "作品集資料",
+            "summary": "結合商業門面與住宅機能，處理臨街展示、生活隱私與樓層使用彈性。",
+            "image": "assets/projects/fengyuan-lin-shop-house.jpg"
+        },
+        {
+            "name": "西區陳宅",
+            "category": "建築設計",
+            "type": "住宅設計",
+            "location": "台中西區",
+            "year": "作品集資料",
+            "summary": "以住宅量體、開口與日常動線為核心，建立乾淨而耐看的居住外觀。",
+            "image": "assets/projects/west-district-chen-house.png"
+        },
+        {
+            "name": "北區陳宅",
+            "category": "建築設計",
+            "type": "住宅設計",
+            "location": "台中北區",
+            "year": "作品集資料",
+            "summary": "透過立面比例、入口層次與室內外關係，整理住宅空間與街道介面。",
+            "image": "assets/projects/north-district-chen-house.jpg"
+        },
+        {
+            "name": "大里黃宅",
+            "category": "建築設計",
+            "type": "住宅設計",
+            "location": "大里",
+            "year": "作品集資料",
+            "summary": "住宅設計與立面規畫，兼顧基地條件、採光與家庭生活需求。",
+            "image": "assets/projects/dali-huang-house.jpg"
+        },
+        {
+            "name": "托默旅館",
+            "category": "建築設計",
+            "type": "旅館建築",
+            "location": "中部地區",
+            "year": "作品集資料",
+            "summary": "旅館量體與外觀設計提案，整合住宿機能、立面表情與商業識別。",
+            "image": "assets/projects/tomer-hotel.jpg"
+        },
+        {
+            "name": "阿秋茶餐廳",
+            "category": "室內裝修 / 商業空間",
+            "type": "餐飲空間",
+            "location": "台中",
+            "year": "作品集資料",
+            "summary": "餐飲空間室內裝修，整合座席配置、燈光、材質與服務動線。",
+            "image": "assets/projects/aqiu-tea-restaurant.jpg"
+        },
+        {
+            "name": "阿秋大肥鵝餐廳",
+            "category": "室內裝修 / 商業空間",
+            "type": "餐飲空間",
+            "location": "台中",
+            "year": "作品集資料",
+            "summary": "品牌餐飲空間設計，強調用餐尺度、營運動線與室內氛圍。",
+            "image": "assets/projects/aqiu-goose-restaurant.jpg"
+        },
+        {
+            "name": "亞維儂餐廳",
+            "category": "室內裝修 / 商業空間",
+            "type": "餐飲空間",
+            "location": "中部地區",
+            "year": "作品集資料",
+            "summary": "餐廳室內裝修與氛圍設計，回應品牌風格與用餐體驗。",
+            "image": "assets/projects/avignon-restaurant.jpg"
+        },
+        {
+            "name": "日耀旅館部",
+            "category": "室內裝修 / 商業空間",
+            "type": "旅館室內",
+            "location": "中部地區",
+            "year": "作品集資料",
+            "summary": "旅館空間室內裝修，整合住宿機能、走廊、客房與公共區域感受。",
+            "image": "assets/projects/riyao-hotel-interior.jpg"
+        },
+        {
+            "name": "日耀百貨一樓大廳",
+            "category": "室內裝修 / 商業空間",
+            "type": "商業大廳",
+            "location": "中部地區",
+            "year": "作品集資料",
+            "summary": "百貨大廳室內裝修，處理入口動線、展示氛圍與公共空間形象。",
+            "image": "assets/projects/riyao-department-lobby.jpg"
+        },
+        {
+            "name": "松食堂",
+            "category": "室內裝修 / 商業空間",
+            "type": "餐飲建築 / 商空",
+            "location": "中部地區",
+            "year": "2015",
+            "summary": "餐飲空間建築與室內提案，整合入口、立面與用餐區空間感。",
+            "image": "assets/projects/song-restaurant.jpg"
+        },
+        {
+            "name": "楓康超市安和店",
+            "category": "商業建築",
+            "type": "超市 / 商業建築",
+            "location": "台中",
+            "year": "作品集資料",
+            "summary": "超市商業建築案例，整合賣場入口、品牌識別、臨街量體與停車動線。",
+            "image": "assets/projects/portfolio-placeholder.svg"
+        },
+        {
+            "name": "楓康超市光明店",
+            "category": "商業建築",
+            "type": "超市 / 商業建築",
+            "location": "台中",
+            "year": "作品集資料",
+            "summary": "超市商業建築案例，先以示意圖片暫替，後續可補入實景照片與設計說明。",
+            "image": "assets/projects/portfolio-placeholder.svg"
+        },
+        {
+            "name": "合勤共生宅",
+            "category": "文化展場 / 共生宅",
+            "type": "共生住宅 / 高齡友善",
+            "location": "台中",
+            "year": "2018",
+            "summary": "以三緣社概念整合居住社群、鄰里社區與關懷社團，回應高齡社會下共生、照護與日常交流的空間需求。",
+            "image": "assets/ho-chung-yang-hero.png",
+            "href": "project.html?item=hct-cohousing",
+            "slug": "hct-cohousing",
+            "detail": {
+                "kicker": "Co-living / Senior Friendly Housing",
+                "lead": "合勤共生宅以高齡社會的居住與照護需求為出發點，提出「三緣社」的空間概念：讓居住社群、鄰里社區與關懷社團互相結緣，形成可被日常使用、學習、陪伴與交流支持的共生環境。",
+                "highlights": [
+                    {
+                        "label": "案名",
+                        "value": "合勤共生宅"
+                    },
+                    {
+                        "label": "主題",
+                        "value": "高齡友善、共生住宅、社區照護"
+                    },
+                    {
+                        "label": "核心概念",
+                        "value": "三緣社：居住社群、鄰里社區、關懷社團"
+                    }
+                ],
+                "gallery": [
+                    {
+                        "src": "assets/ho-chung-yang-hero.png",
+                        "caption": "合勤共生宅建築外觀與街廓介面"
+                    }
+                ],
+                "sections": [
+                    {
+                        "title": "設計命題",
+                        "items": [
+                            "面對高齡社會，照護空間不應只被理解為機構式管理，而應回到長者日常生活、學習、互動與社區連結。",
+                            "本案以共生住宅與生活提案為方向，試圖讓長者、鄰里與關懷支持系統可以在同一生活場域中互相支援。",
+                            "建築量體與立面除了回應街道，也要讓公共性、辨識性與日常使用尺度能被清楚看見。"
+                        ]
+                    },
+                    {
+                        "title": "三緣社概念",
+                        "items": [
+                            "居住社群：將不同照顧需求的長者分群但共存，讓生活仍保有選擇與互動。",
+                            "鄰里社區：透過空間用途規劃，讓附近居民與社區住民產生自然交流。",
+                            "關懷社團：結合護理、學習與社團支持，讓生活不只是被照顧，也能延續自我發展。"
+                        ]
+                    },
+                    {
+                        "title": "文章摘錄整理",
+                        "items": [
+                            "規劃反思指出，高齡者在傳統照護機構中容易被管理便利性取代個別需求，因此本案嘗試提出更具生活感的居住環境。",
+                            "透過社區營造與日常交流，消除機構與鄰里之間的隔閡，使長者能對每日生活保有期待。",
+                            "本段整理自提供資料「我的履歷2018給合勤健康中心.doc」中與合勤建設生活提案相關文字。"
+                        ]
+                    }
+                ],
+                "resources": [
+                    {
+                        "title": "合勤健康中心相關文字資料 DOC",
+                        "href": "提供的資料/我的履歷2018給合勤健康中心.doc"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "合勤生活提案",
+            "category": "建築設計",
+            "type": "生活提案 / 建築設計",
+            "location": "台中中區",
+            "year": "2018",
+            "summary": "中區生活提案案件，另案整理建築立面、入口與生活場域想像，與合勤共生宅分開呈現。",
+            "image": "assets/projects/hct-cohousing-render.png",
+            "href": "project.html?item=hct-life-proposal",
+            "slug": "hct-life-proposal",
+            "detail": {
+                "kicker": "Life Proposal / Central District",
+                "lead": "合勤生活提案為台中中區的另案作品，著重建築立面、入口介面與生活場域想像，與合勤共生宅分開整理。",
+                "highlights": [
+                    {
+                        "label": "案名",
+                        "value": "合勤生活提案"
+                    },
+                    {
+                        "label": "地點",
+                        "value": "台中中區"
+                    },
+                    {
+                        "label": "類型",
+                        "value": "生活提案 / 建築展示"
+                    }
+                ],
+                "gallery": [
+                    {
+                        "src": "assets/projects/hct-cohousing-render.png",
+                        "caption": "合勤生活提案立面與入口模擬"
+                    },
+                    {
+                        "src": "assets/projects/hct-cohousing-animation.gif",
+                        "caption": "合勤生活提案動態展示資料"
+                    }
+                ],
+                "sections": [
+                    {
+                        "title": "案件說明",
+                        "items": [
+                            "本案為中區生活提案案件，與合勤共生宅不同案。",
+                            "目前先依提供圖面建立獨立作品頁，後續可補充基地位置、設計年份、業主需求與設計說明。",
+                            "首頁作品列表與作品頁已分開呈現，避免與合勤共生宅混用。"
+                        ]
+                    }
+                ],
+                "resources": [
+                    {
+                        "title": "合勤生活提案 JPG",
+                        "href": "提供的資料/建築作品集/合勤生活提案.jpg"
+                    },
+                    {
+                        "title": "合勤生活提案 PNG",
+                        "href": "提供的資料/建築作品集/合勤生活提案.png"
+                    }
+                ]
+            }
+        }
+    ],
+    "updates": [
+        {
+            "date": "2026-05-20",
+            "title": "公告開放本市建築工程所產出營建剩餘土石方得運至彰濱產業園區崙尾暫置區暫置，並自即日起生效。",
+            "category": "台中公告",
+            "summary": "中市都工字第1150094158號公告",
+            "href": "taichung-regulation-detail.html?id=GL004780"
+        },
+        {
+            "date": "2026-05-11",
+            "title": "公告本府都市發展局委託「中華民國建築物昇降暨機械停車設備協會」、「社團法人高雄市機械安全協會」及「台灣立體停車機械產業協會」等3家檢查機構辦理「115年度臺中市建築物昇降設備暨機械停車設備安全檢查結果委託抽驗」業務。",
+            "category": "台中公告",
+            "summary": "中市都管字第1150093816號公告",
+            "href": "taichung-regulation-detail.html?id=GL004774"
+        },
+        {
+            "date": "2026-05-28T18:30:00+08:00",
+            "category": "最新法規",
+            "title": "法規專區資料架構建立",
+            "summary": "中央法規、台中市地方法規、中部五縣市建築內規、解釋函令與 AI 對話窗口已納入網站架構。",
+            "href": "#regulations"
+        },
+        {
+            "date": "2026-05-28T18:20:00+08:00",
+            "category": "房地產動態",
+            "title": "房地產動態區塊建立",
+            "summary": "後續可串接市場快訊、土地開發資訊、建築趨勢與區域發展觀察。",
+            "href": "#updates"
+        },
+        {
+            "date": "2026-05-28T18:10:00+08:00",
+            "category": "事務所公告",
+            "title": "何中揚建築師事務所網站改版中",
+            "summary": "網站已切換為自動化資料來源，後續可由 JSON、表格或後台同步更新內容。",
+            "href": "#top"
+        },
+        {
+            "date": "2026-05-28T18:00:00+08:00",
+            "category": "新增案件",
+            "title": "代表作品資料欄位建立",
+            "summary": "新增案件可自動出現在最新動態，並連結到作品分頁或個別作品頁。",
+            "href": "projects.html"
+        }
+    ],
+    "regulations": [
+        {
+            "type": "中央法規",
+            "title": "內政部國土管理署法規公告",
+            "description": "依 Excel 子頁分為法律、法規命令、行政規則、實質法規，紅字標題優先排序。",
+            "href": "nlma-regulations.html"
+        },
+        {
+            "type": "台中市地方法規",
+            "title": "台中市建築管理與地方自治規定",
+            "description": "依臺中市政府主管法規查詢系統都市發展類整理自治條例、自治規則、行政規則、公告與實質意義法規命令。",
+            "href": "taichung-regulations.html"
+        },
+        {
+            "type": "建管實務",
+            "title": "建管實務",
+            "description": "以子網站方式整理中部地區建管作業手冊、申請流程、圖說表單與常見問題。",
+            "href": "building-practice.html"
+        },
+        {
+            "type": "解釋函令",
+            "title": "中央解釋函令",
+            "description": "依國土管理署建築管理法規函釋彙編整理，提供 11 份 PDF 附件下載與快速查找。",
+            "href": "central-interpretations.html"
+        },
+        {
+            "type": "常用表單",
+            "title": "申請表單與下載入口",
+            "description": "整理台中市都市發展局表單下載、建管便民服務與常用申請文件入口。",
+            "href": "https://www.ud.taichung.gov.tw/28928/29030/29036?PageSize=30"
+        },
+        {
+            "type": "AI 對話窗口",
+            "title": "GEMINI + 法規資料快速建議",
+            "description": "預留 AI 對話入口，未來可串接 GEMINI 與法規專區資料，提供初步方向建議。",
+            "href": "#regulations"
+        }
+    ],
+    "services": [
+        {
+            "slug": "land-development",
+            "title": "土地開發評估",
+            "description": "評估基地條件、使用分區、容積、法規限制與開發可行性，協助前期決策。",
+            "href": "service.html?item=land-development"
+        },
+        {
+            "slug": "public-works",
+            "title": "公共工程",
+            "description": "協助公共工程規畫、建築設計、圖說整合、法規檢討、預算界面與執行階段專業服務。",
+            "href": "service.html?item=public-works"
+        },
+        {
+            "slug": "housing-planning",
+            "title": "建案規畫",
+            "description": "協助建案產品定位、空間配置、量體規畫、法規檢討與設計整合。",
+            "href": "service.html?item=housing-planning"
+        },
+        {
+            "slug": "dangerous-old-building-renewal",
+            "title": "危險老舊建築物更新",
+            "description": "提供危老重建可行性、申請流程、獎勵條件與後續設計整合諮詢。",
+            "href": "service.html?item=dangerous-old-building-renewal"
+        },
+        {
+            "slug": "urban-renewal-maintenance",
+            "title": "都市更新整建維護",
+            "description": "協助都市更新、整建維護、社區溝通與改善方案規畫。",
+            "href": "service.html?item=urban-renewal-maintenance"
+        },
+        {
+            "slug": "old-house-life-extension",
+            "title": "老屋延壽",
+            "description": "針對老屋安全、機能、管線與空間品質進行評估，提出延壽與改善策略。",
+            "href": "service.html?item=old-house-life-extension",
+            "detail": {
+                "kicker": "Old House Life Extension",
+                "lead": "協助屋齡 30 年以上合法建築物釐清補助資格、住戶共識、結構安全性能評估、修繕項目、申請文件與施工後請款流程，讓老屋更新不只修補外觀，也能改善安全、管線、無障礙與日常居住品質。",
+                "highlights": [
+                    {
+                        "label": "適用對象",
+                        "value": "4至6樓公寓、6樓以下透天住宅"
+                    },
+                    {
+                        "label": "核心前提",
+                        "value": "合法建築物、屋齡30年以上、住宅使用條件"
+                    },
+                    {
+                        "label": "專業協助",
+                        "value": "資格檢核、評估協調、圖說文件、施工整合"
+                    }
+                ],
+                "sections": [
+                    {
+                        "title": "規定重點",
+                        "items": [
+                            "公寓原則為 4 至 6 層樓合法建築物，且住宅使用樓地板面積或戶數須占二分之一以上。",
+                            "透天住宅原則為 6 層樓以下獨棟或連棟合法建築物，並以全棟住宅使用為主。",
+                            "申請修繕補助前，通常需辦理建築物結構安全性能評估，作為補助與改善判斷基礎。",
+                            "已申請建造執照、拆除執照，或已進入都更、危老重建並報核相關計畫者，可能不適用同一補助流程。",
+                            "同一棟建築物已依其他法令或計畫申請相同補助項目並獲核准者，不得重複申請相同補助。"
+                        ]
+                    },
+                    {
+                        "title": "可評估修繕項目",
+                        "items": [
+                            "公寓共用部分：增設昇降設備、樓梯間修繕、公共管線更新、違規物或老舊招牌拆除、立面修繕、屋頂防水隔熱、外掛式空調與外部管線安全改善、無障礙設施改善。",
+                            "公寓專有部分：居家安全及無障礙設施設備、給排水電氣燃氣管線更新，以及必要室內裝修。",
+                            "透天住宅：建築物立面、屋頂防水隔熱、外部管線安全改善、室外無障礙設施，以及符合條件之室內安全、無障礙與管線改善。",
+                            "實際補助額度、比例與是否可申請，仍需依地方政府公告、審查結果及最新法規辦理。"
+                        ]
+                    },
+                    {
+                        "title": "歡迎合作廠商",
+                        "items": [
+                            "歡迎結構技師、土木技師、室內裝修、營造、管線、防水、外牆、無障礙設備、昇降設備、消防與公寓大廈管理相關團隊合作。",
+                            "合作廠商可提供估價、施工界面、材料品牌、工期與現場改善建議，協助案件從申請到施工更順暢。",
+                            "若廠商已有社區或屋主需求，也可與本所共同進行資格檢核、文件整備與申請顧問服務。"
+                        ]
+                    },
+                    {
+                        "title": "歡迎諮詢顧問",
+                        "items": [
+                            "屋主、管委會、管理負責人、社區主委、里辦公處、物業管理公司與不動產相關從業人員，皆可先諮詢可行性。",
+                            "可先提供建物地址、樓層數、使用執照或建物登記資料、住戶共識狀況、想改善項目與現況照片。",
+                            "本頁資訊作為初步整理，實際申請仍應依中央及地方主管機關最新公告、審查意見與個案條件判斷。"
+                        ]
+                    }
+                ],
+                "process": [
+                    {
+                        "step": "01",
+                        "title": "資格初判",
+                        "text": "確認屋齡、建物類型、合法建築物證明、住宅使用比例或全棟住宅使用條件。"
+                    },
+                    {
+                        "step": "02",
+                        "title": "住戶共識",
+                        "text": "公寓由管委會或管理負責人經區分所有權人會議通過；無管委會者需取得全體區分所有權人同意。透天共有者需取得全體所有權人同意。"
+                    },
+                    {
+                        "step": "03",
+                        "title": "結構安全性能評估",
+                        "text": "辦理初步或詳細評估，作為修繕補助與改善項目判斷依據。"
+                    },
+                    {
+                        "step": "04",
+                        "title": "修繕計畫與文件",
+                        "text": "彙整申請補助計畫書、身分證明、所有權與合法建築物證明、同意書、評估報告、契約或報價單等資料。"
+                    },
+                    {
+                        "step": "05",
+                        "title": "地方政府審查",
+                        "text": "向直轄市、縣市政府提出申請，依審查結果補正、排序或核定補助。"
+                    },
+                    {
+                        "step": "06",
+                        "title": "施工、備查與請款",
+                        "text": "原則 1 年內完工，可依規定展延；完工後提送施工成果備查，完成後向地方政府請款。"
+                    }
+                ],
+                "documents": [
+                    "申請補助計畫書、摘要表、補助項目與條件檢核表",
+                    "申請人或代表人身分證明文件",
+                    "區分所有權人會議紀錄、全體所有權人同意書或推派代表文件",
+                    "近三個月內建物登記謄本",
+                    "使用執照影本或地方政府認定之合法建築物證明",
+                    "結構安全性能評估報告書",
+                    "施工廠商契約書或報價單，並載明主要建材品牌",
+                    "未曾受補助切結書及主管機關要求之其他文件"
+                ],
+                "resources": [
+                    {
+                        "title": "老宅延壽流程圖 PNG",
+                        "href": "提供的資料/老屋延壽/老宅延壽流程圖.png"
+                    },
+                    {
+                        "title": "內政部老宅延壽計畫建築物修繕補助申請流程圖 PDF",
+                        "href": "提供的資料/老屋延壽/內政部老宅延壽計畫建築物修繕補助申請流程圖.pdf"
+                    },
+                    {
+                        "title": "因應國際情勢強化老舊建築物修繕補助辦法 PDF",
+                        "href": "提供的資料/老屋延壽/因應國際情勢強化老舊建築物修繕補助辦法.pdf"
+                    },
+                    {
+                        "title": "老宅延壽問答集 115.05 PDF",
+                        "href": "提供的資料/老屋延壽/老宅延壽問答集115.05.pdf"
+                    },
+                    {
+                        "title": "公寓類 4至6樓公寓修繕需求申請表 ODT",
+                        "href": "提供的資料/老屋延壽/一、公寓類 - 4至6樓公寓修繕需求申請表.odt"
+                    },
+                    {
+                        "title": "透天類 6樓以下透天住宅修繕需求申請表 ODT",
+                        "href": "提供的資料/老屋延壽/三、透天類 - 6樓以下透天住宅修繕需求申請表.odt"
+                    }
+                ],
+                "sourceImage": "assets/old-house-flow-source.png"
+            }
+        },
+        {
+            "slug": "interior-design",
+            "title": "室內設計",
+            "description": "由宇邑空間設計整合生活需求、材質、照明與施工細節，完成舒適耐看的空間。",
+            "href": "service.html?item=interior-design"
+        },
+        {
+            "slug": "construction-contracting",
+            "title": "工程承攬",
+            "description": "協助工程介面整合、施工管理、材料協調與品質控管。",
+            "href": "service.html?item=construction-contracting"
+        },
+        {
+            "slug": "public-safety-inspection",
+            "title": "建築物公共安全檢查",
+            "description": "提供建築物公共安全檢查、缺失改善建議與申報流程協助。",
+            "href": "service.html?item=public-safety-inspection"
+        },
+        {
+            "slug": "signboard-application",
+            "title": "廣告物申請",
+            "description": "協助廣告物設置評估、圖說準備、申請流程與相關法規檢討。",
+            "href": "service.html?item=signboard-application"
+        },
+        {
+            "slug": "change-use-interior-permit",
+            "title": "變更使用執照與室內裝修許可",
+            "description": "協助建築物變更使用執照、室內裝修許可、圖說整合、法規檢討與送審流程。",
+            "href": "service.html?item=change-use-interior-permit"
+        },
+        {
+            "slug": "other-services",
+            "title": "其他業務",
+            "description": "辦理法定空地分割、解除套繪、農地解除套繪、現有巷道廢除或改道、土地分割、代請領使用執照影本與竣工圖說等相關服務。",
+            "href": "service.html?item=other-services"
+        }
+    ],
+    "usefulLinks": [
+        {
+            "category": "建管",
+            "title": "台中市政府建管便民服務",
+            "href": "https://mcgbm.taichung.gov.tw/"
+        },
+        {
+            "category": "圖資",
+            "title": "158地籍圖資系統",
+            "href": "https://lohas.taichung.gov.tw/lohas/"
+        },
+        {
+            "category": "表單",
+            "title": "台中市都市發展局表單下載",
+            "href": "https://www.ud.taichung.gov.tw/28928/29030/29036?PageSize=30"
+        }
+    ],
+    "contact": {
+        "email": "Hodesign2013@gmail.com",
+        "phone": "04-22291885 / 04-35091168",
+        "fax": "04-22291868 / 04-35091169",
+        "address": "台中市西區自由路一段101號20樓202室",
+        "lineLabel": "LINE 公務帳號：@976udzzw",
+        "lineAccountName": "何中揚建築師事務所",
+        "lineId": "@976udzzw",
+        "lineAction": "加入好友 / 線上諮詢",
+        "lineUrl": "#contact",
+        "lineQrImagePrimary": "assets/line-official-account-976udzzw.jpg?v=20260603-line-qr-unified",
+        "lineQrImageSecondary": "assets/line-official-account.jpg?v=20260603-line-qr-unified"
+    }
+}

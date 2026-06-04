@@ -1,0 +1,16 @@
+.tmp-*
+/.tmp-playwright/
+/tmp-old-house/
+/tmp-project-pdfs/
+/提供的資料/
+/建立網站.docx
+/desktop-preview.png
+/mobile-preview.png
+/old-house-current-preview.png
+/old-house-desktop-preview.png
+/old-house-mobile-preview.png
+/projects-after-cache-bust.png
+/projects-desktop-preview.png
+/hct-project-preview.png
+.DS_Store
+Thumbs.db

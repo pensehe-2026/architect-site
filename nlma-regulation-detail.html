@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>法規公告內容 | 何中揚建築師事務所</title>
+    <link rel="stylesheet" href="styles.css?v=20260602-nlma-regulations" />
+  </head>
+  <body class="detail-page regulation-article-page">
+    <header class="site-header detail-header" aria-label="網站導覽">
+      <a class="brand" href="index.html#top" aria-label="回到首頁">
+        <span class="brand-mark">H</span>
+        <span class="brand-copy">
+          <strong>何中揚建築師事務所</strong>
+          <span>HO CHUNG YANG Architecture firm + Yu-Yi Interior Design</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="主要選單">
+        <a href="projects.html">作品集</a>
+        <a href="index.html#regulations">法規</a>
+        <a href="index.html#services">服務</a>
+        <a href="index.html#contact">聯絡</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <a class="back-link" id="backToCategory" href="nlma-regulations.html">回分類</a>
+      <section class="detail-shell">
+        <p class="eyebrow" id="articleKicker">NLMA Regulation</p>
+        <h1 id="articleTitle">法規公告內容</h1>
+        <p id="articleLead"></p>
+        <div class="detail-highlights" id="articleSummary"></div>
+        <div class="detail-actions" id="articleActions"></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading">
+          <div>
+            <p class="eyebrow">Content</p>
+            <h2>內文</h2>
+          </div>
+        </div>
+        <article class="nlma-article-content" id="articleContent"></article>
+      </section>
+    </main>
+
+    <script src="data/nlma-regulations.js?v=20260602-nlma-regulations"></script>
+    <script>
+      const escapeHTML = (value = "") =>
+        String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+      const item = window.NLMA_REGULATIONS.items.find((entry) => entry.id === id) || window.NLMA_REGULATIONS.items[0];
+      document.title = `${item.title} | 何中揚建築師事務所`;
+      document.querySelector("#articleKicker").textContent = item.category;
+      document.querySelector("#articleTitle").textContent = item.title;
+      document.querySelector("#articleLead").textContent = item.priority
+        ? "此標題在 Excel 中為紅字，已於分類清單中優先排序至頂端。"
+        : "此標題依分類與日期整理，可開啟官方連結或本機暫存頁查核。";
+      document.querySelector("#backToCategory").href = `nlma-regulation-category.html?category=${encodeURIComponent(item.categorySlug)}`;
+      document.querySelector("#articleSummary").innerHTML = [
+        { label: "分類", value: item.category },
+        { label: "法規日期", value: item.date || "未載明" },
+        { label: "業務單位", value: item.unit || "未載明" },
+      ]
+        .map((meta) => `<article><span>${escapeHTML(meta.label)}</span><strong>${escapeHTML(meta.value)}</strong></article>`)
+        .join("");
+      document.querySelector("#articleActions").innerHTML = `
+        <a class="button primary detail-button" href="${escapeHTML(item.officialUrl)}" target="_blank" rel="noreferrer">開啟官方連結</a>
+        <a class="button secondary detail-button" href="${escapeHTML(item.localPage)}" target="_blank" rel="noreferrer">開啟本機暫存頁</a>
+      `;
+      document.querySelector("#articleContent").innerHTML = `
+        <p>${escapeHTML(item.content)}</p>
+        <dl>
+          <div><dt>Excel 序號</dt><dd>${escapeHTML(item.sequence)}</dd></div>
+          <div><dt>原始連結</dt><dd><a href="${escapeHTML(item.officialUrl)}" target="_blank" rel="noreferrer">${escapeHTML(item.officialUrl)}</a></dd></div>
+          <div><dt>本機暫存</dt><dd>${escapeHTML(item.localPage)}</dd></div>
+        </dl>
+      `;
+    </script>
+  </body>
+</html>

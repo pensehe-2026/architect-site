@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>建管實務本機編輯器 | 何中揚建築師事務所</title>
+    <link rel="stylesheet" href="styles.css?v=20260603-building-practice-admin" />
+  </head>
+  <body class="practice-site admin-site">
+    <header class="practice-header">
+      <a class="brand" href="building-practice.html" aria-label="回建管實務">
+        <span class="brand-mark">H</span>
+        <span class="brand-copy">
+          <strong>建管實務本機編輯器</strong>
+          <span>Local JSON editor</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="後台選單">
+        <a href="building-practice.html">前台預覽</a>
+        <button class="admin-button" id="downloadJson" type="button">匯出 JSON</button>
+      </nav>
+    </header>
+
+    <main class="admin-layout">
+      <section class="admin-panel">
+        <p class="eyebrow">Post Editor</p>
+        <h1>文章資料</h1>
+        <label>
+          文章標題
+          <input id="postTitleInput" type="text" />
+        </label>
+        <label>
+          日期
+          <input id="postDateInput" type="date" />
+        </label>
+        <label>
+          摘要
+          <textarea id="postSummaryInput" rows="5"></textarea>
+        </label>
+        <p class="admin-note">此頁是靜態網站可用的本機後台。修改後請按「匯出 JSON」，把下載檔覆蓋到 <code>data/building-practice.json</code> 並同步更新 <code>data/building-practice.js</code>。</p>
+      </section>
+
+      <section class="admin-panel">
+        <div class="admin-head">
+          <div>
+            <p class="eyebrow">Files</p>
+            <h2>下載檔案</h2>
+          </div>
+          <button class="admin-button secondary" id="addFile" type="button">新增檔案</button>
+        </div>
+        <div class="admin-file-editor" id="fileEditor"></div>
+      </section>
+    </main>
+
+    <script src="data/building-practice.js?v=20260603-building-practice-admin"></script>
+    <script>
+      const clone = (value) => JSON.parse(JSON.stringify(value));
+      const data = clone(window.BUILDING_PRACTICE);
+      const post = data.posts[0];
+      const fileEditor = document.querySelector("#fileEditor");
+
+      document.querySelector("#postTitleInput").value = post.title;
+      document.querySelector("#postDateInput").value = post.date;
+      document.querySelector("#postSummaryInput").value = post.summary;
+
+      const escapeHTML = (value = "") =>
+        String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+
+      const syncPost = () => {
+        post.title = document.querySelector("#postTitleInput").value;
+        post.date = document.querySelector("#postDateInput").value;
+        post.summary = document.querySelector("#postSummaryInput").value;
+      };
+
+      const renderFiles = () => {
+        fileEditor.innerHTML = post.files
+          .map(
+            (file, index) => `
+              <article class="admin-file-card" data-index="${index}">
+                <img src="${escapeHTML(file.thumbnail || "")}" alt="">
+                <label>標題<input data-field="title" value="${escapeHTML(file.title)}" /></label>
+                <label>分類<input data-field="category" value="${escapeHTML(file.category)}" /></label>
+                <label>檔案路徑<input data-field="localFile" value="${escapeHTML(file.localFile)}" /></label>
+                <label>縮圖路徑<input data-field="thumbnail" value="${escapeHTML(file.thumbnail || "")}" /></label>
+                <button class="admin-button danger" type="button" data-remove="${index}">移除</button>
+              </article>
+            `,
+          )
+          .join("");
+      };
+
+      fileEditor.addEventListener("input", (event) => {
+        const card = event.target.closest(".admin-file-card");
+        if (!card) return;
+        post.files[Number(card.dataset.index)][event.target.dataset.field] = event.target.value;
+      });
+
+      fileEditor.addEventListener("click", (event) => {
+        const remove = event.target.dataset.remove;
+        if (remove === undefined) return;
+        post.files.splice(Number(remove), 1);
+        renderFiles();
+      });
+
+      document.querySelector("#addFile").addEventListener("click", () => {
+        post.files.push({
+          id: `manual-${Date.now()}`,
+          city: "臺中市",
+          category: "作業流程",
+          title: "新增檔案",
+          fileName: "",
+          size: "PDF",
+          officialUrl: "",
+          localFile: "",
+          thumbnail: "",
+        });
+        renderFiles();
+      });
+
+      document.querySelectorAll("#postTitleInput, #postDateInput, #postSummaryInput").forEach((input) => {
+        input.addEventListener("input", syncPost);
+      });
+
+      document.querySelector("#downloadJson").addEventListener("click", () => {
+        syncPost();
+        post.thumbnail = post.files[0]?.thumbnail || "";
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "building-practice.json";
+        link.click();
+        URL.revokeObjectURL(link.href);
+      });
+
+      renderFiles();
+    </script>
+  </body>
+</html>

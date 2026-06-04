@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.hcy-architecture.com.tw/sitemap.xml

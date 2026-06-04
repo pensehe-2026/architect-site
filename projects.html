@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>台中建築作品集 | 何中揚建築師事務所</title>
+    <meta name="description" content="何中揚建築師事務所作品集，依熱銷建案、私人建案、商業建築、公共工程、室內裝修、宗教建築與整建維護分類整理。" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="何中揚建築師事務所作品集" />
+    <meta property="og:description" content="查看台中與中部地區建築設計、商業建築、公共工程、室內裝修與整建維護案例。" />
+    <link rel="stylesheet" href="styles.css?v=20260602-taichung-laws" />
+  </head>
+  <body class="detail-page portfolio-page">
+    <header class="site-header detail-header" aria-label="網站導覽">
+      <a class="brand" href="index.html#top" aria-label="回到首頁">
+        <span class="brand-mark">H</span>
+        <span class="brand-copy">
+          <strong>何中揚建築師事務所</strong>
+          <span>HO CHUNG YANG Architecture firm + Yu-Yi Interior Design</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="主要選單">
+        <a href="projects.html">作品集</a>
+        <a href="index.html#updates">動態</a>
+        <a href="index.html#regulations">法規</a>
+        <a href="index.html#services">服務</a>
+        <a href="index.html#contact">聯絡</a>
+      </nav>
+    </header>
+
+    <main class="detail-main portfolio-main">
+      <a class="back-link" href="index.html#projects">回近期作品</a>
+      <section class="detail-shell">
+        <p class="eyebrow">Portfolio</p>
+        <h1>作品集</h1>
+        <p>依案件類型集中整理代表作品，保留主頁作為近期作品與案例研究入口，完整分類在此頁查閱。</p>
+        <div class="detail-highlights" id="portfolioHighlights"></div>
+      </section>
+
+      <section class="service-detail-content" id="portfolioGrid"></section>
+    </main>
+
+    <script src="data/site-content.js?v=20260602-taichung-laws"></script>
+    <script>
+      const portfolioCategories = [
+        {
+          name: "熱銷建案",
+          description: "集合住宅、共生宅與生活提案等可作為產品定位或銷售展示的代表案例。",
+          test: (project) => ["合勤共生宅", "合勤生活提案"].includes(project.name),
+        },
+        {
+          name: "私人建案",
+          description: "私人住宅、自宅、透天與店鋪住宅等生活尺度建築設計。",
+          test: (project) => /黃宅|陳宅|自宅|住宅/.test(`${project.name} ${project.type}`),
+        },
+        {
+          name: "商業建築",
+          description: "旅館、店鋪、餐飲建築與商業立面相關案例。",
+          test: (project) => /托默旅館|店鋪|商業|餐飲建築|超市/.test(`${project.name} ${project.type}`),
+        },
+        {
+          name: "公共工程",
+          description: "公共建築、公共設施、醫療或政府相關工程案例。",
+          test: (project) => /公共|醫療|工程/.test(`${project.category} ${project.type}`) && !/宗教/.test(project.type),
+        },
+        {
+          name: "室內裝修",
+          description: "餐飲、旅館、商業大廳與室內裝修整合案例。",
+          test: (project) => /室內|裝修|餐飲空間|旅館室內|商業大廳/.test(`${project.category} ${project.type}`),
+        },
+        {
+          name: "教育類建築",
+          description: "校園、補習教育、托育及學習空間相關案例。",
+          test: (project) => /教育|學校|校園|托育|補習/.test(`${project.name} ${project.category} ${project.type}`),
+        },
+        {
+          name: "工廠類建築",
+          description: "廠房、倉儲、產業設施與工業空間相關案例。",
+          test: (project) => /工廠|廠房|倉儲|產業|工業/.test(`${project.name} ${project.category} ${project.type}`),
+        },
+        {
+          name: "宗教建築",
+          description: "宗教、禮拜與精神性公共空間案例。",
+          test: (project) => /宗教|教堂|寺|廟|堂/.test(`${project.name} ${project.type}`),
+        },
+        {
+          name: "雜項廣告",
+          description: "廣告物、招牌、雜項執照與都市介面改善相關案例。",
+          test: (project) => /廣告|招牌|雜項/.test(`${project.name} ${project.category} ${project.type}`),
+        },
+        {
+          name: "整建維護",
+          description: "老屋延壽、整建維護、外牆修繕與既有建物改善案例。",
+          test: (project) => /整建|維護|老屋|修繕|更新/.test(`${project.name} ${project.category} ${project.type}`),
+        },
+      ];
+
+      const escapeHTML = (value = "") =>
+        String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+
+      const renderPortfolio = (content) => {
+        const projects = content.projects || [];
+        const assignedProjects = new Set();
+        const categories = portfolioCategories.map((category) => ({
+          ...category,
+          projects: projects.filter((project) => {
+            if (assignedProjects.has(project) || !category.test(project)) return false;
+            assignedProjects.add(project);
+            return true;
+          }),
+        }));
+        document.querySelector("#portfolioHighlights").innerHTML = [
+          { label: "作品數", value: `${projects.length} 件` },
+          { label: "分類", value: `${categories.length} 類` },
+          { label: "資料來源", value: "作品集資料與網站資料庫" },
+        ]
+          .map(
+            (item) => `
+              <article>
+                <span>${escapeHTML(item.label)}</span>
+                <strong>${escapeHTML(item.value)}</strong>
+              </article>
+            `,
+          )
+          .join("");
+
+        document.querySelector("#portfolioGrid").innerHTML = categories
+          .map((category) => `
+              <section class="project-category portfolio-category" aria-label="${escapeHTML(category.name)}">
+                <div class="project-category-heading">
+                  <div>
+                    <h2>${escapeHTML(category.name)}</h2>
+                    <p>${escapeHTML(category.description)}</p>
+                  </div>
+                  <span>${category.projects.length} 件</span>
+                </div>
+                <div class="project-category-grid">
+                  ${
+                    category.projects.length
+                      ? category.projects
+                    .map(
+                      (project) => `
+                        <article class="project-card">
+                          <div class="project-media" role="img" aria-label="${escapeHTML(project.name)} 的作品視覺">
+                            ${project.image ? `<img src="${escapeHTML(project.image)}" alt="${escapeHTML(project.name)}">` : ""}
+                          </div>
+                          <div class="project-body">
+                            <div class="project-meta">
+                              <span>${escapeHTML(project.type)}</span>
+                              <span>${escapeHTML(project.location)}</span>
+                              <span>${escapeHTML(project.year)}</span>
+                            </div>
+                            <h3>${escapeHTML(project.name)}</h3>
+                            <p>${escapeHTML(project.summary)}</p>
+                            ${project.href ? `<a class="project-link" href="${escapeHTML(project.href)}">查看作品頁</a>` : ""}
+                          </div>
+                        </article>
+                      `,
+                    )
+                    .join("")
+                      : `
+                        <article class="project-card placeholder-card">
+                          <div class="project-media" role="img" aria-label="${escapeHTML(category.name)} 示意圖片">
+                            <img src="assets/projects/portfolio-placeholder.svg" alt="${escapeHTML(category.name)} 示意圖片">
+                          </div>
+                          <div class="project-body">
+                            <div class="project-meta">
+                              <span>示意圖片</span>
+                              <span>資料整理中</span>
+                            </div>
+                            <h3>${escapeHTML(category.name)}作品整理中</h3>
+                            <p>此分類目前先放置示意圖片，後續可補上實際照片、作品名稱、地點、年份與案例說明。</p>
+                          </div>
+                        </article>
+                      `
+                  }
+                </div>
+              </section>
+            `)
+          .join("");
+      };
+
+      if (window.location.protocol === "file:" && window.SITE_CONTENT) {
+        renderPortfolio(window.SITE_CONTENT);
+      } else {
+        fetch(`data/site-content.json?t=${Date.now()}`, { cache: "no-store" })
+          .then((response) => response.json())
+          .then(renderPortfolio)
+          .catch(() => {
+            if (window.SITE_CONTENT) renderPortfolio(window.SITE_CONTENT);
+          });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>台中市地方規定內容 | 何中揚建築師事務所</title>
+    <link rel="stylesheet" href="styles.css?v=20260602-taichung-laws" />
+  </head>
+  <body class="detail-page regulation-article-page">
+    <header class="site-header detail-header" aria-label="網站導覽">
+      <a class="brand" href="index.html#top" aria-label="回到首頁">
+        <span class="brand-mark">H</span>
+        <span class="brand-copy">
+          <strong>何中揚建築師事務所</strong>
+          <span>HO CHUNG YANG Architecture firm + Yu-Yi Interior Design</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="主要選單">
+        <a href="projects.html">作品集</a>
+        <a href="index.html#updates">動態</a>
+        <a href="index.html#regulations">法規</a>
+        <a href="index.html#services">服務</a>
+        <a href="index.html#contact">聯絡</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <a class="back-link" id="backToCategory" href="taichung-regulations.html">回分類</a>
+      <section class="detail-shell">
+        <p class="eyebrow" id="articleKicker">Taichung Local Law</p>
+        <h1 id="articleTitle">台中市地方規定內容</h1>
+        <p id="articleLead"></p>
+        <div class="detail-highlights" id="articleSummary"></div>
+        <div class="detail-actions" id="articleActions"></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading">
+          <div>
+            <p class="eyebrow">Content</p>
+            <h2>內文</h2>
+          </div>
+        </div>
+        <article class="nlma-article-content" id="articleContent"></article>
+      </section>
+    </main>
+
+    <script src="data/taichung-regulations.js?v=20260602-taichung-laws"></script>
+    <script>
+      const escapeHTML = (value = "") =>
+        String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+      const categories = window.TAICHUNG_REGULATIONS.categories;
+      const items = categories.flatMap((category) => category.items);
+      const item = items.find((entry) => entry.id === id) || items[0];
+      const fields = item.fields || {};
+      const paragraphs = item.paragraphs?.length ? item.paragraphs : ["此筆資料未抽出文字內文，請開啟官方連結或本機暫存頁查核。"];
+      document.title = `${item.title} | 何中揚建築師事務所`;
+      document.querySelector("#articleKicker").textContent = item.categoryName;
+      document.querySelector("#articleTitle").textContent = item.title;
+      document.querySelector("#articleLead").textContent = fields["發文字號"] || fields["法規體系"] || "依臺中市政府主管法規查詢系統整理。";
+      document.querySelector("#backToCategory").href = `taichung-regulation-category.html?category=${encodeURIComponent(item.categorySlug)}`;
+      document.querySelector("#articleSummary").innerHTML = [
+        { label: "分類", value: item.categoryName },
+        { label: "公發布日", value: fields["公發布日"] || item.dateRoc || item.date || "未載明" },
+        { label: "發文字號", value: fields["發文字號"] || "未載明" },
+      ]
+        .map((meta) => `<article><span>${escapeHTML(meta.label)}</span><strong>${escapeHTML(meta.value)}</strong></article>`)
+        .join("");
+      document.querySelector("#articleActions").innerHTML = `
+        <a class="button primary detail-button" href="${escapeHTML(item.officialUrl)}" target="_blank" rel="noreferrer">開啟官方連結</a>
+        <a class="button secondary detail-button" href="${escapeHTML(item.localPage)}" target="_blank" rel="noreferrer">開啟本機暫存頁</a>
+      `;
+      const attachmentHtml = item.attachments?.length
+        ? `<h3>附件</h3><ul>${item.attachments
+            .map((file) => `<li><a href="${escapeHTML(file.localFile)}" target="_blank" rel="noreferrer">${escapeHTML(file.name)}</a></li>`)
+            .join("")}</ul>`
+        : "";
+      document.querySelector("#articleContent").innerHTML = `
+        ${paragraphs.map((paragraph) => `<p>${escapeHTML(paragraph)}</p>`).join("")}
+        ${attachmentHtml}
+        <dl>
+          <div><dt>法規體系</dt><dd>${escapeHTML(fields["法規體系"] || item.type || "未載明")}</dd></div>
+          <div><dt>官方連結</dt><dd><a href="${escapeHTML(item.officialUrl)}" target="_blank" rel="noreferrer">${escapeHTML(item.officialUrl)}</a></dd></div>
+          <div><dt>本機暫存</dt><dd>${escapeHTML(item.localPage)}</dd></div>
+        </dl>
+      `;
+    </script>
+  </body>
+</html>

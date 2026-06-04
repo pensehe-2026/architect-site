@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>內政部國土管理署法規公告 | 何中揚建築師事務所</title>
+    <link rel="stylesheet" href="styles.css?v=20260602-nlma-regulations" />
+  </head>
+  <body class="detail-page regulation-index-page">
+    <header class="site-header detail-header" aria-label="網站導覽">
+      <a class="brand" href="index.html#top" aria-label="回到首頁">
+        <span class="brand-mark">H</span>
+        <span class="brand-copy">
+          <strong>何中揚建築師事務所</strong>
+          <span>HO CHUNG YANG Architecture firm + Yu-Yi Interior Design</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="主要選單">
+        <a href="projects.html">作品集</a>
+        <a href="index.html#regulations">法規</a>
+        <a href="index.html#services">服務</a>
+        <a href="index.html#contact">聯絡</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <a class="back-link" href="index.html#regulations">回法規專區</a>
+      <section class="detail-shell">
+        <p class="eyebrow">NLMA Regulations</p>
+        <h1>內政部國土管理署法規公告</h1>
+        <p>依 Excel 工作表拆分為大項目；進入各大項目後可查看該子頁標題清單。紅字標題已優先排序至各分類頂端。</p>
+        <div class="detail-highlights" id="nlmaSummary"></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading">
+          <div>
+            <p class="eyebrow">Categories</p>
+            <h2>法規公告大項目</h2>
+          </div>
+        </div>
+        <div class="nlma-category-grid" id="nlmaCategoryGrid"></div>
+      </section>
+    </main>
+
+    <script src="data/nlma-regulations.js?v=20260602-nlma-regulations"></script>
+    <script>
+      const escapeHTML = (value = "") =>
+        String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+
+      const data = window.NLMA_REGULATIONS;
+      const total = data.items.length;
+      const priority = data.items.filter((item) => item.priority).length;
+      document.querySelector("#nlmaSummary").innerHTML = [
+        { label: "大項目", value: `${data.categories.length} 類` },
+        { label: "標題數", value: `${total} 筆` },
+        { label: "紅字優先", value: `${priority} 筆` },
+      ]
+        .map((item) => `<article><span>${escapeHTML(item.label)}</span><strong>${escapeHTML(item.value)}</strong></article>`)
+        .join("");
+
+      document.querySelector("#nlmaCategoryGrid").innerHTML = data.categories
+        .map(
+          (category) => `
+            <a class="nlma-category-card" href="nlma-regulation-category.html?category=${encodeURIComponent(category.slug)}">
+              <span>${escapeHTML(category.name)}</span>
+              <strong>${category.count} 筆</strong>
+              <p>紅字優先項目 ${category.priorityCount} 筆，點入查看標題清單與本機暫存內容。</p>
+            </a>
+          `,
+        )
+        .join("");
+    </script>
+  </body>
+</html>
