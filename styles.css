@@ -1177,6 +1177,16 @@ h1 {
   background: #fff;
 }
 
+.award-media-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.award-media-single img {
+  object-fit: contain;
+  padding: 12px;
+  background: #fff;
+}
+
 .award-media-grid figcaption {
   padding: 10px 12px;
   color: var(--muted);
