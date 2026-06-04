@@ -206,10 +206,11 @@ h1 {
 }
 
 .hero-content p:not(.eyebrow) {
-  max-width: 900px;
+  max-width: 1120px;
   margin-bottom: 28px;
   color: rgba(255, 255, 255, 0.82);
   font-size: 18px;
+  white-space: nowrap;
 }
 
 .hero-actions {
@@ -2010,6 +2011,10 @@ code {
 
   .hero-content {
     padding-bottom: 7vh;
+  }
+
+  .hero-content p:not(.eyebrow) {
+    white-space: normal;
   }
 
   h1 {
