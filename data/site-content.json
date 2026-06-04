@@ -61,13 +61,13 @@
             "image": "assets/projects/xitun-yongfu-road-apartment.png"
         },
         {
-            "name": "北區陳宅",
-            "category": "建築設計",
-            "type": "住宅設計",
+            "name": "北區集合住宅",
+            "category": "熱銷建案",
+            "type": "集合住宅",
             "location": "台中北區",
-            "year": "作品集資料",
-            "summary": "透過立面比例、入口層次與室內外關係，整理住宅空間與街道介面。",
-            "image": "assets/projects/north-district-chen-house.jpg"
+            "year": "近期作品",
+            "summary": "以框架式立面、開放露台與穩重色系，呈現具銷售展示辨識度的集合住宅外觀。",
+            "image": "assets/projects/north-district-apartment.png"
         },
         {
             "name": "大里黃宅",
