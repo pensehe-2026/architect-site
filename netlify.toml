@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "python scripts/sync_json_to_js.py"
+  command = "python3 scripts/sync_json_to_js.py"
 
 [[headers]]
   for = "/admin/*"
