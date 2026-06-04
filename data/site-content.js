@@ -61,10 +61,10 @@ window.SITE_CONTENT = {
       "image": "assets/projects/xitun-yongfu-road-apartment.png"
     },
     {
-      "name": "北區集合住宅",
+      "name": "西屯區成都路集合住宅",
       "category": "熱銷建案",
       "type": "集合住宅",
-      "location": "台中北區",
+      "location": "台中西屯區成都路",
       "year": "近期作品",
       "summary": "以框架式立面、開放露台與穩重色系，呈現具銷售展示辨識度的集合住宅外觀。",
       "image": "assets/projects/north-district-apartment.png"
