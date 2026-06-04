@@ -1047,6 +1047,11 @@ h1 {
   line-height: 1.05;
 }
 
+#architectMessageTitle {
+  font-size: clamp(30px, 3.4vw, 46px);
+  white-space: nowrap;
+}
+
 .about-panel,
 .about-card,
 .about-timeline article {
@@ -2025,6 +2030,10 @@ code {
   .section-note {
     max-width: none;
     text-align: left;
+  }
+
+  #architectMessageTitle {
+    white-space: normal;
   }
 
   .interpretation-list li::before {
