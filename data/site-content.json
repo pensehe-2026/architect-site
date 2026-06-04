@@ -34,13 +34,13 @@
             "image": "assets/projects/meng-en-church.jpg"
         },
         {
-            "name": "霧峰黃宅",
-            "category": "建築設計",
-            "type": "自宅設計",
-            "location": "霧峰",
-            "year": "作品集資料",
-            "summary": "住宅外觀與平面規畫，透過陽台、露台與立面細節整合家庭生活尺度。",
-            "image": "assets/projects/wufeng-huang-house.jpg"
+            "name": "西屯區福科路集合住宅",
+            "category": "建案",
+            "type": "集合住宅",
+            "location": "台中西屯區福科路",
+            "year": "近期作品",
+            "summary": "以俐落框架、通透陽台與街角商業介面，整合住宅尺度與城市街廓表情。",
+            "image": "assets/projects/xitun-fuke-road-apartment.png"
         },
         {
             "name": "豐原林先生店鋪住宅",
@@ -52,13 +52,13 @@
             "image": "assets/projects/fengyuan-lin-shop-house.jpg"
         },
         {
-            "name": "西區陳宅",
-            "category": "建築設計",
-            "type": "住宅設計",
-            "location": "台中西區",
-            "year": "作品集資料",
-            "summary": "以住宅量體、開口與日常動線為核心，建立乾淨而耐看的居住外觀。",
-            "image": "assets/projects/west-district-chen-house.png"
+            "name": "西屯區永福路集合住宅",
+            "category": "建案",
+            "type": "集合住宅",
+            "location": "台中西屯區永福路",
+            "year": "近期作品",
+            "summary": "以垂直線條、深色量體與陽台綠意，呈現穩重清爽的集合住宅立面。",
+            "image": "assets/projects/xitun-yongfu-road-apartment.png"
         },
         {
             "name": "北區陳宅",
