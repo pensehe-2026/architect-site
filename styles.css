@@ -1005,28 +1005,30 @@ h1 {
 }
 
 .about-hero {
-  position: relative;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: center;
 }
 
-.about-hero::after {
-  content: "";
-  position: absolute;
-  right: clamp(24px, 6vw, 80px);
-  bottom: clamp(24px, 5vw, 64px);
-  width: min(320px, 34vw);
-  aspect-ratio: 16 / 10;
+.about-hero-copy {
+  min-width: 0;
+}
+
+.about-hero-media {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
   border: 1px solid rgba(199, 204, 212, 0.6);
   border-radius: 8px;
-  background:
-    linear-gradient(135deg, rgba(15, 98, 254, 0.18), rgba(255, 255, 255, 0)),
-    url("assets/ho-chung-yang-hero.png") center / cover;
-  opacity: 0.9;
+  background: #f7f9fc;
 }
 
-.about-hero > * {
-  position: relative;
-  z-index: 1;
+.about-hero-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
 }
 
 .about-section {
@@ -1999,6 +2001,7 @@ code {
 
   .metrics,
   .trust-grid,
+  .about-hero,
   .about-section,
   .about-card-grid,
   .about-award-card,
