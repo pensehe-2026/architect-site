@@ -1126,6 +1126,63 @@ h1 {
   background: var(--cobalt);
 }
 
+.about-awards {
+  gap: 16px;
+}
+
+.about-award-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+  gap: 22px;
+}
+
+.featured-award {
+  background:
+    linear-gradient(135deg, rgba(15, 98, 254, 0.08), rgba(199, 204, 212, 0.06)),
+    #fff;
+}
+
+.award-copy {
+  align-self: start;
+}
+
+.award-media-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(180px, 0.72fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.award-media-grid figure {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7f9fc;
+}
+
+.award-media-grid img {
+  width: 100%;
+  height: 100%;
+  max-height: 360px;
+  object-fit: cover;
+}
+
+.award-media-grid figure:nth-child(2) img {
+  object-fit: contain;
+  padding: 12px;
+  background: #fff;
+}
+
+.award-media-grid figcaption {
+  padding: 10px 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .detail-card-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1934,6 +1991,8 @@ code {
   .trust-grid,
   .about-section,
   .about-card-grid,
+  .about-award-card,
+  .award-media-grid,
   .project-category-grid,
   .regulation-grid,
   .link-grid,
