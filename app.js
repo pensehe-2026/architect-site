@@ -211,9 +211,7 @@ const renderContent = (content) => {
   setText('[data-field="introTitle"]', content.introTitle);
   setText('[data-field="studioIntro"]', content.studioIntro);
   setText('[data-field="contactTitle"]', content.contactTitle);
-  setText("#contentVersion", content.version);
-  setText("#lastUpdated", formatDate(content.lastUpdated));
-  setText("#dataSource", contentUrl);
+  setText("#footerLastUpdated", formatDate(content.lastUpdated));
 
   renderMetrics(content.metrics);
   renderProjects(content.projects);

@@ -147,7 +147,7 @@ a {
 
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 46vh;
   display: grid;
   align-items: end;
   overflow: hidden;
@@ -173,9 +173,9 @@ a {
 .hero-content {
   position: relative;
   z-index: 1;
-  width: min(780px, calc(100% - 36px));
+  width: min(1120px, calc(100% - 36px));
   margin: 0 auto 0 clamp(18px, 9vw, 140px);
-  padding: 150px 0 12vh;
+  padding: 90px 0 5vh;
   color: #fff;
 }
 
@@ -196,17 +196,17 @@ p {
 }
 
 h1 {
-  max-width: 720px;
+  max-width: 1120px;
   margin-bottom: 18px;
   font-family: "TASA Explorer", system-ui, sans-serif;
-  font-size: clamp(44px, 6vw, 86px);
+  font-size: clamp(42px, 5vw, 64px);
   font-weight: 500;
   line-height: 0.98;
   white-space: pre-line;
 }
 
 .hero-content p:not(.eyebrow) {
-  max-width: 620px;
+  max-width: 900px;
   margin-bottom: 28px;
   color: rgba(255, 255, 255, 0.82);
   font-size: 18px;
@@ -1775,7 +1775,7 @@ code {
   }
 
   .hero {
-    min-height: 88vh;
+    min-height: 54vh;
   }
 
   .status-band,
@@ -1873,7 +1873,7 @@ code {
   }
 
   .hero-content {
-    padding-bottom: 9vh;
+    padding-bottom: 7vh;
   }
 
   h1 {

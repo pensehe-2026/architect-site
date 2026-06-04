@@ -14,7 +14,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/ho-chung-yang-hero.png" />
     <link rel="preload" href="assets/ho-chung-yang-hero.png" as="image" />
-    <link rel="stylesheet" href="styles.css?v=20260603-building-practice" />
+    <link rel="stylesheet" href="styles.css?v=20260604-hero-footer" />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script type="application/ld+json">
       {
@@ -76,21 +76,6 @@
           <p data-field="heroText">
             從土地開發、自宅設計、建案規畫到室內設計與公共安全檢查，提供完整的建築專業服務。
           </p>
-        </div>
-      </section>
-
-      <section class="status-band" aria-label="網站資訊狀態">
-        <div>
-          <span>內容版本</span>
-          <strong id="contentVersion">--</strong>
-        </div>
-        <div>
-          <span>最後更新</span>
-          <strong id="lastUpdated">--</strong>
-        </div>
-        <div>
-          <span>資料來源</span>
-          <strong id="dataSource">data/site-content.json</strong>
         </div>
       </section>
 
@@ -186,7 +171,7 @@
 
     <footer class="site-footer">
       <span data-field="studioName">何中揚建築師事務所</span>
-      <span>Content updates from <code>data/site-content.json</code></span>
+      <span>網站最後更新：<strong id="footerLastUpdated">--</strong></span>
     </footer>
 
     <div class="modal-backdrop" id="caseModal" hidden>
@@ -213,7 +198,7 @@
       </div>
     </div>
 
-    <script src="data/site-content.js?v=20260603-building-practice"></script>
+    <script src="data/site-content.js?v=20260604-hero-footer"></script>
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", function (user) {
@@ -225,6 +210,6 @@
         });
       }
     </script>
-    <script src="app.js?v=20260603-building-practice" defer></script>
+    <script src="app.js?v=20260604-hero-footer" defer></script>
   </body>
 </html>
