@@ -47,17 +47,17 @@
         {
           name: "熱銷建案",
           description: "集合住宅、共生宅與生活提案等可作為產品定位或銷售展示的代表案例。",
-          test: (project) => ["西屯區福科路集合住宅", "西屯區永福路集合住宅", "西屯區成都路集合住宅"].includes(project.name),
+          test: (project) => project.category === "熱銷建案" || /集合住宅/.test(project.type),
         },
         {
           name: "私人建案",
           description: "私人住宅、自宅、透天與店鋪住宅等生活尺度建築設計。",
-          test: (project) => project.name === "合勤共生宅" || /黃宅|陳宅|自宅|住宅/.test(`${project.name} ${project.type}`),
+          test: (project) => project.category === "私人建案" || /黃宅|陳宅|任宅|自宅|私人住宅|住宅設計/.test(`${project.name} ${project.type}`),
         },
         {
           name: "商業建築",
           description: "旅館、店鋪、餐飲建築與商業立面相關案例。",
-          test: (project) => /托默旅館|店鋪|商業|餐飲建築|超市/.test(`${project.name} ${project.type}`),
+          test: (project) => /商業|托默旅館|店鋪|餐飲建築|超市|電子遊戲場/.test(`${project.category} ${project.name} ${project.type}`),
         },
         {
           name: "公共工程",
@@ -72,12 +72,12 @@
         {
           name: "教育類建築",
           description: "校園、補習教育、托育及學習空間相關案例。",
-          test: (project) => /教育|學校|校園|托育|補習/.test(`${project.name} ${project.category} ${project.type}`),
+          test: (project) => /教育|學校|校園|托育|補習|幼兒園/.test(`${project.name} ${project.category} ${project.type}`),
         },
         {
           name: "工廠類建築",
           description: "廠房、倉儲、產業設施與工業空間相關案例。",
-          test: (project) => /工廠|廠房|倉儲|產業|工業/.test(`${project.name} ${project.category} ${project.type}`),
+          test: (project) => /工廠|廠房|倉儲|產業|工業|農業|產銷設施/.test(`${project.name} ${project.category} ${project.type}`),
         },
         {
           name: "宗教建築",
