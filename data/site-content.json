@@ -75,16 +75,16 @@
                          "type":  "幼兒園 / 教育類建築",
                          "location":  "台中西屯區",
                          "year":  "近期作品",
-                         "summary":  "以入口辨識、親切照明與安全動線整合幼兒教育空間形象。",
-                         "image":  "assets/projects/xitun-kindergarten-entrance.jpg",
+                         "summary":  "幼兒教育空間案例，整合校園入口、教室量體與外部活動尺度。",
+                         "image":  "assets/projects/xitun-road-kindergarten.jpg",
                          "href":  "project.html?item=xitun-kindergarten",
                          "slug":  "xitun-kindergarten",
                          "detail":  {
                                         "kicker":  "Kindergarten / Education Architecture",
-                                        "lead":  "西屯區幼兒園以明確入口辨識、親切夜間照明與安全動線為核心，整理幼兒教育空間對外形象與日常使用需求。",
+                                        "lead":  "西屯區幼兒園整合校園入口、教室量體、日夜間辨識與安全動線，建立清楚親切的幼兒教育空間形象。",
                                         "highlights":  [
                                                            {
-                                                               "label":  "案名",
+                                                               "label":  "作品",
                                                                "value":  "西屯區幼兒園"
                                                            },
                                                            {
@@ -98,8 +98,12 @@
                                                        ],
                                         "gallery":  [
                                                         {
+                                                            "src":  "assets/projects/xitun-road-kindergarten.jpg",
+                                                            "caption":  "西屯區幼兒園外觀立面"
+                                                        },
+                                                        {
                                                             "src":  "assets/projects/xitun-kindergarten-entrance.jpg",
-                                                            "caption":  "西屯區幼兒園入口立面"
+                                                            "caption":  "西屯區幼兒園入口近景"
                                                         },
                                                         {
                                                             "src":  "assets/projects/xitun-kindergarten-night.jpg",
@@ -110,9 +114,9 @@
                                                          {
                                                              "title":  "設計重點",
                                                              "items":  [
-                                                                           "以入口門廳與立面語彙建立清楚辨識度，讓幼兒園具有親切且穩定的第一印象。",
-                                                                           "夜間照明強化入口安全與品牌形象，同時維持溫暖的迎賓感。",
-                                                                           "教育空間需兼顧家長接送、幼兒安全、日常管理與建築外觀整合。"
+                                                                           "以入口辨識與安全動線為核心，讓接送、進出與日常管理更清楚。",
+                                                                           "透過立面比例、開窗與夜間照明整理，建立親切且穩定的教育空間形象。",
+                                                                           "整合教室量體、戶外活動尺度與校園邊界，兼顧使用安全與街角識別。"
                                                                        ]
                                                          }
                                                      ]
@@ -396,15 +400,6 @@
                          "year":  "作品集資料",
                          "summary":  "住宅建案規劃案例，呈現清楚量體、陽台節奏與社區入口關係。",
                          "image":  "assets/projects/tanzi-residential-project.jpg"
-                     },
-                     {
-                         "name":  "西屯路幼兒園",
-                         "category":  "教育類建築",
-                         "type":  "幼兒園 / 教育類建築",
-                         "location":  "台中西屯路",
-                         "year":  "作品集資料",
-                         "summary":  "幼兒教育空間案例，整合校園入口、教室量體與外部活動尺度。",
-                         "image":  "assets/projects/xitun-road-kindergarten.jpg"
                      }
                  ],
     "updates":  [
