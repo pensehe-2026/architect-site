@@ -8,6 +8,7 @@
     <meta name="robots" content="index, follow" />
     <meta property="og:title" content="建築作品案例 | 何中揚建築師事務所" />
     <meta property="og:description" content="查看建築設計、共生宅、商業建築與室內裝修案例研究。" />
+    <link rel="stylesheet" href="assets/vendor/glightbox/glightbox.min.css" />
     <link rel="stylesheet" href="styles.css?v=20260602-taichung-laws" />
   </head>
   <body class="detail-page">
@@ -38,6 +39,7 @@
       <section class="service-detail-content" id="projectDetailContent"></section>
     </main>
 
+    <script src="assets/vendor/glightbox/glightbox.min.js"></script>
     <script src="data/site-content.js?v=20260602-taichung-laws"></script>
     <script>
       const params = new URLSearchParams(window.location.search);
@@ -83,7 +85,9 @@
           .map(
             (item) => `
               <figure class="project-gallery-item">
-                <img src="${escapeHTML(item.src)}" alt="${escapeHTML(item.caption || project.name)}">
+                <a class="project-lightbox" href="${escapeHTML(item.src)}" data-gallery="project-gallery" data-title="${escapeHTML(item.caption || project.name)}">
+                  <img src="${escapeHTML(item.src)}" alt="${escapeHTML(item.caption || project.name)}">
+                </a>
                 <figcaption>${escapeHTML(item.caption || project.name)}</figcaption>
               </figure>
             `,
@@ -128,6 +132,13 @@
             <div class="resource-grid">${resources}</div>
           </section>
         `;
+        if (window.GLightbox) {
+          GLightbox({
+            selector: ".project-lightbox",
+            touchNavigation: true,
+            loop: true,
+          });
+        }
       };
 
       if (window.location.protocol === "file:" && window.SITE_CONTENT) {

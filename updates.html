@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>歷史動態 | 何中揚建築師事務所</title>
+    <meta name="description" content="何中揚建築師事務所歷史動態，彙整最新法規、事務所公告、新增案件與房地產動態。" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="歷史動態 | 何中揚建築師事務所" />
+    <meta property="og:description" content="完整瀏覽事務所公告、法規更新與新增案件。" />
+    <link rel="stylesheet" href="styles.css?v=20260612-updates" />
+  </head>
+  <body class="detail-page journal-page">
+    <header class="site-header detail-header" aria-label="網站導覽">
+      <a class="brand" href="index.html#top" aria-label="回到首頁">
+        <span class="brand-mark">H</span>
+        <span class="brand-copy">
+          <strong>何中揚建築師事務所</strong>
+          <span>HO CHUNG YANG Architecture firm + Yu-Yi Interior Design</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="主要導覽">
+        <a href="about.html">關於我們</a>
+        <a href="projects.html">作品集</a>
+        <a href="index.html#updates">動態</a>
+        <a href="index.html#regulations">法規</a>
+        <a href="index.html#services">服務</a>
+        <a href="index.html#contact">聯絡</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <a class="back-link" href="index.html#updates">回最新動態</a>
+      <section class="detail-shell journal-hero">
+        <p class="eyebrow">News Archive</p>
+        <h1>歷史動態</h1>
+        <p>彙整事務所公告、法規更新、新增案件與市場觀察，方便日後查閱與延伸成建管實務文章。</p>
+        <div class="journal-filter" id="journalFilter" aria-label="動態分類"></div>
+      </section>
+
+      <section class="journal-layout" aria-labelledby="journalTitle">
+        <aside class="journal-side">
+          <p class="eyebrow">Categories</p>
+          <div id="journalStats"></div>
+        </aside>
+        <div>
+          <div class="detail-section-heading journal-heading">
+            <p class="eyebrow">All Updates</p>
+            <h2 id="journalTitle">完整列表</h2>
+          </div>
+          <div class="journal-list" id="journalList"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="data/site-content.js?v=20260612-updates"></script>
+    <script>
+      const escapeHTML = (value = "") =>
+        String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+
+      const formatDate = (value) => {
+        const date = new Date(value);
+        if (Number.isNaN(date.getTime())) return value || "";
+        return date.toLocaleDateString("zh-TW", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        });
+      };
+
+      let activeCategory = "全部";
+
+      const renderArchive = (content) => {
+        const updates = [...(content.updates || [])].sort(
+          (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+        );
+        const categories = ["全部", ...new Set(updates.map((item) => item.category || "未分類"))];
+        const filtered = activeCategory === "全部" ? updates : updates.filter((item) => (item.category || "未分類") === activeCategory);
+
+        document.querySelector("#journalFilter").innerHTML = categories
+          .map(
+            (category) => `
+              <button class="journal-chip${category === activeCategory ? " is-active" : ""}" type="button" data-category="${escapeHTML(category)}">
+                ${escapeHTML(category)}
+              </button>
+            `,
+          )
+          .join("");
+
+        document.querySelector("#journalStats").innerHTML = categories
+          .filter((category) => category !== "全部")
+          .map((category) => {
+            const count = updates.filter((item) => (item.category || "未分類") === category).length;
+            return `<a href="#" data-category="${escapeHTML(category)}"><span>${escapeHTML(category)}</span><strong>${count}</strong></a>`;
+          })
+          .join("");
+
+        document.querySelector("#journalList").innerHTML = filtered
+          .map(
+            (item) => `
+              <article class="journal-card">
+                <time datetime="${escapeHTML(item.date)}">${escapeHTML(formatDate(item.date))}</time>
+                <div>
+                  <span>${escapeHTML(item.category || "未分類")}</span>
+                  <h3><a href="${escapeHTML(item.href || "#")}">${escapeHTML(item.title)}</a></h3>
+                  <p>${escapeHTML(item.summary || "")}</p>
+                </div>
+              </article>
+            `,
+          )
+          .join("");
+
+        document.querySelectorAll("[data-category]").forEach((button) => {
+          button.addEventListener("click", (event) => {
+            event.preventDefault();
+            activeCategory = button.dataset.category;
+            renderArchive(content);
+          });
+        });
+      };
+
+      if (window.location.protocol === "file:" && window.SITE_CONTENT) {
+        renderArchive(window.SITE_CONTENT);
+      } else {
+        fetch(`data/site-content.json?t=${Date.now()}`, { cache: "no-store" })
+          .then((response) => response.json())
+          .then(renderArchive)
+          .catch(() => {
+            if (window.SITE_CONTENT) renderArchive(window.SITE_CONTENT);
+          });
+      }
+    </script>
+  </body>
+</html>
