@@ -369,6 +369,124 @@ const closeSearchPanel = () => {
   document.body.classList.remove("modal-open");
 };
 
+const optionalJsonCache = {};
+
+const loadOptionalJson = async (path) => {
+  if (optionalJsonCache[path]) return optionalJsonCache[path];
+  try {
+    const response = await fetch(`${path}?t=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Optional data request failed: ${response.status}`);
+    optionalJsonCache[path] = await response.json();
+    return optionalJsonCache[path];
+  } catch (error) {
+    console.warn(error);
+    optionalJsonCache[path] = null;
+    return null;
+  }
+};
+
+const compactItems = (items = [], mapper, limit = 12) =>
+  items
+    .slice(0, limit)
+    .map(mapper)
+    .filter(Boolean)
+    .join("\n");
+
+const buildAiContext = async () => {
+  const content = currentContent || {};
+  const [nlma, taichung, practice] = await Promise.all([
+    loadOptionalJson("data/nlma-regulations.json"),
+    loadOptionalJson("data/taichung-regulations.json"),
+    loadOptionalJson("data/building-practice.json"),
+  ]);
+
+  const sections = [
+    `事務所：${content.studioName || ""} / ${content.studioTagline || ""}`,
+    `服務項目：${compactItems(content.services, (item) => `- ${item.title}：${item.description}`, 16)}`,
+    `最新動態：${compactItems(getAllUpdates(content), (item) => `- ${item.date || ""}｜${item.category || ""}｜${item.title}：${item.summary || ""}`, 10)}`,
+    `首頁法規入口：${compactItems(content.regulations, (item) => `- ${item.type || ""}｜${item.title}：${item.description || ""}`, 10)}`,
+    `好用連結：${compactItems(content.usefulLinks, (item) => `- ${item.category || ""}｜${item.title}｜${item.href}`, 8)}`,
+  ];
+
+  if (nlma?.categories) {
+    sections.push(
+      `中央法規公告分類：${compactItems(nlma.categories, (category) => `- ${category.name || category.title}：${category.count || category.items?.length || 0} 筆`, 10)}`,
+    );
+  }
+  if (taichung?.latest) {
+    sections.push(
+      `台中市建築管理與地方自治最新公告：${compactItems(taichung.latest, (item) => `- ${item.date || ""}｜${item.title || ""}`, 10)}`,
+    );
+  }
+  if (taichung?.categories) {
+    sections.push(
+      `台中市法規分類：${compactItems(taichung.categories, (category) => `- ${category.name || category.title}：${category.count || category.items?.length || 0} 筆`, 10)}`,
+    );
+  }
+  if (practice?.posts) {
+    sections.push(
+      `建管實務文章：${compactItems(practice.posts, (post) => `- ${post.date || ""}｜${post.title || ""}：${post.summary || ""}`, 10)}`,
+    );
+  }
+
+  return sections.join("\n\n").slice(0, 18000);
+};
+
+const appendAiMessage = (role, text) => {
+  const target = document.querySelector("#aiChatMessages");
+  if (!target) return null;
+  const node = document.createElement("article");
+  node.className = `ai-chat-message ${role}`;
+  node.innerHTML = `<p>${escapeHTML(text)}</p>`;
+  target.append(node);
+  target.scrollTop = target.scrollHeight;
+  return node;
+};
+
+const openAiChat = () => {
+  const panel = document.querySelector("#aiChatPanel");
+  const input = document.querySelector("#aiChatInput");
+  if (!panel) return;
+  panel.hidden = false;
+  requestAnimationFrame(() => input?.focus());
+};
+
+const closeAiChat = () => {
+  const panel = document.querySelector("#aiChatPanel");
+  if (panel) panel.hidden = true;
+};
+
+const submitAiChat = async (event) => {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const input = document.querySelector("#aiChatInput");
+  const question = input?.value.trim();
+  if (!question) return;
+
+  input.value = "";
+  appendAiMessage("user", question);
+  const pending = appendAiMessage("assistant", "整理站內資料中，請稍候...");
+  form.querySelector("button").disabled = true;
+
+  try {
+    const context = await buildAiContext();
+    const response = await fetch("/.netlify/functions/ai-chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question, context }),
+    });
+    const payload = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(payload.error || "AI service unavailable");
+    pending.querySelector("p").textContent = payload.answer || "目前沒有取得回覆。";
+  } catch (error) {
+    pending.querySelector("p").textContent =
+      "AI 對話窗口已接好，但目前還沒有可用的 Gemini 後端回覆。請確認 Netlify 已設定 GEMINI_API_KEY，並重新部署網站。";
+    console.warn(error);
+  } finally {
+    form.querySelector("button").disabled = false;
+  }
+};
+
 const restoreHashPosition = () => {
   const id = window.location.hash.slice(1);
   if (!id || id === "top") return;
@@ -418,10 +536,14 @@ document.querySelector("#searchPanel")?.addEventListener("click", (event) => {
   if (event.target.id === "searchPanel") closeSearchPanel();
 });
 document.querySelector("#globalSearchInput")?.addEventListener("input", (event) => renderSearchResults(event.target.value));
+document.querySelector("#openAiChat")?.addEventListener("click", openAiChat);
+document.querySelector("#closeAiChat")?.addEventListener("click", closeAiChat);
+document.querySelector("#aiChatForm")?.addEventListener("submit", submitAiChat);
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeCaseModal();
     closeSearchPanel();
+    closeAiChat();
   }
   if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
     event.preventDefault();

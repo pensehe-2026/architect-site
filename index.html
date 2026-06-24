@@ -202,7 +202,30 @@
       </div>
     </div>
 
-    <script src="data/site-content.js?v=20260604-hero-text-line"></script>
+    <button class="ai-chat-toggle" id="openAiChat" type="button" aria-label="開啟 AI 法規助理">
+      AI
+    </button>
+
+    <aside class="ai-chat-panel" id="aiChatPanel" aria-labelledby="aiChatTitle" hidden>
+      <div class="ai-chat-head">
+        <div>
+          <p class="eyebrow">Regulation AI</p>
+          <h2 id="aiChatTitle">法規 AI 助理</h2>
+        </div>
+        <button class="modal-close" id="closeAiChat" type="button" aria-label="關閉 AI 對話">×</button>
+      </div>
+      <div class="ai-chat-messages" id="aiChatMessages" aria-live="polite">
+        <article class="ai-chat-message assistant">
+          <p>可以先問我建築法規、建管實務、老屋延壽或服務流程。我會依目前網站資料整理方向，正式申請仍建議由事務所確認。</p>
+        </article>
+      </div>
+      <form class="ai-chat-form" id="aiChatForm">
+        <textarea id="aiChatInput" rows="3" placeholder="例如：老屋延壽申請需要先準備什麼？"></textarea>
+        <button type="submit">送出</button>
+      </form>
+    </aside>
+
+    <script src="data/site-content.js?v=20260624-ai-chat"></script>
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", function (user) {
@@ -214,6 +237,6 @@
         });
       }
     </script>
-    <script src="app.js?v=20260604-hero-text-line" defer></script>
+    <script src="app.js?v=20260624-ai-chat" defer></script>
   </body>
 </html>
