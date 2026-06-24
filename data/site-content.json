@@ -645,6 +645,13 @@
                 "sourceImage": "assets/old-house-flow-source.png",
                 "news": [
                     {
+                        "date": "2026-04-02",
+                        "category": "內政部新聞",
+                        "title": "老舊建築物修繕補助辦法公布 預計5月底全臺開放申請",
+                        "summary": "內政部發布老宅延壽計畫補助辦法，50億特別預算挹注，預估3千棟屋齡30年以上住宅受惠。",
+                        "href": "https://www.moi.gov.tw/News_Content.aspx?n=4&s=337676"
+                    },
+                    {
                         "date": "2026-06-24",
                         "category": "危老延壽",
                         "title": "老屋延壽諮詢與補助申請協助開放",

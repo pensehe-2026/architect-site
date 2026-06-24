@@ -112,7 +112,9 @@ const renderProjects = (items = []) => {
 
 const renderUpdates = (items = []) => {
   const target = document.querySelector("#updatesList");
+  const hiddenHomeUpdateTitles = new Set(["房地產動態區塊建立", "代表作品資料欄位建立"]);
   const visibleItems = [...items]
+    .filter((item) => !hiddenHomeUpdateTitles.has(item.title))
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 6);
   target.innerHTML = visibleItems
