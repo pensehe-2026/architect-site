@@ -75,8 +75,17 @@
 
       let activeCategory = "全部";
 
+      const getServiceNews = (content) =>
+        (content.services || []).flatMap((service) =>
+          (service.detail?.news || []).map((item) => ({
+            ...item,
+            category: item.category || service.title,
+            href: item.href || `${service.href || `service.html?item=${service.slug}`}#service-news`,
+          })),
+        );
+
       const renderArchive = (content) => {
-        const updates = [...(content.updates || [])].sort(
+        const updates = [...(content.updates || []), ...getServiceNews(content)].sort(
           (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
         );
         const categories = ["全部", ...new Set(updates.map((item) => item.category || "未分類"))];

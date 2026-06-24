@@ -642,7 +642,16 @@ window.SITE_CONTENT = {
             "href": "提供的資料/老屋延壽/三、透天類 - 6樓以下透天住宅修繕需求申請表.odt"
           }
         ],
-        "sourceImage": "assets/old-house-flow-source.png"
+        "sourceImage": "assets/old-house-flow-source.png",
+        "news": [
+          {
+            "date": "2026-06-24",
+            "category": "危老延壽",
+            "title": "老屋延壽諮詢與補助申請協助開放",
+            "summary": "針對屋齡 30 年以上合法建築物，協助釐清補助資格、住戶共識、結構安全性能評估、修繕項目與請款流程。",
+            "href": "service.html?item=old-house-life-extension#service-news"
+          }
+        ]
       }
     },
     {

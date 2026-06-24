@@ -8,7 +8,7 @@
     <meta name="robots" content="index, follow" />
     <meta property="og:title" content="建築服務項目 | 何中揚建築師事務所" />
     <meta property="og:description" content="查看土地開發、公共工程、老屋延壽、室內裝修與建築許可申請等服務內容。" />
-    <link rel="stylesheet" href="styles.css?v=20260602-taichung-laws" />
+    <link rel="stylesheet" href="styles.css?v=20260624-service-news-tight" />
   </head>
   <body class="detail-page">
     <header class="site-header detail-header" aria-label="網站導覽">
@@ -41,7 +41,7 @@
       </section>
       <section class="service-detail-content" id="serviceDetailContent"></section>
     </main>
-    <script src="data/site-content.js?v=20260602-taichung-laws"></script>
+    <script src="data/site-content.js?v=20260624-service-news-tight"></script>
     <script>
       const params = new URLSearchParams(window.location.search);
       const slug = params.get("item");
@@ -114,8 +114,34 @@
             `,
           )
           .join("");
+        const news = (detail.news || [])
+          .map(
+            (item) => `
+              <article class="service-news-item">
+                <time datetime="${escapeHTML(item.date || "")}">${escapeHTML(item.date || "")}</time>
+                <div>
+                  <span>${escapeHTML(item.category || service.title)}</span>
+                  <h3><a href="${escapeHTML(item.href || "#service-news")}">${escapeHTML(item.title)}</a></h3>
+                  <p>${escapeHTML(item.summary || "")}</p>
+                </div>
+              </article>
+            `,
+          )
+          .join("");
 
         content.innerHTML = `
+          ${
+            news
+              ? `<section class="detail-section service-news-section" id="service-news">
+                  <div class="detail-section-heading">
+                    <p class="eyebrow">News</p>
+                    <h2>${escapeHTML(detail.newsTitle || "\u6700\u65b0\u6d88\u606f")}</h2>
+                  </div>
+                  <div class="service-news-list">${news}</div>
+                </section>`
+              : ""
+          }
+
           <section class="detail-section">
             <div class="detail-section-heading">
               <p class="eyebrow">Process</p>

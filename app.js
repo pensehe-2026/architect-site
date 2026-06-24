@@ -131,6 +131,20 @@ const renderUpdates = (items = []) => {
     .join("");
 };
 
+const getServiceNews = (content = currentContent) =>
+  (content?.services || []).flatMap((service) =>
+    (service.detail?.news || []).map((item) => ({
+      ...item,
+      category: item.category || service.title,
+      href: item.href || `${service.href || `service.html?item=${service.slug}`}#service-news`,
+    })),
+  );
+
+const getAllUpdates = (content = currentContent) =>
+  [...(content?.updates || []), ...getServiceNews(content)].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
+
 const renderServices = (items = []) => {
   const target = document.querySelector("#serviceList");
   target.innerHTML = items
@@ -215,7 +229,7 @@ const renderContent = (content) => {
 
   renderMetrics(content.metrics);
   renderProjects(content.projects);
-  renderUpdates(content.updates);
+  renderUpdates(getAllUpdates(content));
   renderRegulations(content.regulations);
   renderServices(content.services);
   renderUsefulLinks(content.usefulLinks);
@@ -295,7 +309,7 @@ const buildSearchIndex = (content = currentContent) => {
       href: item.href || "#regulations",
       keywords: item.type,
     })),
-    ...(content.updates || []).map((item) => ({
+    ...getAllUpdates(content).map((item) => ({
       type: "動態",
       title: item.title,
       summary: item.summary,
