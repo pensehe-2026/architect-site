@@ -437,7 +437,8 @@ const appendAiMessage = (role, text) => {
   if (!target) return null;
   const node = document.createElement("article");
   node.className = `ai-chat-message ${role}`;
-  const linkedText = escapeHTML(text)
+  const normalizedText = String(text).replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1：$2");
+  const linkedText = escapeHTML(normalizedText)
     .replace(/\n/g, "<br>")
     .replace(
       /(^|[\s(（])((?:https?:\/\/[^\s<>()）]+)|(?:[A-Za-z0-9_-]+\.html(?:\?[^\s<>()）]+)?(?:#[^\s<>()）]+)?)|(?:index\.html#[^\s<>()）]+)|(?:#[A-Za-z0-9_-]+))/g,
