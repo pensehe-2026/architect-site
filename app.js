@@ -441,11 +441,11 @@ const appendAiMessage = (role, text) => {
   const linkedText = escapeHTML(normalizedText)
     .replace(/\n/g, "<br>")
     .replace(
-      /(^|[\s(（])((?:https?:\/\/[^\s<>()）]+)|(?:[A-Za-z0-9_-]+\.html(?:\?[^\s<>()）]+)?(?:#[^\s<>()）]+)?)|(?:index\.html#[^\s<>()）]+)|(?:#[A-Za-z0-9_-]+))/g,
+      /(^|[\s(（])((?:https?:\/\/[^\s<>()），。；、]+)|(?:[A-Za-z0-9_-]+\.html(?:\?[^\s<>()），。；、]+)?(?:#[^\s<>()），。；、]+)?)|(?:index\.html#[^\s<>()），。；、]+)|(?:#[A-Za-z0-9_-]+))/g,
       (match, prefix, url) => {
         const href = url.startsWith("#") ? `index.html${url}` : url;
         const external = href.startsWith("http");
-        return `${prefix}<a href="${href}"${external ? ' target="_blank" rel="noreferrer"' : ""}>${url}</a>`;
+        return `${prefix}<a href="${href}"${external ? ' target="_blank" rel="noreferrer"' : ""}>這裡</a>`;
       },
     );
   node.innerHTML = `<p>${linkedText}</p>`;
