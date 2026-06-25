@@ -437,7 +437,17 @@ const appendAiMessage = (role, text) => {
   if (!target) return null;
   const node = document.createElement("article");
   node.className = `ai-chat-message ${role}`;
-  node.innerHTML = `<p>${escapeHTML(text)}</p>`;
+  const linkedText = escapeHTML(text)
+    .replace(/\n/g, "<br>")
+    .replace(
+      /(^|[\s(（])((?:https?:\/\/[^\s<>()）]+)|(?:[A-Za-z0-9_-]+\.html(?:\?[^\s<>()）]+)?(?:#[^\s<>()）]+)?)|(?:index\.html#[^\s<>()）]+)|(?:#[A-Za-z0-9_-]+))/g,
+      (match, prefix, url) => {
+        const href = url.startsWith("#") ? `index.html${url}` : url;
+        const external = href.startsWith("http");
+        return `${prefix}<a href="${href}"${external ? ' target="_blank" rel="noreferrer"' : ""}>${url}</a>`;
+      },
+    );
+  node.innerHTML = `<p>${linkedText}</p>`;
   target.append(node);
   target.scrollTop = target.scrollHeight;
   return node;
