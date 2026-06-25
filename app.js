@@ -478,9 +478,11 @@ const submitAiChat = async (event) => {
     const payload = await response.json().catch(() => ({}));
     if (!response.ok) throw new Error(payload.error || "AI service unavailable");
     pending.querySelector("p").textContent = payload.answer || "目前沒有取得回覆。";
+    pending.scrollIntoView({ block: "nearest" });
   } catch (error) {
     pending.querySelector("p").textContent =
       "AI 對話窗口已接好，但目前還沒有可用的 Gemini 後端回覆。請確認 Netlify 已設定 GEMINI_API_KEY，並重新部署網站。";
+    pending.scrollIntoView({ block: "nearest" });
     console.warn(error);
   } finally {
     form.querySelector("button").disabled = false;
