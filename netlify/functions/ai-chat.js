@@ -9,13 +9,26 @@ const json = (statusCode, body) => ({
   body: JSON.stringify(body),
 });
 
+const knownAnswer = (question) => {
+  const compactQuestion = question.replace(/\s+/g, "");
+  const asksForBuildingDrawings =
+    /(竣工圖|竣工圖說|使用執照影本|建管圖說|圖說謄本|謄本)/.test(compactQuestion) &&
+    /(申請|哪裡|表單|取得|調閱|領取|下載|怎麼辦|如何)/.test(compactQuestion);
+
+  if (asksForBuildingDrawings) {
+    return [
+      "可以進入「表單－台中市都市發展局表單下載」搜尋相關申請表單。",
+      "若不熟悉申請流程或應備文件，也可委託何中揚建築師事務所代為申請或協助確認。",
+      "正式判斷仍須依主管機關最新公告與專業人員審查。",
+    ].join("\n");
+  }
+
+  return "";
+};
+
 exports.handler = async (event) => {
   if (event.httpMethod !== "POST") {
     return json(405, { error: "Method not allowed" });
-  }
-
-  if (!GEMINI_API_KEY) {
-    return json(503, { error: "GEMINI_API_KEY is not configured" });
   }
 
   let payload;
@@ -32,11 +45,21 @@ exports.handler = async (event) => {
     return json(400, { error: "Question is required" });
   }
 
+  const fixedAnswer = knownAnswer(question);
+  if (fixedAnswer) {
+    return json(200, { answer: fixedAnswer });
+  }
+
+  if (!GEMINI_API_KEY) {
+    return json(503, { error: "GEMINI_API_KEY is not configured" });
+  }
+
   const systemPrompt = [
     "你是何中揚建築師事務所網站的法規與服務導覽助理。",
     "請使用繁體中文回答，語氣專業、清楚、簡潔。",
     "你只能根據提供的網站資料、法規摘要、建管實務摘要與最新消息回答。",
     "如果使用者問題的關鍵詞出現在網站資料中，請視為已有可用資料，直接整理重點，不要回答查不到服務項目。",
+    "使用者詢問竣工圖謄本、使用執照影本、建管圖說或申請表單時，優先引導至「表單－台中市都市發展局表單下載」搜尋，也可說明可委託何中揚建築師事務所代為申請。",
     "如果資料不足，請先列出目前能從資料判斷的方向，再明確說明哪些部分需要由事務所進一步確認。",
     "不要編造法條、日期、費用、補助金額或審查結果。",
     "涉及建築法規、申請流程或補助資格時，請用條列式回答：準備事項、流程重點、需要確認的風險、建議下一步。",
