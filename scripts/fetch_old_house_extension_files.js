@@ -48,6 +48,36 @@ const selectedListItems = [
   },
 ];
 
+const directFileNames = {
+  1: "official-01-taichung-old-house-extension-announcement.pdf",
+  3: "official-03-briefing-1150623.pdf",
+  4: "official-04-faq-11505.pdf",
+  5: "official-05-brochure.pdf",
+  7: "official-07-application-flow.pdf",
+  8: "official-08-repair-subsidy-regulations.pdf",
+};
+
+const attachmentFileNames = {
+  1: "official-02-01-apartment-repair-demand-form.pdf",
+  2: "official-02-02-apartment-repair-demand-form.docx",
+  3: "official-02-03-apartment-repair-demand-form.odt",
+  4: "official-02-04-townhouse-repair-demand-form.pdf",
+  5: "official-02-05-townhouse-repair-demand-form.odt",
+  6: "official-02-06-townhouse-repair-demand-form.docx",
+  7: "official-02-07-apartment-repair-plan-subsidy.pdf",
+  8: "official-02-08-apartment-repair-plan-subsidy.docx",
+  9: "official-02-09-apartment-repair-plan-subsidy.odt",
+  10: "official-02-10-apartment-required-documents.pdf",
+  11: "official-02-11-apartment-required-documents.docx",
+  12: "official-02-12-apartment-required-documents.odt",
+  13: "official-02-13-townhouse-repair-plan-subsidy.pdf",
+  14: "official-02-14-townhouse-repair-plan-subsidy.odt",
+  15: "official-02-15-townhouse-repair-plan-subsidy.docx",
+  16: "official-02-16-townhouse-required-documents.pdf",
+  17: "official-02-17-townhouse-required-documents.docx",
+  18: "official-02-18-townhouse-required-documents.odt",
+};
+
 const requestText = (url) =>
   new Promise((resolve, reject) => {
     https
@@ -147,7 +177,7 @@ const main = async () => {
 
   const directResources = [];
   for (const item of selectedListItems) {
-    const fileName = safeFileName(item.url, item.number, item.title);
+    const fileName = directFileNames[item.number] || safeFileName(item.url, item.number, item.title);
     const target = path.join(OUT_DIR, fileName);
     await download(item.url, target);
     directResources.push({
@@ -159,7 +189,7 @@ const main = async () => {
   const attachmentResources = [];
   let attachmentIndex = 1;
   for (const item of postAttachments) {
-    const fileName = safeFileName(item.url, `2-${attachmentIndex}`, item.title);
+    const fileName = attachmentFileNames[attachmentIndex] || safeFileName(item.url, `2-${attachmentIndex}`, item.title);
     const target = path.join(OUT_DIR, fileName);
     await download(item.url, target);
     attachmentResources.push({

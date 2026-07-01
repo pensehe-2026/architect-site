@@ -626,7 +626,7 @@ window.SITE_CONTENT = {
         "resources": [
           {
             "title": "官方1｜臺中市老宅延壽機能復新計畫公告1150624",
-            "href": "assets/regulations/old-house-life-extension/01-臺中市老宅延壽機能復新計畫公告.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-01-taichung-old-house-extension-announcement.pdf"
           },
           {
             "title": "官方2｜老宅延壽相關補助申請書件（官方內頁）",
@@ -634,119 +634,119 @@ window.SITE_CONTENT = {
           },
           {
             "title": "官方2｜一、公寓類4至6樓公寓修繕需求申請表.pdf",
-            "href": "assets/regulations/old-house-life-extension/2-1-一-公寓類4至6樓公寓修繕需求申請表.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-02-01-apartment-repair-demand-form.pdf"
           },
           {
             "title": "官方2｜一、公寓類4至6樓公寓修繕需求申請表.docx",
-            "href": "assets/regulations/old-house-life-extension/2-2-一-公寓類4至6樓公寓修繕需求申請表.docx"
+            "href": "assets/regulations/old-house-life-extension/official-02-02-apartment-repair-demand-form.docx"
           },
           {
             "title": "官方2｜一、公寓類4至6樓公寓修繕需求申請表.odt",
-            "href": "assets/regulations/old-house-life-extension/2-3-一-公寓類4至6樓公寓修繕需求申請表.odt"
+            "href": "assets/regulations/old-house-life-extension/official-02-03-apartment-repair-demand-form.odt"
           },
           {
             "title": "官方2｜二、透天類6樓以下透天住宅修繕需求申請表.pdf",
-            "href": "assets/regulations/old-house-life-extension/2-4-二-透天類6樓以下透天住宅修繕需求申請表.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-02-04-townhouse-repair-demand-form.pdf"
           },
           {
             "title": "官方2｜二、透天類6樓以下透天住宅修繕需求申請表.odt",
-            "href": "assets/regulations/old-house-life-extension/2-5-二-透天類6樓以下透天住宅修繕需求申請表.odt"
+            "href": "assets/regulations/old-house-life-extension/official-02-05-townhouse-repair-demand-form.odt"
           },
           {
             "title": "官方2｜二、透天類6樓以下透天住宅修繕需求申請表.docx",
-            "href": "assets/regulations/old-house-life-extension/2-6-二-透天類6樓以下透天住宅修繕需求申請表.docx"
+            "href": "assets/regulations/old-house-life-extension/official-02-06-townhouse-repair-demand-form.docx"
           },
           {
             "title": "官方2｜三、公寓類4至6樓公寓修繕計畫暨結構安全性能評估申請補助計畫書.pdf",
-            "href": "assets/regulations/old-house-life-extension/2-7-三-公寓類4至6樓公寓修繕計畫暨結構安全性能評估申請補助計畫書.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-02-07-apartment-repair-plan-subsidy.pdf"
           },
           {
             "title": "官方2｜三、公寓類4至6樓公寓修繕計畫暨結構安全性能評估申請補助計畫書.docx",
-            "href": "assets/regulations/old-house-life-extension/2-8-三-公寓類4至6樓公寓修繕計畫暨結構安全性能評估申請補助計畫書.docx"
+            "href": "assets/regulations/old-house-life-extension/official-02-08-apartment-repair-plan-subsidy.docx"
           },
           {
             "title": "官方2｜三、公寓類4至6樓公寓修繕計畫暨結構安全性能評估申請補助計畫書.odt",
-            "href": "assets/regulations/old-house-life-extension/2-9-三-公寓類4至6樓公寓修繕計畫暨結構安全性能評估申請補助計畫書.odt"
+            "href": "assets/regulations/old-house-life-extension/official-02-09-apartment-repair-plan-subsidy.odt"
           },
           {
             "title": "官方2｜四、公寓類4至6樓公寓修繕計畫暨結構安全性能評估申請補助計畫書-應檢附文件說明.pdf",
-            "href": "assets/regulations/old-house-life-extension/2-10-四-公寓類4至6樓公寓修繕計畫暨結構安全性能評估申請補助計畫書-應檢附文件說明.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-02-10-apartment-required-documents.pdf"
           },
           {
             "title": "官方2｜四、公寓類4至6樓公寓修繕計畫暨結構安全性能評估申請補助計畫書-應檢附文件說明.docx",
-            "href": "assets/regulations/old-house-life-extension/2-11-四-公寓類4至6樓公寓修繕計畫暨結構安全性能評估申請補助計畫書-應檢附文件說明.docx"
+            "href": "assets/regulations/old-house-life-extension/official-02-11-apartment-required-documents.docx"
           },
           {
             "title": "官方2｜四、公寓類4至6樓公寓修繕計畫暨結構安全性能評估申請補助計畫書-應檢附文件說明.odt",
-            "href": "assets/regulations/old-house-life-extension/2-12-四-公寓類4至6樓公寓修繕計畫暨結構安全性能評估申請補助計畫書-應檢附文件說明.odt"
+            "href": "assets/regulations/old-house-life-extension/official-02-12-apartment-required-documents.odt"
           },
           {
             "title": "官方2｜五、透天類6樓以下透天住宅修繕計畫暨結構安全性能評估申請補助計畫書.pdf",
-            "href": "assets/regulations/old-house-life-extension/2-13-五-透天類6樓以下透天住宅修繕計畫暨結構安全性能評估申請補助計畫書.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-02-13-townhouse-repair-plan-subsidy.pdf"
           },
           {
             "title": "官方2｜五、透天類6樓以下透天住宅修繕計畫暨結構安全性能評估申請補助計畫書.odt",
-            "href": "assets/regulations/old-house-life-extension/2-14-五-透天類6樓以下透天住宅修繕計畫暨結構安全性能評估申請補助計畫書.odt"
+            "href": "assets/regulations/old-house-life-extension/official-02-14-townhouse-repair-plan-subsidy.odt"
           },
           {
             "title": "官方2｜五、透天類6樓以下透天住宅修繕計畫暨結構安全性能評估申請補助計畫書.docx",
-            "href": "assets/regulations/old-house-life-extension/2-15-五-透天類6樓以下透天住宅修繕計畫暨結構安全性能評估申請補助計畫書.docx"
+            "href": "assets/regulations/old-house-life-extension/official-02-15-townhouse-repair-plan-subsidy.docx"
           },
           {
             "title": "官方2｜六、透天類6樓以下透天住宅修繕計畫暨結構安全性能評估申請補助計畫書-應檢附文件說明.pdf",
-            "href": "assets/regulations/old-house-life-extension/2-16-六-透天類6樓以下透天住宅修繕計畫暨結構安全性能評估申請補助計畫書-應檢附文件說明.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-02-16-townhouse-required-documents.pdf"
           },
           {
             "title": "官方2｜六、透天類6樓以下透天住宅修繕計畫暨結構安全性能評估申請補助計畫書-應檢附文件說明.docx",
-            "href": "assets/regulations/old-house-life-extension/2-17-六-透天類6樓以下透天住宅修繕計畫暨結構安全性能評估申請補助計畫書-應檢附文件說明.docx"
+            "href": "assets/regulations/old-house-life-extension/official-02-17-townhouse-required-documents.docx"
           },
           {
             "title": "官方2｜六、透天類6樓以下透天住宅修繕計畫暨結構安全性能評估申請補助計畫書-應檢附文件說明.odt",
-            "href": "assets/regulations/old-house-life-extension/2-18-六-透天類6樓以下透天住宅修繕計畫暨結構安全性能評估申請補助計畫書-應檢附文件說明.odt"
+            "href": "assets/regulations/old-house-life-extension/official-02-18-townhouse-required-documents.odt"
           },
           {
             "title": "官方3｜老宅延壽說明會簡報1150623",
-            "href": "assets/regulations/old-house-life-extension/03-老宅延壽說明會簡報1150623.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-03-briefing-1150623.pdf"
           },
           {
             "title": "官方4｜內政部老宅延壽問答集",
-            "href": "assets/regulations/old-house-life-extension/04-老宅延壽問答集11505.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-04-faq-11505.pdf"
           },
           {
             "title": "官方5｜老宅延壽機能復新計畫宣傳摺頁",
-            "href": "assets/regulations/old-house-life-extension/05-摺頁.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-05-brochure.pdf"
           },
           {
             "title": "官方7｜內政部老宅延壽計畫建築物修繕補助申請流程圖",
-            "href": "assets/regulations/old-house-life-extension/07-內政部老宅延壽計畫建築物修繕補助申請流程圖.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-07-application-flow.pdf"
           },
           {
             "title": "官方8｜因應國際情勢強化老舊建築物修繕補助辦法",
-            "href": "assets/regulations/old-house-life-extension/08-因應國際情勢強化老舊建築物修繕補助辦法.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-08-repair-subsidy-regulations.pdf"
           },
           {
             "title": "老宅延壽流程圖 PNG",
-            "href": "提供的資料/老屋延壽/老宅延壽流程圖.png"
+            "href": "assets/regulations/old-house-life-extension/old-house-flow.png"
           },
           {
             "title": "內政部老宅延壽計畫建築物修繕補助申請流程圖 PDF",
-            "href": "提供的資料/老屋延壽/內政部老宅延壽計畫建築物修繕補助申請流程圖.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-07-application-flow.pdf"
           },
           {
             "title": "因應國際情勢強化老舊建築物修繕補助辦法 PDF",
-            "href": "提供的資料/老屋延壽/因應國際情勢強化老舊建築物修繕補助辦法.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-08-repair-subsidy-regulations.pdf"
           },
           {
             "title": "老宅延壽問答集 115.05 PDF",
-            "href": "提供的資料/老屋延壽/老宅延壽問答集115.05.pdf"
+            "href": "assets/regulations/old-house-life-extension/official-04-faq-11505.pdf"
           },
           {
             "title": "公寓類 4至6樓公寓修繕需求申請表 ODT",
-            "href": "提供的資料/老屋延壽/一、公寓類 - 4至6樓公寓修繕需求申請表.odt"
+            "href": "assets/regulations/old-house-life-extension/official-02-03-apartment-repair-demand-form.odt"
           },
           {
             "title": "透天類 6樓以下透天住宅修繕需求申請表 ODT",
-            "href": "提供的資料/老屋延壽/三、透天類 - 6樓以下透天住宅修繕需求申請表.odt"
+            "href": "assets/regulations/old-house-life-extension/official-02-05-townhouse-repair-demand-form.odt"
           }
         ],
         "sourceImage": "assets/old-house-flow-source.png",
