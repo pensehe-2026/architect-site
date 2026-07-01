@@ -404,13 +404,6 @@ window.SITE_CONTENT = {
   ],
   "updates": [
     {
-      "date": "2026-06-25",
-      "category": "危老延壽",
-      "title": "臺中市老宅延壽機能復新計畫公告1150624",
-      "summary": "臺中市都市發展局公告老宅延壽機能復新計畫受理資訊，申請前可先確認建物資格、住戶共識、修繕項目與應備文件。",
-      "href": "service.html?item=old-house-life-extension#service-news"
-    },
-    {
       "date": "2026-05-20",
       "title": "公告開放本市建築工程所產出營建剩餘土石方得運至彰濱產業園區崙尾暫置區暫置，並自即日起生效。",
       "category": "台中公告",
@@ -423,6 +416,13 @@ window.SITE_CONTENT = {
       "category": "台中公告",
       "summary": "中市都管字第1150093816號公告",
       "href": "taichung-regulation-detail.html?id=GL004774"
+    },
+    {
+      "date": "2026-06-25",
+      "category": "危老延壽",
+      "title": "臺中市老宅延壽機能復新計畫公告1150624",
+      "summary": "臺中市都市發展局公告老宅延壽機能復新計畫受理資訊，申請前可先確認建物資格、住戶共識、修繕項目與應備文件。",
+      "href": "service.html?item=old-house-life-extension#service-news"
     },
     {
       "date": "2026-05-28T18:30:00+08:00",
