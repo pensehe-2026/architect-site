@@ -1169,6 +1169,82 @@ h1 {
   margin-bottom: 0;
 }
 
+.architect-profile {
+  display: grid;
+  gap: 26px;
+}
+
+.architect-profile-lead span,
+.architect-profile h4 {
+  color: var(--cobalt);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.architect-profile-lead h3 {
+  margin: 8px 0 0;
+  font-size: clamp(30px, 4vw, 56px);
+  font-weight: 500;
+}
+
+.architect-profile-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 18px;
+}
+
+.architect-profile-grid section {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.architect-profile h4 {
+  margin: 0 0 16px;
+}
+
+.credential-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+
+.credential-list div {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 18px;
+  align-items: baseline;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.credential-list div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.credential-list dt {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.credential-list dd,
+.credential-highlight p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.credential-highlight strong {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--ink);
+  font-size: 18px;
+}
+
 .about-card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2802,6 +2878,7 @@ h1 {
   .trust-grid,
   .about-hero,
   .about-section,
+  .architect-profile-grid,
   .about-card-grid,
   .about-award-card,
   .award-media-grid,
@@ -2833,6 +2910,11 @@ h1 {
 
   #architectMessageTitle {
     white-space: normal;
+  }
+
+  .credential-list div {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
   .interpretation-list li::before {
