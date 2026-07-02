@@ -2451,6 +2451,13 @@ h1 {
   text-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
 }
 
+.hero-content h1 {
+  max-width: none;
+  font-size: clamp(28px, calc((100vw - 72px) / 18), 56px);
+  line-height: 1.22;
+  white-space: pre;
+}
+
 .hero-content p:not(.eyebrow) {
   max-width: 920px;
   font-size: clamp(17px, 1.45vw, 21px);
