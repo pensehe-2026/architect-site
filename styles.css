@@ -1191,7 +1191,7 @@ h1 {
 
 .architect-profile-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  grid-template-columns: 1fr;
   gap: 18px;
 }
 
