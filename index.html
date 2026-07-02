@@ -16,37 +16,81 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/ho-chung-yang-hero.png" />
     <link rel="preload" href="assets/ho-chung-yang-hero.png" as="image" />
-    <link rel="stylesheet" href="styles.css?v=20260702-hero-oneline" />
+    <link rel="stylesheet" href="styles.css?v=20260702-search-aio" />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Architect",
-        "name": "何中揚建築師事務所",
-        "alternateName": "HO CHUNG YANG Architecture firm + Yu-Yi Interior Design",
-        "url": "https://www.hcy-architecture.com.tw/",
-        "description": "台中市建築師事務所，提供變更使用、室內裝修、老屋延壽、房屋拉皮、整建維護、養生宅、共生宅、建案規劃、分戶、合併戶、法定空地分割與建築法規顧問服務。",
-        "email": "Hodesign2013@gmail.com",
-        "telephone": "+886-4-2229-1885",
-        "faxNumber": "+886-4-2229-1868",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "西區自由路一段101號20樓202室",
-          "addressLocality": "台中市",
-          "addressCountry": "TW"
-        },
-        "areaServed": ["台中市", "彰化縣", "南投縣", "苗栗縣", "雲林縣"],
-        "knowsAbout": ["台中市建築師", "變更使用", "老屋延壽", "房屋拉皮", "室內裝修", "整建維護", "養生宅", "共生宅", "建案", "分戶", "合併戶", "法定空地分割", "建築設計", "建築法規"],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "建築與建物管理服務",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "變更使用執照與室內裝修許可" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "老屋延壽與房屋拉皮整建維護" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "建案規劃、共生宅與養生宅評估" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "分戶、合併戶與法定空地分割" } }
-          ]
-        }
+        "@graph": [
+          {
+            "@type": ["Architect", "LocalBusiness", "ProfessionalService"],
+            "@id": "https://www.hcy-architecture.com.tw/#studio",
+            "name": "何中揚建築師事務所",
+            "alternateName": ["HO CHUNG YANG Architecture firm", "宇邑空間設計", "Yu-Yi Interior Design"],
+            "url": "https://www.hcy-architecture.com.tw/",
+            "image": "https://www.hcy-architecture.com.tw/assets/ho-chung-yang-hero.png",
+            "description": "台中市建築師事務所，提供變更使用、室內裝修、老屋延壽、房屋拉皮、整建維護、養生宅、共生宅、建案規劃、分戶、合併戶、法定空地分割與建築法規顧問服務。",
+            "email": "Hodesign2013@gmail.com",
+            "telephone": "+886-4-2229-1885",
+            "faxNumber": "+886-4-2229-1868",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "西區自由路一段101號20樓202室",
+              "addressLocality": "台中市",
+              "addressCountry": "TW"
+            },
+            "areaServed": ["台中市", "彰化縣", "南投縣", "苗栗縣", "雲林縣"],
+            "knowsAbout": ["台中市建築師", "變更使用", "老屋延壽", "房屋拉皮", "室內裝修", "整建維護", "養生宅", "共生宅", "建案", "分戶", "合併戶", "法定空地分割", "建築設計", "建築法規"],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "台中市建築與建物管理服務",
+              "itemListElement": [
+                { "@type": "Offer", "url": "https://www.hcy-architecture.com.tw/service.html?item=change-use-interior-permit", "itemOffered": { "@type": "Service", "name": "變更使用執照與室內裝修許可" } },
+                { "@type": "Offer", "url": "https://www.hcy-architecture.com.tw/service.html?item=old-house-life-extension", "itemOffered": { "@type": "Service", "name": "老屋延壽、房屋拉皮與整建維護" } },
+                { "@type": "Offer", "url": "https://www.hcy-architecture.com.tw/service.html?item=housing-planning", "itemOffered": { "@type": "Service", "name": "建案規劃、共生宅與養生宅評估" } },
+                { "@type": "Offer", "url": "https://www.hcy-architecture.com.tw/service.html?item=other-services", "itemOffered": { "@type": "Service", "name": "分戶、合併戶與法定空地分割" } }
+              ]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.hcy-architecture.com.tw/#website",
+            "url": "https://www.hcy-architecture.com.tw/",
+            "name": "何中揚建築師事務所",
+            "publisher": { "@id": "https://www.hcy-architecture.com.tw/#studio" },
+            "inLanguage": "zh-Hant-TW"
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://www.hcy-architecture.com.tw/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "台中市變更使用或室內裝修許可可以找誰協助？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "可委託何中揚建築師事務所協助用途檢討、圖說整合、消防與建築法規檢核、申請文件準備與送審流程。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "老屋延壽、房屋拉皮與整建維護要先做什麼？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "可先確認屋齡、建物型態、合法建築物證明、住戶共識與修繕需求，再評估補助資格、結構安全性能評估、修繕計畫與施工整合。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "分戶、合併戶、法定空地分割或解除套繪可以協助嗎？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "何中揚建築師事務所可協助法定空地分割、解除套繪、農地解除套繪、分戶、合併戶、土地分割、使用執照影本與竣工圖說申請等建築行政服務。"
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
   </head>
@@ -170,6 +214,30 @@
             <strong>查看熱銷建案、私人建案與共生宅作品</strong>
           </a>
         </nav>
+      </section>
+
+      <section class="search-faq-section" aria-labelledby="searchFaqTitle">
+        <div class="section-heading compact">
+          <p class="eyebrow">Search FAQ</p>
+          <h2 id="searchFaqTitle">常見搜尋問題</h2>
+        </div>
+        <div class="search-faq-grid">
+          <article>
+            <h3>台中市變更使用或室內裝修許可可以找誰協助？</h3>
+            <p>可委託何中揚建築師事務所協助用途檢討、圖說整合、消防與建築法規檢核、申請文件準備與送審流程。</p>
+            <a href="service.html?item=change-use-interior-permit">查看變更使用與室內裝修服務</a>
+          </article>
+          <article>
+            <h3>老屋延壽、房屋拉皮與整建維護要先做什麼？</h3>
+            <p>先確認屋齡、合法建築物證明、住戶共識、修繕需求與補助資格，再安排結構安全性能評估、修繕計畫與工程整合。</p>
+            <a href="service.html?item=old-house-life-extension">查看老屋延壽專區</a>
+          </article>
+          <article>
+            <h3>分戶、合併戶、法定空地分割或解除套繪可以協助嗎？</h3>
+            <p>可協助法定空地分割、解除套繪、農地解除套繪、分戶、合併戶、土地分割、使用執照影本與竣工圖說申請。</p>
+            <a href="service.html?item=other-services">查看其他建築行政服務</a>
+          </article>
+        </div>
       </section>
 
       <section class="section-grid" id="projects" aria-labelledby="projectsTitle">

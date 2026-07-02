@@ -2696,6 +2696,47 @@ h1 {
   line-height: 1.55;
 }
 
+.search-faq-section {
+  width: min(1180px, calc(100% - 44px));
+  margin: 0 auto;
+  padding: 0 0 56px;
+}
+
+.search-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.search-faq-grid article {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid rgba(20, 42, 68, 0.14);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 40px rgba(20, 42, 68, 0.08);
+}
+
+.search-faq-grid h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 19px;
+  line-height: 1.55;
+}
+
+.search-faq-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.search-faq-grid a {
+  color: var(--cobalt);
+  font-weight: 800;
+}
+
 .contact-section {
   margin-top: 36px;
 }
@@ -2759,20 +2800,21 @@ h1 {
   .project-category-grid,
   .regulation-grid,
   .link-grid,
-    .service-list,
-    .seo-link-grid,
-    .detail-highlights,
-    .process-grid,
-    .split-section,
-    .detail-card-grid,
-    .resource-grid,
-    .journal-layout,
-    .journal-card,
-    .service-news-item,
-    .interpretation-list li,
-    .nlma-category-grid,
-    .nlma-title-item,
-    .nlma-article-content dl div {
+  .search-faq-grid,
+  .service-list,
+  .seo-link-grid,
+  .detail-highlights,
+  .process-grid,
+  .split-section,
+  .detail-card-grid,
+  .resource-grid,
+  .journal-layout,
+  .journal-card,
+  .service-news-item,
+  .interpretation-list li,
+  .nlma-category-grid,
+  .nlma-title-item,
+  .nlma-article-content dl div {
     grid-template-columns: 1fr;
   }
 

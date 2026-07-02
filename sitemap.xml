@@ -43,10 +43,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hcy-architecture.com.tw/building-practice-admin.html</loc>
+    <loc>https://www.hcy-architecture.com.tw/llms.txt</loc>
     <lastmod>2026-07-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.hcy-architecture.com.tw/service.html?item=land-development</loc>

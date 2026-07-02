@@ -46,7 +46,7 @@ def main() -> None:
         (url("nlma-regulations.html"), "0.8", "weekly"),
         (url("taichung-regulations.html"), "0.8", "weekly"),
         (url("building-practice.html"), "0.8", "monthly"),
-        (url("building-practice-admin.html"), "0.2", "yearly"),
+        (url("llms.txt"), "0.5", "monthly"),
     ]
 
     for service in site.get("services", []):
@@ -84,6 +84,9 @@ def main() -> None:
         [
             "User-agent: *",
             "Allow: /",
+            "Allow: /llms.txt",
+            "Disallow: /admin/",
+            "Disallow: /building-practice-admin.html",
             f"Sitemap: {url('sitemap.xml')}",
             "",
         ]
