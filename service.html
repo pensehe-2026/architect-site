@@ -8,7 +8,9 @@
     <meta name="robots" content="index, follow" />
     <meta property="og:title" content="建築服務項目 | 何中揚建築師事務所" />
     <meta property="og:description" content="查看土地開發、公共工程、老屋延壽、室內裝修與建築許可申請等服務內容。" />
-    <link rel="stylesheet" href="styles.css?v=20260701-premium-landing" />
+    <meta name="keywords" content="台中市建築師, 變更使用, 老屋延壽, 房屋拉皮, 室內裝修, 整建維護, 養生宅, 共生宅, 建案, 分戶, 合併戶, 法定空地分割" />
+    <link rel="canonical" href="https://www.hcy-architecture.com.tw/service.html" />
+    <link rel="stylesheet" href="styles.css?v=20260702-seo-aio" />
   </head>
   <body class="detail-page">
     <header class="site-header detail-header" aria-label="網站導覽">
@@ -41,7 +43,7 @@
       </section>
       <section class="service-detail-content" id="serviceDetailContent"></section>
     </main>
-    <script src="data/site-content.js?v=20260625-oldhouse-official"></script>
+    <script src="data/site-content.js?v=20260702-seo-aio"></script>
     <script>
       const params = new URLSearchParams(window.location.search);
       const slug = params.get("item");
@@ -188,12 +190,25 @@
 
       const renderService = (content) => {
         const service = content.services.find((item) => item.slug === slug) || content.services[0];
-        const seoTitle = `台中${service.title} | 何中揚建築師事務所`;
-        const seoDescription = `${service.title}服務：${service.detail?.lead || service.description} 由何中揚建築師事務所協助評估、規劃、申請與法規顧問。`;
+        const serviceKeywords = service.keywords || [];
+        const seoTitle = service.seoTitle || `台中市${service.title} | 何中揚建築師事務所`;
+        const seoDescription =
+          service.seoDescription ||
+          `${service.title}服務：${service.detail?.lead || service.description} 由何中揚建築師事務所協助評估、規劃、申請與法規顧問。`;
         document.title = seoTitle;
         document.querySelector('meta[name="description"]')?.setAttribute("content", seoDescription);
+        document
+          .querySelector('meta[name="keywords"]')
+          ?.setAttribute(
+            "content",
+            ["台中市建築師", service.title, ...serviceKeywords, "何中揚建築師事務所"].filter(Boolean).join(", "),
+          );
         document.querySelector('meta[property="og:title"]')?.setAttribute("content", seoTitle);
         document.querySelector('meta[property="og:description"]')?.setAttribute("content", seoDescription);
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) {
+          canonical.href = `https://www.hcy-architecture.com.tw/service.html?item=${encodeURIComponent(service.slug)}`;
+        }
         document.querySelector("#serviceTitle").textContent = service.title;
         document.querySelector("#serviceDescription").textContent = service.description;
         const schema = {
@@ -213,7 +228,9 @@
               "addressCountry": "TW"
             }
           },
-          "areaServed": "台中市"
+          "areaServed": "台中市",
+          "serviceType": serviceKeywords,
+          "url": `https://www.hcy-architecture.com.tw/service.html?item=${encodeURIComponent(service.slug)}`
         };
         const schemaNode = document.createElement("script");
         schemaNode.type = "application/ld+json";
