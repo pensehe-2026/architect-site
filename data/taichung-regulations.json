@@ -2,7 +2,7 @@
   "source": "臺中市政府主管法規查詢系統",
   "sourceUrl": "https://law.taichung.gov.tw/LawCategoryMain.aspx?type=M&CategoryID=0308",
   "generatedAt": "2026-06-02T00:00:00+08:00",
-  "total": 345,
+  "total": 347,
   "categories": [
     {
       "id": "030801",
@@ -9369,8 +9369,83 @@
       "id": "030804",
       "slug": "announcements",
       "name": "公告",
-      "count": 69,
+      "count": 71,
       "items": [
+        {
+          "id": "GL004800",
+          "dateRoc": "115.06.22",
+          "date": "2026-06-22",
+          "title": "預告修正「臺中市一定規模以上或特殊結構物範圍」公告草案。",
+          "type": "公告",
+          "href": "LawContent.aspx?id=GL004800",
+          "officialUrl": "https://law.taichung.gov.tw/LawContent.aspx?id=GL004800",
+          "categoryId": "030804",
+          "categorySlug": "announcements",
+          "categoryName": "公告",
+          "localPage": "assets/regulations/taichung/pages/GL004800.html",
+          "fields": {
+            "法規名稱": "預告修正「臺中市一定規模以上或特殊結構物範圍」公告草案。",
+            "公發布日": "民國 115 年 06 月 22 日",
+            "發文字號": "中市都公字第1150124125號公告",
+            "法規體系": "臺中市法規/都市發展類/公告",
+            "全文檔案": "中市都工字第1150124125號公告.pdf"
+          },
+          "attachments": [
+            {
+              "name": "中市都工字第1150124125號公告.pdf",
+              "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136920&id=GL004800&type=LAW",
+              "localFile": "assets/regulations/taichung/files/GL004800/中市都工字第1150124125號公告.pdf"
+            }
+          ],
+          "paragraphs": [
+            "如附件檔。"
+          ]
+        },
+        {
+          "id": "GL004801",
+          "dateRoc": "115.06.22",
+          "date": "2026-06-22",
+          "title": "預告修正本市建築物施工管理相關作業規定及表單草案。",
+          "type": "公告",
+          "href": "LawContent.aspx?id=GL004801",
+          "officialUrl": "https://law.taichung.gov.tw/LawContent.aspx?id=GL004801",
+          "categoryId": "030804",
+          "categorySlug": "announcements",
+          "categoryName": "公告",
+          "localPage": "assets/regulations/taichung/pages/GL004801.html",
+          "fields": {
+            "法規名稱": "預告修正本市建築物施工管理相關作業規定及表單草案。",
+            "公發布日": "民國 115 年 06 月 22 日",
+            "發文字號": "中市都工字第11501241251號公告",
+            "法規體系": "臺中市法規/都市發展類/公告",
+            "圖表附件": "中市都工字第11501241251號公告.pdf 附件1-臺中市建築執照與雜項執照申報開工查核表.pdf 附件2-臺中市建築物申報施工勘驗書件初審表.pdf 附件3-臺中市政府都市發展局使用執照審查紀錄單.pdf"
+          },
+          "attachments": [
+            {
+              "name": "中市都工字第11501241251號公告.pdf",
+              "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136921&id=GL004801&type=LAW",
+              "localFile": "assets/regulations/taichung/files/GL004801/中市都工字第11501241251號公告.pdf"
+            },
+            {
+              "name": "附件1-臺中市建築執照與雜項執照申報開工查核表.pdf",
+              "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136922&id=GL004801&type=LAW",
+              "localFile": "assets/regulations/taichung/files/GL004801/附件1-臺中市建築執照與雜項執照申報開工查核表.pdf"
+            },
+            {
+              "name": "附件2-臺中市建築物申報施工勘驗書件初審表.pdf",
+              "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136923&id=GL004801&type=LAW",
+              "localFile": "assets/regulations/taichung/files/GL004801/附件2-臺中市建築物申報施工勘驗書件初審表.pdf"
+            },
+            {
+              "name": "附件3-臺中市政府都市發展局使用執照審查紀錄單.pdf",
+              "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136924&id=GL004801&type=LAW",
+              "localFile": "assets/regulations/taichung/files/GL004801/附件3-臺中市政府都市發展局使用執照審查紀錄單.pdf"
+            }
+          ],
+          "paragraphs": [
+            "如附件檔。"
+          ]
+        },
         {
           "id": "GL004780",
           "dateRoc": "115.05.20",
@@ -11629,29 +11704,29 @@
   ],
   "latestAnnouncements": [
     {
-      "id": "GL004780",
-      "dateRoc": "115.05.20",
-      "date": "2026-05-20",
-      "title": "公告開放本市建築工程所產出營建剩餘土石方得運至彰濱產業園區崙尾暫置區暫置，並自即日起生效。",
+      "id": "GL004800",
+      "dateRoc": "115.06.22",
+      "date": "2026-06-22",
+      "title": "預告修正「臺中市一定規模以上或特殊結構物範圍」公告草案。",
       "type": "公告",
-      "href": "LawContent.aspx?id=GL004780",
-      "officialUrl": "https://law.taichung.gov.tw/LawContent.aspx?id=GL004780",
+      "href": "LawContent.aspx?id=GL004800",
+      "officialUrl": "https://law.taichung.gov.tw/LawContent.aspx?id=GL004800",
       "categoryId": "030804",
       "categorySlug": "announcements",
       "categoryName": "公告",
-      "localPage": "assets/regulations/taichung/pages/GL004780.html",
+      "localPage": "assets/regulations/taichung/pages/GL004800.html",
       "fields": {
-        "法規名稱": "公告開放本市建築工程所產出營建剩餘土石方得運至彰濱產業園區崙尾暫置區暫置，並自即日起生效。",
-        "公發布日": "民國 115 年 05 月 20 日",
-        "發文字號": "中市都工字第1150094158號公告",
+        "法規名稱": "預告修正「臺中市一定規模以上或特殊結構物範圍」公告草案。",
+        "公發布日": "民國 115 年 06 月 22 日",
+        "發文字號": "中市都公字第1150124125號公告",
         "法規體系": "臺中市法規/都市發展類/公告",
-        "圖表附件": "中市都工字第1150094158號公告.pdf"
+        "全文檔案": "中市都工字第1150124125號公告.pdf"
       },
       "attachments": [
         {
-          "name": "中市都工字第1150094158號公告.pdf",
-          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136774&id=GL004780&type=LAW",
-          "localFile": "assets/regulations/taichung/files/GL004780/中市都工字第1150094158號公告.pdf"
+          "name": "中市都工字第1150124125號公告.pdf",
+          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136920&id=GL004800&type=LAW",
+          "localFile": "assets/regulations/taichung/files/GL004800/中市都工字第1150124125號公告.pdf"
         }
       ],
       "paragraphs": [
@@ -11659,29 +11734,44 @@
       ]
     },
     {
-      "id": "GL004774",
-      "dateRoc": "115.05.11",
-      "date": "2026-05-11",
-      "title": "公告本府都市發展局委託「中華民國建築物昇降暨機械停車設備協會」、「社團法人高雄市機械安全協會」及「台灣立體停車機械產業協會」等3家檢查機構辦理「115年度臺中市建築物昇降設備暨機械停車設備安全檢查結果委託抽驗」業務。",
+      "id": "GL004801",
+      "dateRoc": "115.06.22",
+      "date": "2026-06-22",
+      "title": "預告修正本市建築物施工管理相關作業規定及表單草案。",
       "type": "公告",
-      "href": "LawContent.aspx?id=GL004774",
-      "officialUrl": "https://law.taichung.gov.tw/LawContent.aspx?id=GL004774",
+      "href": "LawContent.aspx?id=GL004801",
+      "officialUrl": "https://law.taichung.gov.tw/LawContent.aspx?id=GL004801",
       "categoryId": "030804",
       "categorySlug": "announcements",
       "categoryName": "公告",
-      "localPage": "assets/regulations/taichung/pages/GL004774.html",
+      "localPage": "assets/regulations/taichung/pages/GL004801.html",
       "fields": {
-        "法規名稱": "公告本府都市發展局委託「中華民國建築物昇降暨機械停車設備協會」、「社團法人高雄市機械安全協會」及「台灣立體停車機械產業協會」等3家檢查機構辦理「115年度臺中市建築物昇降設備暨機械停車設備安全檢查結果委託抽驗」業務。",
-        "公發布日": "民國 115 年 05 月 11 日",
-        "發文字號": "中市都管字第1150093816號公告",
+        "法規名稱": "預告修正本市建築物施工管理相關作業規定及表單草案。",
+        "公發布日": "民國 115 年 06 月 22 日",
+        "發文字號": "中市都工字第11501241251號公告",
         "法規體系": "臺中市法規/都市發展類/公告",
-        "全文檔案": "中市都管字第1150093816號公告.pdf"
+        "圖表附件": "中市都工字第11501241251號公告.pdf 附件1-臺中市建築執照與雜項執照申報開工查核表.pdf 附件2-臺中市建築物申報施工勘驗書件初審表.pdf 附件3-臺中市政府都市發展局使用執照審查紀錄單.pdf"
       },
       "attachments": [
         {
-          "name": "中市都管字第1150093816號公告.pdf",
-          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136742&id=GL004774&type=LAW",
-          "localFile": "assets/regulations/taichung/files/GL004774/中市都管字第1150093816號公告.pdf"
+          "name": "中市都工字第11501241251號公告.pdf",
+          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136921&id=GL004801&type=LAW",
+          "localFile": "assets/regulations/taichung/files/GL004801/中市都工字第11501241251號公告.pdf"
+        },
+        {
+          "name": "附件1-臺中市建築執照與雜項執照申報開工查核表.pdf",
+          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136922&id=GL004801&type=LAW",
+          "localFile": "assets/regulations/taichung/files/GL004801/附件1-臺中市建築執照與雜項執照申報開工查核表.pdf"
+        },
+        {
+          "name": "附件2-臺中市建築物申報施工勘驗書件初審表.pdf",
+          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136923&id=GL004801&type=LAW",
+          "localFile": "assets/regulations/taichung/files/GL004801/附件2-臺中市建築物申報施工勘驗書件初審表.pdf"
+        },
+        {
+          "name": "附件3-臺中市政府都市發展局使用執照審查紀錄單.pdf",
+          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136924&id=GL004801&type=LAW",
+          "localFile": "assets/regulations/taichung/files/GL004801/附件3-臺中市政府都市發展局使用執照審查紀錄單.pdf"
         }
       ],
       "paragraphs": [
