@@ -8,7 +8,7 @@ from xml.sax.saxutils import escape
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE_URL = "https://www.hcy-architecture.com.tw"
+SITE_URL = "https://bauhaus.com.tw"
 TODAY = date.today().isoformat()
 
 

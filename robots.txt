@@ -3,4 +3,4 @@ Allow: /
 Allow: /llms.txt
 Disallow: /admin/
 Disallow: /building-practice-admin.html
-Sitemap: https://www.hcy-architecture.com.tw/sitemap.xml
+Sitemap: https://bauhaus.com.tw/sitemap.xml

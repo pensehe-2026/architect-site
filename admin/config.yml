@@ -8,8 +8,8 @@ publish_mode: editorial_workflow
 media_folder: "assets/uploads"
 public_folder: "assets/uploads"
 
-site_url: "https://www.hcy-architecture.com.tw"
-display_url: "https://www.hcy-architecture.com.tw"
+site_url: "https://bauhaus.com.tw"
+display_url: "https://bauhaus.com.tw"
 logo_url: "/assets/ho-chung-yang-hero.png"
 locale: "zh_Hant"
 
