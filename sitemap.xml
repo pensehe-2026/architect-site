@@ -1657,6 +1657,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://bauhaus.com.tw/taichung-regulation-detail.html?id=GL002048</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://bauhaus.com.tw/taichung-regulation-detail.html?id=GL001335</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -1820,12 +1826,6 @@
   </url>
   <url>
     <loc>https://bauhaus.com.tw/taichung-regulation-detail.html?id=GL002731</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://bauhaus.com.tw/taichung-regulation-detail.html?id=GL002048</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -3203,6 +3203,18 @@
     <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bauhaus.com.tw/taichung-regulation-detail.html?id=GL004800</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://bauhaus.com.tw/taichung-regulation-detail.html?id=GL004801</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bauhaus.com.tw/taichung-regulation-detail.html?id=GL004780</loc>

@@ -404,18 +404,18 @@ window.SITE_CONTENT = {
   ],
   "updates": [
     {
-      "date": "2026-05-20",
-      "title": "公告開放本市建築工程所產出營建剩餘土石方得運至彰濱產業園區崙尾暫置區暫置，並自即日起生效。",
+      "date": "2026-06-22",
+      "title": "預告修正「臺中市一定規模以上或特殊結構物範圍」公告草案。",
       "category": "台中公告",
-      "summary": "中市都工字第1150094158號公告",
-      "href": "taichung-regulation-detail.html?id=GL004780"
+      "summary": "中市都公字第1150124125號公告",
+      "href": "taichung-regulation-detail.html?id=GL004800"
     },
     {
-      "date": "2026-05-11",
-      "title": "公告本府都市發展局委託「中華民國建築物昇降暨機械停車設備協會」、「社團法人高雄市機械安全協會」及「台灣立體停車機械產業協會」等3家檢查機構辦理「115年度臺中市建築物昇降設備暨機械停車設備安全檢查結果委託抽驗」業務。",
+      "date": "2026-06-22",
+      "title": "預告修正本市建築物施工管理相關作業規定及表單草案。",
       "category": "台中公告",
-      "summary": "中市都管字第1150093816號公告",
-      "href": "taichung-regulation-detail.html?id=GL004774"
+      "summary": "中市都工字第11501241251號公告",
+      "href": "taichung-regulation-detail.html?id=GL004801"
     },
     {
       "date": "2026-06-25",
