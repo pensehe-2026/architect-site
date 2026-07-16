@@ -1439,8 +1439,9 @@ h1 {
 
 .old-house-intro h1 {
   max-width: 880px;
-  font-size: clamp(42px, 6vw, 72px);
+  font-size: clamp(16px, 4.4vw, 56px);
   line-height: 1.08;
+  white-space: nowrap;
 }
 
 .old-house-intro > p:not(.eyebrow):not(.source-stamp) {
