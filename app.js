@@ -200,6 +200,8 @@ const renderContact = (contact = fallbackContent.contact) => {
   const addressText = document.querySelector("#addressText");
   const lineQrImagePrimary = document.querySelector("#lineQrImagePrimary");
   const lineQrImageSecondary = document.querySelector("#lineQrImageSecondary");
+  const lineAccountName = document.querySelector("#lineAccountName");
+  const lineAccountId = document.querySelector("#lineAccountId");
 
   emailLink.textContent = contact.email;
   emailLink.href = `mailto:${contact.email}`;
@@ -207,8 +209,10 @@ const renderContact = (contact = fallbackContent.contact) => {
   phoneLink.href = `tel:${contact.phone.split("/")[0].replaceAll(" ", "")}`;
   faxText.textContent = `傳真 ${contact.fax}`;
   addressText.textContent = contact.address;
+  if (lineAccountName) lineAccountName.textContent = contact.lineAccountName || "何中揚建築師事務所";
+  if (lineAccountId) lineAccountId.textContent = contact.lineId || "@680utsqm";
   if (lineQrImagePrimary) {
-    lineQrImagePrimary.src = contact.lineQrImagePrimary || "assets/line-official-account-976udzzw.jpg";
+    lineQrImagePrimary.src = contact.lineQrImagePrimary || "assets/line-official-account-680utsqm.png";
     lineQrImagePrimary.alt = `${contact.lineAccountName || "何中揚建築師事務所"} LINE QR code`;
   }
   if (lineQrImageSecondary) {

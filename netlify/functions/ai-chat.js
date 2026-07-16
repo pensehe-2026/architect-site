@@ -39,7 +39,7 @@ const SCENARIO_GUIDES = [
   "27｜想查台中市地方法規：回答可至台中市建築管理與地方自治規定，導到 taichung-regulations.html。",
   "28｜想查建管實務手冊、補照流程、套繪圖例或面積計算表：回答可至建管實務子網站，導到 building-practice.html。",
   "29｜想下載表單或找官方入口：回答可用好用連結，建管便民服務 https://mcgbm.taichung.gov.tw/、158地籍圖資 https://lohas.taichung.gov.tw/lohas/、台中市都市發展局表單下載 https://www.ud.taichung.gov.tw/28928/29030/29036?PageSize=30。",
-  "30｜想聯絡、詢價、預約諮詢或加入 LINE：回答可用 Email、電話、地址與 LINE，導到 index.html#contact；Email Hodesign2013@gmail.com，電話 04-22291885 / 04-35091168，LINE @976udzzw。",
+  "30｜想聯絡、詢價、預約諮詢或加入 LINE：回答可用 Email、電話、地址與 LINE，導到 index.html#contact；Email Hodesign2013@gmail.com，電話 04-22291885 / 04-35091168，LINE @680utsqm。",
 ];
 
 const knownAnswer = (question) => {

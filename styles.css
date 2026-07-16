@@ -828,6 +828,14 @@ h1 {
   margin: 0;
 }
 
+.line-qr-card--primary {
+  aspect-ratio: 343 / 384;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 6px;
+  background: #fff;
+}
+
 .line-qr-image {
   display: block;
   width: 100%;
@@ -1493,6 +1501,28 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 6px;
   background: #fff;
+}
+
+.line-qr-card--primary .line-qr-image {
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 0;
+}
+
+.line-qr-caption {
+  display: flex;
+  min-height: 10.7%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+  font-size: clamp(7px, 0.65vw, 11px);
+  line-height: 1.35;
+  text-align: center;
+}
+
+.line-qr-caption strong {
+  font-weight: 500;
 }
 
 .faq-item summary {

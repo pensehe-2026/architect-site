@@ -12,10 +12,11 @@ ROOT = Path(__file__).resolve().parents[1]
 LINE_GREEN = "#06c755"
 ACCOUNTS = [
     {
-        "out": ROOT / "assets" / "line-official-account-976udzzw.jpg",
-        "url": "https://line.me/R/ti/p/@976udzzw",
+        "out": ROOT / "assets" / "line-official-account-680utsqm.png",
+        "url": "https://line.me/R/ti/p/@680utsqm",
         "name": "何中揚建築師事務所",
-        "id": "@976udzzw",
+        "id": "@680utsqm",
+        "raw": True,
     },
     {
         "out": ROOT / "assets" / "line-official-account.jpg",
@@ -56,6 +57,11 @@ def main() -> None:
                 r, g, b = pixels[x, y]
                 if r < 80 and g < 80 and b < 80:
                     pixels[x, y] = tuple(int(LINE_GREEN[index : index + 2], 16) for index in (1, 3, 5))
+
+        if account.get("raw"):
+            qr.save(account["out"])
+            print(account["out"])
+            continue
 
         canvas = Image.new("RGB", (343, 384), "white")
         canvas.paste(qr, (22, 16))
