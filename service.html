@@ -211,12 +211,14 @@
         document.querySelector('meta[property="og:title"]')?.setAttribute("content", seoTitle);
         document.querySelector('meta[property="og:description"]')?.setAttribute("content", seoDescription);
         const canonical = document.querySelector('link[rel="canonical"]');
-        if (canonical) {
-          canonical.href = `https://bauhaus.com.tw/service.html?item=${encodeURIComponent(service.slug)}`;
-        }
+        const dedicatedServiceUrl =
+          service.slug === "old-house-life-extension"
+            ? "https://bauhaus.com.tw/old-house-life-extension.html"
+            : `https://bauhaus.com.tw/service.html?item=${encodeURIComponent(service.slug)}`;
+        if (canonical) canonical.href = dedicatedServiceUrl;
         document.querySelector("#serviceTitle").textContent = service.title;
         document.querySelector("#serviceDescription").textContent = service.description;
-        const serviceUrl = `https://bauhaus.com.tw/service.html?item=${encodeURIComponent(service.slug)}`;
+        const serviceUrl = dedicatedServiceUrl;
         const faqItems = [
           {
             question: `台中市${service.title}可以委託何中揚建築師事務所嗎？`,

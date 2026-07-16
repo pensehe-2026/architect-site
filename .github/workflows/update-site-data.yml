@@ -52,6 +52,6 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/regulations data sitemap.xml robots.txt
+          git add assets/regulations data old-house-life-extension.html search-index.html sitemap.xml robots.txt
           git commit -m "Update fetched website data"
           git push

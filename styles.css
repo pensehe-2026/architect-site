@@ -1421,6 +1421,93 @@ h1 {
   overflow-wrap: anywhere;
 }
 
+.old-house-page .detail-main {
+  width: min(1160px, calc(100% - 36px));
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.breadcrumb a {
+  color: var(--moss);
+}
+
+.old-house-intro h1 {
+  max-width: 880px;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.08;
+}
+
+.old-house-intro > p:not(.eyebrow):not(.source-stamp) {
+  max-width: 880px;
+  line-height: 1.75;
+}
+
+.source-stamp {
+  max-width: none !important;
+  margin: 20px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 13px !important;
+}
+
+.expertise-note {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.36fr) minmax(0, 1fr);
+  gap: 28px;
+  margin-top: 18px;
+  padding: 24px 28px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.expertise-note strong {
+  font-size: 18px;
+}
+
+.expertise-note p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.expertise-note a,
+.service-news-section .detail-section-heading > a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.faq-list {
+  display: grid;
+  gap: 10px;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.faq-item summary {
+  padding: 18px 20px;
+  color: var(--ink);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 20px 20px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .regulation-detail-page .detail-shell {
   background: #fbfaf6;
 }
@@ -2896,6 +2983,7 @@ h1 {
   .journal-layout,
   .journal-card,
   .service-news-item,
+  .expertise-note,
   .interpretation-list li,
   .nlma-category-grid,
   .nlma-title-item,

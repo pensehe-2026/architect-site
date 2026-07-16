@@ -422,7 +422,7 @@ window.SITE_CONTENT = {
       "category": "危老延壽",
       "title": "臺中市老宅延壽機能復新計畫公告1150624",
       "summary": "臺中市都市發展局公告老宅延壽機能復新計畫受理資訊，申請前可先確認建物資格、住戶共識、修繕項目與應備文件。",
-      "href": "service.html?item=old-house-life-extension#service-news"
+      "href": "old-house-life-extension.html#service-news"
     },
     {
       "date": "2026-05-28T18:30:00+08:00",
@@ -526,7 +526,7 @@ window.SITE_CONTENT = {
       "slug": "old-house-life-extension",
       "title": "老屋延壽",
       "description": "針對老屋安全、機能、管線與空間品質進行評估，提出延壽與改善策略。",
-      "href": "service.html?item=old-house-life-extension",
+      "href": "old-house-life-extension.html",
       "detail": {
         "kicker": "Old House Life Extension",
         "lead": "協助屋齡 30 年以上合法建築物釐清補助資格、住戶共識、結構安全性能評估、修繕項目、申請文件與施工後請款流程，讓老屋更新不只修補外觀，也能改善安全、管線、無障礙與日常居住品質。",
@@ -764,7 +764,7 @@ window.SITE_CONTENT = {
             "category": "危老延壽",
             "title": "臺中市老宅延壽機能復新計畫公告1150624",
             "summary": "臺中市都市發展局公告老宅延壽機能復新計畫受理資訊，申請前可先確認建物資格、住戶共識、修繕項目與應備文件。",
-            "href": "service.html?item=old-house-life-extension#service-news"
+            "href": "old-house-life-extension.html#service-news"
           },
           {
             "date": "2026-04-02",
@@ -778,12 +778,14 @@ window.SITE_CONTENT = {
             "category": "危老延壽",
             "title": "老屋延壽諮詢與補助申請協助開放",
             "summary": "針對屋齡 30 年以上合法建築物，協助釐清補助資格、住戶共識、結構安全性能評估、修繕項目與請款流程。",
-            "href": "service.html?item=old-house-life-extension#service-news"
+            "href": "old-house-life-extension.html#service-news"
           }
         ]
       },
       "keywords": [
         "老屋延壽",
+        "老宅延壽",
+        "老宅延壽機能復新計畫",
         "房屋拉皮",
         "整建維護",
         "都市更新整建維護",
@@ -791,7 +793,7 @@ window.SITE_CONTENT = {
         "建築物修繕補助"
       ],
       "seoTitle": "台中老屋延壽與房屋拉皮｜整建維護補助與申請流程｜何中揚建築師事務所",
-      "seoDescription": "台中老屋延壽、房屋拉皮與整建維護服務，協助補助資格、住戶共識、結構安全性能評估、修繕項目、圖說文件、施工整合與請款流程。"
+      "seoDescription": "台中老屋延壽與老宅延壽申請服務，協助補助資格、住戶共識、結構安全性能評估、房屋拉皮、整建維護、圖說文件、施工整合與請款流程。"
     },
     {
       "slug": "interior-design",

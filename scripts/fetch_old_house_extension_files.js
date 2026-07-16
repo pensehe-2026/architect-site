@@ -223,7 +223,7 @@ const main = async () => {
     category: "危老延壽",
     title: "臺中市老宅延壽機能復新計畫公告1150624",
     summary: "臺中市都市發展局公告老宅延壽機能復新計畫受理資訊，申請前可先確認建物資格、住戶共識、修繕項目與應備文件。",
-    href: "service.html?item=old-house-life-extension#service-news",
+    href: "old-house-life-extension.html#service-news",
   };
   service.detail.news = [officialNews, ...service.detail.news.filter((item) => item.title !== officialNews.title)];
   site.updates = [officialNews, ...site.updates.filter((item) => item.title !== officialNews.title)];
