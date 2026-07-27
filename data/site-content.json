@@ -123,6 +123,55 @@
             }
         },
         {
+            "name": "西屯區實驗教育機構",
+            "category": "教育類建築",
+            "type": "實驗教育機構 / 教育類建築",
+            "location": "台中西屯區",
+            "year": "作品集資料",
+            "summary": "以白色建築量體、傳統屋頂語彙與清楚校園動線，形塑具文化辨識度的實驗教育場域。",
+            "image": "assets/projects/IMG_20260721_141855-clean.png",
+            "href": "project.html?item=xitun-experimental-education-institute",
+            "slug": "xitun-experimental-education-institute",
+            "detail": {
+                "kicker": "Experimental Education / Education Architecture",
+                "lead": "西屯區實驗教育機構整合教學空間、校園入口與內院動線，以白色量體及傳統屋頂語彙建立清楚且具文化特色的教育空間形象。",
+                "highlights": [
+                    {
+                        "label": "作品",
+                        "value": "西屯區實驗教育機構"
+                    },
+                    {
+                        "label": "類型",
+                        "value": "實驗教育機構 / 教育類建築"
+                    },
+                    {
+                        "label": "地點",
+                        "value": "台中西屯區"
+                    }
+                ],
+                "gallery": [
+                    {
+                        "src": "assets/projects/IMG_20260721_141855-clean.png",
+                        "caption": "西屯區實驗教育機構臨街全景"
+                    },
+                    {
+                        "src": "assets/projects/xitun-experimental-education-institute-courtyard.jpg",
+                        "caption": "西屯區實驗教育機構校園入口與內院"
+                    }
+                ],
+                "sections": [
+                    {
+                        "title": "設計重點",
+                        "items": [
+                            "以白色量體與傳統屋頂語彙建立教育場域的文化識別與整體性。",
+                            "整合臨街入口、校園內院與教學空間動線，提升日常進出及使用辨識。",
+                            "透過立面比例、開窗與庭院界面整理，兼顧採光、校園尺度與街廓關係。"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
             "name": "大里黃宅",
             "category": "建築設計",
             "type": "住宅設計",
