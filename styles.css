@@ -1469,6 +1469,13 @@ h1 {
   line-height: 1.75;
 }
 
+.urban-renewal-page .detail-button.secondary {
+  border-color: var(--accent);
+  background: #fff;
+  color: var(--accent);
+  backdrop-filter: none;
+}
+
 .subsidy-track-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
