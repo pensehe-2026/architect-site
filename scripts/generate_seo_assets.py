@@ -262,6 +262,71 @@ def write_urban_renewal_page(site: dict) -> None:
         f"""<article><span>{html_escape(item.get('label'))}</span><strong>{html_escape(item.get('value'))}</strong></article>"""
         for item in detail.get("highlights", [])
     )
+    presentation = detail.get("presentation", {})
+    presentation_slides = presentation.get("slides", [])
+    presentation_thumbnails = "\n".join(
+        f"""<button class="deck-thumbnail{' is-active' if index == 0 else ''}" type="button" data-slide-index="{index}" aria-label="查看第 {index + 1} 頁：{html_escape(slide.get('title'))}">
+          <img src="{html_escape(slide.get('thumbnail'))}" alt="" loading="lazy" decoding="async" />
+          <span>{index + 1:02d}</span>
+        </button>"""
+        for index, slide in enumerate(presentation_slides)
+    )
+    presentation_html = ""
+    presentation_script = ""
+    if presentation_slides:
+        first_slide = presentation_slides[0]
+        presentation_payload = json.dumps(presentation_slides, ensure_ascii=False).replace("</", "<\\/")
+        presentation_html = f"""<section class="detail-section presentation-section" id="presentation">
+          <div class="detail-section-heading">
+            <div><p class="eyebrow">Professional Briefing</p><h2>{html_escape(presentation.get('title'))}</h2></div>
+            <a href="{html_escape(presentation.get('downloadHref'))}" download>下載原始簡報 PPTX</a>
+          </div>
+          <p class="section-note">{html_escape(presentation.get('description'))}</p>
+          <div class="deck-viewer" data-presentation-viewer>
+            <div class="deck-stage">
+              <a href="{html_escape(first_slide.get('image'))}" id="deckStageLink" target="_blank" rel="noreferrer" aria-label="放大檢視目前投影片">
+                <img src="{html_escape(first_slide.get('image'))}" id="deckStageImage" alt="第 1 頁：{html_escape(first_slide.get('title'))}" decoding="async" />
+              </a>
+              <button class="deck-nav deck-nav-prev" type="button" aria-label="上一張投影片" title="上一張投影片">&#8249;</button>
+              <button class="deck-nav deck-nav-next" type="button" aria-label="下一張投影片" title="下一張投影片">&#8250;</button>
+            </div>
+            <div class="deck-meta"><span id="deckCounter">1 / {len(presentation_slides)}</span><strong id="deckTitle">{html_escape(first_slide.get('title'))}</strong></div>
+            <div class="deck-thumbnails" role="list" aria-label="簡報投影片縮圖">{presentation_thumbnails}</div>
+          </div>
+        </section>"""
+        presentation_script = f"""<script>
+      (() => {{
+        const slides = {presentation_payload};
+        const viewer = document.querySelector("[data-presentation-viewer]");
+        if (!viewer || !slides.length) return;
+        const image = viewer.querySelector("#deckStageImage");
+        const link = viewer.querySelector("#deckStageLink");
+        const counter = viewer.querySelector("#deckCounter");
+        const title = viewer.querySelector("#deckTitle");
+        const thumbnails = [...viewer.querySelectorAll("[data-slide-index]")];
+        let current = 0;
+
+        const render = (index) => {{
+          current = (index + slides.length) % slides.length;
+          const slide = slides[current];
+          image.src = slide.image;
+          image.alt = `第 ${{current + 1}} 頁：${{slide.title}}`;
+          link.href = slide.image;
+          counter.textContent = `${{current + 1}} / ${{slides.length}}`;
+          title.textContent = slide.title;
+          thumbnails.forEach((button, buttonIndex) => {{
+            const active = buttonIndex === current;
+            button.classList.toggle("is-active", active);
+            button.setAttribute("aria-current", active ? "true" : "false");
+          }});
+          thumbnails[current]?.scrollIntoView({{ behavior: "smooth", block: "nearest", inline: "center" }});
+        }};
+
+        viewer.querySelector(".deck-nav-prev")?.addEventListener("click", () => render(current - 1));
+        viewer.querySelector(".deck-nav-next")?.addEventListener("click", () => render(current + 1));
+        thumbnails.forEach((button) => button.addEventListener("click", () => render(Number(button.dataset.slideIndex))));
+      }})();
+    </script>"""
     process = "\n".join(
         f"""<article class="process-step"><span>{html_escape(item.get('step'))}</span><div><h3>{html_escape(item.get('title'))}</h3><p>{html_escape(item.get('text'))}</p></div></article>"""
         for item in detail.get("process", [])
@@ -389,6 +454,7 @@ def write_urban_renewal_page(site: dict) -> None:
             <article><span>臺中市軌道</span><h3>地方年度專案</h3><p>依年度公告受理，須檢核區位、特定規模與優先地區；審議與核定留在地方。</p></article>
           </div>
         </section>
+        {presentation_html}
         <section class="detail-section" id="process"><div class="detail-section-heading"><div><p class="eyebrow">Process</p><h2>都市更新整建維護申請流程</h2></div></div><div class="process-grid">{process}</div></section>
         <section class="detail-section detail-card-grid">{sections}</section>
         <section class="detail-section split-section"><div><p class="eyebrow">Checklist</p><h2>申請前可先準備</h2><ul class="document-list">{documents}</ul></div><div class="consult-box"><h2>先確認條件，再投入計畫成本</h2><p>可先提供建物地址、屋齡、使用執照或合法建築物證明、權屬資料、住戶共識與想改善項目，由本所協助比較中央及臺中市補助路徑。</p><a class="button primary detail-button" href="index.html#contact">聯絡何中揚建築師事務所</a></div></section>
@@ -397,6 +463,7 @@ def write_urban_renewal_page(site: dict) -> None:
       </div>
     </main>
     <footer class="site-footer"><span>何中揚建築師事務所</span><span>台中市西區自由路一段101號20樓202室｜04-22291885</span></footer>
+    {presentation_script}
   </body>
 </html>
 """

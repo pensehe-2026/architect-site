@@ -1476,6 +1476,144 @@ h1 {
   backdrop-filter: none;
 }
 
+.presentation-section {
+  overflow: hidden;
+}
+
+.presentation-section > .section-note {
+  max-width: 880px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.deck-viewer {
+  margin-top: 24px;
+}
+
+.deck-stage {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1376 / 768;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #edf2f5;
+}
+
+.deck-stage > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.deck-stage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.deck-nav {
+  position: absolute;
+  top: 50%;
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  background: rgba(18, 32, 51, 0.88);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.deck-nav:hover,
+.deck-nav:focus-visible {
+  background: var(--accent);
+}
+
+.deck-nav-prev {
+  left: 14px;
+}
+
+.deck-nav-next {
+  right: 14px;
+}
+
+.deck-meta {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+  padding: 12px 2px;
+}
+
+.deck-meta span {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.deck-meta strong {
+  min-width: 0;
+  font-size: 18px;
+}
+
+.deck-thumbnails {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 14px 2px 8px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.deck-thumbnail {
+  position: relative;
+  flex: 0 0 174px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  scroll-snap-align: start;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 0;
+  background: #edf2f5;
+  cursor: pointer;
+}
+
+.deck-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.deck-thumbnail span {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  min-width: 28px;
+  border-radius: 3px;
+  padding: 3px 5px;
+  background: rgba(18, 32, 51, 0.88);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.deck-thumbnail.is-active,
+.deck-thumbnail:focus-visible {
+  border-color: var(--accent);
+}
+
 .subsidy-track-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3132,6 +3270,34 @@ h1 {
   .nlma-title-item,
   .nlma-article-content dl div {
     grid-template-columns: 1fr;
+  }
+
+  .deck-nav {
+    width: 38px;
+    height: 38px;
+    font-size: 26px;
+  }
+
+  .deck-nav-prev {
+    left: 8px;
+  }
+
+  .deck-nav-next {
+    right: 8px;
+  }
+
+  .deck-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .deck-meta strong {
+    font-size: 16px;
+  }
+
+  .deck-thumbnail {
+    flex-basis: 138px;
   }
 
   .section-note {

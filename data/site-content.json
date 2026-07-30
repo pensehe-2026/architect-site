@@ -587,6 +587,73 @@
                         "value": "共識、計畫、設計、審議、施工整合"
                     }
                 ],
+                "presentation": {
+                    "title": "臺中市都市更新整建維護專業簡報",
+                    "description": "以 12 張投影片完整說明整建維護的雙軌補助、申請資格、特定規模、可施作項目、補助計算、審查流程、低碳要求及完工後五年管理義務。",
+                    "downloadHref": "assets/documents/urban-renewal-maintenance/taichung-renovation-blueprint.pptx",
+                    "slides": [
+                        {
+                            "title": "老屋變妝，雙軌並進",
+                            "image": "assets/documents/urban-renewal-maintenance/slides/slide-01.jpg",
+                            "thumbnail": "assets/documents/urban-renewal-maintenance/slides/thumbs/slide-01.jpg"
+                        },
+                        {
+                            "title": "為何選擇整建維護",
+                            "image": "assets/documents/urban-renewal-maintenance/slides/slide-02.jpg",
+                            "thumbnail": "assets/documents/urban-renewal-maintenance/slides/thumbs/slide-02.jpg"
+                        },
+                        {
+                            "title": "中央與臺中市雙軌補助",
+                            "image": "assets/documents/urban-renewal-maintenance/slides/slide-03.jpg",
+                            "thumbnail": "assets/documents/urban-renewal-maintenance/slides/thumbs/slide-03.jpg"
+                        },
+                        {
+                            "title": "申請機制與受理對象",
+                            "image": "assets/documents/urban-renewal-maintenance/slides/slide-04.jpg",
+                            "thumbnail": "assets/documents/urban-renewal-maintenance/slides/thumbs/slide-04.jpg"
+                        },
+                        {
+                            "title": "臺中市特定規模門檻",
+                            "image": "assets/documents/urban-renewal-maintenance/slides/slide-05.jpg",
+                            "thumbnail": "assets/documents/urban-renewal-maintenance/slides/thumbs/slide-05.jpg"
+                        },
+                        {
+                            "title": "整建維護核心施工項目",
+                            "image": "assets/documents/urban-renewal-maintenance/slides/slide-06.jpg",
+                            "thumbnail": "assets/documents/urban-renewal-maintenance/slides/thumbs/slide-06.jpg"
+                        },
+                        {
+                            "title": "中央補助金額計算邏輯",
+                            "image": "assets/documents/urban-renewal-maintenance/slides/slide-07.jpg",
+                            "thumbnail": "assets/documents/urban-renewal-maintenance/slides/thumbs/slide-07.jpg"
+                        },
+                        {
+                            "title": "臺中市補助金額計算邏輯",
+                            "image": "assets/documents/urban-renewal-maintenance/slides/slide-08.jpg",
+                            "thumbnail": "assets/documents/urban-renewal-maintenance/slides/thumbs/slide-08.jpg"
+                        },
+                        {
+                            "title": "辦理流程與審查關卡",
+                            "image": "assets/documents/urban-renewal-maintenance/slides/slide-09.jpg",
+                            "thumbnail": "assets/documents/urban-renewal-maintenance/slides/thumbs/slide-09.jpg"
+                        },
+                        {
+                            "title": "臺中市低碳城市章節",
+                            "image": "assets/documents/urban-renewal-maintenance/slides/slide-10.jpg",
+                            "thumbnail": "assets/documents/urban-renewal-maintenance/slides/thumbs/slide-10.jpg"
+                        },
+                        {
+                            "title": "完工後五年管理義務",
+                            "image": "assets/documents/urban-renewal-maintenance/slides/slide-11.jpg",
+                            "thumbnail": "assets/documents/urban-renewal-maintenance/slides/thumbs/slide-11.jpg"
+                        },
+                        {
+                            "title": "啟動整建維護的下一步",
+                            "image": "assets/documents/urban-renewal-maintenance/slides/slide-12.jpg",
+                            "thumbnail": "assets/documents/urban-renewal-maintenance/slides/thumbs/slide-12.jpg"
+                        }
+                    ]
+                },
                 "sections": [
                     {
                         "title": "為什麼選擇整建維護",
