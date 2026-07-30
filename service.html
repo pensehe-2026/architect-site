@@ -157,16 +157,20 @@
             <div class="process-grid">${process}</div>
           </section>
 
-          <section class="detail-section split-section">
-            <div>
-              <p class="eyebrow">Original Flow</p>
-              <h2>原始流程圖</h2>
-              <p>保留主管機關流程圖作為查核依據；手機閱讀則以上方流程卡快速理解。</p>
-            </div>
-            <a class="source-image-link" href="${escapeHTML(detail.sourceImage)}" target="_blank" rel="noreferrer">
-              <img src="${escapeHTML(detail.sourceImage)}" alt="老宅延壽補助申請流程圖" />
-            </a>
-          </section>
+          ${
+            detail.sourceImage
+              ? `<section class="detail-section split-section">
+                  <div>
+                    <p class="eyebrow">Original Flow</p>
+                    <h2>原始流程圖</h2>
+                    <p>保留主管機關流程圖作為查核依據；手機閱讀則以上方流程卡快速理解。</p>
+                  </div>
+                  <a class="source-image-link" href="${escapeHTML(detail.sourceImage)}" target="_blank" rel="noreferrer">
+                    <img src="${escapeHTML(detail.sourceImage)}" alt="${escapeHTML(service.title)}申請流程圖" />
+                  </a>
+                </section>`
+              : ""
+          }
 
           <section class="detail-section detail-card-grid">${sections}</section>
 
@@ -211,10 +215,12 @@
         document.querySelector('meta[property="og:title"]')?.setAttribute("content", seoTitle);
         document.querySelector('meta[property="og:description"]')?.setAttribute("content", seoDescription);
         const canonical = document.querySelector('link[rel="canonical"]');
+        const dedicatedPages = {
+          "old-house-life-extension": "https://bauhaus.com.tw/old-house-life-extension.html",
+          "urban-renewal-maintenance": "https://bauhaus.com.tw/urban-renewal-maintenance.html",
+        };
         const dedicatedServiceUrl =
-          service.slug === "old-house-life-extension"
-            ? "https://bauhaus.com.tw/old-house-life-extension.html"
-            : `https://bauhaus.com.tw/service.html?item=${encodeURIComponent(service.slug)}`;
+          dedicatedPages[service.slug] || `https://bauhaus.com.tw/service.html?item=${encodeURIComponent(service.slug)}`;
         if (canonical) canonical.href = dedicatedServiceUrl;
         document.querySelector("#serviceTitle").textContent = service.title;
         document.querySelector("#serviceDescription").textContent = service.description;

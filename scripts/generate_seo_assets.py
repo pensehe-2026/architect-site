@@ -4,6 +4,7 @@ import json
 from datetime import date
 from pathlib import Path
 from urllib.parse import quote
+from xml.etree import ElementTree
 from xml.sax.saxutils import escape
 
 
@@ -20,12 +21,36 @@ def url(path: str) -> str:
     return f"{SITE_URL.rstrip('/')}/{path.lstrip('/')}"
 
 
-def sitemap_entry(loc: str, priority: str = "0.6", changefreq: str = "monthly") -> str:
+def read_sitemap_lastmods() -> dict[str, str]:
+    path = ROOT / "sitemap.xml"
+    if not path.exists():
+        return {}
+    try:
+        root = ElementTree.fromstring(path.read_text(encoding="utf-8"))
+    except ElementTree.ParseError:
+        return {}
+
+    namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+    lastmods: dict[str, str] = {}
+    for node in root.findall("sm:url", namespace):
+        loc = node.findtext("sm:loc", default="", namespaces=namespace)
+        lastmod = node.findtext("sm:lastmod", default="", namespaces=namespace)
+        if loc and lastmod:
+            lastmods[loc] = lastmod
+    return lastmods
+
+
+def sitemap_entry(
+    loc: str,
+    priority: str = "0.6",
+    changefreq: str = "monthly",
+    lastmod: str = TODAY,
+) -> str:
     return "\n".join(
         [
             "  <url>",
             f"    <loc>{escape(loc)}</loc>",
-            f"    <lastmod>{TODAY}</lastmod>",
+            f"    <lastmod>{lastmod}</lastmod>",
             f"    <changefreq>{changefreq}</changefreq>",
             f"    <priority>{priority}</priority>",
             "  </url>",
@@ -45,6 +70,8 @@ def link_item(href: str, title: str, text: str = "") -> str:
 def service_href(service: dict) -> str:
     if service.get("slug") == "old-house-life-extension":
         return "old-house-life-extension.html"
+    if service.get("slug") == "urban-renewal-maintenance":
+        return "urban-renewal-maintenance.html"
     return service.get("href") or f"service.html?item={quote(service.get('slug', ''))}"
 
 
@@ -217,6 +244,165 @@ def write_old_house_page(site: dict) -> None:
     (ROOT / "old-house-life-extension.html").write_text(html, encoding="utf-8")
 
 
+def write_urban_renewal_page(site: dict) -> None:
+    service = next(
+        (item for item in site.get("services", []) if item.get("slug") == "urban-renewal-maintenance"),
+        None,
+    )
+    if not service:
+        return
+
+    detail = service.get("detail", {})
+    page_url = url("urban-renewal-maintenance.html")
+    title = service.get("seoTitle") or "台中都市更新整建維護｜何中揚建築師事務所"
+    description = service.get("seoDescription") or service.get("description", "")
+    source_date = detail.get("sourceDate") or TODAY
+
+    highlights = "\n".join(
+        f"""<article><span>{html_escape(item.get('label'))}</span><strong>{html_escape(item.get('value'))}</strong></article>"""
+        for item in detail.get("highlights", [])
+    )
+    process = "\n".join(
+        f"""<article class="process-step"><span>{html_escape(item.get('step'))}</span><div><h3>{html_escape(item.get('title'))}</h3><p>{html_escape(item.get('text'))}</p></div></article>"""
+        for item in detail.get("process", [])
+    )
+    sections = "\n".join(
+        f"""<article class="detail-info-card"><h2>{html_escape(section.get('title'))}</h2><ul>{''.join(f'<li>{html_escape(item)}</li>' for item in section.get('items', []))}</ul></article>"""
+        for section in detail.get("sections", [])
+    )
+    documents = "\n".join(f"<li>{html_escape(item)}</li>" for item in detail.get("documents", []))
+    resources = "\n".join(
+        f"""<article class="document-resource-card">
+          <span class="document-type">PDF</span>
+          <h3>{html_escape(item.get('title'))}</h3>
+          <p>{html_escape(item.get('description'))}</p>
+          <div class="document-actions">
+            <a href="{html_escape(item.get('href'))}" target="_blank" rel="noreferrer">線上閱讀</a>
+            <a href="{html_escape(item.get('href'))}" download>下載 PDF</a>
+          </div>
+        </article>"""
+        for item in detail.get("resources", [])
+    )
+    faq_html = "\n".join(
+        f"""<details class="faq-item"><summary>{html_escape(item.get('question'))}</summary><p>{html_escape(item.get('answer'))}</p></details>"""
+        for item in detail.get("faqs", [])
+    )
+    schema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": f"{page_url}#service",
+                "name": "台中都市更新整建維護服務",
+                "description": description,
+                "url": page_url,
+                "serviceType": [
+                    "都市更新整建維護",
+                    "整建維護補助",
+                    "自主更新補助",
+                    "房屋拉皮",
+                    "耐震補強",
+                ],
+                "areaServed": {"@type": "City", "name": "台中市"},
+                "provider": {
+                    "@type": "Architect",
+                    "name": "何中揚建築師事務所",
+                    "url": url("index.html"),
+                    "telephone": "+886-4-2229-1885",
+                    "email": "Hodesign2013@gmail.com",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "自由路一段101號20樓202室",
+                        "addressLocality": "台中市西區",
+                        "addressCountry": "TW",
+                    },
+                },
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "首頁", "item": url("index.html")},
+                    {"@type": "ListItem", "position": 2, "name": "服務項目", "item": url("index.html#services")},
+                    {"@type": "ListItem", "position": 3, "name": "都市更新整建維護", "item": page_url},
+                ],
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": item.get("question"),
+                        "acceptedAnswer": {"@type": "Answer", "text": item.get("answer")},
+                    }
+                    for item in detail.get("faqs", [])
+                ],
+            },
+        ],
+    }
+
+    html = f"""<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{html_escape(title)}</title>
+    <meta name="description" content="{html_escape(description)}" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="keywords" content="台中都市更新, 都市更新整建維護, 整建維護補助, 自主更新補助, 房屋拉皮, 立面修繕, 耐震補強, 何中揚建築師事務所" />
+    <link rel="canonical" href="{page_url}" />
+    <meta property="og:site_name" content="何中揚建築師事務所" />
+    <meta property="og:title" content="{html_escape(title)}" />
+    <meta property="og:description" content="{html_escape(description)}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{page_url}" />
+    <meta property="og:image" content="{url('assets/projects/IMG_20260721_141855-clean.png')}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="台中都市更新整建維護｜何中揚建築師事務所" />
+    <meta name="twitter:description" content="中央與臺中市補助比較、資格初判、住戶共識、事業計畫、審議、設計施工與文件下載。" />
+    <link rel="stylesheet" href="styles.css?v=20260730-urban-renewal" />
+    <script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>
+  </head>
+  <body class="detail-page urban-renewal-page">
+    <header class="site-header detail-header" aria-label="網站導覽">
+      <a class="brand" href="index.html#top" aria-label="回到首頁"><span class="brand-mark">H</span><span class="brand-copy"><strong>何中揚建築師事務所</strong><span>HO CHUNG YANG Architecture firm + Yu-Yi Interior Design</span></span></a>
+      <nav class="main-nav" aria-label="主要選單"><a href="about.html">關於我們</a><a href="projects.html">作品集</a><a href="index.html#updates">動態</a><a href="index.html#regulations">法規</a><a href="index.html#services" aria-current="page">服務</a><a href="index.html#contact">聯絡</a></nav>
+    </header>
+    <main class="detail-main">
+      <nav class="breadcrumb" aria-label="麵包屑"><a href="index.html">首頁</a><span>/</span><a href="index.html#services">服務項目</a><span>/</span><span>都市更新整建維護</span></nav>
+      <section class="detail-shell urban-renewal-intro">
+        <p class="eyebrow">Urban Renewal Renovation &amp; Maintenance</p>
+        <h1>台中都市更新整建維護</h1>
+        <p>{html_escape(detail.get('lead') or service.get('description'))}</p>
+        <div class="detail-highlights">{highlights}</div>
+        <div class="detail-actions"><a class="button primary detail-button" href="index.html#contact">預約資格初判</a><a class="button secondary detail-button" href="#downloads">閱讀與下載文件</a></div>
+        <p class="source-stamp">內容依據：112 至 115 年中央都市更新基金作業須知、臺中市整建維護資料及使用者提供簡報；本頁最近整理日期 {html_escape(source_date)}。補助條件與額度以申請年度公告為準。</p>
+      </section>
+      <section class="expertise-note" aria-label="專業服務說明">
+        <strong>從建管、都更審議到工程執行，一站式整合</strong>
+        <p>主持建築師何中揚曾任台中市政府都市發展局建照管理科股長，可協助社區釐清合法建築物、權屬、違規項目、補助軌道與審議介面。<a href="about.html#architectProfileTitle">查看建築師簡介</a></p>
+      </section>
+      <div class="service-detail-content">
+        <section class="detail-section" id="tracks">
+          <div class="detail-section-heading"><div><p class="eyebrow">Two Tracks</p><h2>中央與臺中市補助怎麼選</h2></div><a href="https://twur.nlma.gov.tw/zh/urban/area/0" target="_blank" rel="noreferrer">查詢都市更新地區</a></div>
+          <div class="subsidy-track-grid">
+            <article><span>中央軌道</span><h3>都市更新基金</h3><p>著重單價與面積核算、大面積或完整性修繕，地方政府初審後送中央複審與核定。</p></article>
+            <article><span>臺中市軌道</span><h3>地方年度專案</h3><p>依年度公告受理，須檢核區位、特定規模與優先地區；審議與核定留在地方。</p></article>
+          </div>
+        </section>
+        <section class="detail-section" id="process"><div class="detail-section-heading"><div><p class="eyebrow">Process</p><h2>都市更新整建維護申請流程</h2></div></div><div class="process-grid">{process}</div></section>
+        <section class="detail-section detail-card-grid">{sections}</section>
+        <section class="detail-section split-section"><div><p class="eyebrow">Checklist</p><h2>申請前可先準備</h2><ul class="document-list">{documents}</ul></div><div class="consult-box"><h2>先確認條件，再投入計畫成本</h2><p>可先提供建物地址、屋齡、使用執照或合法建築物證明、權屬資料、住戶共識與想改善項目，由本所協助比較中央及臺中市補助路徑。</p><a class="button primary detail-button" href="index.html#contact">聯絡何中揚建築師事務所</a></div></section>
+        <section class="detail-section" id="faq"><div class="detail-section-heading"><div><p class="eyebrow">FAQ</p><h2>台中整建維護常見問題</h2></div></div><div class="faq-list">{faq_html}</div></section>
+        <section class="detail-section" id="downloads"><div class="detail-section-heading"><div><p class="eyebrow">Documents</p><h2>計畫範例、補助摺頁與作業須知</h2></div><p class="section-note">每份文件均可直接線上閱讀，或下載 PDF 留存。</p></div><div class="document-resource-grid">{resources}</div></section>
+      </div>
+    </main>
+    <footer class="site-footer"><span>何中揚建築師事務所</span><span>台中市西區自由路一段101號20樓202室｜04-22291885</span></footer>
+  </body>
+</html>
+"""
+    (ROOT / "urban-renewal-maintenance.html").write_text(html, encoding="utf-8")
+
+
 def write_search_index(site: dict, taichung: dict, nlma: dict) -> None:
     services = "\n".join(
         link_item(
@@ -333,10 +519,12 @@ def write_search_index(site: dict, taichung: dict, nlma: dict) -> None:
 
 
 def main() -> None:
+    existing_lastmods = read_sitemap_lastmods()
     site = read_json(ROOT / "data" / "site-content.json")
     taichung = read_json(ROOT / "data" / "taichung-regulations.json")
     nlma = read_json(ROOT / "data" / "nlma-regulations.json")
     write_old_house_page(site)
+    write_urban_renewal_page(site)
     write_search_index(site, taichung, nlma)
 
     urls: list[tuple[str, str, str]] = [
@@ -371,11 +559,23 @@ def main() -> None:
         for item in category.get("items", []):
             urls.append((url(f"taichung-regulation-detail.html?id={quote(item['id'])}"), "0.5", "monthly"))
 
+    updated_urls = {
+        url("index.html"),
+        url("search-index.html"),
+        url("urban-renewal-maintenance.html"),
+    }
+    sitemap_rows = [
+        sitemap_entry(
+            *entry,
+            lastmod=TODAY if entry[0] in updated_urls else existing_lastmods.get(entry[0], TODAY),
+        )
+        for entry in urls
+    ]
     xml = "\n".join(
         [
             '<?xml version="1.0" encoding="UTF-8"?>',
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-            *[sitemap_entry(*entry) for entry in urls],
+            *sitemap_rows,
             "</urlset>",
             "",
         ]

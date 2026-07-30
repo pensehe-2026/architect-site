@@ -1429,7 +1429,8 @@ h1 {
   overflow-wrap: anywhere;
 }
 
-.old-house-page .detail-main {
+.old-house-page .detail-main,
+.urban-renewal-page .detail-main {
   width: min(1160px, calc(100% - 36px));
 }
 
@@ -1455,6 +1456,107 @@ h1 {
 .old-house-intro > p:not(.eyebrow):not(.source-stamp) {
   max-width: 880px;
   line-height: 1.75;
+}
+
+.urban-renewal-intro h1 {
+  max-width: 920px;
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: 1.08;
+}
+
+.urban-renewal-intro > p:not(.eyebrow):not(.source-stamp) {
+  max-width: 920px;
+  line-height: 1.75;
+}
+
+.subsidy-track-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.subsidy-track-grid article {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  border-radius: 6px;
+  padding: 24px;
+  background: #fff;
+}
+
+.subsidy-track-grid article:last-child {
+  border-top-color: var(--clay);
+}
+
+.subsidy-track-grid span,
+.document-type {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.subsidy-track-grid h3 {
+  margin: 8px 0 10px;
+  font-size: 24px;
+}
+
+.subsidy-track-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.document-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.document-resource-card {
+  display: flex;
+  min-width: 0;
+  min-height: 250px;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 22px;
+  background: #fff;
+}
+
+.document-resource-card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.document-resource-card p {
+  margin: 0 0 22px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.document-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.document-actions a {
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 9px 12px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.document-actions a:first-child {
+  background: var(--accent);
+  color: #fff;
 }
 
 .source-stamp {
@@ -1487,7 +1589,8 @@ h1 {
 }
 
 .expertise-note a,
-.service-news-section .detail-section-heading > a {
+.service-news-section .detail-section-heading > a,
+.urban-renewal-page .detail-section-heading > a {
   color: var(--accent);
   font-weight: 700;
 }
@@ -3011,6 +3114,8 @@ h1 {
   .split-section,
   .detail-card-grid,
   .resource-grid,
+  .subsidy-track-grid,
+  .document-resource-grid,
   .journal-layout,
   .journal-card,
   .service-news-item,
