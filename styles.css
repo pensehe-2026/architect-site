@@ -3222,6 +3222,26 @@ h1 {
     min-height: 54vh;
   }
 
+  .metrics-section {
+    margin-top: 0;
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+
+  .metrics {
+    border-radius: 10px;
+    box-shadow: 0 16px 42px rgba(18, 32, 51, 0.12);
+  }
+
+  .metric {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .metric:last-child {
+    border-bottom: 0;
+  }
+
   .status-band,
   .section-grid,
   .seo-keyword-section,
@@ -3379,7 +3399,13 @@ h1 {
   }
 
   .hero-content {
+    padding-top: 72px;
     padding-bottom: 7vh;
+  }
+
+  .hero-content h1 {
+    font-size: 17px;
+    line-height: 1.5;
   }
 
   .hero-content p:not(.eyebrow) {
