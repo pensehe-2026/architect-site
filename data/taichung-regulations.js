@@ -2,7 +2,7 @@ window.TAICHUNG_REGULATIONS = {
   "source": "臺中市政府主管法規查詢系統",
   "sourceUrl": "https://law.taichung.gov.tw/LawCategoryMain.aspx?type=M&CategoryID=0308",
   "generatedAt": "2026-06-02T00:00:00+08:00",
-  "total": 349,
+  "total": 351,
   "categories": [
     {
       "id": "030801",
@@ -9369,8 +9369,68 @@ window.TAICHUNG_REGULATIONS = {
       "id": "030804",
       "slug": "announcements",
       "name": "公告",
-      "count": 73,
+      "count": 75,
       "items": [
+        {
+          "id": "GL004816",
+          "dateRoc": "115.08.31",
+          "date": "2026-08-31",
+          "title": "修正「臺中市一定規模以上或特殊結構物範圍」，並自115年8月31日起生效。",
+          "type": "公告",
+          "href": "LawContent.aspx?id=GL004816",
+          "officialUrl": "https://law.taichung.gov.tw/LawContent.aspx?id=GL004816",
+          "categoryId": "030804",
+          "categorySlug": "announcements",
+          "categoryName": "公告",
+          "localPage": "assets/regulations/taichung/pages/GL004816.html",
+          "fields": {
+            "法規名稱": "修正「臺中市一定規模以上或特殊結構物範圍」，並自115年8月31日起生效。",
+            "公發布日": "民國 115 年 08 月 31 日",
+            "發文字號": "中市都工字第1150183326號公告",
+            "法規體系": "臺中市法規/都市發展類/公告",
+            "全文檔案": "中市都工字第1150183326號公告.pdf"
+          },
+          "attachments": [
+            {
+              "name": "中市都工字第1150183326號公告.pdf",
+              "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=137028&id=GL004816&type=LAW",
+              "localFile": "assets/regulations/taichung/files/GL004816/中市都工字第1150183326號公告.pdf"
+            }
+          ],
+          "paragraphs": [
+            "如附件檔。"
+          ]
+        },
+        {
+          "id": "GL004817",
+          "dateRoc": "115.08.31",
+          "date": "2026-08-31",
+          "title": "修正本市建築物施工管理相關作業規定及表單，並自115年8月31日起生效。",
+          "type": "公告",
+          "href": "LawContent.aspx?id=GL004817",
+          "officialUrl": "https://law.taichung.gov.tw/LawContent.aspx?id=GL004817",
+          "categoryId": "030804",
+          "categorySlug": "announcements",
+          "categoryName": "公告",
+          "localPage": "assets/regulations/taichung/pages/GL004817.html",
+          "fields": {
+            "法規名稱": "修正本市建築物施工管理相關作業規定及表單，並自115年8月31日起生效。",
+            "公發布日": "民國 115 年 08 月 31 日",
+            "發文字號": "中市都工字第11501833261號公告",
+            "法規體系": "臺中市法規/都市發展類/公告",
+            "全文檔案": "中市都工字第11501833261號公告及附件.pdf"
+          },
+          "attachments": [
+            {
+              "name": "中市都工字第11501833261號公告及附件.pdf",
+              "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=137029&id=GL004817&type=LAW",
+              "localFile": "assets/regulations/taichung/files/GL004817/中市都工字第11501833261號公告及附件.pdf"
+            }
+          ],
+          "paragraphs": [
+            "如附件檔。"
+          ]
+        },
         {
           "id": "GL004803",
           "dateRoc": "115.07.13",
@@ -11795,34 +11855,29 @@ window.TAICHUNG_REGULATIONS = {
   ],
   "latestAnnouncements": [
     {
-      "id": "GL004803",
-      "dateRoc": "115.07.13",
-      "date": "2026-07-13",
-      "title": "公告「本府為辦理民間工程運送營建剩餘土石方至臺中港之相關推薦機制及回饋金基準訂定事宜。」",
+      "id": "GL004816",
+      "dateRoc": "115.08.31",
+      "date": "2026-08-31",
+      "title": "修正「臺中市一定規模以上或特殊結構物範圍」，並自115年8月31日起生效。",
       "type": "公告",
-      "href": "LawContent.aspx?id=GL004803",
-      "officialUrl": "https://law.taichung.gov.tw/LawContent.aspx?id=GL004803",
+      "href": "LawContent.aspx?id=GL004816",
+      "officialUrl": "https://law.taichung.gov.tw/LawContent.aspx?id=GL004816",
       "categoryId": "030804",
       "categorySlug": "announcements",
       "categoryName": "公告",
-      "localPage": "assets/regulations/taichung/pages/GL004803.html",
+      "localPage": "assets/regulations/taichung/pages/GL004816.html",
       "fields": {
-        "法規名稱": "公告「本府為辦理民間工程運送營建剩餘土石方至臺中港之相關推薦機制及回饋金基準訂定事宜。」",
-        "公發布日": "民國 115 年 07 月 13 日",
-        "發文字號": "府授都工字第11502355761號公告",
+        "法規名稱": "修正「臺中市一定規模以上或特殊結構物範圍」，並自115年8月31日起生效。",
+        "公發布日": "民國 115 年 08 月 31 日",
+        "發文字號": "中市都工字第1150183326號公告",
         "法規體系": "臺中市法規/都市發展類/公告",
-        "全文檔案": "府授都工字第11502355761號公告.pdf 府授都工字第1150247414號函(公告內容更正函).pdf"
+        "全文檔案": "中市都工字第1150183326號公告.pdf"
       },
       "attachments": [
         {
-          "name": "府授都工字第11502355761號公告.pdf",
-          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136940&id=GL004803&type=LAW",
-          "localFile": "assets/regulations/taichung/files/GL004803/府授都工字第11502355761號公告.pdf"
-        },
-        {
-          "name": "府授都工字第1150247414號函(公告內容更正函).pdf",
-          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136977&id=GL004803&type=LAW",
-          "localFile": "assets/regulations/taichung/files/GL004803/府授都工字第1150247414號函(公告內容更正函).pdf"
+          "name": "中市都工字第1150183326號公告.pdf",
+          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=137028&id=GL004816&type=LAW",
+          "localFile": "assets/regulations/taichung/files/GL004816/中市都工字第1150183326號公告.pdf"
         }
       ],
       "paragraphs": [
@@ -11830,55 +11885,29 @@ window.TAICHUNG_REGULATIONS = {
       ]
     },
     {
-      "id": "GL004802",
-      "dateRoc": "115.07.10",
-      "date": "2026-07-10",
-      "title": "為訂定本府辦理民間建築工程運送營建剩餘土石方至臺中港之申請書件（各階段申請書、切結書）與流程圖等相關事宜，並自即日起生效。",
+      "id": "GL004817",
+      "dateRoc": "115.08.31",
+      "date": "2026-08-31",
+      "title": "修正本市建築物施工管理相關作業規定及表單，並自115年8月31日起生效。",
       "type": "公告",
-      "href": "LawContent.aspx?id=GL004802",
-      "officialUrl": "https://law.taichung.gov.tw/LawContent.aspx?id=GL004802",
+      "href": "LawContent.aspx?id=GL004817",
+      "officialUrl": "https://law.taichung.gov.tw/LawContent.aspx?id=GL004817",
       "categoryId": "030804",
       "categorySlug": "announcements",
       "categoryName": "公告",
-      "localPage": "assets/regulations/taichung/pages/GL004802.html",
+      "localPage": "assets/regulations/taichung/pages/GL004817.html",
       "fields": {
-        "法規名稱": "為訂定本府辦理民間建築工程運送營建剩餘土石方至臺中港之申請書件（各階段申請書、切結書）與流程圖等相關事宜，並自即日起生效。",
-        "公發布日": "民國 115 年 07 月 10 日",
-        "發文字號": "府授都工字第11502320871號公告",
+        "法規名稱": "修正本市建築物施工管理相關作業規定及表單，並自115年8月31日起生效。",
+        "公發布日": "民國 115 年 08 月 31 日",
+        "發文字號": "中市都工字第11501833261號公告",
         "法規體系": "臺中市法規/都市發展類/公告",
-        "全文檔案": "府授都工字第11502320871號公告.pdf",
-        "圖表附件": "附件1-臺中市政府辦理土資場營建剩餘土石方運送至臺中港作業流程圖.pdf 附件2-非公共工程土石方運送至臺中港申請書(土資場).pdf 附件3-臺中市政府辦理民間建築工程營建剩餘土石方運送至臺中港作業流程圖.pdf 附件4-非公共工程土石方運送至臺中港申請書(民間建築工程).pdf 附件5-非公共工程剩餘土石方運送至臺中港切結書(範本).pdf"
+        "全文檔案": "中市都工字第11501833261號公告及附件.pdf"
       },
       "attachments": [
         {
-          "name": "府授都工字第11502320871號公告.pdf",
-          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136934&id=GL004802&type=LAW",
-          "localFile": "assets/regulations/taichung/files/GL004802/府授都工字第11502320871號公告.pdf"
-        },
-        {
-          "name": "附件1-臺中市政府辦理土資場營建剩餘土石方運送至臺中港作業流程圖.pdf",
-          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136935&id=GL004802&type=LAW",
-          "localFile": "assets/regulations/taichung/files/GL004802/附件1-臺中市政府辦理土資場營建剩餘土石方運送至臺中港作業流程圖.pdf"
-        },
-        {
-          "name": "附件2-非公共工程土石方運送至臺中港申請書(土資場).pdf",
-          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136936&id=GL004802&type=LAW",
-          "localFile": "assets/regulations/taichung/files/GL004802/附件2-非公共工程土石方運送至臺中港申請書(土資場).pdf"
-        },
-        {
-          "name": "附件3-臺中市政府辦理民間建築工程營建剩餘土石方運送至臺中港作業流程圖.pdf",
-          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136937&id=GL004802&type=LAW",
-          "localFile": "assets/regulations/taichung/files/GL004802/附件3-臺中市政府辦理民間建築工程營建剩餘土石方運送至臺中港作業流程圖.pdf"
-        },
-        {
-          "name": "附件4-非公共工程土石方運送至臺中港申請書(民間建築工程).pdf",
-          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136938&id=GL004802&type=LAW",
-          "localFile": "assets/regulations/taichung/files/GL004802/附件4-非公共工程土石方運送至臺中港申請書(民間建築工程).pdf"
-        },
-        {
-          "name": "附件5-非公共工程剩餘土石方運送至臺中港切結書(範本).pdf",
-          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=136939&id=GL004802&type=LAW",
-          "localFile": "assets/regulations/taichung/files/GL004802/附件5-非公共工程剩餘土石方運送至臺中港切結書(範本).pdf"
+          "name": "中市都工字第11501833261號公告及附件.pdf",
+          "officialUrl": "https://law.taichung.gov.tw/Download.ashx?FileID=137029&id=GL004817&type=LAW",
+          "localFile": "assets/regulations/taichung/files/GL004817/中市都工字第11501833261號公告及附件.pdf"
         }
       ],
       "paragraphs": [
