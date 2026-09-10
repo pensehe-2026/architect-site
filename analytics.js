@@ -15,7 +15,12 @@
 
   function ensurePrivacyLink() {
     const footer = document.querySelector(".site-footer");
-    if (!footer || footer.querySelector('a[href="privacy.html"]')) return;
+    const existingLink = footer
+      ? Array.from(footer.querySelectorAll("a[href]")).some(function (link) {
+          return /\/privacy(?:\.html)?\/?$/.test(new URL(link.href, window.location.origin).pathname);
+        })
+      : false;
+    if (!footer || existingLink) return;
 
     const link = document.createElement("a");
     link.href = "privacy.html";
