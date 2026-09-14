@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-臺中市營建賸餘土石方管理自治條例
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="5Jf29gJbL0a7kFTkBjiKuA=="></script>
+    <script type="text/javascript" nonce="5Jf29gJbL0a7kFTkBjiKuA==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL001704" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="5Jf29gJbL0a7kFTkBjiKuA==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -248,13 +317,13 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第一條　&nbsp; 臺中市（以下簡稱本市）為有效管理於本市興建之建築工程、<br>
+		<td><div class="ClearCss"><span class="csp-s0"><span class="csp-s1">第一條　&nbsp; 臺中市（以下簡稱本市）為有效管理於本市興建之建築工程、<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公共工程及其他民間工程產生之營建賸餘土石方(以下簡稱餘土)，<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 以維護公共安全、環境衛生及市容觀瞻，特制定本自治條例。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二條　&nbsp; 本自治條例用詞，定義如下：<br>
+		<td><div class="ClearCss"><span class="csp-s2"><span class="csp-s3">第二條　&nbsp; 本自治條例用詞，定義如下：<br>
 　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、餘土：指建築工程、公共工程及其他民間工程施工所產生<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 之賸餘泥、土、砂、石、磚、瓦、混凝土塊等經暫屯、堆<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 置可供回收、分類、加工、處理、再生利用、直接利用及<br>
@@ -274,7 +343,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三條　&nbsp; 本自治條例之主管機關為臺中市政府都市發展局（以下簡稱都<br>
+		<td><div class="ClearCss"><span class="csp-s4"><span class="csp-s5">第三條　&nbsp; 本自治條例之主管機關為臺中市政府都市發展局（以下簡稱都<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 發局）。臺中市政府（以下簡稱本府）各機關之業務權責劃分如下：<br>
 　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、都發局：本市土資場設置之審查與管理、建築工程（不含<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公共建築工程)餘土流向管制、未依餘土處理計畫處理者<br>
@@ -302,13 +371,13 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第四條　&nbsp; 營建混合物於施工工地現場先行分離或分類後，其屬餘土者，<br>
+		<td><div class="ClearCss"><span class="csp-s6"><span class="csp-s7">第四條　&nbsp; 營建混合物於施工工地現場先行分離或分類後，其屬餘土者，<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 應運至餘土收容或處理場所(以下簡稱收容處理場所)；未於施工工<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 地現場分離或分類者，應依環保法令規定辦理。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第五條　&nbsp; 收容處理場所如下：<br>
+		<td><div class="ClearCss"><span class="csp-s8"><span class="csp-s9">第五條　&nbsp; 收容處理場所如下：<br>
 　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、依本自治條例設立之土資場。<br>
 　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、依本自治條例許可收容餘土之砂石場、磚瓦窯場(廠)、輕<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 質骨材場(廠)、水泥廠及預拌混凝土廠。<br>
@@ -330,7 +399,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 細明體">第六條　&nbsp; 建築工程應由起造人或承造人於工地實際產出餘土前，覓妥收<br>
+		<td><div class="ClearCss"><span class="csp-s10"><span class="csp-s11"><span class="csp-s10">第六條　&nbsp; 建築工程應由起造人或承造人於工地實際產出餘土前，覓妥收<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 容處理場所，並將其地址及名稱併同餘土處理計畫，報都發局備查<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；變更時，亦同。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 建築工程餘土處理完成後，起造人或承造人應報都發局備查。<br>
@@ -349,14 +418,14 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第七條　&nbsp; 本市建築工程所產出餘土應運至本市收容處理場所；屬可直接<br>
+		<td><div class="ClearCss"><span class="csp-s12"><span class="csp-s13">第七條　&nbsp; 本市建築工程所產出餘土應運至本市收容處理場所；屬可直接<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 利用物料者應運至本市土資場或砂石場處理。但本市收容處理場所<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 、砂石場之處理量不足或有特殊情形時，都發局得公告開放其他縣<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 市收受餘土。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第八條　　建築工程餘土處理計畫應載明下列事項：<br>
+		<td><div class="ClearCss"><span class="csp-s14"><span class="csp-s15">第八條　　建築工程餘土處理計畫應載明下列事項：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、起造人、承造人及承運業者姓名、地址及聯絡電話。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 二、餘土數量、種類及處理作業時間。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 三、收容處理場所之名稱、地點。<br>
@@ -371,13 +440,13 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第九條　&nbsp; 承運業者依建築工程餘土處理計畫運送餘土前，應先核對餘土<br>
+		<td><div class="ClearCss"><span class="csp-s16"><span class="csp-s17">第九條　&nbsp; 承運業者依建築工程餘土處理計畫運送餘土前，應先核對餘土<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 種類、數量及運送憑證，運往指定場所，並將簽證後之餘土處理紀<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 錄表回報承造人。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十條　&nbsp; 都發局得就餘土處理作業情形、承造人所提送餘土處理紀錄表<br>
+		<td><div class="ClearCss"><span class="csp-s18"><span class="csp-s19">第十條　&nbsp; 都發局得就餘土處理作業情形、承造人所提送餘土處理紀錄表<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 及運送憑證聯予以抽查。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 前項抽查，都發局得視實際需要會同本府環境保護局、農業局<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 及其他有關機關辦理。<br>
@@ -389,13 +458,13 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十一條　&nbsp; 承造人應向營建賸餘土石方資訊服務中心(以下簡稱資訊服<br>
+		<td><div class="ClearCss"><span class="csp-s20"><span class="csp-s21">第十一條　&nbsp; 承造人應向營建賸餘土石方資訊服務中心(以下簡稱資訊服<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 務中心)申報餘土種類、數量及去處；如有運至公共工程之工地<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 處理者，應取得工程主辦機關同意文件。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十二條&nbsp;&nbsp;&nbsp; 都發局得委託相關公會或機構辦理下列事項：<br>
+		<td><div class="ClearCss"><span class="csp-s22"><span class="csp-s23">第十二條&nbsp;&nbsp;&nbsp; 都發局得委託相關公會或機構辦理下列事項：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、建築工程餘土處理計畫申報作業。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、建築工程餘土處理完成申報作業。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 三、運送憑證及處理紀錄表之印製、發給。<br>
@@ -408,7 +477,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十三條　&nbsp; 公共工程挖填土石方應力求平衡及減量，並對收容處理方式<br>
+		<td><div class="ClearCss"><span class="csp-s24"><span class="csp-s25">第十三條　&nbsp; 公共工程挖填土石方應力求平衡及減量，並對收容處理方式<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 整體評估及規劃，餘土應訂定處理計畫，並納入工程施工計畫管<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 理，由工程主辦機關負責督導、查核及管制餘土之處理。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 工程預期總出土量達五十萬立方公尺以上者，工程主辦機關<br>
@@ -426,7 +495,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 細明體">第十四條　&nbsp; 公共工程餘土之處理，由工程主辦機關自行規劃設置、審查<br>
+		<td><div class="ClearCss"><span class="csp-s26"><span class="csp-s27"><span class="csp-s26">第十四條　&nbsp; 公共工程餘土之處理，由工程主辦機關自行規劃設置、審查<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 核准專用營建餘土處理場所或由承包廠商自行覓妥收容處理場所<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 。並於工地實際產出餘土前，由承包廠商將其地址及名稱報工程<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 主辦機關備查。<br>
@@ -440,13 +509,13 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十五條　&nbsp; 公共工程餘土之處理方式、環保工作項目、權責與違約處罰<br>
+		<td><div class="ClearCss"><span class="csp-s28"><span class="csp-s29">第十五條　&nbsp; 公共工程餘土之處理方式、環保工作項目、權責與違約處罰<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ，工程主辦機關應於招標文件及工程契約書中規定，並納入工程<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 施工管理及督導。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十六條　&nbsp; 公共工程承包廠商應於工地實際產生餘土前，將公共工程餘<br>
+		<td><div class="ClearCss"><span class="csp-s30"><span class="csp-s31">第十六條　&nbsp; 公共工程承包廠商應於工地實際產生餘土前，將公共工程餘<br>
 &nbsp; &nbsp; &nbsp; &nbsp; 土處理計畫送工程主辦機關審核同意，並由工程主辦機關副知處<br>
 &nbsp; &nbsp; &nbsp; &nbsp; 理地點之縣(市)主管機關。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 公共工程餘土處理計畫應載明下列事項：<br>
@@ -466,7 +535,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十七條　&nbsp; 公共工程進行中，承包廠商應按公共工程餘土處理計畫辦理<br>
+		<td><div class="ClearCss"><span class="csp-s32"><span class="csp-s33">第十七條　&nbsp; 公共工程進行中，承包廠商應按公共工程餘土處理計畫辦理<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ，並於每月底按運送憑證製作月報表，向資訊服務中心申報餘土<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 之種類、數量及去處；工程主辦機關應督導承包廠商依餘土處理<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 計畫辦理。承包廠商違規棄置餘土者，應由工程主辦機關按契約<br>
@@ -475,7 +544,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十八條　&nbsp; 工程主辦機關應配合建立運送餘土流向證明文件制度，並不<br>
+		<td><div class="ClearCss"><span class="csp-s34"><span class="csp-s35">第十八條　&nbsp; 工程主辦機關應配合建立運送餘土流向證明文件制度，並不<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定期辦理餘土流向管制之抽查作業。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 工程主辦機關於承包廠商請領工程估驗款計價時，應抽查運<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 送餘土流向證明文件與經核准之餘土處理計畫是否相符。<br>
@@ -487,7 +556,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十九條　&nbsp; 都發局對於重大公共工程餘土之處理，得於工程施工中，視<br>
+		<td><div class="ClearCss"><span class="csp-s36"><span class="csp-s37">第十九條　&nbsp; 都發局對於重大公共工程餘土之處理，得於工程施工中，視<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 實際需要不定期邀集建管、環保、水土保持、警政及有關機關督<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 導考核，如有不合規定之棄置行為，應請工程主辦機關立即改善<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ，工程主辦機關對於違規行為未處理者，應追究其責任。<br>
@@ -496,12 +565,12 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十條　&nbsp; 為處理公共工程施工所產生之餘土，得於工程施工場所範圍<br>
+		<td><div class="ClearCss"><span class="csp-s38"><span class="csp-s39">第二十條　&nbsp; 為處理公共工程施工所產生之餘土，得於工程施工場所範圍<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 內設置臨時收容處理場所。其設置計畫應由工程主辦機關核定。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十一條　&nbsp; 民間參與投資之公共建設計畫，其工程餘土之處理，由主<br>
+		<td><div class="ClearCss"><span class="csp-s40"><span class="csp-s41">第二十一條　&nbsp; 民間參與投資之公共建設計畫，其工程餘土之處理，由主<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 辦機關依本章規定行使工程主辦機關權責。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 前項餘土處理，主辦機關應辦事項得委託其他機關或民間<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 團體辦理。</span></span></div></td>
@@ -511,7 +580,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 細明體">第二十二條　&nbsp; 土資場應面臨八公尺以上道路或農路，基地範圍所臨接道<br>
+		<td><div class="ClearCss"><span class="csp-s42"><span class="csp-s43"><span class="csp-s42">第二十二條　&nbsp; 土資場應面臨八公尺以上道路或農路，基地範圍所臨接道<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 路路段寬度應為十二公尺，不足時得予以退縮，所退縮土地面<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 積得計入基地面積。但其他法令另有規定者，從其規定。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 前項面臨道路或農路最小路寬，自基地起連接至已開闢八<br>
@@ -531,7 +600,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十三條　&nbsp; 下列地區不得設置土資場：<br>
+		<td><div class="ClearCss"><span class="csp-s44"><span class="csp-s45">第二十三條　&nbsp; 下列地區不得設置土資場：<br>
 　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、水庫集水區或河川行水區域內。<br>
 　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、水源水質水量保護區或自來水水源取水體之水平距離<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 四百公尺範圍內。<br>
@@ -553,7 +622,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 細明體">第二十四條　&nbsp; 都發局為審查收容處理場所之設置、變更、展期、營運、<br>
+		<td><div class="ClearCss"><span class="csp-s46"><span class="csp-s47"><span class="csp-s46">第二十四條　&nbsp; 都發局為審查收容處理場所之設置、變更、展期、營運、<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 註銷、封場、違規記點、承諾處理量等事宜，應設置臺中市政<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 府營建賸餘土石方收容處理場所審查委員會 (以下簡稱土石方<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 審查委員會)，其設置要點由本府另定之。<br>
@@ -562,12 +631,12 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十五條　&nbsp; 土資場得經土石方審查委員會之審查同意及依環保法令相<br>
+		<td><div class="ClearCss"><span class="csp-s48"><span class="csp-s49">第二十五條　&nbsp; 土資場得經土石方審查委員會之審查同意及依環保法令相<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 關規定獲許可後，收受營建混合物。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第二十六條　&nbsp; 申請設置土資場，應填具申請書，並檢附下列文件向都發<br>
+		<td><div class="ClearCss"><p><span class="csp-s50"><span class="csp-s51">第二十六條　&nbsp; 申請設置土資場，應填具申請書，並檢附下列文件向都發<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 局提出：<br>
 　&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、申請人身分證明文件影本。<br>
 　&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 二、設場區位表。<br>
@@ -584,7 +653,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十七條　&nbsp; 都發局於受理前條申請後，應於收件日起三十日內由土石<br>
+		<td><div class="ClearCss"><span class="csp-s52"><span class="csp-s53">第二十七條　&nbsp; 都發局於受理前條申請後，應於收件日起三十日內由土石<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 方審查委員會辦理初審；初審通過後，並由都發局將設置計畫<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公開展覽三十日後，通知申請人辦理複審。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 前項審查涉及都市計畫、區域計畫、交通、環保或水土保<br>
@@ -592,7 +661,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十八條　&nbsp; 前條第一項之複審，申請人應於收到複審通知後六個月內<br>
+		<td><div class="ClearCss"><span class="csp-s54"><span class="csp-s55">第二十八條　&nbsp; 前條第一項之複審，申請人應於收到複審通知後六個月內<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ，向都發局檢送下列文件：<br>
 　&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、設置場地計畫書圖，含地形圖 (比例尺不得小於五千<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 分之一 )、位置圖(比例尺不得小於五千分之一)、配<br>
@@ -629,7 +698,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十九條　&nbsp; 土資場經複審通過後，由都發局核發設置許可。<br>
+		<td><div class="ClearCss"><span class="csp-s56"><span class="csp-s57">第二十九條　&nbsp; 土資場經複審通過後，由都發局核發設置許可。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 申請人應於前項許可後一年內依核准圖說興建完成，並填<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 具申請書及檢附下列文件向都發局申請營運許可：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、核准圖說。<br>
@@ -647,7 +716,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十條　&nbsp; 土資場於申請營運許可前應設置下列設施：<br>
+		<td><div class="ClearCss"><span class="csp-s58"><span class="csp-s59">第三十條　&nbsp; 土資場於申請營運許可前應設置下列設施：<br>
 　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、辦公場所。<br>
 　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、出入口處應豎立標示牌，載明土資場名稱、核准日期文<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 號、接受餘土種類 (經許可收受營建混合物者應載明營<br>
@@ -662,7 +731,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十一條　&nbsp; 本市已依法登記營運中之砂石場、磚瓦窯場(廠)、輕質骨<br>
+		<td><div class="ClearCss"><span class="csp-s60"><span class="csp-s61">第三十一條　&nbsp; 本市已依法登記營運中之砂石場、磚瓦窯場(廠)、輕質骨<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 材場(廠)、水泥廠及預拌混凝土廠收受可直接利用物料以外之<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 餘土者，應填具申請書，並檢附下列文件向都發局提出申請：<br>
 　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、申請人身分證明文件。<br>
@@ -687,7 +756,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十二條　&nbsp; 經需土工程主管機關同意收容餘土之施工場所，應由餘土<br>
+		<td><div class="ClearCss"><span class="csp-s62"><span class="csp-s63">第三十二條　&nbsp; 經需土工程主管機關同意收容餘土之施工場所，應由餘土<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 產生承包廠商或承造人填具申請書，並檢附下列文件，送都發<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 局備查：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、需土工程計畫書或建造(雜項)執照圖說影本。<br>
@@ -698,7 +767,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十三條　&nbsp; 土資場申請使用期限不得超過五年，核准使用期限屆滿者<br>
+		<td><div class="ClearCss"><span class="csp-s64"><span class="csp-s65">第三十三條　&nbsp; 土資場申請使用期限不得超過五年，核准使用期限屆滿者<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ，應停止使用。但如容量尚未飽和或拌合加工及篩選分類功能<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ，其處理設備足堪使用者，應於核准期限屆滿六個月前申請營<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 運展期，每次展期不得超過五年。<br>
@@ -723,7 +792,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十四條　&nbsp; 土資場有下列情形之一者，應於情形發生一個月內申請終<br>
+		<td><div class="ClearCss"><span class="csp-s66"><span class="csp-s67">第三十四條　&nbsp; 土資場有下列情形之一者，應於情形發生一個月內申請終<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 止營運：<br>
 　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、核准使用之處理容量已飽和。<br>
 　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、核准使用期限屆滿未辦理展期。<br>
@@ -749,7 +818,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十五條　&nbsp; 收容處理場所應依核定計畫內容，簽發(收)下列之證明書<br>
+		<td><div class="ClearCss"><span class="csp-s68"><span class="csp-s69">第三十五條　&nbsp; 收容處理場所應依核定計畫內容，簽發(收)下列之證明書<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 或憑證：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、餘土處理後之處理證明文件。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、收容餘土後，簽收運送憑證。<br>
@@ -759,7 +828,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十六條　&nbsp; 收容處理場所於製作各項證明書或憑證時，應逐案上網向<br>
+		<td><div class="ClearCss"><span class="csp-s70"><span class="csp-s71">第三十六條　&nbsp; 收容處理場所於製作各項證明書或憑證時，應逐案上網向<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 資訊服務中心申報；並製作下列報表，於每月五日前送餘土管<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 理權責機關備查：<br>
 　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、收容處理同意書月報表。<br>
@@ -773,14 +842,14 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十七條　&nbsp; 土資場位置或經營業務變更時，應依本自治條例規定程序<br>
+		<td><div class="ClearCss"><span class="csp-s72"><span class="csp-s73">第三十七條　&nbsp; 土資場位置或經營業務變更時，應依本自治條例規定程序<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 重新申請。但僅變更處理功能、減少土資場面積或增加土資場<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 面積未超過原核准面積三分之一者，得申請初、複審合併辦理<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ，並免將設置計畫公開展覽三十日。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十八條　&nbsp; 第五條第一項第一款及第二款之收容處理場所應按核准計<br>
+		<td><div class="ClearCss"><span class="csp-s74"><span class="csp-s75">第三十八條　&nbsp; 第五條第一項第一款及第二款之收容處理場所應按核准計<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 畫之一年處理總量每立方公尺新臺幣五元計算，依都發局通知<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一次繳交營運保證金。設置變更時，亦同。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 前項保證金，得以現金、銀行本票、保付支票、無記名政<br>
@@ -793,7 +862,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十九條　&nbsp; 依第三十一條、第三十三條或第三十四條規定辦理展期、<br>
+		<td><div class="ClearCss"><span class="csp-s76"><span class="csp-s77">第三十九條　&nbsp; 依第三十一條、第三十三條或第三十四條規定辦理展期、<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 營運終止、註銷或封場者，應經土石方審查委員會現場會勘通<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 過。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 前項現場會勘時，如未依核定之計畫辦理封場者，都發局<br>
@@ -804,7 +873,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第四十條　&nbsp; 本市收容場所營運時應妥善管理，並不得妨害公共安全、公<br>
+		<td><div class="ClearCss"><span class="csp-s78"><span class="csp-s79">第四十條　&nbsp; 本市收容場所營運時應妥善管理，並不得妨害公共安全、公<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 共交通及公共衛生。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 本市收容處理場所之營運，應符合核定計畫及法令規定，並<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 維護其各項設施正常使用，都發局得隨時派員檢查。</span></span></div></td>
@@ -814,7 +883,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第四十一條　&nbsp; 已依第二十六條、第三十一條、第三十三條、第三十七條<br>
+		<td><div class="ClearCss"><span class="csp-s80"><span class="csp-s81">第四十一條　&nbsp; 已依第二十六條、第三十一條、第三十三條、第三十七條<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 或第五十三條第二項申請而未核准前，擅自營業或收容處理餘<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 土，處收容處理場所新臺幣六萬元以上十萬元以下罰鍰，並勒<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 令停止營業或收土至核准營運、展期或變更止；仍繼續營業或<br>
@@ -822,7 +891,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第四十二條　&nbsp; 未依施工計畫開挖深度超挖平均達一公尺者，處起造人、<br>
+		<td><div class="ClearCss"><span class="csp-s82"><span class="csp-s83">第四十二條　&nbsp; 未依施工計畫開挖深度超挖平均達一公尺者，處起造人、<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 承造人或承包廠商新臺幣三萬元以上十萬元以下罰鍰，並限期<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 改善；屆期仍未改善者，得按次處罰，必要時並得勒令停工至<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 改善止。<br>
@@ -836,7 +905,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第四十三條　&nbsp; 違反第六條第一項、第十四條第一項規定者，處起造人、<br>
+		<td><div class="ClearCss"><span class="csp-s84"><span class="csp-s85">第四十三條　&nbsp; 違反第六條第一項、第十四條第一項規定者，處起造人、<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 承造人或承包廠商新臺幣三萬元以上十萬元以下罰鍰，並限期<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清除或補辦手續；屆期仍未清除或補辦手續者，得按次處罰，<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 必要時得勒令停工至完成清除或補辦手續止；涉及刑事責任者<br>
@@ -844,7 +913,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第四十四條　&nbsp; 有下列情形之一者，處收容處理場所新臺幣三萬元以上十<br>
+		<td><div class="ClearCss"><span class="csp-s86"><span class="csp-s87">第四十四條　&nbsp; 有下列情形之一者，處收容處理場所新臺幣三萬元以上十<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 萬元以下罰鍰，並得按次處罰：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、未依第三十一條第四項、第三十三條第一項規定，於<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 核准期滿六個月前申請展期。<br>
@@ -854,7 +923,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第四十五條　&nbsp; 違反第三十五條第二項、第四十條規定或於許可營運期間<br>
+		<td><div class="ClearCss"><span class="csp-s88"><span class="csp-s89">第四十五條　&nbsp; 違反第三十五條第二項、第四十條規定或於許可營運期間<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 未依都發局指定期限履行第二十九條第二項第六款或第三十一<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 條第一項第七款者，處收容處理場所新臺幣三萬元以上十萬元<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 以下罰鍰，並得限期改善或履行；屆期仍未改善或履行者，得<br>
@@ -862,7 +931,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第四十六條　&nbsp; 違反第三十五條第一項規定，開立不實餘土處理證明或文<br>
+		<td><div class="ClearCss"><span class="csp-s90"><span class="csp-s91">第四十六條　&nbsp; 違反第三十五條第一項規定，開立不實餘土處理證明或文<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 件，或未依規處理餘土者，處收容處理場所新臺幣三萬元以上<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 十萬元以下罰鍰，並得限期改善；屆期仍未改善者，得按次處<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 罰。<br>
@@ -877,7 +946,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第四十七條　&nbsp; 本市收容處理場所每月收受餘土超過原核准處理量時，以<br>
+		<td><div class="ClearCss"><span class="csp-s92">第四十七條　&nbsp; 本市收容處理場所每月收受餘土超過原核准處理量時，以<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 每一百立方公尺處收容處理場所新臺幣三萬元罰鍰；其餘數未<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 達一百立方公尺者以一百立方公尺計算。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 前項罰鍰以新臺幣十萬元為上限。<br>
@@ -890,7 +959,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第四十八條　&nbsp; 違反第六條第六項所定辦法關於申報作業之規定、第八條<br>
+		<td><div class="ClearCss"><span class="csp-s93"><span class="csp-s94">第四十八條　&nbsp; 違反第六條第六項所定辦法關於申報作業之規定、第八條<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 、第九條、第十六條第二項規定，其餘土流向及數量與核准內<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 容不一致、未依報備地點運送餘土或違規棄置餘土者，處承造<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 人、承包廠商、承運業者或收容處理場所新臺幣一萬元以上十<br>
@@ -900,14 +969,14 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第四十九條　&nbsp; 違反第三十六條規定者，處收容處理場所新臺幣一萬元以<br>
+		<td><div class="ClearCss"><span class="csp-s95"><span class="csp-s96">第四十九條　&nbsp; 違反第三十六條規定者，處收容處理場所新臺幣一萬元以<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 上十萬元以下罰鍰，並得限期令其補辦手續；屆期仍未補辦手<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 續者，得按次處罰，必要時並得勒令停止營業或收土至完成補<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 辦手續止。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第五十條　&nbsp; 違反第十一條、第十六條第一項、第三項、第十七條前段規<br>
+		<td><div class="ClearCss"><span class="csp-s97"><span class="csp-s98">第五十條　&nbsp; 違反第十一條、第十六條第一項、第三項、第十七條前段規<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定者，處承造人或承包廠商新臺幣一萬元以上五萬元以下罰鍰，<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 並限期補辦手續；屆期仍未補辦手續者，得按次處罰，必要時並<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 得勒令停工至完成補辦手續止。</span></span></div></td>
@@ -917,11 +986,11 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第五十一條　&nbsp; 本自治條例所需書表格式，由都發局另定之。</span></span></div></td>
+		<td><div class="ClearCss"><span class="csp-s99"><span class="csp-s100">第五十一條　&nbsp; 本自治條例所需書表格式，由都發局另定之。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第五十二條　&nbsp; 都發局於核准第五條第一項第一款、第二款及第六款本府<br>
+		<td><div class="ClearCss"><span class="csp-s101"><span class="csp-s102">第五十二條　&nbsp; 都發局於核准第五條第一項第一款、第二款及第六款本府<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 委託民間經營之土資場收受餘土及核發展期許可時，得為公益<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 回饋方案之附款。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 前項公益回饋方案應包含下列事項：<br>
@@ -936,7 +1005,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第五十三條　&nbsp; 本自治條例公布前依臺灣省營建工程剩餘土石方處理及資<br>
+		<td><div class="ClearCss"><span class="csp-s103"><span class="csp-s104">第五十三條　&nbsp; 本自治條例公布前依臺灣省營建工程剩餘土石方處理及資<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 源堆置場設置管理要點核准設置之土資場，申請變更或營運期<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 滿重新申請者，除不受第二十三條第一項第五款規定限制外，<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 應依本自治條例規定辦理。但核准使用期限屆滿申請營運展期<br>
@@ -949,7 +1018,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em"><span style="font-family: 細明體">第五十四條&nbsp;&nbsp;&nbsp; 本自治條例自公布日施行。</span></span></div></td>
+		<td><div class="ClearCss"><span class="csp-s105"><span class="csp-s106">第五十四條&nbsp;&nbsp;&nbsp; 本自治條例自公布日施行。</span></span></div></td>
 	</tr>
 </table>
 
@@ -975,8 +1044,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -986,7 +1055,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,016</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,089</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -994,10 +1063,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="5Jf29gJbL0a7kFTkBjiKuA=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="5Jf29gJbL0a7kFTkBjiKuA=="></script>
+<script src="/js/FYLS.js" nonce="5Jf29gJbL0a7kFTkBjiKuA=="></script>
+<script type="text/javascript" nonce="5Jf29gJbL0a7kFTkBjiKuA==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -1070,8 +1139,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="5Jf29gJbL0a7kFTkBjiKuA==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -1092,5 +1174,276 @@
         });
     });
 </script>
+
+
+    <style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s0 { font-family: 細明體 !important; } 
+.csp-s1 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s2 { font-family: 細明體 !important; } 
+.csp-s3 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s4 { font-family: 細明體 !important; } 
+.csp-s5 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s6 { font-family: 細明體 !important; } 
+.csp-s7 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s8 { font-family: 細明體 !important; } 
+.csp-s9 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s10 { font-family: 細明體 !important; } 
+.csp-s11 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s12 { font-family: 細明體 !important; } 
+.csp-s13 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s14 { font-family: 細明體 !important; } 
+.csp-s15 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s16 { font-family: 細明體 !important; } 
+.csp-s17 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s18 { font-family: 細明體 !important; } 
+.csp-s19 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s20 { font-family: 細明體 !important; } 
+.csp-s21 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s22 { font-family: 細明體 !important; } 
+.csp-s23 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s24 { font-family: 細明體 !important; } 
+.csp-s25 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s26 { font-family: 細明體 !important; } 
+.csp-s27 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s28 { font-family: 細明體 !important; } 
+.csp-s29 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s30 { font-family: 細明體 !important; } 
+.csp-s31 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s32 { font-family: 細明體 !important; } 
+.csp-s33 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s34 { font-family: 細明體 !important; } 
+.csp-s35 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s36 { font-family: 細明體 !important; } 
+.csp-s37 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s38 { font-family: 細明體 !important; } 
+.csp-s39 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s40 { font-family: 細明體 !important; } 
+.csp-s41 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s42 { font-family: 細明體 !important; } 
+.csp-s43 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s44 { font-family: 細明體 !important; } 
+.csp-s45 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s46 { font-family: 細明體 !important; } 
+.csp-s47 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s48 { font-family: 細明體 !important; } 
+.csp-s49 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s50 { font-family: 細明體 !important; } 
+.csp-s51 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s52 { font-family: 細明體 !important; } 
+.csp-s53 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s54 { font-family: 細明體 !important; } 
+.csp-s55 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s56 { font-family: 細明體 !important; } 
+.csp-s57 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s58 { font-family: 細明體 !important; } 
+.csp-s59 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s60 { font-family: 細明體 !important; } 
+.csp-s61 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s62 { font-family: 細明體 !important; } 
+.csp-s63 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s64 { font-family: 細明體 !important; } 
+.csp-s65 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s66 { font-family: 細明體 !important; } 
+.csp-s67 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s68 { font-family: 細明體 !important; } 
+.csp-s69 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s70 { font-family: 細明體 !important; } 
+.csp-s71 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s72 { font-family: 細明體 !important; } 
+.csp-s73 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s74 { font-family: 細明體 !important; } 
+.csp-s75 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s76 { font-family: 細明體 !important; } 
+.csp-s77 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s78 { font-family: 細明體 !important; } 
+.csp-s79 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s80 { font-family: 細明體 !important; } 
+.csp-s81 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s82 { font-family: 細明體 !important; } 
+.csp-s83 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s84 { font-family: 細明體 !important; } 
+.csp-s85 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s86 { font-family: 細明體 !important; } 
+.csp-s87 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s88 { font-family: 細明體 !important; } 
+.csp-s89 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s90 { font-family: 細明體 !important; } 
+.csp-s91 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s92 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s93 { font-family: 細明體 !important; } 
+.csp-s94 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s95 { font-family: 細明體 !important; } 
+.csp-s96 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s97 { font-family: 細明體 !important; } 
+.csp-s98 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s99 { font-family: 細明體 !important; } 
+.csp-s100 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s101 { font-family: 細明體 !important; } 
+.csp-s102 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s103 { font-family: 細明體 !important; } 
+.csp-s104 { font-size: 1em !important; } 
+</style>
+
+<style nonce="5Jf29gJbL0a7kFTkBjiKuA==">
+.csp-s105 { font-size: 1em !important; } 
+.csp-s106 { font-family: 細明體 !important; } 
+</style>
+
 
 

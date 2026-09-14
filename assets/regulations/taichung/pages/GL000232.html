@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-公告本市都市計畫商業區、住宅區申請作為補習班使用之限制規定
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="/xXHWdGeDESWkU/PVi7mBA=="></script>
+    <script type="text/javascript" nonce="/xXHWdGeDESWkU/PVi7mBA==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="/xXHWdGeDESWkU/PVi7mBA==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL000232" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="/xXHWdGeDESWkU/PVi7mBA==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -238,15 +307,15 @@
                 <table id="ctl00_cp_content_tableLawArticleBasic" class="table tab-list tab-nobg tab-law law-content">
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em"><span style="font-size: 1em"><span style="font-family: 新細明體">壹、為維護公共安全，本市商業區、住宅區申設補習班需符合下列要件：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、不得設置於十一樓以上之樓層。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、設置補習班之建築物，其面前道路寬度應符合下列規定：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (一)設置五、六樓者，須面臨十公尺寬以上道路。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (二)設置於建築物七樓以上十樓以下者，須面臨十二公尺寬<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 以上道路。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 三、住宅區申設補習班，其建築物樓地板面積每棟每層不得逾<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 五百平方公尺。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 四、申請補習班之建築物，其相關附屬設施依都市計畫法臺灣<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 省施行細則規定辦理。</span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s0"><span class="csp-s1"><span class="csp-s2">壹、為維護公共安全，本市商業區、住宅區申設補習班需符合下列要件：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、不得設置於十一樓以上之樓層。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、設置補習班之建築物，其面前道路寬度應符合下列規定：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (一)設置五、六樓者，須面臨十公尺寬以上道路。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (二)設置於建築物七樓以上十樓以下者，須面臨十二公尺寬<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 以上道路。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 三、住宅區申設補習班，其建築物樓地板面積每棟每層不得逾<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 五百平方公尺。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 四、申請補習班之建築物，其相關附屬設施依都市計畫法臺灣<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 省施行細則規定辦理。</span></span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 40px"><span style="font-family: 新細明體"><span style="font-size: 1em">貳、公告前已核准申設補習班，並領有使用執照之建築物，得繼續為原來<br>&nbsp;&nbsp;&nbsp; 之使用。</span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s3"><span class="csp-s4"><span class="csp-s5">貳、公告前已核准申設補習班，並領有使用執照之建築物，得繼續為原來<br>&nbsp;&nbsp;&nbsp; 之使用。</span></span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 40px"><span style="font-size: 1em"><span style="font-family: 新細明體">叁、本公告僅適用於九十九年十二月二十五日改制前之臺中市轄區。</span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s6"><span class="csp-s7"><span class="csp-s8">叁、本公告僅適用於九十九年十二月二十五日改制前之臺中市轄區。</span></span></div></div></td>
 	</tr>
 </table>
 
@@ -272,8 +341,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -283,7 +352,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,369</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,423</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -291,10 +360,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="/xXHWdGeDESWkU/PVi7mBA=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="/xXHWdGeDESWkU/PVi7mBA=="></script>
+<script src="/js/FYLS.js" nonce="/xXHWdGeDESWkU/PVi7mBA=="></script>
+<script type="text/javascript" nonce="/xXHWdGeDESWkU/PVi7mBA==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -367,8 +436,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="/xXHWdGeDESWkU/PVi7mBA==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -389,5 +471,25 @@
         });
     });
 </script>
+
+
+    <style nonce="/xXHWdGeDESWkU/PVi7mBA==">
+.csp-s0 { line-height: 1.917em !important; } 
+.csp-s1 { font-size: 1em !important; } 
+.csp-s2 { font-family: 新細明體 !important; } 
+</style>
+
+<style nonce="/xXHWdGeDESWkU/PVi7mBA==">
+.csp-s3 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 40px !important; } 
+.csp-s4 { font-family: 新細明體 !important; } 
+.csp-s5 { font-size: 1em !important; } 
+</style>
+
+<style nonce="/xXHWdGeDESWkU/PVi7mBA==">
+.csp-s6 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 40px !important; } 
+.csp-s7 { font-size: 1em !important; } 
+.csp-s8 { font-family: 新細明體 !important; } 
+</style>
+
 
 

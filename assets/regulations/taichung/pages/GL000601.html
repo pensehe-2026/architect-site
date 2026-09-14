@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-臺中市招牌廣告及樹立廣告設置辦法
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="sCoF4eJDMEmnqRIDb9dC6Q=="></script>
+    <script type="text/javascript" nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL000601" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="sCoF4eJDMEmnqRIDb9dC6Q==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -245,18 +314,18 @@
                 <table id="ctl00_cp_content_tableLawArticleBasic" class="table tab-list tab-nobg tab-law law-content">
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第一條 &nbsp; &nbsp;臺中市政府為規範招牌廣告及樹立廣告之設置，依招牌廣告及<br>
+		<td><div class="ClearCss"><span class="csp-s0">第一條 &nbsp; &nbsp;臺中市政府為規範招牌廣告及樹立廣告之設置，依招牌廣告及<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 樹立廣告管理辦法第八條規定，訂定本辦法。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 新細明體"><span style="font-size: 1em">第二條　&nbsp; 本辦法之主管機關為臺中市政府都市發展局(以下簡稱都發局)<br>
+		<td><div class="ClearCss"><p><span class="csp-s1"><span class="csp-s2">第二條　&nbsp; 本辦法之主管機關為臺中市政府都市發展局(以下簡稱都發局)<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 。</span></span></p>
 </div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第三條 &nbsp; &nbsp;正面式招牌廣告之設置，應符合下列規定：<br>
+		<td><div class="ClearCss"><span class="csp-s3">第三條 &nbsp; &nbsp;正面式招牌廣告之設置，應符合下列規定：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、縱長超過二公尺者，應申請雜項執照。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 二、下端距離地面淨距離不得低於三公尺，並不得低於騎樓下<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 面樑底線，上端不得高於建築物簷口底面或女兒牆。<br>
@@ -275,7 +344,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第四條 &nbsp; &nbsp;側懸式招牌廣告之設置，應符合下列規定：<br>
+		<td><div class="ClearCss"><span class="csp-s4">第四條 &nbsp; &nbsp;側懸式招牌廣告之設置，應符合下列規定：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、縱長超過六公尺者，應申請雜項執照。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 二、下端距離地面淨距離不得低於三公尺，不得突出建築物牆<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; （柱）面超過一點五公尺。但位於車道上方者，下端距離地<br>
@@ -285,7 +354,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第五條 &nbsp; &nbsp;騎樓招牌廣告之設置，應符合下列規定：<br>
+		<td><div class="ClearCss"><span class="csp-s5">第五條 &nbsp; &nbsp;騎樓招牌廣告之設置，應符合下列規定：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、設置於建築物騎樓內或騎樓版下之側懸式或懸吊式招牌，<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 下端距離地面淨距離不得低於三公尺，厚度不得超過五十<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 公分。<br>
@@ -299,7 +368,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第六條 &nbsp; &nbsp;設置於地面之樹立廣告，應符合下列規定：<br>
+		<td><div class="ClearCss"><span class="csp-s6">第六條 &nbsp; &nbsp;設置於地面之樹立廣告，應符合下列規定：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、空地上設置之樹立廣告，其高度超過六公尺者，應申請雜<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 項執照。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 二、設置於騎樓地或都市計畫規定應退縮建築範圍者，不得妨<br>
@@ -321,7 +390,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第七條 &nbsp; &nbsp;設置於屋頂之樹立廣告，應符合下列規定：<br>
+		<td><div class="ClearCss"><span class="csp-s7">第七條 &nbsp; &nbsp;設置於屋頂之樹立廣告，應符合下列規定：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、高度超過三公尺者，應申請雜項執照。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 二、自女兒牆上方留設一點五公尺以上淨距離供逃生避難使用<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 。但自女兒牆退縮一點五公尺且自屋頂版面挑高二公尺以<br>
@@ -338,26 +407,26 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -4.667em; margin: 0 0 0 56pt"><span style="font-size: 1em">第八條 &nbsp; &nbsp;招牌廣告及樹立廣告內容不得妨害公共秩序及善良風俗。</span></div>
+		<td><div class="ClearCss"><div class="csp-s8"><span class="csp-s9">第八條 &nbsp; &nbsp;招牌廣告及樹立廣告內容不得妨害公共秩序及善良風俗。</span></div>
 </div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第九條 &nbsp; &nbsp;招牌廣告及樹立廣告材質應注意安全性。其照明方式採外架照<br>
+		<td><div class="ClearCss"><span class="csp-s10">第九條 &nbsp; &nbsp;招牌廣告及樹立廣告材質應注意安全性。其照明方式採外架照<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 明者，燈具不得突出建築線二公尺，下端距離地面淨距離不得<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 低於四點六公尺，用電裝置設備應符合屋內線路裝置規則規定<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第十條 &nbsp; &nbsp;招牌廣告及樹立廣告設置於住宅區四樓以上或高度超過十公尺<br>
+		<td><div class="ClearCss"><span class="csp-s11">第十條 &nbsp; &nbsp;招牌廣告及樹立廣告設置於住宅區四樓以上或高度超過十公尺<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 者，不得使用閃爍式燈光照明、電視牆及電腦顯示板。但建築<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 物臨接寬度在二十公尺以上道路且樓高在三十公尺以上，於屋<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 頂設置廣告物者，不在此限。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第十一條 &nbsp; &nbsp;招牌廣告及樹立廣告設置許可審查程序分為圖說審查及竣工<br>
+		<td><div class="ClearCss"><span class="csp-s12">第十一條 &nbsp; &nbsp;招牌廣告及樹立廣告設置許可審查程序分為圖說審查及竣工<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 查驗。圖說審查合格者，准予施工，並應於三個月內辦理竣<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 工查驗。竣工查驗合格者，發給廣告物許可證。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 應送都市設計審議案件，其招牌廣告及樹立廣告圖說提案經<br>
@@ -367,41 +436,41 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 新細明體"><span style="font-size: 1em">第十二條&nbsp; 申請設置招牌廣告及樹立廣告圖說審查，應備具申請書，並檢<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 附下列書件，向都發局或都發局委託之專業團體提出：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、簽證表。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、審查表。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 三、設計圖及其說明。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 四、設置處所之所有權證明文件或使用權同意書。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 五、有公寓大廈管理條例第八條情事者，應檢附經區分所有權<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 人會議之決議文件或社區規約；有公寓大廈管理條例第三<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 十三條情事者，應檢附區分所有權人同意書。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 六、應經都市設計審議之地區，檢附都市設計審查審定書有關<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 廣告物設置部分資料。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 七、面臨未開闢道路或既成巷道之空地上申請設置樹立廣告者<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ，應檢附建築線指定文件。但已取得雜項執照者免附。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 八、位於公共設施預定地者，應檢附切結書切結將來政府開闢<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公共設施時應無償拆除。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 九、廣告塔設於建築物屋頂者，應檢附建築物結構安全證明。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 但已取得雜項執照者免附。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 十、其他經都發局公告之文件。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 前項第三款設計圖及其說明應載明內容、長寬高尺寸、與建築<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 物或申請基地之關係位置、材料、比例。</span></span></p></div></td>
+		<td><div class="ClearCss"><p><span class="csp-s13"><span class="csp-s14">第十二條&nbsp; 申請設置招牌廣告及樹立廣告圖說審查，應備具申請書，並檢<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 附下列書件，向都發局或都發局委託之專業團體提出：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、簽證表。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、審查表。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 三、設計圖及其說明。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 四、設置處所之所有權證明文件或使用權同意書。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 五、有公寓大廈管理條例第八條情事者，應檢附經區分所有權<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 人會議之決議文件或社區規約；有公寓大廈管理條例第三<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 十三條情事者，應檢附區分所有權人同意書。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 六、應經都市設計審議之地區，檢附都市設計審查審定書有關<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 廣告物設置部分資料。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 七、面臨未開闢道路或既成巷道之空地上申請設置樹立廣告者<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ，應檢附建築線指定文件。但已取得雜項執照者免附。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 八、位於公共設施預定地者，應檢附切結書切結將來政府開闢<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公共設施時應無償拆除。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 九、廣告塔設於建築物屋頂者，應檢附建築物結構安全證明。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 但已取得雜項執照者免附。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 十、其他經都發局公告之文件。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 前項第三款設計圖及其說明應載明內容、長寬高尺寸、與建築<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 物或申請基地之關係位置、材料、比例。</span></span></p></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 新細明體"><span style="font-size: 1em">第十三條　申請招牌廣告及樹立廣告設置竣工查驗，應備具申請書，並檢<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 附下列書件，向都發局或都發局委託之專業團體提出：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、責任施工保證書。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、現場竣工照片。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 三、其他經都發局公告之文件。</span></span></p></div></td>
+		<td><div class="ClearCss"><p><span class="csp-s15"><span class="csp-s16">第十三條　申請招牌廣告及樹立廣告設置竣工查驗，應備具申請書，並檢<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 附下列書件，向都發局或都發局委託之專業團體提出：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、責任施工保證書。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、現場竣工照片。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 三、其他經都發局公告之文件。</span></span></p></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第十四條 &nbsp;招牌廣告及樹立廣告依規定應申辦雜項執照者，得併同建造執<br>
+		<td><div class="ClearCss"><span class="csp-s17">第十四條 &nbsp;招牌廣告及樹立廣告依規定應申辦雜項執照者，得併同建造執<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 照辦理。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 新細明體"><span style="font-size: 1em">第十五條　廣告物未逾廣告物許可證有效期限，其構架之尺寸位置未變更<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ，僅更換廣告物面板者，得無須再重新申請廣告物許可證，由<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 原申請人檢附現況照片報請都發局備查。</span></span></p></div></td>
+		<td><div class="ClearCss"><p><span class="csp-s18"><span class="csp-s19">第十五條　廣告物未逾廣告物許可證有效期限，其構架之尺寸位置未變更<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ，僅更換廣告物面板者，得無須再重新申請廣告物許可證，由<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 原申請人檢附現況照片報請都發局備查。</span></span></p></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 新細明體"><span style="font-size: 1em">第十六條　廣告物逾許可有效期限，重新申請設置，其構架之尺寸位置未<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 變更者，得備具申請書，並檢附下列書件，向都發局或都發局<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 委託之專業團體提出，直接發給廣告物許可證，不受第十一條<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二階段程序限制：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、設計圖及其說明。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、設置處所之所有權證明文件或使用權同意書。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 三、有公寓大廈管理條例第八條情事者，應檢附經區分所有權<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 人會議之決議文件或社區規約；有公寓大廈管理條例第三<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 十三條情事者，應檢附區分所有權人同意書。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 四、責任施工保證書。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 五、其他經都發局公告之文件。</span></span></p></div></td>
+		<td><div class="ClearCss"><p><span class="csp-s20"><span class="csp-s21">第十六條　廣告物逾許可有效期限，重新申請設置，其構架之尺寸位置未<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 變更者，得備具申請書，並檢附下列書件，向都發局或都發局<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 委託之專業團體提出，直接發給廣告物許可證，不受第十一條<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二階段程序限制：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、設計圖及其說明。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、設置處所之所有權證明文件或使用權同意書。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 三、有公寓大廈管理條例第八條情事者，應檢附經區分所有權<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 人會議之決議文件或社區規約；有公寓大廈管理條例第三<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 十三條情事者，應檢附區分所有權人同意書。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 四、責任施工保證書。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 五、其他經都發局公告之文件。</span></span></p></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 新細明體"><span style="font-size: 1em">第十七條　招牌廣告及樹立廣告之標準圖樣，由都發局另定之。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 選用前項標準圖樣設置廣告者，其圖說審查及竣工查驗得於竣<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 工後合併辦理，並免附設計圖及其說明。</span></span></p></div></td>
+		<td><div class="ClearCss"><p><span class="csp-s22"><span class="csp-s23">第十七條　招牌廣告及樹立廣告之標準圖樣，由都發局另定之。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 選用前項標準圖樣設置廣告者，其圖說審查及竣工查驗得於竣<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 工後合併辦理，並免附設計圖及其說明。</span></span></p></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第十八條 &nbsp;取得許可之招牌廣告及樹立廣告，應將許可證核准日期及字號<br>
+		<td><div class="ClearCss"><span class="csp-s24">第十八條 &nbsp;取得許可之招牌廣告及樹立廣告，應將許可證核准日期及字號<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 標示於廣告物之左下角、右下角或明顯處。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-size: 1em">第十九條&nbsp; 本辦法之書表格式，由都發局另定之。<br></span></p></div></td>
+		<td><div class="ClearCss"><p><span class="csp-s25">第十九條&nbsp; 本辦法之書表格式，由都發局另定之。<br></span></p></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -5.833em; margin: 0 0 0 70pt"><span style="font-size: 1em">第二十條&nbsp;&nbsp;&nbsp;本辦法自發布日施行。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s26"><span class="csp-s27">第二十條&nbsp;&nbsp;&nbsp;本辦法自發布日施行。</span></div></div></td>
 	</tr>
 </table>
 
@@ -427,8 +496,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -438,7 +507,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,083</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,148</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -446,10 +515,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="sCoF4eJDMEmnqRIDb9dC6Q=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="sCoF4eJDMEmnqRIDb9dC6Q=="></script>
+<script src="/js/FYLS.js" nonce="sCoF4eJDMEmnqRIDb9dC6Q=="></script>
+<script type="text/javascript" nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -522,8 +591,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -544,5 +626,95 @@
         });
     });
 </script>
+
+
+    <style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s0 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s1 { font-family: 新細明體 !important; } 
+.csp-s2 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s3 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s4 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s5 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s6 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s7 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s8 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -4.667em !important; margin: 0 0 0 56pt !important; } 
+.csp-s9 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s10 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s11 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s12 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s13 { font-family: 新細明體 !important; } 
+.csp-s14 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s15 { font-family: 新細明體 !important; } 
+.csp-s16 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s17 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s18 { font-family: 新細明體 !important; } 
+.csp-s19 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s20 { font-family: 新細明體 !important; } 
+.csp-s21 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s22 { font-family: 新細明體 !important; } 
+.csp-s23 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s24 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s25 { font-size: 1em !important; } 
+</style>
+
+<style nonce="sCoF4eJDMEmnqRIDb9dC6Q==">
+.csp-s26 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -5.833em !important; margin: 0 0 0 70pt !important; } 
+.csp-s27 { font-size: 1em !important; } 
+</style>
+
 
 

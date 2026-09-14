@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-臺中市政府都市發展局性騷擾防治措施申訴及懲戒處理要點
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="LtFIY8UFZUGx9JRBimyQig=="></script>
+    <script type="text/javascript" nonce="LtFIY8UFZUGx9JRBimyQig==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="LtFIY8UFZUGx9JRBimyQig==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL004455" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="8/KvigLuCadSimoI/p/2UhmM70f6p5frXwLMoesJtuINXP+RsAzv5lUkhFat76uugc8TvMNIIYMWtIcTOKFqxrns+Ysj5ddyC3ARssXWsx6BicKR7vWrw7J8RxCxnRwAC9sCXXHH4eM7zg3SLEbYB7jup5rrbjZepzQpEq5fuNlmQJBQmAKG/X+O93pn026pBuoB3/MneZP+eGL7N1cHl3GYqVQduEcNqMMQ5AsnlDtCRRzPjElg6/V8t88y9lUSDpU57dWap84aM8zhCwlFE8M87PZ5tOCv8SUEXBZf0ob8YB7FZFKH8lmbHPCpBbYXweS5B3JuhqpNtl268Beet6yzD3T1/xZyd8Fg2SMCveoUtT4U2XHLHASXxIvxfrubeMBEc5+k9NLl2rOugueAAZvqg6g3jXX8k27Kg5TEItxfaZr9ojMkIVolSPS/GEc4PVFVnNFpj8T2g9T7soF4Q44dJZg+O3yMdMt36qjSos68AqEH1JAx/QXxSmoxrvBfLlLeHvYe0yZs7/xdQPznabGjnD6aZv0ap4xfUd8ypmuYhqyKikViLLC3LkJXUx0ZJ7o2ZhhFOuBf29fFvkCWzmqtWOd5/h8kfvuSVIfPqdIhxqQxOcoxcyPkpxyVrXSqcmzPgkOUyU5XS7feBdI0uopoBALfihvSkpBseDWCVKUbx4T8iVunTcVcTW92Xc7vQvF+EgJNVZuj0+2o0uWdkfQCkfv6IIy5ROACRxV+9sOB0DcvjSbo8rSFj8X5HcESwYYYLVwfmpZO0+KGSygYngjsJ8wbsI+Wo07TnOLRJIW4cu0C5aA+wT5M6KPzFPTXg/MXpuGLK6QhnXyv0SLuGuDYCV11Gv2fNOoANJyxTImNjf83WtozXihRgpU5jdC6vTHrKsQNNTVKj2J1xEvykYWsyqblw9PnFwIGW+Yb7lc290DY8lFQZlZn3SAwt3ziNDteS8i6Xo4gCMTvAn0l7gsHsruytoF0VrLU2BMgdAaeR1ZxJPKvAhnM9sLetYz1E0iWjO70Z4QIIuWQlph7NgoUt5AaOSTudPFd+MIqjWLh1ziF9xuT7U+ldAjBhrg+sRZmko0Uo83uSvGuvbworoS6d/KaWR5iqSs5HuRP4nJZ7oPsP3XVZMmrgo+NdT/gBYVQJqihnldmKTKhQPlRqxmliT9NDrOBnWLI6QpDLo6hnp3dUZZPuJBIRHztvXlXQNFtEfmNouzqLL8gjVzTUGJ6cpDNKo3qYwzdcRtghSD1DY+3qcF9RhyeirelLuuEDZPFWiBd0muraHZH0wyf7k9nEt2v1gbE04tGKLAFhjwoT8LgHVg6UOugH42LVsIBeandQfgiVVH9nuKeGhfnmeXliIpB0nZ3a81QXstY081DAjT/w4JccwBGYVmie6Jn/Jvs53SqYlqUnT5kHFKB2Z1wBeoZVjUDka6T+B0fHqUy3H9TstsfBbGGbb9QRUgQi+ePeJVTb3mjJ/BjdWi7nx1QbSNbE91QjwKVIK2H0o/6w2/nejOtQnBcCccTS6Ka2ZClWeyL9nuW9lK8N8Jw0vKxrWFQn3OZKITJC0JJygdZhkyQqH4DgbCqbQxUG/O43rkH+INCgP079x841y3fJDBQ/TLOME3TRj/DkPYm8wdx5Z5SRwrCRk2NpwE8dO92i4mZaRUDTqPnJlx4pU95/NaZaZ7ZoiKVtbWg6xDA5YTTaQhnQX23hH2ZsGagwOPOrPBeVBoJSvF71ZCnWlroNhqBtUYiA+Bz0+YVwtcszAvfl6gbMi90CzpoVLwhFi1ZFIzB0/U4cu6F8YWBGprxcviI601XM5kbRWRdIT3OmLAGvZtGwzktyX2b8bpj9gE49PtcfYxml2ZxDJ2MHiOkXymBnfjfPaDve6dvdfgVp4utD3sduCwqN/oIuJcjgPs3" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="LtFIY8UFZUGx9JRBimyQig==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -244,7 +313,7 @@
                 <table id="ctl00_cp_content_tableLawArticleBasic" class="table tab-list tab-nobg tab-law law-content">
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">一、臺中市政府都市發展局（以下簡稱都發局）為營造優質友善職場，提<br>
+		<td><div class="ClearCss"><span class="csp-s0">一、臺中市政府都市發展局（以下簡稱都發局）為營造優質友善職場，提<br>
 &nbsp; &nbsp; 供免於性騷擾之工作與服務環境，建立性騷擾事件申訴管道，並採取<br>
 &nbsp; &nbsp; 適當之預防、懲戒及處理機制，特依性別平等工作法、性騷擾防治法<br>
 &nbsp; &nbsp; 及臺中市政府及所屬機關學校性騷擾防治與申訴作業注意事項等相關<br>
@@ -252,17 +321,17 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">二、本要點適用於性騷擾事件之申訴人或被申訴人為都發局員工。但不包<br>
+		<td><div class="ClearCss"><span class="csp-s1">二、本要點適用於性騷擾事件之申訴人或被申訴人為都發局員工。但不包<br>
 　　括性別平等教育法規範之校園性騷擾事件。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">三、本要點所稱性騷擾及職權性騷擾，係指性別平等工作法第十二條及性<br>
+		<td><div class="ClearCss"><span class="csp-s2">三、本要點所稱性騷擾及職權性騷擾，係指性別平等工作法第十二條及性<br>
 　　騷擾防治法第二條所規定之情形。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">四、本要點所稱性騷擾，包括:<br>
+		<td><div class="ClearCss"><span class="csp-s3">四、本要點所稱性騷擾，包括:<br>
 　　(一)性別平等工作法之性騷擾，指下列情形之一：<br>
 　&nbsp;　　1、受僱者於執行職務時，任何人以性要求、具有性意味或性別歧<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 視之言詞或行為，對其造成敵意性、脅迫性或冒犯性之工作環<br>
@@ -292,7 +361,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">五、都發局應利用集會、廣播、電子郵件或內部文件等各種傳遞訊息之機<br>
+		<td><div class="ClearCss"><span class="csp-s4">五、都發局應利用集會、廣播、電子郵件或內部文件等各種傳遞訊息之機<br>
 &nbsp; &nbsp; 會及方式，加強對所屬員工有關性騷擾防治措施及申訴管道之宣導。<br>
 &nbsp; &nbsp; 每年應定期舉辦或鼓勵所屬人員參與防治性騷擾之教育訓練，並由擔<br>
 &nbsp; &nbsp; 任主管職務以及參與性騷擾申訴事件之處理、調查及決議人員者為優<br>
@@ -300,7 +369,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">六、都發局設置性騷擾事件申訴管道，相關資訊揭示如下，並於都發局網<br>
+		<td><div class="ClearCss"><span class="csp-s5">六、都發局設置性騷擾事件申訴管道，相關資訊揭示如下，並於都發局網<br>
 &nbsp; &nbsp; 站公告：&nbsp;<br>
 &nbsp; &nbsp; (一)專線電話：04-22289111#65703<br>
 &nbsp; &nbsp; (二)專用傳真：04-23272418<br>
@@ -309,7 +378,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">七、都發局於知悉所屬員工有發生性騷擾之情形時，應採取下列立即有效<br>
+		<td><div class="ClearCss"><span class="csp-s6">七、都發局於知悉所屬員工有發生性騷擾之情形時，應採取下列立即有效<br>
 &nbsp; &nbsp; 之糾正及補救措施：<br>
 &nbsp; &nbsp; (一)因接獲被害人申訴而知悉性騷擾之情形時：<br>
 &nbsp; &nbsp; &nbsp; &nbsp;1、協助申訴人保全相關證據，必要時協助通知警察機關到場處理<br>
@@ -346,7 +415,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">八、都發局就所屬公共場所及公眾得出入之場所，定期檢討其空間及設施<br>
+		<td><div class="ClearCss"><span class="csp-s7">八、都發局就所屬公共場所及公眾得出入之場所，定期檢討其空間及設施<br>
 &nbsp; &nbsp; ，避免性騷擾之發生。<br>
 &nbsp; &nbsp; 都發局知悉於所屬公共場所及公眾得出入之場所發生性騷擾事件，應<br>
 &nbsp; &nbsp; 採取下列有效之糾正及補救措施，並應注意被害人安全及隱私之維護<br>
@@ -357,7 +426,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">九、性騷擾之行為人或被害人為都發局所屬員工時，被害人或其代理人得<br>
+		<td><div class="ClearCss"><span class="csp-s8">九、性騷擾之行為人或被害人為都發局所屬員工時，被害人或其代理人得<br>
 &nbsp; &nbsp; 以言詞、電子郵件或書面提出申訴。以言詞或電子郵件為之者，受理<br>
 &nbsp; &nbsp; 人員或單位應作成書面紀錄，經向申訴人或其代理人朗讀或使閱覽，<br>
 &nbsp; &nbsp; 確認其內容無誤後，由其簽名或蓋章。<br>
@@ -384,7 +453,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">十、都發局參與性騷擾申訴事件之處理、調查及決議等相關人員，應依下<br>
+		<td><div class="ClearCss"><span class="csp-s9">十、都發局參與性騷擾申訴事件之處理、調查及決議等相關人員，應依下<br>
 &nbsp; &nbsp; 列規定辦理：<br>
 &nbsp; &nbsp; (一)保護當事人與受邀協助調查之個人隱私，及其他人格法益；對其<br>
 &nbsp; &nbsp; &nbsp; &nbsp; 姓名或其他足以辨識身分之資料，除有調查之必要或基於公共安<br>
@@ -395,7 +464,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">十一、都發局受理性騷擾之申訴，應成立性騷擾事件申訴處理委員會 (以<br>
+		<td><div class="ClearCss"><span class="csp-s10">十一、都發局受理性騷擾之申訴，應成立性騷擾事件申訴處理委員會 (以<br>
 &nbsp; &nbsp; &nbsp; 下稱申訴處理委員會)調查決定處理之。<br>
 &nbsp; &nbsp; &nbsp; 前項申訴處理委員會應置委員五人，其中一名為召集人，由都發局<br>
 &nbsp; &nbsp; &nbsp; 首長指定都發局員工擔任，並為會議主席，其餘委員由都發局首長<br>
@@ -412,7 +481,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">十二、適用性騷擾防治法之申訴事件有下列情形之一者，應即移送社會局<br>
+		<td><div class="ClearCss"><span class="csp-s11">十二、適用性騷擾防治法之申訴事件有下列情形之一者，應即移送社會局<br>
 &nbsp; &nbsp; &nbsp; 決定不予受理或應續行調查：<br>
 &nbsp; &nbsp; &nbsp; (一)當事人逾期提出申訴。<br>
 &nbsp; &nbsp; &nbsp; (二)申訴不合法定程式，不能補正或經通知限期補正，屆期未補正<br>
@@ -421,7 +490,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">十三、申訴事件之調查人員在調查過程中，有下列各款情形之一者，應自<br>
+		<td><div class="ClearCss"><span class="csp-s12">十三、申訴事件之調查人員在調查過程中，有下列各款情形之一者，應自<br>
 &nbsp; &nbsp; &nbsp; 行迴避：<br>
 &nbsp; &nbsp; &nbsp; (一)本人或其配偶、前配偶、四親等內之血親或三親等內之姻親或<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 曾有此關係者為事件之當事人。<br>
@@ -441,7 +510,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">十四、申訴處理委員會之處理程序如下：<br>
+		<td><div class="ClearCss"><span class="csp-s13">十四、申訴處理委員會之處理程序如下：<br>
 &nbsp; &nbsp; &nbsp; (一)應自接獲性騷擾申訴事件後，應於受理申訴或移送到達之日起<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 七日內開始調查，並於二個月內完成調查；必要時，得延長一<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 個月，並應通知當事人。<br>
@@ -458,13 +527,13 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">十五、都發局首長或各級主管涉及性騷擾行為，且情節重大，於進行調查<br>
+		<td><div class="ClearCss"><span class="csp-s14">十五、都發局首長或各級主管涉及性騷擾行為，且情節重大，於進行調查<br>
 &nbsp; &nbsp; &nbsp; 期間有先行停止或調整職務之必要時，得由臺中市政府或都發局停<br>
 &nbsp; &nbsp; &nbsp; 止或調整職務。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">十六、都發局接獲屬性別平等工作法之事件時，應至勞動部職場性騷擾案<br>
+		<td><div class="ClearCss"><span class="csp-s15">十六、都發局接獲屬性別平等工作法之事件時，應至勞動部職場性騷擾案<br>
 &nbsp; &nbsp; &nbsp; 件通報系統(下稱通報系統)填報。<br>
 &nbsp; &nbsp; &nbsp; 前項申訴事件調查結果，應包括下列事項：<br>
 &nbsp; &nbsp; &nbsp; (一)申訴事件之案由，包括當事人敘述。<br>
@@ -483,38 +552,38 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">十七、屬性騷擾防治法規範之性騷擾事件，如係權勢性騷擾以外之事件，<br>
+		<td><div class="ClearCss"><span class="csp-s16">十七、屬性騷擾防治法規範之性騷擾事件，如係權勢性騷擾以外之事件，<br>
 &nbsp; &nbsp; &nbsp; 任一方當事人得以書面或言詞向社會局申請調解。都發局於性騷擾<br>
 &nbsp; &nbsp; &nbsp; 事件調查程序中，獲知任一方當事人有調解意願時，應協助其向社<br>
 &nbsp; &nbsp; &nbsp; 會局申請調解。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">十八、申訴處理委員會受理之性騷擾申訴事件如已進入司法程序，經申請<br>
+		<td><div class="ClearCss"><span class="csp-s17">十八、申訴處理委員會受理之性騷擾申訴事件如已進入司法程序，經申請<br>
 &nbsp; &nbsp; &nbsp; 人同意後，得決議暫緩調查及審議。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">十九、性騷擾事件提起申訴後，得於處分作成前，以書面撤回申訴。<br>
+		<td><div class="ClearCss"><span class="csp-s18">十九、性騷擾事件提起申訴後，得於處分作成前，以書面撤回申訴。<br>
 &nbsp; &nbsp; &nbsp; 前項撤回申訴後，如屬性騷擾防治法規範之性騷擾事件，不得就同<br>
 &nbsp; &nbsp; &nbsp; 一案件再提起申訴。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">二十、逾期未作成調查結果或當事人不服申訴調查結果者，得按其身分依<br>
+		<td><div class="ClearCss"><span class="csp-s19">二十、逾期未作成調查結果或當事人不服申訴調查結果者，得按其身分依<br>
 &nbsp; &nbsp; &nbsp; 適用之法令提起救濟。<br>
 &nbsp; &nbsp; &nbsp; 都發局處理性別平等工作法申訴事件作成之調查結果，應附記不服<br>
 &nbsp; &nbsp; &nbsp; 處理結果得提起救濟之期間及受理機關。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">二十一、都發局對於在性騷擾事件申訴、調查、偵查或審理程序中，為申<br>
+		<td><div class="ClearCss"><span class="csp-s20">二十一、都發局對於在性騷擾事件申訴、調查、偵查或審理程序中，為申<br>
 &nbsp; &nbsp; &nbsp; &nbsp; 訴、告訴、告發、提起訴訟、作證、提供協助或其他參與行為之<br>
 &nbsp; &nbsp; &nbsp; &nbsp; 人，不得予以解職、調職或為其他不利之處分。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">二十二、性騷擾事件之行為人為都發局所屬員工，其性騷擾行為經調查屬<br>
+		<td><div class="ClearCss"><span class="csp-s21">二十二、性騷擾事件之行為人為都發局所屬員工，其性騷擾行為經調查屬<br>
 &nbsp; &nbsp; &nbsp; &nbsp; 實者，都發局應視情節輕重，將調查結果送交考績委員會或相關<br>
 &nbsp; &nbsp; &nbsp; &nbsp; 委員會，對行為人依相關規定為適當之懲戒或處理。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; 都發局對於性騷擾申訴事件應採取追蹤、考核及監督，確保懲處<br>
@@ -522,7 +591,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">二十三、本要點之未盡事宜，依性別平等工作法、性騷擾防治法等相關法<br>
+		<td><div class="ClearCss"><span class="csp-s22">二十三、本要點之未盡事宜，依性別平等工作法、性騷擾防治法等相關法<br>
 &nbsp; &nbsp; &nbsp; &nbsp; 令之規定辦理。</span></div></td>
 	</tr>
 </table>
@@ -549,8 +618,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -560,7 +629,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,208</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,268</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -568,10 +637,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="LtFIY8UFZUGx9JRBimyQig=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="LtFIY8UFZUGx9JRBimyQig=="></script>
+<script src="/js/FYLS.js" nonce="LtFIY8UFZUGx9JRBimyQig=="></script>
+<script type="text/javascript" nonce="LtFIY8UFZUGx9JRBimyQig==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -644,8 +713,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="LtFIY8UFZUGx9JRBimyQig==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -666,5 +748,99 @@
         });
     });
 </script>
+
+
+    <style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s0 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s1 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s2 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s3 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s4 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s5 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s6 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s7 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s8 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s9 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s10 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s11 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s12 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s13 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s14 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s15 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s16 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s17 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s18 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s19 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s20 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s21 { font-size: 1em !important; } 
+</style>
+
+<style nonce="LtFIY8UFZUGx9JRBimyQig==">
+.csp-s22 { font-size: 1em !important; } 
+</style>
+
 
 

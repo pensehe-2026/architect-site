@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-都市計畫法臺中市施行自治條例
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="arDn/OWOMUO+hIZ3yWy0IA=="></script>
+    <script type="text/javascript" nonce="arDn/OWOMUO+hIZ3yWy0IA==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL002020" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Bfr+d80+8lwD7Ydzq+Wt2CjcrNCsGbhwEZnGk+R4/vrHe0u2+QnE9Z9KIi0vX0ADQ0QQzjaLj0UvCj2nrqz+jQW+IWZcLkbswCFollZ7dfb2hbIL8fT4WfYwZ9RjO7bjUEhD8dj0F7mjUgXnjMuVZ6siGpZ3prE74BqC/FjTgNDmbXPTWg22mfLDI4LmzF20tm6P5UQm5XNWyYJiTrZp984i6Crxf6v3mQSAV9POUTXcJcli/pOFJVCqj7Wd/EU5fvHKxxeFwCaQQM6lcocgOG5o7awBPBGf10VUuH+RUe3dit3FRx6j7gbmETvMIM6GqXunr5CLoP8NCM7ps4J0CmZ/NSXYcESwIB9HhA6omDdsTLETpJyXicVZDxVel6Zhe9zz3618WrcgTRuSrs5LRb0DpofYSOoxpviHgIUJusWMbyJKZntDKQ4Ic6LxyyEBuUpeqXphv/HuAmeikNBDTGxQLsrDHxQ7vRS39mSh2C2ORz/aw9bvfAMoSNuwsAeg4SN5fOuPuKHB7wWQrJPaGdPrZvG30gF5xQgwjFgWZ6lQDTsz0lbdRJCqUtXDwZltiTc6AaUXmcfrmC6Y102UuP3Bvc5qNd5+dUpZ4i27K+sf85PF9fU8Q2cjn/NZg7X9vl8/MRzBrgDJCbnNkjnT8Is8gq7U/SiVNuIUPpUBP35qLTYXAgh8IdAw+uvOnPK6f8Pz1haWSryODC+reMyzPgLX6cS/XKDSRgDFCpsa6tTvFPVMqOxfTFRyalxitNk8U+h4Ftilw4IyyVpHX/Q0BDVBz+mXIT8HSKvfCHvZWwqMyJhaHT6x0NbAznWlDvNxAasrzd+u4PCLRy18bfiR1hFRIZpTZw/MRLLo7U5nGyGVfGqInp2ncVaGxv/ALgSRpt/TpHcDiBlpZzslbwqAhkj3WMvWs5cXzLbIqnP+LwUfmC/dUo9d5PloVx+b8ZLJDfXqxXA6hIwxaXrnqsqrNq+45sPOnsLruKbAuxZ5NnacXl2j+LlaY0aNE+TLCPkrOJJBpH/RrH3yMXx8TzjxBxWQZpSMkCJ/W7mbjFnTv+e+RT85yoTqA91M6ufdvNYiFSIzbqCrpCDvITyQGZS0B2Lgivnh911Qr6AsjFbnlPYyCa0G8utrw0LublOpGQvs9b/AOuHcRlt0jRRr0LsxDBzBvvGjzNSgP8zHnDQmBuzD+Fxnk5ck+pgTKJwK5cW1qQLJc9uazCsWkUb8fKvvWDzk978TFMzm/K4iCCEwReJTkKaN/Q/xE73Cz1StCQZh8tsJpUvfy7OeEqGZWs+X8NBJHXbYAUj6ej15Zbg3Ail8nrP+nFVaj6WyXImPbwzXbVQXzG8g9A2hQfaFKV/n1UaChzYAkmXxwTaiujMz7Z0k/vNGOm+CkNKwGbMfV8MakkimbY/ioKx5I0g5Km7sak6W4eszENZovqge1yRqyrs2lBEEOv+sOEjx+lXqPGH1uVOnGToPmbqLqdpXAbgKFxlKYxEGpaMjIJtjC1Z+p6+0zIzDdNqdKKR81WfW5A5AoeQlBHoAJ+/9Y+GbUSRJKpikwdu8k3wXknVhb9+864vFs4AcXPgbQF6I8DPCr61BO6ThRb0vtEul2UY65jDiJc22kziv+JEl/5ewjryc5t8ehPnQGR/7BvcF4My8tcN1V9ovHmuO/vWDNSepnhGICHlD8Lue238D8KtYzhRslOQpjRMsbQ7G0Z35cvCuVa7I+p03kyQ+BN4p46fOSMqmyVAYF4lehFO/1sqUGfzauinEgbYkDrd2pw/1g6wZSKMnP2FecvzuL2cT7NkqZ61xY02FjlCwQpS24aNHK6zDkP+QM0OAvvoPnY0eGBlXMNkJvhPQ6dSek7mekonf7Dr7tiGllMEKVCncyKBtaKwmHQ3y6ikA4CRe5vVbsOZKgzV0awFIlyi7aDg4awhTh1B5W16PamEqgqlL8QFcyBrAJLhc75ulHcC23vWQoRYpep1fUL3+Fg9psSAzF870AzLxChHsxwV1xOcj1NByVpQuTG13p+fuShvsCNrHQWTfiM+3P3ra7+F7Ei7xQdW92nnNr2oyFcCXbn0zZVJ/U1ABTbE=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="arDn/OWOMUO+hIZ3yWy0IA==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -248,18 +317,18 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第一條　　本自治條例依都市計畫法（以下簡稱本法）第八十五條規定制定<br>
+		<td><div class="ClearCss"><p><span class="csp-s0"><span class="csp-s1">第一條　　本自治條例依都市計畫法（以下簡稱本法）第八十五條規定制定<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;之。</span></span></p>
 </div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第二條 &nbsp; &nbsp;本自治條例之主管機關為臺中市政府（以下簡稱本府）。</span></span></p>
+		<td><div class="ClearCss"><p><span class="csp-s2"><span class="csp-s3">第二條 &nbsp; &nbsp;本自治條例之主管機關為臺中市政府（以下簡稱本府）。</span></span></p>
 </div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第三條&nbsp;&nbsp; &nbsp;本自治條例用詞，定義如下：<br>
+		<td><div class="ClearCss"><p><span class="csp-s4"><span class="csp-s5">第三條&nbsp;&nbsp; &nbsp;本自治條例用詞，定義如下：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;一、道路，指合於下列規定之一者：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;（一）經主要計畫或細部計畫規定發布之計畫道路。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;（二）依法指定或認定建築線之巷道。<br>
@@ -270,7 +339,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第四條&nbsp;&nbsp; &nbsp;本法第十七條第二項但書所稱能確定建築線，指該計畫區之主<br>
+		<td><div class="ClearCss"><p><span class="csp-s6"><span class="csp-s7">第四條&nbsp;&nbsp; &nbsp;本法第十七條第二項但書所稱能確定建築線，指該計畫區之主<br>
 &nbsp; &nbsp; &nbsp; 要計畫道路已依有關法令規定豎立樁誌，而能指示建築線者；所稱<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;主要公共設施已照主要計畫興建完成，指符合下列各款規定者<br>
 &nbsp; &nbsp; &nbsp; ：<br>
@@ -284,14 +353,14 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第五條&nbsp;&nbsp; &nbsp;都市計畫擬定、變更案件應於本法第十九條規定之公開展覽期<br>
+		<td><div class="ClearCss"><p><span class="csp-s8"><span class="csp-s9">第五條&nbsp;&nbsp; &nbsp;都市計畫擬定、變更案件應於本法第十九條規定之公開展覽期<br>
 &nbsp; &nbsp; &nbsp; 間內辦理說明會，並於公開展覽期滿三十日內提請臺中市都市計畫<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;委員會（以下簡稱都委會）審議。</span></span></p>
 </div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第六條&nbsp;&nbsp; &nbsp;本法第十九條規定之公開展覽，應在本府與相關區公所所在地<br>
+		<td><div class="ClearCss"><p><span class="csp-s10"><span class="csp-s11">第六條&nbsp;&nbsp; &nbsp;本法第十九條規定之公開展覽，應在本府與相關區公所所在地<br>
 &nbsp; &nbsp; &nbsp; 為之。公開展覽日期、地點及說明會之日期、地點應刊登本府公報<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;、臺中市（以下簡稱本市）新聞紙三日及本府網站，並在有關區公<br>
 &nbsp; &nbsp; &nbsp; 所與里辦公處張貼公告。</span></span></p>
@@ -299,12 +368,12 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第七條&nbsp;&nbsp; &nbsp;依本法第十九條提出書面意見者，應於都委會審議完竣前送達<br>
+		<td><div class="ClearCss"><span class="csp-s12">第七條&nbsp;&nbsp; &nbsp;依本法第十九條提出書面意見者，應於都委會審議完竣前送達<br>
 &nbsp; &nbsp; &nbsp; 本府。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-size: 1em">第八條&nbsp;&nbsp; &nbsp;土地權利關係人依本法第二十四條規定自行擬定細部計畫時，<br>
+		<td><div class="ClearCss"><p><span class="csp-s13">第八條&nbsp;&nbsp; &nbsp;土地權利關係人依本法第二十四條規定自行擬定細部計畫時，<br>
 　　　應配合本法第十七條規定之分區發展優先次序辦理之。但有下列情<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;形之一者，不在此限：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、都市計畫指定應自行擬定細部計畫地區。<br>
@@ -316,7 +385,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第九條 &nbsp;　土地權利關係人依本法第二十四條或第六十一條規定自行擬定<br>
+		<td><div class="ClearCss"><p><span class="csp-s14"><span class="csp-s15">第九條 &nbsp;　土地權利關係人依本法第二十四條或第六十一條規定自行擬定<br>
 　　　或變更細部計畫者，應檢送載明下列事項之申請計畫書、圖及相關<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件正、副本各一份，送本府核辦：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、申請人姓名、出生年月日、住址。<br>
@@ -336,7 +405,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第十條&nbsp;&nbsp;　前二條之細部計畫，本府認不符都市整體發展需要或有礙公共<br>
+		<td><div class="ClearCss"><p><span class="csp-s16"><span class="csp-s17">第十條&nbsp;&nbsp;　前二條之細部計畫，本府認不符都市整體發展需要或有礙公共<br>
 　　　利益時，得通知限期修正；屆期未修正者，不予受理。申請書圖及<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;附件與本法或本自治條例之規定不符者，得通知限期補正；屆期不<br>
 　　　補正者，不予受理。</span></span></p>
@@ -344,7 +413,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第十一條&nbsp;&nbsp;　依第八條及第九條規定自行擬定或變更細部計畫時，其計畫<br>
+		<td><div class="ClearCss"><p><span class="csp-s18"><span class="csp-s19">第十一條&nbsp;&nbsp;　依第八條及第九條規定自行擬定或變更細部計畫時，其計畫<br>
 　　　　書規定以市地重劃或都市更新方式辦理者，應檢附本府各目的事<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;業主管機關認可之可行性評估相關證明文件。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　前項計畫書規劃之公共設施用地兼具其他使用項目者，應於<br>
@@ -353,7 +422,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第十二條&nbsp;&nbsp;　土地權利關係人依本法第二十五條規定向內政部請求處理者<br>
+		<td><div class="ClearCss"><p><span class="csp-s20"><span class="csp-s21">第十二條&nbsp;&nbsp;　土地權利關係人依本法第二十五條規定向內政部請求處理者<br>
 　　　　，應同時將副本連同附件送達本府，本府自收到副本之日起十五<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日內將拒絕理由及有關文件送內政部審議。審議經決議土地權利<br>
 　　　　關係人有理由者，本府應自收到內政部通知之日起三十日內提請<br>
@@ -364,13 +433,13 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-size: 1em">第十三條&nbsp;&nbsp;　依本法第二十六條規定辦理通盤檢討時，本府得視實際情形<br>
+		<td><div class="ClearCss"><p><span class="csp-s22">第十三條&nbsp;&nbsp;　依本法第二十六條規定辦理通盤檢討時，本府得視實際情形<br>
 　　　　就本法第十五條或第二十二條規定之全部或部分事項辦理。</span></p>
 </div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第十四條　　申請依本法第二十七條規定變更都市計畫，屬本市興建之重<br>
+		<td><div class="ClearCss"><p><span class="csp-s23"><span class="csp-s24">第十四條　　申請依本法第二十七條規定變更都市計畫，屬本市興建之重<br>
 　　　　大建設者，應檢附本府目的事業主管機關同意文件。但依本法第<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二十七條第一項第三款或第四款由中央提出或興建者，應檢附內<br>
 　　　　政部會同有關機關認定之文件。</span></span></p>
@@ -378,7 +447,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第十五條&nbsp;&nbsp;　本府或內政部為擬定或變更都市計畫，派員進入設有圍障之<br>
+		<td><div class="ClearCss"><p><span class="csp-s25"><span class="csp-s26">第十五條&nbsp;&nbsp;　本府或內政部為擬定或變更都市計畫，派員進入設有圍障之<br>
 　　　　公私有土地或房屋為勘查或測量時，應依下列規定辦理：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、將工作地點及日期預先通知土地所有權人或使用人。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　二、攜帶證明身分文件。<br>
@@ -390,7 +459,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第十六條&nbsp;&nbsp;　依本法第二十九條及第四十一條所給付之補償金有下列情形<br>
+		<td><div class="ClearCss"><p><span class="csp-s27"><span class="csp-s28">第十六條&nbsp;&nbsp;　依本法第二十九條及第四十一條所給付之補償金有下列情形<br>
 　　　　之一，得依法提存：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、受補償人拒絕受領或不能受領者。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　二、受補償人所在地不明者。</span></span></p>
@@ -401,7 +470,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第十七條　　都市計畫地區內土地得視實際發展情形，劃定下列各種使用<br>
+		<td><div class="ClearCss"><p><span class="csp-s29"><span class="csp-s30">第十七條　　都市計畫地區內土地得視實際發展情形，劃定下列各種使用<br>
 　　　　分區，分別限制其使用：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、住宅區。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　二、商業區。<br>
@@ -425,7 +494,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第十八條　　住宅區為保護居住環境而劃定，除本自治條例另有規定者外<br>
+		<td><div class="ClearCss"><p><span class="csp-s31"><span class="csp-s32">第十八條　　住宅區為保護居住環境而劃定，除本自治條例另有規定者外<br>
 　　　　，不得為下列建築物及土地之使用：<br>
 　　　　　　一、第二十一條規定限制之建築物及土地之使用。<br>
 　　　　　　二、使用電力及氣體燃料（使用動力不包括空氣調節、抽水<br>
@@ -507,7 +576,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十八條之一　　前條第二十二款資訊休閒業及第二十三款健身休閒場所<br>
+		<td><div class="ClearCss"><span class="csp-s33"><span class="csp-s34">第十八條之一　　前條第二十二款資訊休閒業及第二十三款健身休閒場所<br>
 　　　　　　符合下列規定者，不受前條限制：<br>
 　　　　　　　　一、資訊休閒業使用之單層樓地板面積未逾三百平方公<br>
 　　　　　　　　　　尺。<br>
@@ -531,7 +600,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第十九條 &nbsp;　住宅區建築物及土地之使用未超過第十八條第二款、第三款<br>
+		<td><div class="ClearCss"><p><span class="csp-s35"><span class="csp-s36">第十九條 &nbsp;　住宅區建築物及土地之使用未超過第十八條第二款、第三款<br>
 　　　　第五目或第十二款至第十四款之限制規定，與符合第十八條第三<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;款第十目但書、第四款但書及第九款但書規定者，得依下列規<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定使用：<br>
@@ -552,7 +621,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第二十條&nbsp;&nbsp;　大型商場(店)及飲食店符合下列條件，不受第十八條第十二<br>
+		<td><div class="ClearCss"><p><span class="csp-s37"><span class="csp-s38">第二十條&nbsp;&nbsp;　大型商場(店)及飲食店符合下列條件，不受第十八條第十二<br>
 　　　　款使用面積之限制：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、主要出入口面臨二十公尺以上之道路。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　二、設置之地點位於建築物第一層、第二層或地下第一層。<br>
@@ -562,7 +631,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第二十一條 &nbsp;　商業區為促進商業發展而劃定，不得為下列建築物及土地<br>
+		<td><div class="ClearCss"><span class="csp-s39">第二十一條 &nbsp;　商業區為促進商業發展而劃定，不得為下列建築物及土地<br>
 　　　　　之使用：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、第二十三條至第二十五條規定限制之建築及使用。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　二、作業廠房之樓地板面積合計超過三百平方公尺者。<br>
@@ -612,7 +681,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第二十二條&nbsp;&nbsp;　住宅區及商業區設置補習班，其建築物除每層樓地板面積<br>
+		<td><div class="ClearCss"><p><span class="csp-s40"><span class="csp-s41">第二十二條&nbsp;&nbsp;　住宅區及商業區設置補習班，其建築物除每層樓地板面積<br>
 　　　　　不得超過五百平方公尺外，並應符合下列規定：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、不得設置於第十一樓以上之樓層。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　二、建築物面前道路寬度應符合下列規定：<br>
@@ -624,7 +693,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-size: 1em">第二十三條&nbsp;&nbsp;　乙種工業區以供公害輕微之工廠及其必要附屬設施、工業<br>
+		<td><div class="ClearCss"><p><span class="csp-s42">第二十三條&nbsp;&nbsp;　乙種工業區以供公害輕微之工廠及其必要附屬設施、工業<br>
 　　　　　發展有關設施、公共服務設施及公用事業設施為限，並不得為<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下列建築物及土地之使用：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、第二十六條規定限制之建築及使用。<br>
@@ -695,7 +764,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第二十四條　　前條所稱工廠必要附屬設施、工業發展有關設施，指下列<br>
+		<td><div class="ClearCss"><p><span class="csp-s43"><span class="csp-s44">第二十四條　　前條所稱工廠必要附屬設施、工業發展有關設施，指下列<br>
 　　　　　設施：<br>
 　　　　　　　一、工廠必要附屬設施：<br>
 　　　　　　　　　（一）研發、推廣、教育解說、實作體驗及服務辦公<br>
@@ -739,7 +808,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第二十五條　　第二十三條所稱公共服務設施及公用事業設施，指下列設<br>
+		<td><div class="ClearCss"><p><span class="csp-s45"><span class="csp-s46">第二十五條　　第二十三條所稱公共服務設施及公用事業設施，指下列設<br>
 　　　　　施：<br>
 　　　　　　　一、警察及消防機構。<br>
 　　　　　　　二、變電所、輸電線路鐵塔（連接站）及其管路。<br>
@@ -789,7 +858,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-size: 1em">第二十六條　　甲種工業區以供輕工業及無公共危險之重工業為主，不得<br>
+		<td><div class="ClearCss"><p><span class="csp-s47">第二十六條　　甲種工業區以供輕工業及無公共危險之重工業為主，不得<br>
 　　　　　為下列建築物及土地之使用。但第二十四條及前條第一項之各<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;款設施，不在此限：<br>
 　　　　　　　一、煉油工業：以原油為原料之製造工業。<br>
@@ -804,7 +873,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第二十七條　　特種工業區應以下列特種工業、公共服務設施及公用事業<br>
+		<td><div class="ClearCss"><p><span class="csp-s48"><span class="csp-s49">第二十七條　　特種工業區應以下列特種工業、公共服務設施及公用事業<br>
 　　　　　設施之使用為限。但與特種工業有關之辦公室、倉庫、展售設<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;施、生產實驗室、訓練房舍、環境保護設施、單身員工宿舍、<br>
 　　　　　員工餐廳及其他經本府核准之必要附屬設施者，不在此限：<br>
@@ -825,7 +894,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第二十八條&nbsp;&nbsp;　零星工業區應以下列設施為限：<br>
+		<td><div class="ClearCss"><p><span class="csp-s50"><span class="csp-s51">第二十八條&nbsp;&nbsp;　零星工業區應以下列設施為限：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、合法登記、無污染性，具有相當規模且遷廠不易之工<br>
 　　　　　　　　　廠。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　二、前款附屬之辦公室、展售設施、倉庫、生產實驗室、<br>
@@ -850,20 +919,20 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第二十九條&nbsp;&nbsp;　依產業創新條例、原獎勵投資條例或促進產業升級條例規<br>
+		<td><div class="ClearCss"><p><span class="csp-s52"><span class="csp-s53">第二十九條&nbsp;&nbsp;　依產業創新條例、原獎勵投資條例或促進產業升級條例規<br>
 　　　　　定編定開發之工業區內建築物及土地之使用，得依其有關法令<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;規定辦理，不受第二十三條至第二十七條之限制。</span></span></p>
 </div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第三十條&nbsp;&nbsp;　行政區以供政府機關、自治團體、人民團體、紀念性建築物<br>
+		<td><div class="ClearCss"><p><span class="csp-s54"><span class="csp-s55">第三十條&nbsp;&nbsp;　行政區以供政府機關、自治團體、人民團體、紀念性建築物<br>
 　　　　及其他公益上需要之建築物使用為限。</span></span></p>
 </div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第三十一條&nbsp;&nbsp;　文教區供下列之使用：<br>
+		<td><div class="ClearCss"><p><span class="csp-s56"><span class="csp-s57">第三十一條&nbsp;&nbsp;　文教區供下列之使用：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、藝術館、博物館、社教館、圖書館、科學館、紀念性<br>
 　　　　　　　　　建築物等及其附屬設施。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　二、學校。<br>
@@ -873,7 +942,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第三十二條&nbsp;&nbsp;　體育運動區供下列之使用：<br>
+		<td><div class="ClearCss"><p><span class="csp-s58"><span class="csp-s59">第三十二條&nbsp;&nbsp;　體育運動區供下列之使用：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、傑出運動名人館、運動博物館及紀念性建築物。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　二、運動訓練設施。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　&nbsp;三、運動設施。<br>
@@ -885,7 +954,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第三十三條　　風景區為保育及開發自然風景而劃定，以供下列之使用為<br>
+		<td><div class="ClearCss"><p><span class="csp-s60"><span class="csp-s61">第三十三條　　風景區為保育及開發自然風景而劃定，以供下列之使用為<br>
 　　　　　限：<br>
 　　　　　　　一、住宅。<br>
 　　　　　　　二、宗祠及宗教建築。<br>
@@ -907,7 +976,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-size: 1em">第三十四條&nbsp;&nbsp;　保存區供下列之使用：<br>
+		<td><div class="ClearCss"><p><span class="csp-s62">第三十四條&nbsp;&nbsp;　保存區供下列之使用：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、名勝古蹟。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　二、具有歷史、文化、紀念性、藝術或科學價值之建築物<br>
 　　　　　　　　　及其環境景觀。<br>
@@ -916,7 +985,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第三十五條　　保護區為國土保安、水土保持、維護天然資源與保護生態<br>
+		<td><div class="ClearCss"><p><span class="csp-s63"><span class="csp-s64">第三十五條　　保護區為國土保安、水土保持、維護天然資源與保護生態<br>
 　　　　　環境，經本府核准得供下列之使用：<br>
 　　　　　　　一、國防所需之各種設施。<br>
 　　　　　　　二、警衛、保安、保防、消防設施。<br>
@@ -965,7 +1034,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第三十六條&nbsp;&nbsp;　保護區內之土地，禁止下列行為。但第一款至第五款之行<br>
+		<td><div class="ClearCss"><span class="csp-s65">第三十六條&nbsp;&nbsp;　保護區內之土地，禁止下列行為。但第一款至第五款之行<br>
 　　　　　為，為前條第一項所列各款設施所必需，並經有關主管機關核<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;准者，不在此限：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　&nbsp;一、砍伐竹木。但經中央目的事業主管機關或本府核准之<br>
@@ -980,7 +1049,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第三十七條　　農業區為保持農業生產而劃定，除保持農業生產及本自治<br>
+		<td><div class="ClearCss"><p><span class="csp-s66"><span class="csp-s67">第三十七條　　農業區為保持農業生產而劃定，除保持農業生產及本自治<br>
 　　　　　條例另有規定者外，僅得申請下列使用：<br>
 　　　　　　　一、建築農舍。<br>
 　　　　　　　二、農業產銷必要設施。<br>
@@ -1017,7 +1086,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十八條　　農業區除都市計畫書另有規定外，本府得核准為下列之使<br>
+		<td><div class="ClearCss"><span class="csp-s68"><span class="csp-s69">第三十八條　　農業區除都市計畫書另有規定外，本府得核准為下列之使<br>
 　　　　　用：<br>
 　　　　　　　一、公用事業設施。<br>
 　　　　　　　二、土石方資源堆置處理場。<br>
@@ -1044,7 +1113,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第三十九條&nbsp;&nbsp;　毗鄰農業區之建築基地，無法以其他相鄰土地作為私設通<br>
+		<td><div class="ClearCss"><p><span class="csp-s70"><span class="csp-s71">第三十九條&nbsp;&nbsp;　毗鄰農業區之建築基地，無法以其他相鄰土地作為私設通<br>
 　　　　　路連接建築線者，得經本府核准以農業區土地作為私設通路使<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　前項私設通路設置之位置、長度、寬度及使用條件等事項<br>
@@ -1053,7 +1122,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第四十條&nbsp;&nbsp;&nbsp;&nbsp;農業區土地在都市計畫發布前已為建地目、編定為可供興建<br>
+		<td><div class="ClearCss"><p><span class="csp-s72"><span class="csp-s73">第四十條&nbsp;&nbsp;&nbsp;&nbsp;農業區土地在都市計畫發布前已為建地目、編定為可供興建<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;住宅使用之建築用地或已建築供居住使用之合法建築物基地者，<br>
 　　　　其建築物及使用，應依下列規定辦理：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一、建築物簷高不得超過十四公尺，並以四層為限，建蔽率<br>
@@ -1069,7 +1138,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第四十一條&nbsp;&nbsp;　電信專用區為促進電信事業之發展而劃定，得為下列之使<br>
+		<td><div class="ClearCss"><p><span class="csp-s74"><span class="csp-s75">第四十一條&nbsp;&nbsp;　電信專用區為促進電信事業之發展而劃定，得為下列之使<br>
 　　　　　用：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、經營電信事業所需設施：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　　（一）機房、營業廳、辦公室、料場、倉庫、天線場<br>
@@ -1103,7 +1172,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第四十二條　　都市計畫發布實施後，其土地上原有建築物不合使用分區<br>
+		<td><div class="ClearCss"><p><span class="csp-s76"><span class="csp-s77">第四十二條　　都市計畫發布實施後，其土地上原有建築物不合使用分區<br>
 　　　　　管制規定者，除經本府命其變更使用或遷移者外，得繼續為原<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有合法之使用。但不得增建、改建、增加設備或變更為其他不<br>
 　　　　　符規定之使用。</span></span></p>
@@ -1111,7 +1180,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-size: 1em">第四十三條&nbsp;&nbsp;　各使用分區之建蔽率除本自治條例另有規定者外，不得超<br>
+		<td><div class="ClearCss"><p><span class="csp-s78">第四十三條&nbsp;&nbsp;　各使用分區之建蔽率除本自治條例另有規定者外，不得超<br>
 　　　　　過下列規定：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、住宅區：百分之六十。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　二、商業區：百分之八十。<br>
@@ -1142,14 +1211,14 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第四十四條&nbsp;&nbsp;　各使用分區內，經核准設置之再生能源發電設備及其輸變<br>
+		<td><div class="ClearCss"><p><span class="csp-s79"><span class="csp-s80">第四十四條&nbsp;&nbsp;　各使用分區內，經核准設置之再生能源發電設備及其輸變<br>
 　　　　　電相關設施，其建蔽率依前條第一項第二十一款之規定，不受<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;該分區建蔽率規定之限制。</span></span></p>
 </div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-size: 1em">第四十五條&nbsp;&nbsp;　為使土地合理使用，應依下列規定，於都市計畫書內訂定<br>
+		<td><div class="ClearCss"><p><span class="csp-s81">第四十五條&nbsp;&nbsp;　為使土地合理使用，應依下列規定，於都市計畫書內訂定<br>
 　　　　　容積管制規定：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　一、住宅區及商業區，應依計畫容納人口、居住密度、每<br>
 　　　　　　　　　人平均居住樓地板面積及公共設施服務水準，訂定平<br>
@@ -1165,14 +1234,14 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-size: 1em">第四十六條&nbsp;&nbsp;　各使用分區之容積率，依都市計畫書中所載規定；未載明<br>
+		<td><div class="ClearCss"><p><span class="csp-s82">第四十六條&nbsp;&nbsp;　各使用分區之容積率，依都市計畫書中所載規定；未載明<br>
 　　　　　者，其容積率（以下簡稱法定容積率）不得超過附表一之規定<br>
 　　　　　。</span></p>
 </div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第四十七條　　各土地使用分區除依本法第八十三條之一、文化資產保存<br>
+		<td><div class="ClearCss"><p><span class="csp-s83"><span class="csp-s84">第四十七條　　各土地使用分區除依本法第八十三條之一、文化資產保存<br>
 　　　　　法第四十一條及第五十條、水利法第八十二條規定可移入容積<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;、增額容積及因大眾捷運系統與地下街設施移設或連通增加之<br>
 　　　　　容積外，於法定容積增加建築容積後，不得超過下列規定：<br>
@@ -1195,7 +1264,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第四十七條之一　　依都市危險及老舊建築物加速重建條例實施重建，且<br>
+		<td><div class="ClearCss"><span class="csp-s85">第四十七條之一　　依都市危險及老舊建築物加速重建條例實施重建，且<br>
 　　　　　　　同時取得耐震標章或通過新建住宅性能評估結構安全性能<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;，其建蔽率及建築物高度比得酌予放寬。<br>
 　　　　　　　　　依前項規定實施重建者，應與本府簽訂協議書，並於<br>
@@ -1218,7 +1287,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第四十八條 &nbsp;　本府擬定或變更都市計畫，得於各都市計畫書內訂定增設<br>
+		<td><div class="ClearCss"><p><span class="csp-s86"><span class="csp-s87">第四十八條 &nbsp;　本府擬定或變更都市計畫，得於各都市計畫書內訂定增設<br>
 　　　　　供公眾使用停車空間及設置開放空間獎勵容積之規定。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　建築物增設供公眾使用停車空間及設置開放空間，其回饋<br>
 　　　　　方式及管理維護實施事項於都市計畫書規定。<br>
@@ -1228,7 +1297,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第四十八條之一　　私有土地屬都市更新地區以外之建築物提供六百平方<br>
+		<td><div class="ClearCss"><span class="csp-s88">第四十八條之一　　私有土地屬都市更新地區以外之建築物提供六百平方<br>
 　　　　　　　公尺以上容積樓地板面積作社會住宅、幼兒園、社區關懷<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;據點、里民活動中心、長期照顧服務機構，或一百平方公<br>
 　　　　　　　尺以上、三百五十平方公尺以下之托嬰中心使用者（含相<br>
@@ -1246,7 +1315,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第四十八條之二　　以公有土地為建築基地之全部供作社會住宅及其必要<br>
+		<td><div class="ClearCss"><span class="csp-s89">第四十八條之二　　以公有土地為建築基地之全部供作社會住宅及其必要<br>
 　　　　　　　附屬設施使用者，該建築基地得增加建築容積至一點五倍<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;法定容積。經都市計畫變更程序者，得再酌予提高。但不<br>
 　　　　　　　得超過法定容積之二倍。<br>
@@ -1263,7 +1332,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em">第四十八條之三　　依原獎勵投資條例、原促進產業升級條例或產業創新<br>
+		<td><div class="ClearCss"><span class="csp-s90">第四十八條之三　　依原獎勵投資條例、原促進產業升級條例或產業創新<br>
 　　　　　　　條例編定，由經濟部或本府管轄之工業區、產業園區，或<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;依科學園區設置管理條例設置之科學園區，法定容積率為<br>
 　　　　　　　百分之二百四十以下，且從事產業創新條例相關規定所指<br>
@@ -1309,7 +1378,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第四十九條&nbsp;&nbsp;　擬定細部計畫時，應於都市計畫書中訂定使用分區管制事<br>
+		<td><div class="ClearCss"><p><span class="csp-s91"><span class="csp-s92">第四十九條&nbsp;&nbsp;　擬定細部計畫時，應於都市計畫書中訂定使用分區管制事<br>
 　　　　　項；並得就該地區環境之需要訂定都市設計相關事項。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　前項使用分區管制事項，應包括區內土地及建築物之使用<br>
 　　　　　、最小建築基地面積、基地內應保持空地之比率、容積率、綠<br>
@@ -1326,7 +1395,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第五十條　　建築物下列設置，經本府核准者，其法定空地、容積樓地板<br>
+		<td><div class="ClearCss"><p><span class="csp-s93"><span class="csp-s94">第五十條　　建築物下列設置，經本府核准者，其法定空地、容積樓地板<br>
 　　　　面積、建築面積及建築物高度計算方式如下：<br>
 　　　　　　一、建築基地以人工地盤、架空走廊或地下通道連接供公眾<br>
 　　　　　　　　使用之通路或場所並提供公眾通行者，得計入法定空地<br>
@@ -1350,7 +1419,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第五十條之一　　建築基地屬應經都市設計審議或建造執照預審會議通過<br>
+		<td><div class="ClearCss"><span class="csp-s95"><span class="csp-s96">第五十條之一　　建築基地屬應經都市設計審議或建造執照預審會議通過<br>
 　　　　　　者，其建築物屋頂應有三分之一面積以上之綠化或綠能設施<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（備）。但情況特殊並經都市設計審議或建造執照預審會議<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;審議通過者，不在此限。<br>
@@ -1366,7 +1435,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第五十一條&nbsp;&nbsp;　公共設施用地建蔽率、容積率，依都市計畫書中所載規定<br>
+		<td><div class="ClearCss"><p><span class="csp-s97"><span class="csp-s98">第五十一條&nbsp;&nbsp;　公共設施用地建蔽率、容積率，依都市計畫書中所載規定<br>
 　　　　　；未載明者，不得超過附表二之規定。</span></span></p>
 </div></td>
 	</tr>
@@ -1375,14 +1444,14 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第五十二條&nbsp;&nbsp;　為辦理都市計畫使用分區證明、劃設公共設施完竣地區、<br>
+		<td><div class="ClearCss"><p><span class="csp-s99"><span class="csp-s100">第五十二條&nbsp;&nbsp;　為辦理都市計畫使用分區證明、劃設公共設施完竣地區、<br>
 　　　　　違反都市計畫規定事件查報等都市計畫相關行政作業事項，得<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由本府視實際需要委由相關區公所辦理。</span></span></p>
 </div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第五十三條&nbsp;&nbsp;　住宅區、風景區、保護區或農業區內之合法建築物，有下<br>
+		<td><div class="ClearCss"><p><span class="csp-s101"><span class="csp-s102">第五十三條&nbsp;&nbsp;　住宅區、風景區、保護區或農業區內之合法建築物，有下<br>
 　　　　　列情形之ㄧ，經本府核准者，得按其原建蔽率、容積率、建築<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;物高度或總樓地板面積，於原都市計畫住宅區、風景區、保護<br>
 　　　　　區或農業區之自有土地，辦理重建：<br>
@@ -1395,7 +1464,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第五十四條&nbsp;&nbsp;　合法建築物因政府興辦公共設施拆除後賸餘部分就地整建<br>
+		<td><div class="ClearCss"><p><span class="csp-s103"><span class="csp-s104">第五十四條&nbsp;&nbsp;　合法建築物因政府興辦公共設施拆除後賸餘部分就地整建<br>
 　　　　　，經本府核准，其基地因面積、寬度、深度或地形高差等情形<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而不符建蔽率、容積率、前後院之退縮規定及停車空間之留設<br>
 　　　　　時，得不受本自治條例之限制。</span></span></p>
@@ -1403,7 +1472,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第五十五條&nbsp;&nbsp;　高氯離子鋼筋混凝土建築物經報本府核准拆除重建，得依<br>
+		<td><div class="ClearCss"><p><span class="csp-s105"><span class="csp-s106">第五十五條&nbsp;&nbsp;　高氯離子鋼筋混凝土建築物經報本府核准拆除重建，得依<br>
 　　　　　原規定容積率或原總樓地板面積重建。原未訂定容積率者，得<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;依重建時容積率重建，並酌予提高。但最高以不超過其原規定<br>
 　　　　　容積率、重建時容積率或總樓地板面積之百分之三十為限。<br>
@@ -1413,14 +1482,14 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第五十六條&nbsp;&nbsp;　申請在公共設施保留地內建築臨時性之展覽會場、裝飾門<br>
+		<td><div class="ClearCss"><p><span class="csp-s107"><span class="csp-s108">第五十六條&nbsp;&nbsp;　申請在公共設施保留地內建築臨時性之展覽會場、裝飾門<br>
 　　　　　、裝飾塔、牌樓、施工架或其他類似之建築物，本府核准時，<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　應規定其存續期間。</span></span></p>
 </div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-size: 1em"><span style="font-family: 細明體">五十七條 &nbsp;　本自治條例，除中華民國一百零三年二月六日制定公布之<br>
+		<td><div class="ClearCss"><p><span class="csp-s109"><span class="csp-s110">五十七條 &nbsp;　本自治條例，除中華民國一百零三年二月六日制定公布之<br>
 　　　　　第四十七條自中華民國一百零四年七月一日施行外，自公布日<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;施行。</span></span></p>
 </div></td>
@@ -1449,8 +1518,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -1460,7 +1529,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,000</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,081</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -1468,10 +1537,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="arDn/OWOMUO+hIZ3yWy0IA=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="arDn/OWOMUO+hIZ3yWy0IA=="></script>
+<script src="/js/FYLS.js" nonce="arDn/OWOMUO+hIZ3yWy0IA=="></script>
+<script type="text/javascript" nonce="arDn/OWOMUO+hIZ3yWy0IA==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -1544,8 +1613,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="arDn/OWOMUO+hIZ3yWy0IA==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -1566,5 +1648,307 @@
         });
     });
 </script>
+
+
+    <style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s0 { font-family: 細明體 !important; } 
+.csp-s1 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s2 { font-family: 細明體 !important; } 
+.csp-s3 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s4 { font-family: 細明體 !important; } 
+.csp-s5 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s6 { font-family: 細明體 !important; } 
+.csp-s7 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s8 { font-family: 細明體 !important; } 
+.csp-s9 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s10 { font-family: 細明體 !important; } 
+.csp-s11 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s12 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s13 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s14 { font-family: 細明體 !important; } 
+.csp-s15 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s16 { font-family: 細明體 !important; } 
+.csp-s17 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s18 { font-family: 細明體 !important; } 
+.csp-s19 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s20 { font-family: 細明體 !important; } 
+.csp-s21 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s22 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s23 { font-family: 細明體 !important; } 
+.csp-s24 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s25 { font-family: 細明體 !important; } 
+.csp-s26 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s27 { font-family: 細明體 !important; } 
+.csp-s28 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s29 { font-family: 細明體 !important; } 
+.csp-s30 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s31 { font-family: 細明體 !important; } 
+.csp-s32 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s33 { font-family: 細明體 !important; } 
+.csp-s34 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s35 { font-family: 細明體 !important; } 
+.csp-s36 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s37 { font-family: 細明體 !important; } 
+.csp-s38 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s39 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s40 { font-family: 細明體 !important; } 
+.csp-s41 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s42 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s43 { font-family: 細明體 !important; } 
+.csp-s44 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s45 { font-family: 細明體 !important; } 
+.csp-s46 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s47 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s48 { font-family: 細明體 !important; } 
+.csp-s49 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s50 { font-family: 細明體 !important; } 
+.csp-s51 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s52 { font-family: 細明體 !important; } 
+.csp-s53 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s54 { font-family: 細明體 !important; } 
+.csp-s55 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s56 { font-family: 細明體 !important; } 
+.csp-s57 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s58 { font-family: 細明體 !important; } 
+.csp-s59 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s60 { font-family: 細明體 !important; } 
+.csp-s61 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s62 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s63 { font-family: 細明體 !important; } 
+.csp-s64 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s65 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s66 { font-family: 細明體 !important; } 
+.csp-s67 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s68 { font-family: 細明體 !important; } 
+.csp-s69 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s70 { font-family: 細明體 !important; } 
+.csp-s71 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s72 { font-family: 細明體 !important; } 
+.csp-s73 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s74 { font-family: 細明體 !important; } 
+.csp-s75 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s76 { font-family: 細明體 !important; } 
+.csp-s77 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s78 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s79 { font-family: 細明體 !important; } 
+.csp-s80 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s81 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s82 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s83 { font-family: 細明體 !important; } 
+.csp-s84 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s85 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s86 { font-family: 細明體 !important; } 
+.csp-s87 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s88 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s89 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s90 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s91 { font-family: 細明體 !important; } 
+.csp-s92 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s93 { font-family: 細明體 !important; } 
+.csp-s94 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s95 { font-family: 細明體 !important; } 
+.csp-s96 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s97 { font-family: 細明體 !important; } 
+.csp-s98 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s99 { font-family: 細明體 !important; } 
+.csp-s100 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s101 { font-family: 細明體 !important; } 
+.csp-s102 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s103 { font-family: 細明體 !important; } 
+.csp-s104 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s105 { font-family: 細明體 !important; } 
+.csp-s106 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s107 { font-family: 細明體 !important; } 
+.csp-s108 { font-size: 1em !important; } 
+</style>
+
+<style nonce="arDn/OWOMUO+hIZ3yWy0IA==">
+.csp-s109 { font-size: 1em !important; } 
+.csp-s110 { font-family: 細明體 !important; } 
+</style>
+
 
 

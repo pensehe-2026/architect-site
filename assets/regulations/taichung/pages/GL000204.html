@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-臺中市臨時展演場所搭建臨時建築物管理作業程序
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="leyw2jIKike7ii3K10qvww=="></script>
+    <script type="text/javascript" nonce="leyw2jIKike7ii3K10qvww==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="leyw2jIKike7ii3K10qvww==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL000204" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="J89AEUoC8/LTbLQjuWC9/sUwl/XpWT1CCAQNow6hxti+z/EtXdV2KurKFXxBRU7eV8KTjpk11RNB7tbrzMjVXRxHd1C/pBD8paBpLbpTWohcvgV4OCA05wQ5SjliaraOu+90x8LG2KOwPD6XhVkfV5cSURX7C/I5DSU0d7rLkGaFZikAc5Miit2A5sPaA/D4f+GSeacOrWP3rsbpYWVexfu7LwWg5A416tE0ZEd4g4+poG5rHKPzkko/TPVBksd5ZMtQ4dVm0euldGONDQ2eO0xjwOwW/y3W3qAAIbJTY8nGasKAE0z7u/+Z6XQART8YN2+zJAXLE5U33vyU0XdMkR7GeQHJyLAKvFNtEVFCGaTflgVErJyUeqYrgDqPJWvI4sxVp3iZlsOsz8bF1624E0RXLALTGaVNCCdDVQS6CTLwDNXdHoUHAd3swtyTJRcqXnT/yLUPexphH6xvDkuq4Moza6NemC2m48iITPFM68tNHQ33Aa4ORlG+xvd6miTypgjlkU+Uman0htqJS+EHoSVntaCNE54B+OvkgGuRKnxTMTrewuSNY1KM9LHGOSSA+bZQ4fUTLLk7S3jFpCKiLWKAAxZ0XRyGFEb9oywJYEpePMo3j4csxes6ty3ci+HHNZD4pAr6nuYJXv04JguTe/TBAH9cWY4ZyDIBo27EjyWF/I8qLz+/KtM6l+eJABiY5AtHLkxlRSTKTpQ2uOwTTXb1TRU0p8PvD5tmlxh47b/EpDAxwDgEVMYOBhtgjDSKruIgkNBzeOsVocq6i0TcyYQNHVHgJixKndQhg8WIIE6d+dgdoCBmJBnyCtvKzrQKbu8DjtEHYMtdlTWxGnm2CLVUZOZwec75XiIUionxwsPIJgzhAit8SetjhaGCwV0GBVOUeS/gnD+IiqNWz0DooEdrb3umhO0GzMPQdEtKmd/1yO0/LK9aLETNIAcgKeEAl3XvH8RAu/a3t2f2TV7p2Nud0gRSwzFOVTxesn2e7yNCtFDvgtExm0pzSBI3p6T//z3QIOoyTYHuVbWIo/0yfsHVktUaZhwdo7BA3HE6xZnJutLGKtxNrNAq2IYQP0zZtq5V0L8W8TQonSva7z3542Txi8x4T7VK17HxboyL1OdrkDlPSFVphweFmdLiJe/nnlyF8cHWtDaN70LPLHYVh6c9nSS9lpZxqjQSUg3tZ381ldHWzypcp56AHcNBelPcOhaoKZny072mCMbhuSKNh3FHpUErPx1dlXJjPRSgFHaG+nVWbufs8YqzM3qZWjFC2Vw5wfApeDYEEpmu0zzTqvNDA1tH+AFTj+eZp5D7ZtDdWdeZMyKv1QUBilPvtPJIKwDSWS4ZPSzfDXUo1kphAToMKIy+ViTbnu3sMgrvUuxnfeqnBVY15epMlOvZmkp3S2DAYc4gcKy5zycGDhCMpWuTTmFctL9QdFKpVjjMPtqH3/CESjI/oqKNpogTVM4gN0okXrGc8tDnVhfCpF+iQ5wpBZaI32ku19kztBLq+sZkcxj9Aoz+Ny6HmZmFrsKa9xSqR51nAOpG/6fALIGUwBUMzIjQTt+YAXzFdKz7fjTjLnnQ6GLp4nYEi1bDVpNqL8yH8x3W8RC+Rse6H9PPg0nevUdGO0vPuprGgv764+mkpzy5eKc+dxr3ADcQKCL8G9cDthkUC72lwGjLuGuQ2WbkMOP2brho1+TNBwZ0y2SDrw4uMVEVfaKm6n/ermlV5PLLc5NJmFqqdKjIsoPXP30cHX0TdvO6pU+PVmf2S8S1y24YgqmmmzV2vOYZ+z5jY1pyzjvoeLi81HiLPf/o7yIHz2vzUyAcjIyne9xWtahOe6col/sur5iWrYvq62viQBKLbzRsvfSFFLr2v6cZyXpfZt5Ds84zZIT9hj8u+O8=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="leyw2jIKike7ii3K10qvww==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -238,7 +307,7 @@
                 <table id="ctl00_cp_content_tableLawArticleBasic" class="table tab-list tab-nobg tab-law law-content">
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 2em"><span style="font-size: 1em">一、</span><span style="font-size: 1em">為明定臨時展演場所搭建臨時建築物管理程序，以維護公共安全，特訂定本作業程序。</span></div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">二、</span><span style="font-size: 1em">本程序適用範圍限於九十九年十二月二十五日改制前之臺中縣轄區。</span></div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">三、</span><span style="font-size: 1em">本程序所稱之臨時展演場所，係指經目的事業主管機關核准用期限不超過三個月之臨時商品藝文展覽、演藝集會場所、攤販集中場或其他類似場所。</span></div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">四、</span><span style="font-size: 1em">申請人應於展演十四日前委託建築師及相關技師，檢附下列書圖文件向臺中市政府都市發展局提出申請，經核准後始得搭建臨時性建築物。<br>(一)申請書。(應包括活動期限說明)<br>(二)目的事業主管機關核准文件。<br>(三)建築師委託書。</span></div><div style="line-height: 1.917em; text-indent: -2.029em; margin: 0 0 0 48.35pt"><span style="font-size: 1em">(</span><span style="font-size: 1em">四)土地使用權利證明文件(三個月有效期限內之土地登記薄謄本、地籍圖謄本及土地使用權利同意書；公有土地應由管理機關出具土地使用權利同意書；於道路用地申請臨時展演場所者應先取得使用道路主管機關許可證明)。</span></div><div style="line-height: 1.917em; text-indent: -1.5em; margin: 0 0 0 43pt"><span style="font-size: 1em">(</span><span style="font-size: 1em">五)現況圖、位置圖、平面圖、立面圖、剖面圖、細部構造材料圖。</span></div><div style="line-height: 1.917em; text-indent: -1.5em; margin: 0 0 0 43pt"><span style="font-size: 1em">(</span><span style="font-size: 1em">六)結構計算書圖。</span></div><div style="line-height: 1.917em; text-indent: -1.5em; margin: 0 0 0 43pt"><span style="font-size: 1em">(</span><span style="font-size: 1em">七)自行拆除切結書。</span></div><div style="line-height: 1.917em; text-indent: -1.5em; margin: 0 0 0 43pt"><span style="font-size: 1em">(</span><span style="font-size: 1em">八)其他必要之設備圖說。</span></div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">五、</span><span style="font-size: 1em">申請使用期間在三日以內之短期展演，且臨時建築物高度不超過四‧五公尺、面積不超過五百平方公尺且申請活動使用基地面積不超過五千平方公尺者，得檢具前點所須文件經目的事業主管機關同意後即行搭建臨時展演場所，不受前點應辦理申請核准程序規定。</span></div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">六、</span><span style="font-size: 1em">高度在一‧五公尺以下無頂蓋之臨時舞台或高度在四公尺以下無壁體及基礎結構之臨時攤棚，得檢具相關圖說逕向目的事業主管機關申請，並經目的事業主管機關同意後即可搭建。但應將核准圖說副知都市發展局列管，免依第三點辦理申請核准程序，其臨時使用以一個月為限。</span></div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">七、</span><span style="font-size: 1em">申請人應於施工前將消防設備圖說及交通影響說明送本市消防局審查，經核可後始得施工，申請活動面積超過五千平方公尺者並應製作交通影響評估送本府交通局審核。但合於前二點規定者，不在比限。竣工後應申請竣工勘驗，經本府都市發展局會同本市消防局勘驗合格後‧核發臨時使用許可。</span></div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">八、</span><span style="font-size: 1em">活動所附設廣告招牌應納入申請圖說一併申請臨時許可，不得單獨另案申請。</span></div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">九、</span><span style="font-size: 1em">臨時展演活動使用期滿後應於七日內自行拆除完畢；申請人應會同建築師檢附已拆除完畢之現場相片報本府都市發展局備查。逾期未拆除者，視同違章建築論處。</span></div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">十、</span><span style="font-size: 1em">臨時建築物使用期限以三個月為限，如有正當理由應於原核准使用期限內，重新提出申請，其延長使用期限不得超過三個月，並以申請延長一次為限，逾期應依規定拆除。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s0"><span class="csp-s1">一、</span><span class="csp-s1">為明定臨時展演場所搭建臨時建築物管理程序，以維護公共安全，特訂定本作業程序。</span></div><div class="csp-s2"><span class="csp-s1">二、</span><span class="csp-s1">本程序適用範圍限於九十九年十二月二十五日改制前之臺中縣轄區。</span></div><div class="csp-s2"><span class="csp-s1">三、</span><span class="csp-s1">本程序所稱之臨時展演場所，係指經目的事業主管機關核准用期限不超過三個月之臨時商品藝文展覽、演藝集會場所、攤販集中場或其他類似場所。</span></div><div class="csp-s2"><span class="csp-s1">四、</span><span class="csp-s1">申請人應於展演十四日前委託建築師及相關技師，檢附下列書圖文件向臺中市政府都市發展局提出申請，經核准後始得搭建臨時性建築物。<br>(一)申請書。(應包括活動期限說明)<br>(二)目的事業主管機關核准文件。<br>(三)建築師委託書。</span></div><div class="csp-s3"><span class="csp-s1">(</span><span class="csp-s1">四)土地使用權利證明文件(三個月有效期限內之土地登記薄謄本、地籍圖謄本及土地使用權利同意書；公有土地應由管理機關出具土地使用權利同意書；於道路用地申請臨時展演場所者應先取得使用道路主管機關許可證明)。</span></div><div class="csp-s4"><span class="csp-s1">(</span><span class="csp-s1">五)現況圖、位置圖、平面圖、立面圖、剖面圖、細部構造材料圖。</span></div><div class="csp-s4"><span class="csp-s1">(</span><span class="csp-s1">六)結構計算書圖。</span></div><div class="csp-s4"><span class="csp-s1">(</span><span class="csp-s1">七)自行拆除切結書。</span></div><div class="csp-s4"><span class="csp-s1">(</span><span class="csp-s1">八)其他必要之設備圖說。</span></div><div class="csp-s2"><span class="csp-s1">五、</span><span class="csp-s1">申請使用期間在三日以內之短期展演，且臨時建築物高度不超過四‧五公尺、面積不超過五百平方公尺且申請活動使用基地面積不超過五千平方公尺者，得檢具前點所須文件經目的事業主管機關同意後即行搭建臨時展演場所，不受前點應辦理申請核准程序規定。</span></div><div class="csp-s2"><span class="csp-s1">六、</span><span class="csp-s1">高度在一‧五公尺以下無頂蓋之臨時舞台或高度在四公尺以下無壁體及基礎結構之臨時攤棚，得檢具相關圖說逕向目的事業主管機關申請，並經目的事業主管機關同意後即可搭建。但應將核准圖說副知都市發展局列管，免依第三點辦理申請核准程序，其臨時使用以一個月為限。</span></div><div class="csp-s2"><span class="csp-s1">七、</span><span class="csp-s1">申請人應於施工前將消防設備圖說及交通影響說明送本市消防局審查，經核可後始得施工，申請活動面積超過五千平方公尺者並應製作交通影響評估送本府交通局審核。但合於前二點規定者，不在比限。竣工後應申請竣工勘驗，經本府都市發展局會同本市消防局勘驗合格後‧核發臨時使用許可。</span></div><div class="csp-s2"><span class="csp-s1">八、</span><span class="csp-s1">活動所附設廣告招牌應納入申請圖說一併申請臨時許可，不得單獨另案申請。</span></div><div class="csp-s2"><span class="csp-s1">九、</span><span class="csp-s1">臨時展演活動使用期滿後應於七日內自行拆除完畢；申請人應會同建築師檢附已拆除完畢之現場相片報本府都市發展局備查。逾期未拆除者，視同違章建築論處。</span></div><div class="csp-s2"><span class="csp-s1">十、</span><span class="csp-s1">臨時建築物使用期限以三個月為限，如有正當理由應於原核准使用期限內，重新提出申請，其延長使用期限不得超過三個月，並以申請延長一次為限，逾期應依規定拆除。</span></div></div></td>
 	</tr>
 </table>
 
@@ -264,8 +333,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -275,7 +344,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,392</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,445</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -283,10 +352,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="leyw2jIKike7ii3K10qvww=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="leyw2jIKike7ii3K10qvww=="></script>
+<script src="/js/FYLS.js" nonce="leyw2jIKike7ii3K10qvww=="></script>
+<script type="text/javascript" nonce="leyw2jIKike7ii3K10qvww==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -359,8 +428,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="leyw2jIKike7ii3K10qvww==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -381,5 +463,15 @@
         });
     });
 </script>
+
+
+    <style nonce="leyw2jIKike7ii3K10qvww==">
+.csp-s0 { line-height: 1.917em !important; text-indent: -2em !important; margin: 2em !important; } 
+.csp-s1 { font-size: 1em !important; } 
+.csp-s2 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s3 { line-height: 1.917em !important; text-indent: -2.029em !important; margin: 0 0 0 48.35pt !important; } 
+.csp-s4 { line-height: 1.917em !important; text-indent: -1.5em !important; margin: 0 0 0 43pt !important; } 
+</style>
+
 
 

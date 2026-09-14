@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-臺中市建築物施工中管制要點
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="Vsmn53XwYUKpcqE5U+89Hg=="></script>
+    <script type="text/javascript" nonce="Vsmn53XwYUKpcqE5U+89Hg==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL000188" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="Vsmn53XwYUKpcqE5U+89Hg==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -245,103 +314,103 @@
                 <table id="ctl00_cp_content_tableLawArticleBasic" class="table tab-list tab-nobg tab-law law-content">
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">一、臺中市政府(以下簡稱本府)為維護建築物施工場所之公共安全、公共交通，促進市容觀瞻，特依建築法第五十八條、第六十一條、第六十三條至第六十九條、第八十九條及建築技術規則建築設計施工編第八章之規定訂定本要點。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s0"><span class="csp-s1">一、臺中市政府(以下簡稱本府)為維護建築物施工場所之公共安全、公共交通，促進市容觀瞻，特依建築法第五十八條、第六十一條、第六十三條至第六十九條、第八十九條及建築技術規則建築設計施工編第八章之規定訂定本要點。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em"><span style="font-size: 1em">二、本要點適用範圍限於九十九年十二月二十五日改制前之臺中縣轄區。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s2"><span class="csp-s3">二、本要點適用範圍限於九十九年十二月二十五日改制前之臺中縣轄區。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">三、工地措施：凡從事建築物之新建、增建、改建、修建或拆除等行為時，施工場所，應有維護安全、防護危險及預防災害之設備措施。其圖說應依建築法第五十四條規定申請本府主管建築機關備查。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">&nbsp;&nbsp;&nbsp;前項安全防護措施應於各階段工程施工前按圖說施作完妥，由承造人會同監造人查核符合規定後併同申報勘驗文件簽章檢同現場照片送達本府主管建築機次日方得繼續施工。本府主管建築機得隨時勘驗作成紀錄。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s4"><span class="csp-s5">三、工地措施：凡從事建築物之新建、增建、改建、修建或拆除等行為時，施工場所，應有維護安全、防護危險及預防災害之設備措施。其圖說應依建築法第五十四條規定申請本府主管建築機關備查。</span></div><div class="csp-s4"><span class="csp-s5">&nbsp;&nbsp;&nbsp;前項安全防護措施應於各階段工程施工前按圖說施作完妥，由承造人會同監造人查核符合規定後併同申報勘驗文件簽章檢同現場照片送達本府主管建築機次日方得繼續施工。本府主管建築機得隨時勘驗作成紀錄。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em"><span style="font-size: 1em">四、安全圍籬之設備內容</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-size: 1em">(一)材料：建築物施工場所臨接寬度超過四公尺道路者應於基地四週以鋼鐵或金屬板(一‧二○公厘厚以上)，木板(一‧五○公分厚以上)，夾板(○‧九○公分厚以上)等材料設置高度在二‧四○公尺以上定著基地上之密閉式或漏空部分未超過六公分之安全圍籬。臨接道路長度未達六公尺者得將圍籬改為活動式。臨接寬度四公尺以下道路者，應採取完善之圍護措施。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-size: 1em">(二)設置範圍：五層以上建築物或應設行人安全走廊地區兩旁建築物施工時，應採用鋼鐵或金屬圍籬。但施工場所利用原有磚造圍牆或臨接山坡地、河川、湖泊等天然屏障或四周空曠未開闢且無鄰房居住地區，無礙於公共安全經本府主管建築機核准者不在此限。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-size: 1em">(三)底座：安全圍籬底部和地表間空隙，須設金屬板或混凝土防溢座，使基地用水不致溢流到基地外。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-size: 1em">(四)施工門：車輛出入設置鐵捲門或軌道式活動密閉門，除車輛出入外應隨時封閉，並不得任意遷移，其寬度不得大於六公尺。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 2em"><span style="font-size: 1em">(五)警示標誌：於圍籬突出轉角處張貼警示標誌圖樣。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 2em"><span style="font-size: 1em">(六)警示燈：於圍籬突出、磚角、施工大門處設立警示燈，以利夜間人車注意。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-size: 1em">(七)拒馬：結構體完成，鷹架圍籬拆除後，整理環境時，於借用道路範圍內，須圍妥一‧二公尺以上高拒馬，並隨時清掃整理，以維持工地整潔。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s6"><span class="csp-s7">四、安全圍籬之設備內容</span></div><div class="csp-s8"><span class="csp-s7">(一)材料：建築物施工場所臨接寬度超過四公尺道路者應於基地四週以鋼鐵或金屬板(一‧二○公厘厚以上)，木板(一‧五○公分厚以上)，夾板(○‧九○公分厚以上)等材料設置高度在二‧四○公尺以上定著基地上之密閉式或漏空部分未超過六公分之安全圍籬。臨接道路長度未達六公尺者得將圍籬改為活動式。臨接寬度四公尺以下道路者，應採取完善之圍護措施。</span></div><div class="csp-s8"><span class="csp-s7">(二)設置範圍：五層以上建築物或應設行人安全走廊地區兩旁建築物施工時，應採用鋼鐵或金屬圍籬。但施工場所利用原有磚造圍牆或臨接山坡地、河川、湖泊等天然屏障或四周空曠未開闢且無鄰房居住地區，無礙於公共安全經本府主管建築機核准者不在此限。</span></div><div class="csp-s8"><span class="csp-s7">(三)底座：安全圍籬底部和地表間空隙，須設金屬板或混凝土防溢座，使基地用水不致溢流到基地外。</span></div><div class="csp-s8"><span class="csp-s7">(四)施工門：車輛出入設置鐵捲門或軌道式活動密閉門，除車輛出入外應隨時封閉，並不得任意遷移，其寬度不得大於六公尺。</span></div><div class="csp-s9"><span class="csp-s7">(五)警示標誌：於圍籬突出轉角處張貼警示標誌圖樣。</span></div><div class="csp-s9"><span class="csp-s7">(六)警示燈：於圍籬突出、磚角、施工大門處設立警示燈，以利夜間人車注意。</span></div><div class="csp-s8"><span class="csp-s7">(七)拒馬：結構體完成，鷹架圍籬拆除後，整理環境時，於借用道路範圍內，須圍妥一‧二公尺以上高拒馬，並隨時清掃整理，以維持工地整潔。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">五、機具材料置放：建築物施工時，其建築材料、施工機具及廢棄物之堆放應在其安全圍籬內。如地下室全部開挖者，應考慮分段施工或於擋土支撐上方架設棧橋(供施工機具運轉)、構臺(供材料置放)以利工程施工，但開挖面積在五百平方公尺以下或基地情形特殊且無其他替代方法可以施工時，其運轉機具或擋土構材得報經核准限時借用道路。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s10"><span class="csp-s11">五、機具材料置放：建築物施工時，其建築材料、施工機具及廢棄物之堆放應在其安全圍籬內。如地下室全部開挖者，應考慮分段施工或於擋土支撐上方架設棧橋(供施工機具運轉)、構臺(供材料置放)以利工程施工，但開挖面積在五百平方公尺以下或基地情形特殊且無其他替代方法可以施工時，其運轉機具或擋土構材得報經核准限時借用道路。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">六、鷹架、護網、帆布、斜籬：二層以上建築物施工或拆除時，其施工鷹架外緣距離建築線或地界線不足二‧五○公尺或五層以上建築物施工時，應設置防止物料向外飛散或墮落之措施。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-size: 1em">(一)鷹架設置：六層以上建築物施工時應使用鋼管鷹架或鋼框鷹架。但其施工場地情況特殊或其未臨道路部分，無礙於公共安全經核准者不在此限。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-size: 1em">(二)護網：鷹架外部應置二十號以上鍍鋅鐵絲網或一‧三厘徑尼龍塑膠網(網格不得大於十五公厘，搭接長度不得小於二○公分)。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 2em"><span style="font-size: 1em">(三)帆布護籬：鷹架外部於四樓板以下應另加設厚○‧二二公厘帆布圍護。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-size: 1em">(四)斜籬：鷹架斜籬應使用框架式以○‧九公分厚夾板或一‧二公厘厚鋼板設置於二樓板處並每五層設置一處，突出鷹架寬度約二公尺。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s12"><span class="csp-s13">六、鷹架、護網、帆布、斜籬：二層以上建築物施工或拆除時，其施工鷹架外緣距離建築線或地界線不足二‧五○公尺或五層以上建築物施工時，應設置防止物料向外飛散或墮落之措施。</span></div><div class="csp-s14"><span class="csp-s13">(一)鷹架設置：六層以上建築物施工時應使用鋼管鷹架或鋼框鷹架。但其施工場地情況特殊或其未臨道路部分，無礙於公共安全經核准者不在此限。</span></div><div class="csp-s14"><span class="csp-s13">(二)護網：鷹架外部應置二十號以上鍍鋅鐵絲網或一‧三厘徑尼龍塑膠網(網格不得大於十五公厘，搭接長度不得小於二○公分)。</span></div><div class="csp-s15"><span class="csp-s13">(三)帆布護籬：鷹架外部於四樓板以下應另加設厚○‧二二公厘帆布圍護。</span></div><div class="csp-s14"><span class="csp-s13">(四)斜籬：鷹架斜籬應使用框架式以○‧九公分厚夾板或一‧二公厘厚鋼板設置於二樓板處並每五層設置一處，突出鷹架寬度約二公尺。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">七、安全走廊範圍：凡建築基地臨接經本府主管建築機指定之重要道路、行人擁擠地區或重要名勝地區。其臨接道路長度在十公尺以上者，應於安全圍籬外設置有頂蓋之行人安全走廊，以銜接基地相鄰之騎樓或人行道。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s16"><span class="csp-s17">七、安全走廊範圍：凡建築基地臨接經本府主管建築機指定之重要道路、行人擁擠地區或重要名勝地區。其臨接道路長度在十公尺以上者，應於安全圍籬外設置有頂蓋之行人安全走廊，以銜接基地相鄰之騎樓或人行道。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em"><span style="font-size: 1em">八、安全走廊規格：行人安全走廊之設置應依下列規定辦理：</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-size: 1em">(一)安全走廊之淨寬至少一‧三○公尺，淨高至少二‧四○公尺，其使用材料為鋼鐵料、木料、金屬料，應堅固安全美觀，其頂面應設置鋼板(厚度一‧五○公厘以上)頂側線應設置二十公分寬以上之封板，以防止物料墜落。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-size: 1em">(二)道路旁設有紅磚人行道(寬度二‧三○公尺以上)者，其　安全走廊之寬度與紅磚人行道寬度相同，其餘地區應依前款規定設置，但路旁行道樹得扣除佔用範圍。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-size: 1em">(三)安全走廊上方，得加設臨時工房或供材料貨櫃置放(須檢討結構安全)，其造型應整齊美觀，層高不得超過四公尺，安全走廊內不得設置任何阻礙物，並應舖設適當材料使地面齊平，以利通行。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 2em"><span style="font-size: 1em">(四)安全走廊內應設置照明設備。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-size: 1em">(五)安全走廊除供施工場所之車輛進出口處(地坪加○‧九公分厚鐵板)外，應力求貫通不得中斷，且不得任意遷移拆除。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 2em"><span style="font-size: 1em">(六)行人安全走廊應於該建築物全部完工後拆除。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s18"><span class="csp-s19">八、安全走廊規格：行人安全走廊之設置應依下列規定辦理：</span></div><div class="csp-s20"><span class="csp-s19">(一)安全走廊之淨寬至少一‧三○公尺，淨高至少二‧四○公尺，其使用材料為鋼鐵料、木料、金屬料，應堅固安全美觀，其頂面應設置鋼板(厚度一‧五○公厘以上)頂側線應設置二十公分寬以上之封板，以防止物料墜落。</span></div><div class="csp-s20"><span class="csp-s19">(二)道路旁設有紅磚人行道(寬度二‧三○公尺以上)者，其　安全走廊之寬度與紅磚人行道寬度相同，其餘地區應依前款規定設置，但路旁行道樹得扣除佔用範圍。</span></div><div class="csp-s20"><span class="csp-s19">(三)安全走廊上方，得加設臨時工房或供材料貨櫃置放(須檢討結構安全)，其造型應整齊美觀，層高不得超過四公尺，安全走廊內不得設置任何阻礙物，並應舖設適當材料使地面齊平，以利通行。</span></div><div class="csp-s21"><span class="csp-s19">(四)安全走廊內應設置照明設備。</span></div><div class="csp-s20"><span class="csp-s19">(五)安全走廊除供施工場所之車輛進出口處(地坪加○‧九公分厚鐵板)外，應力求貫通不得中斷，且不得任意遷移拆除。</span></div><div class="csp-s21"><span class="csp-s19">(六)行人安全走廊應於該建築物全部完工後拆除。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em"><span style="font-size: 1em">九、道路使用寬度：建築工程使用道路者，應依下列規定辦理：</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 2em"><span style="font-size: 1em">(一)道路寬度在四公尺以下者，不得使用。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 2em"><span style="font-size: 1em">(二)道路寬度超過四公尺未達六公尺者，使用寬度不得超過一公尺。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 2em"><span style="font-size: 1em">(三)道路寬度六公尺以上未達十二公尺者，使用寬度不得超過一‧五公尺。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 2em"><span style="font-size: 1em">(四)道路寬度十二公尺以上者，使用寬度不得超過二公尺。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s22"><span class="csp-s23">九、道路使用寬度：建築工程使用道路者，應依下列規定辦理：</span></div><div class="csp-s24"><span class="csp-s23">(一)道路寬度在四公尺以下者，不得使用。</span></div><div class="csp-s24"><span class="csp-s23">(二)道路寬度超過四公尺未達六公尺者，使用寬度不得超過一公尺。</span></div><div class="csp-s24"><span class="csp-s23">(三)道路寬度六公尺以上未達十二公尺者，使用寬度不得超過一‧五公尺。</span></div><div class="csp-s24"><span class="csp-s23">(四)道路寬度十二公尺以上者，使用寬度不得超過二公尺。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em">十、吊高設備：建築物施工場所使用起重或吊高設備作業時，應考慮其安全性，並派員身著鉻黃色衣服，手持指揮旗疏導交通，禁止任意占用道路，妨礙通行。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s25"><span class="csp-s26">十、吊高設備：建築物施工場所使用起重或吊高設備作業時，應考慮其安全性，並派員身著鉻黃色衣服，手持指揮旗疏導交通，禁止任意占用道路，妨礙通行。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt"><span style="font-size: 1em">十一、保持道路清潔：建築工程地區有污損周圍路段者，應即以混凝土或瀝青混凝土等材料暫時加以舖平並清除廢棄物等，以維施工環境清潔。工地須設置沖洗設備；車輛之輪胎應刷洗乾淨後始得駛離工地，沿途不得滴漏污水遺落污物。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s27"><span class="csp-s28">十一、保持道路清潔：建築工程地區有污損周圍路段者，應即以混凝土或瀝青混凝土等材料暫時加以舖平並清除廢棄物等，以維施工環境清潔。工地須設置沖洗設備；車輛之輪胎應刷洗乾淨後始得駛離工地，沿途不得滴漏污水遺落污物。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt"><span style="font-size: 1em">十二、騎樓打通：建築物應設置法定騎樓之施工場所．除騎樓地面經核准者外，應保持與鄰側騎樓地及前側人行道面順平；並應於二樓樓板混凝土灌注一個月內打通騎樓及在騎樓內側加做圍籬，以供公眾通行，但鄰接地騎樓未打通前不在此限。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s29"><span class="csp-s30">十二、騎樓打通：建築物應設置法定騎樓之施工場所．除騎樓地面經核准者外，應保持與鄰側騎樓地及前側人行道面順平；並應於二樓樓板混凝土灌注一個月內打通騎樓及在騎樓內側加做圍籬，以供公眾通行，但鄰接地騎樓未打通前不在此限。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt"><span style="font-size: 1em">十三、衛生設備：建築物施工場所，如於基地內設置工寮及臨時廁所時，應隨時保持清潔，其臨時廁所應有簡易化糞池設備，以維公共衛生。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s31"><span class="csp-s32">十三、衛生設備：建築物施工場所，如於基地內設置工寮及臨時廁所時，應隨時保持清潔，其臨時廁所應有簡易化糞池設備，以維公共衛生。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt"><span style="font-size: 1em">十四、施工場所出入口：建築物施工場所四周明顯處及車輛出入口處應設置安全警示燈、警示標誌，以提醒行人車輛注意，車輛進出之際，應派員身著鉻黃色衣服，手持旗號之引導者，在場指揮交通，車輛進出口位置應距離道路交叉口、轉角、人行斑馬線、消防栓在五公尺以上，火警警報器三公尺以上，但情況特殊，經本府主管建築機核准者不在此限。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s33"><span class="csp-s34">十四、施工場所出入口：建築物施工場所四周明顯處及車輛出入口處應設置安全警示燈、警示標誌，以提醒行人車輛注意，車輛進出之際，應派員身著鉻黃色衣服，手持旗號之引導者，在場指揮交通，車輛進出口位置應距離道路交叉口、轉角、人行斑馬線、消防栓在五公尺以上，火警警報器三公尺以上，但情況特殊，經本府主管建築機核准者不在此限。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt">十五、垃圾清除：建築物施工場所除利用電梯孔、管道間清運垃圾外，應設置垃圾清除滑落孔道或加設防護裝置之垃圾滑槽，以防止垃圾自上落下時四處飛散。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s35">十五、垃圾清除：建築物施工場所除利用電梯孔、管道間清運垃圾外，應設置垃圾清除滑落孔道或加設防護裝置之垃圾滑槽，以防止垃圾自上落下時四處飛散。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt"><span style="font-size: 1em">十六、安全護欄：建築物施工場所可能發生跌落事故之處所，如昇降機坑孔道、吊孔各樓層之開口、樓梯等應加揭示危險標誌並設置一點一○公尺以上之安全護欄。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s36"><span class="csp-s37">十六、安全護欄：建築物施工場所可能發生跌落事故之處所，如昇降機坑孔道、吊孔各樓層之開口、樓梯等應加揭示危險標誌並設置一點一○公尺以上之安全護欄。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt"><span style="font-size: 1em">十七、排水護蓋材料：建築物施工場所應規劃基地排水設施，基地四周原有排水溝應隨時疏濬保持通暢，其車輛出入口處用鐵板護蓋蓋於水溝上，其餘得以適當材料護蓋。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s38"><span class="csp-s39">十七、排水護蓋材料：建築物施工場所應規劃基地排水設施，基地四周原有排水溝應隨時疏濬保持通暢，其車輛出入口處用鐵板護蓋蓋於水溝上，其餘得以適當材料護蓋。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt"><span style="font-size: 1em">十八、污泥處理：建築物施工場所，如有反循環基樁、連續壁、預壘排樁、磨石子等工程產生之污泥者，應設置足夠容量之污泥沉澱處理槽或機械處理設備使污泥凝結沉澱後，其上方之廢水始得排入現有排水溝，凝結沉澱之污泥並應設法運離工地。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s40"><span class="csp-s41">十八、污泥處理：建築物施工場所，如有反循環基樁、連續壁、預壘排樁、磨石子等工程產生之污泥者，應設置足夠容量之污泥沉澱處理槽或機械處理設備使污泥凝結沉澱後，其上方之廢水始得排入現有排水溝，凝結沉澱之污泥並應設法運離工地。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt"><span style="font-size: 1em">十九、截流措施：在山坡地開挖整地，除應做好水土保持外，應設置臨時性之排水、截流、沈砂等設施，以防止沙石沖刷至公共排水溝，道路等公共設施。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s42"><span class="csp-s43">十九、截流措施：在山坡地開挖整地，除應做好水土保持外，應設置臨時性之排水、截流、沈砂等設施，以防止沙石沖刷至公共排水溝，道路等公共設施。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt"><span style="font-size: 1em">二十、噪音、震動作業時限：建築物施工場所易產生噪音或震動或灰塵散播之工程，其作業時間，應依下列規定辦理：</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 3em"><span style="font-size: 1em">(一)震動及灰塵散播作業場所，限於上午七時至下午八時間實施。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 60pt"><span style="font-size: 1em">(二)噪音作業場所：打設擋土樁、挖土機操作時應遵守噪音管制有關規定，其作業限於上午七時至下午十時間實施。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s44"><span class="csp-s45">二十、噪音、震動作業時限：建築物施工場所易產生噪音或震動或灰塵散播之工程，其作業時間，應依下列規定辦理：</span></div><div class="csp-s46"><span class="csp-s45">(一)震動及灰塵散播作業場所，限於上午七時至下午八時間實施。</span></div><div class="csp-s47"><span class="csp-s45">(二)噪音作業場所：打設擋土樁、挖土機操作時應遵守噪音管制有關規定，其作業限於上午七時至下午十時間實施。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -4em; margin: 0 0 0 48pt"><span style="font-size: 1em">二十一、公共設施防護：建築物施工場所周圍道路、既成巷路、鄰近房屋、排水溝渠、下水道與人孔、給水管與止水栓、瓦斯管、消防栓、電力電纜、電話線、軍用通訊電纜、交通號誌、公車站牌、電桿、行道樹、人行地下道、陸橋、公共護欄、路燈等公共設施均應予詳加調查，隨時與本府有關主管單位協調養護、防護、迂迴施工、臨時移設等對策，以防止導致鄰近地區發生缺水、缺電、瓦斯斷氣、斷話、火警等情況。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s48"><span class="csp-s49">二十一、公共設施防護：建築物施工場所周圍道路、既成巷路、鄰近房屋、排水溝渠、下水道與人孔、給水管與止水栓、瓦斯管、消防栓、電力電纜、電話線、軍用通訊電纜、交通號誌、公車站牌、電桿、行道樹、人行地下道、陸橋、公共護欄、路燈等公共設施均應予詳加調查，隨時與本府有關主管單位協調養護、防護、迂迴施工、臨時移設等對策，以防止導致鄰近地區發生缺水、缺電、瓦斯斷氣、斷話、火警等情況。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -4em; margin: 0 0 0 48pt"><span style="font-size: 1em">二十二、樣品屋時限：建築工程如需設置樣品屋時，應提出申請，經核准後始得設置，並應於建築物全部完工時拆除。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s50"><span class="csp-s51">二十二、樣品屋時限：建築工程如需設置樣品屋時，應提出申請，經核准後始得設置，並應於建築物全部完工時拆除。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -4em; margin: 0 0 0 48pt"><span style="font-size: 1em">二十三、地下室支撐作業：為避免因建築工程挖掘地基或任意取土導致鄰屋及地下埋設物之傾斜破損等營建公害，承造人於地下室開挖時其擋土支撐作業應依營造安全衛生設施標準規定辦理並應注意下列事項：</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 72pt"><span style="font-size: 1em">(一)靠近鄰房挖土，其擋土工法應校核現場地質狀況及地下水情形與原設計是否相符，並於施工時派專人隨時檢查並改善擋土設備，以避免附近道路與鄰房發生崩塌沈陷。於必要時應先設法改善鄰房基礎使成穩定後，再行開挖地下室。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 4em"><span style="font-size: 1em">(二)地下室開挖如採用自然坡度施工者，做下列各項辦理：</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 5.5em"><span style="font-size: 1em">1、與鄰房保留足夠安全間距。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -7em; margin: 0 0 0 84pt"><span style="font-size: 1em">　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;2、除採取其他適當措施者外，開挖面之放置時間限三星期內，開挖面與披肩須有適當保護措施，坡間保護寬度應與開挖深度相同，且其地表面不可加載荷重。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -7em; margin: 0 0 0 84pt"><span style="font-size: 1em">　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;3、如地表面部分發生龜裂時，應即以塑膠布覆蓋龜裂部分或採取其他適當措施，並繼續觀察，倘繼續擴大時，應迅即回填，另行採用其他擋土工法。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 72pt"><span style="font-size: 1em">(三)隨時注意開挖中有無發生異常出水現象及設置排水溝以防止附近雨、污水流入開挖區內，並應設置坑池或點井，以利排水。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 72pt"><span style="font-size: 1em">(四)搬運擋土材料或結構鋼材等長尺度之構材時，應注意其上下及周圍之行人及車輛安全，並派專人身著鉻黃色衣服，手持指揮旗在場指揮交通。</span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 72pt"><span style="font-size: 1em">(五)設在擋土支撐上之棧橋，構臺應有足夠的強度與支持力，並應隨時加以補強。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s52"><span class="csp-s53">二十三、地下室支撐作業：為避免因建築工程挖掘地基或任意取土導致鄰屋及地下埋設物之傾斜破損等營建公害，承造人於地下室開挖時其擋土支撐作業應依營造安全衛生設施標準規定辦理並應注意下列事項：</span></div><div class="csp-s54"><span class="csp-s53">(一)靠近鄰房挖土，其擋土工法應校核現場地質狀況及地下水情形與原設計是否相符，並於施工時派專人隨時檢查並改善擋土設備，以避免附近道路與鄰房發生崩塌沈陷。於必要時應先設法改善鄰房基礎使成穩定後，再行開挖地下室。</span></div><div class="csp-s55"><span class="csp-s53">(二)地下室開挖如採用自然坡度施工者，做下列各項辦理：</span></div><div class="csp-s56"><span class="csp-s53">1、與鄰房保留足夠安全間距。</span></div><div class="csp-s57"><span class="csp-s53">　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;2、除採取其他適當措施者外，開挖面之放置時間限三星期內，開挖面與披肩須有適當保護措施，坡間保護寬度應與開挖深度相同，且其地表面不可加載荷重。</span></div><div class="csp-s57"><span class="csp-s53">　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;3、如地表面部分發生龜裂時，應即以塑膠布覆蓋龜裂部分或採取其他適當措施，並繼續觀察，倘繼續擴大時，應迅即回填，另行採用其他擋土工法。</span></div><div class="csp-s54"><span class="csp-s53">(三)隨時注意開挖中有無發生異常出水現象及設置排水溝以防止附近雨、污水流入開挖區內，並應設置坑池或點井，以利排水。</span></div><div class="csp-s54"><span class="csp-s53">(四)搬運擋土材料或結構鋼材等長尺度之構材時，應注意其上下及周圍之行人及車輛安全，並派專人身著鉻黃色衣服，手持指揮旗在場指揮交通。</span></div><div class="csp-s54"><span class="csp-s53">(五)設在擋土支撐上之棧橋，構臺應有足夠的強度與支持力，並應隨時加以補強。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -4em; margin: 0 0 0 48pt"><span style="font-size: 1em">二十四、顏色與標示板：安全圍籬、安全走廊、帆布護籬等設施之顏色以整齊劃　一為原則，並於車輛進出口設置標示板(七十五公分×一五○公分)標示工程名稱、建造執照號碼、設計人、監造人、承造人(含主任技師)等有關工程內容摘要外，不得設置與工程無關之任何廣告。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s58"><span class="csp-s59">二十四、顏色與標示板：安全圍籬、安全走廊、帆布護籬等設施之顏色以整齊劃　一為原則，並於車輛進出口設置標示板(七十五公分×一五○公分)標示工程名稱、建造執照號碼、設計人、監造人、承造人(含主任技師)等有關工程內容摘要外，不得設置與工程無關之任何廣告。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -4em; margin: 0 0 0 48pt"><span style="font-size: 1em">二十五、違反本要點之規定者，依建築法第八十九條、建築師法、營造業法及臺中市建築案件行政裁罰基準等有關規定處理。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s60"><span class="csp-s61">二十五、違反本要點之規定者，依建築法第八十九條、建築師法、營造業法及臺中市建築案件行政裁罰基準等有關規定處理。</span></div></div></td>
 	</tr>
 </table>
 
@@ -367,8 +436,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -378,7 +447,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,455</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,501</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -386,10 +455,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="Vsmn53XwYUKpcqE5U+89Hg=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="Vsmn53XwYUKpcqE5U+89Hg=="></script>
+<script src="/js/FYLS.js" nonce="Vsmn53XwYUKpcqE5U+89Hg=="></script>
+<script type="text/javascript" nonce="Vsmn53XwYUKpcqE5U+89Hg==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -462,8 +531,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="Vsmn53XwYUKpcqE5U+89Hg==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -484,5 +566,144 @@
         });
     });
 </script>
+
+
+    <style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s0 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s1 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s2 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; } 
+.csp-s3 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s4 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s5 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s6 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; } 
+.csp-s7 { font-size: 1em !important; } 
+.csp-s8 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 48pt !important; } 
+.csp-s9 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: 2em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s10 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s11 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s12 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s13 { font-size: 1em !important; } 
+.csp-s14 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 48pt !important; } 
+.csp-s15 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: 2em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s16 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s17 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s18 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; } 
+.csp-s19 { font-size: 1em !important; } 
+.csp-s20 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 48pt !important; } 
+.csp-s21 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: 2em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s22 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; } 
+.csp-s23 { font-size: 1em !important; } 
+.csp-s24 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: 2em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s25 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s26 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s27 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+.csp-s28 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s29 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+.csp-s30 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s31 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+.csp-s32 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s33 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+.csp-s34 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s35 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s36 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+.csp-s37 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s38 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+.csp-s39 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s40 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+.csp-s41 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s42 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+.csp-s43 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s44 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+.csp-s45 { font-size: 1em !important; } 
+.csp-s46 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: 3em !important; } 
+.csp-s47 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 60pt !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s48 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -4em !important; margin: 0 0 0 48pt !important; } 
+.csp-s49 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s50 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -4em !important; margin: 0 0 0 48pt !important; } 
+.csp-s51 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s52 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -4em !important; margin: 0 0 0 48pt !important; } 
+.csp-s53 { font-size: 1em !important; } 
+.csp-s54 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 72pt !important; } 
+.csp-s55 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: 4em !important; } 
+.csp-s56 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: 5.5em !important; } 
+.csp-s57 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -7em !important; margin: 0 0 0 84pt !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s58 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -4em !important; margin: 0 0 0 48pt !important; } 
+.csp-s59 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Vsmn53XwYUKpcqE5U+89Hg==">
+.csp-s60 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -4em !important; margin: 0 0 0 48pt !important; } 
+.csp-s61 { font-size: 1em !important; } 
+</style>
+
 
 

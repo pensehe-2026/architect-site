@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-臺中市公有建築應送都市設計審議委員會審議要點
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="Epwwl2nOuk2D0RWZhIkyQw=="></script>
+    <script type="text/javascript" nonce="Epwwl2nOuk2D0RWZhIkyQw==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="Epwwl2nOuk2D0RWZhIkyQw==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL000165" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="0K0j1dUh8KUHHApZRMSQXYpNXXKMQhyfCcOcN7yOn+0f5MoWykQdxWJjZJ9WXiLUDS+CkT8mWBAuKa5Qb+6RHwNccvCJVoC4NvCUSn9pdzMBsV5n+etTMo4KWNKSGr3fPdLRkiZ6eg6bQ9OoXA4PxnINbQQ8bB+FvrVKb8abV4X6oWt636YhZhMAH/0rkE0gp71UsCmPs7LxZkn3N1ejXelaViK3P4MACGH4hEWuLQvtIG22ioK47HgcHEEAkREdzcrBB5YPczLAbamIiPdrbR1WMtJsPha+501L7Zv3IEZPrT5+KKrERB7ImHAIwajReChulZNvTZ24e9vH/XxCxV8/GyrGcb80PeC9HAMVafBkn2WfYbjcrHvEG7svBs8R3E13aLf+DAPcVDDPjnNWL2UkwAmNrYrO8EQNpWC0dqzACSV6+8sI8145ZcZMSf9OR/qnKACi6+jw+NmkBB99q5QxWlBRw5cqN/YKLWbRiEdg1QfU2UHx/u0mNE57uNa7gpUEXpfFq/91CguWgO4s2+MxOHvQ7l5TTliAgGrXIfjw8LE5QtWd47PzRl+n87WdNaO8HwBifeSC1A//TFPuFoxhpGdhk3ejCVBlt676XSpi/0TSqivXFrVD9Us4Im9L3Ax33rPWq9qZOVB6dt0PhQcvnhlYV/aXwIAhYr2yNhiJQdpW5iv/51MMr34aiR5HQnnUEqpNk3+RTnLOXZ9SgWevrRRe6yBENxQN3AGjpQNO65t8iXzHyN0l57ZonOcHQIYex/rkSFHsxze9oJKzNXjaDxVKt4+IerPvdSiNjCW+HNFbpOlBgp9ICoLm+U+YcWc/daHbme9/iq5uMaTsRL0Bk4byrODVpDvX9QewRcFuLLCp8sxpIiawoTqjSgiLFTXhmASCpOulCjj3xZq2p/7rrncew7vUVuMiL5cHqfjreTHUswumSB6ZanXbylS4aGN47mMeDqSjruPC/6hYpKewPgtxX52ANp/qEwKE4F2s9xJFAenE7W1ZIQNwVjl1sUbiRcf/JfStFXgrxUz94DSCQOx22e4RU0FkRX1KyGderkbtzyFbPAnnr9gpLqY5ijgO3menWxzaR6gpRusY1KyZcPg8RXPg8XOu1XKS8Q3yKoCI43vg+Q2/1Hp7dhBgmERPfZxLy7N6BNT3xJA2lBMeTXTSn68rnvBkbfzYnkBw90qZZtWwMJ+51SMLLcd60c8Zf/3hA2sUICBPsltu7dzQ9ulMaPbMjlF40uzL+MiWXV4/raogvV3d7u//ujpmlEs95l+ySxNXYJnk6s5c8H2i6sWXX1LGR9hOC+aQzcj8cyWcInI7ToMYsDviPpaXml8zxEjqS6eydVG+L7b8NJaXQxQZL4WSK1clvDnilCmy7R1pIsaoNUjHHl1zUxS/UVrCT+GjRgH1cgnPl0mdh1yVxpg1wgdeTWNlsk5rJWFp6Mcl1jl4Qxn9wU7zeQ7Uoy1fz3O284/NUZwxHa7HcBCFAL2jKyJvfbogvbJpDP/uyj9XXkAO7s2ivq7AXj4QFgw9voXQC4rEa1UYKpX7xLB+96MjuiBQMIURmrY41EfdVMxxA+LPRl0BmQ5MlAwEhMM1eKvZJllNc/V2aH8TG9u5pwVoFpSusOyVoceef72kV7sGjWuTcDwKDLIV6yypvjTA+bLPqCBqmklPSlh8oI6lIs4Owcwf2PaiptVMG6gXeQCeBRvYMIx/EUoH508aeDSgg48P3XT506R+4c/VaCuqCNmhKKlwutKSs6ojaYRrclXFCjzpKvrqQlF93Ssum42QyR9R87LFlnNTFYI1y17QJv/+FUQk0YAIWhyKvaw1GYooJMpQXmWjD9UbRejsVwE46Bi9vy75eORwSUqciNPqO/F62OTP7ARSAMahl2oZNXtoutfZYnyIIF/AYeqvl1ERbY6nE39dA3PczWNPipiqq9tiFUmTlS/XKAh7FVHxwhqViRrSNWgjUD87T2PMzJTaBz/sztJqceDDVS+NaMNVD8jl5tweVOKp14n65aOEKduA3+gMdzv+7+7ezxWV" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="Epwwl2nOuk2D0RWZhIkyQw==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -245,12 +314,12 @@
                 <table id="ctl00_cp_content_tableLawArticleBasic" class="table tab-list tab-nobg tab-law law-content">
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">一、臺中市政府為促進臺中市都市計畫區內公有建築規劃設計品質並改善<br>
+		<td><div class="ClearCss"><span class="csp-s0"><span class="csp-s1">一、臺中市政府為促進臺中市都市計畫區內公有建築規劃設計品質並改善<br>
 &nbsp;&nbsp;&nbsp; 都市景觀，特訂定本要點。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">二、下列各款之公有建築應於核發建造執照或建築設計許可前，依下列規<br>
+		<td><div class="ClearCss"><span class="csp-s2"><span class="csp-s3">二、下列各款之公有建築應於核發建造執照或建築設計許可前，依下列規<br>
 &nbsp; &nbsp; 定辦理：&nbsp;<br>
 &nbsp; &nbsp; (一)公共設施用地採多目標使用之建築者基地面積三千平方公尺以上<br>
 &nbsp; &nbsp; &nbsp; &nbsp; 者，應送臺中市政府都市設計審議委員會(以下簡稱本委員會)審<br>
@@ -279,25 +348,25 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">三、前點第一款至第四款經各目的事業主管機關專案審議通過者，應檢附<br>
+		<td><div class="ClearCss"><span class="csp-s4"><span class="csp-s5">三、前點第一款至第四款經各目的事業主管機關專案審議通過者，應檢附<br>
 &nbsp;&nbsp;&nbsp; 相關資料文件圖說，送本委員會備查。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">四、各項申請案件經中央主管機關針對設計內容審查並核定之專案計畫、<br>
+		<td><div class="ClearCss"><span class="csp-s6"><span class="csp-s7">四、各項申請案件經中央主管機關針對設計內容審查並核定之專案計畫、<br>
 &nbsp;&nbsp;&nbsp; 九二一災後社區更新重建計畫、擴大國內需求方案、創造城鄉新風貌<br>
 &nbsp;&nbsp;&nbsp; 計畫、依臺中市建築物補辦建築執照辦法及臺中市臨時性建築物管理<br>
 &nbsp;&nbsp;&nbsp; 辦法辦理者，得免送本委員會審查。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">五、九十九年十二月二十五日改制前之臺中縣轄區內公有建築，已編列預<br>
+		<td><div class="ClearCss"><span class="csp-s8"><span class="csp-s9">五、九十九年十二月二十五日改制前之臺中縣轄區內公有建築，已編列預<br>
 &nbsp;&nbsp;&nbsp; 算並經改制前之臺中縣議會或原鄉鎮市公所代表會審議通過者，得免<br>
 &nbsp;&nbsp;&nbsp; 提送本委員會審議，並應依改制前之都市設計相關審查規定辦理。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">六、依都市計畫土地使用分區管制規定需全區納入都市設計審議之地區，<br>
+		<td><div class="ClearCss"><span class="csp-s10"><span class="csp-s11">六、依都市計畫土地使用分區管制規定需全區納入都市設計審議之地區，<br>
 &nbsp;&nbsp;&nbsp; 公有設施經各目的事業主管機關專案審議通過後，應檢附相關資料文<br>
 &nbsp;&nbsp;&nbsp; 件圖說，送本委員會備查。</span></span></div></td>
 	</tr>
@@ -325,8 +394,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -336,7 +405,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,281</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,329</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -344,10 +413,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="Epwwl2nOuk2D0RWZhIkyQw=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="Epwwl2nOuk2D0RWZhIkyQw=="></script>
+<script src="/js/FYLS.js" nonce="Epwwl2nOuk2D0RWZhIkyQw=="></script>
+<script type="text/javascript" nonce="Epwwl2nOuk2D0RWZhIkyQw==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -420,8 +489,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="Epwwl2nOuk2D0RWZhIkyQw==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -442,5 +524,37 @@
         });
     });
 </script>
+
+
+    <style nonce="Epwwl2nOuk2D0RWZhIkyQw==">
+.csp-s0 { font-family: 細明體 !important; } 
+.csp-s1 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Epwwl2nOuk2D0RWZhIkyQw==">
+.csp-s2 { font-family: 細明體 !important; } 
+.csp-s3 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Epwwl2nOuk2D0RWZhIkyQw==">
+.csp-s4 { font-family: 細明體 !important; } 
+.csp-s5 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Epwwl2nOuk2D0RWZhIkyQw==">
+.csp-s6 { font-family: 細明體 !important; } 
+.csp-s7 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Epwwl2nOuk2D0RWZhIkyQw==">
+.csp-s8 { font-family: 細明體 !important; } 
+.csp-s9 { font-size: 1em !important; } 
+</style>
+
+<style nonce="Epwwl2nOuk2D0RWZhIkyQw==">
+.csp-s10 { font-family: 細明體 !important; } 
+.csp-s11 { font-size: 1em !important; } 
+</style>
+
 
 

@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-臺中市辦理都市更新拆遷補償及獎勵金發放作業自治條例
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="G4OLHCvaWEWDlDtyq4B2XA=="></script>
+    <script type="text/javascript" nonce="G4OLHCvaWEWDlDtyq4B2XA==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="G4OLHCvaWEWDlDtyq4B2XA==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL000967" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="pYCwUriC2Y7eIsAirAneSG8D1soFx5asapCqXz1XF36oeaU+W2L1LMo8rlAwGItfB82CkqaPASuf2ZLN8VNb9sUZ+vrg1GklFXGo56gfC08uGnzRCnE5Af+2od/Efcvqov6msu0V+zLZXD4MQUe5drYCGZY5/DfZTspKAe1CDZjhVxlOeoO3NVEyOWtwQnrI8eHppUy7D5udMaYx/iqn/I7dqlagk62ZG3wx8NkJpOjBikYCFXA2bAzfvSe1MqRCDallpCCW+1LFpjNOZGOuKyftnKPBaMVVWknjOD6HYXUPpu8+aJR5jhEoZaQ7dvUKmi//LKcvHd1ATIwFsMM3geuBQHgm3ulLxksegeK683UipstZuGPq9h0241EWTqe/TFHF4G9+b9cXWA7+Rv95P2nLb7u8FS3Sl1Txs/cxDjji5ePoyxhMVIufApS0EMXWsYVQ2Z4I7ouh+IJBZ9G+IIzRHsiwXR599btKCPDx8nJA6PDKitxtbZ/IYaNCUQJwH8QbkCYKwFJhFOEOdQFuWta2zuDxudjBkI4fosGZaXNOCbzcZxy2ffYbrHTkk40vYT+7OZIJ5LDWNBP6MVvEEf/CFjhlhFTAsiuVSik1/9pWfUVxcxhg3vnJY5WtI+TJFrJNbMk4tetYjXxcUCvJ5JJA1zNyEQOtsJ9BSuX8cNigOazDEE/9GWPq3MeNouFHhD3F59AhQl9lrc+HtiC+3K4uAU0v/hwxVuVeurwWbm70AzvuIESagr7reonmOnjqOm4y+XpZAukCGPHQL5QTMWeHNnXb4SMfG42gpEq55OLZtgxgy2nU+cRVORG7TgzVPrUcR3BmfMZD8v+66Cpuq5AAjmnqMgIQ8tZTF0fMa1YvIG9nekxXhY7YoG1isC84nn8IuH6gaKrAx6ibiGPOMrd3bgVBMIaXanezRzTxBDRQQG5g+jIHgSVmKltLNOi/NuMx0mTuOTq20Gr4o1OAW0rTbJkIrd+dpbBkoRz3KB1fRPMKnxcLeDQBqEGCaIXJa2QJliaa9c0ZRh/bnL6XOUUziPYCriBMwYq0BiAD7hPukc5sKqCaTiWtOcr/fRCHfOxLycfc16KDy4w6CaXl4HWKbqfuI8fqr3qaRhqtHmqHTMhXyXBQuZ02fSY0dGuW1Y0ZIeyT8yBtqCk6t8bWmt5JKogohQYnjlnLYkEi/HluVrBDIIuNqvJSBIs6e0Uaw4AtK1XNPuiKNi+AyQ1zvJupEBb63trqyZz3sSM/yEFG2DiItMBnGDxRp5TpOlHIUM912rep/cqNujf9zyZPUvuTwze2VGxXZBjJ1ChCpTjqAYBHnR8dUx/4Lp9jhaXjAcBLjW50CJeomFdHsDY73ruz2SML8vuNxczasq4JfXQDTg71ledwr9d+qrkNtlONhZkqpAspIGCJBEx1oN2t3b7cc7eENrp5HXiWi0gyjKGnMf80DzEWr26D5fcvsWH4E26ku79uEJ0pQ4AO2XCH62sB67LjcywTXpbMrmi5ollUJrv79JXqaJspXWnmJB0CjuOvQ3skOv9fJ53KiAswr5O/QKHTsrvsMgRwMJc1D65Kp2Jg/LLeabenqlTmYgxjvT5FB6TBght3spFRZJIbjVe1XBPQl5/5ECJR3tkZu7pif9VuhfNnia2bhKT3GHYCJJyZf28UByNyelxT9fdVSGFHyE1OBD3+XqCNioRK9RI7h9hbBlMOVoomuKL2I6lLnhWctjXFVJjf71xKLfLfAPwMmcrytljPXgMVTXik220BDKdvNErDRqr8B87q8I51KbJku5GKAhPi6ddqAxNBQz5Xc1G2Spn0ZeASb0PZkf5vqscgvdRKTQrKgGEG+5n0GO1suFF0Y8TRWExZx1BZSMfpb+1NUo3DYMdDkV+Qh0uBJLus19RBn1A5dD/qAaGa" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="G4OLHCvaWEWDlDtyq4B2XA==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -238,18 +307,18 @@
                 <table id="ctl00_cp_content_tableLawArticleBasic" class="table tab-list tab-nobg tab-law law-content">
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體"><span style="font-size: 1em">第一條 &nbsp; &nbsp;臺中市為辦理都市更新須拆除或遷移土地改良物、動力機具、<br>
+		<td><div class="ClearCss"><span class="csp-s0"><span class="csp-s1">第一條 &nbsp; &nbsp;臺中市為辦理都市更新須拆除或遷移土地改良物、動力機具、<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 設備、人口及營業損失等之拆遷補償費及獎勵金發放，特制定<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 本自治條例。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體"><span style="font-size: 1em">第二條 &nbsp; &nbsp;本自治條例之主管機關為臺中市政府（以下簡稱本府）都市發<br>
+		<td><div class="ClearCss"><span class="csp-s2"><span class="csp-s3">第二條 &nbsp; &nbsp;本自治條例之主管機關為臺中市政府（以下簡稱本府）都市發<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 展局（以下簡稱本局）。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體"><span style="font-size: 1em">第三條 &nbsp; &nbsp;本自治條例，用詞定義如下：<br>
+		<td><div class="ClearCss"><span class="csp-s4"><span class="csp-s5">第三條 &nbsp; &nbsp;本自治條例，用詞定義如下：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、土地改良物：指建築改良物及農作改良物二種。附著於土<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 地之建築物或工事，為建築改良物。附著於土地之農作物<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 及其他植物與水利土壤之改良，為農作改良物。<br>
@@ -259,38 +328,38 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體"><span style="font-size: 1em">第四條 &nbsp; &nbsp;土地改良物拆遷補償費由實施者委託三家以上專業估價者查估<br>
+		<td><div class="ClearCss"><span class="csp-s6"><span class="csp-s7">第四條 &nbsp; &nbsp;土地改良物拆遷補償費由實施者委託三家以上專業估價者查估<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 後評定之。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 新細明體"><span style="font-size: 1em">第五條 &nbsp; &nbsp;依前條而拆除或遷移之土地改良物，配合本府公告日期前自動<br>
+		<td><div class="ClearCss"><p><span class="csp-s8"><span class="csp-s9">第五條 &nbsp; &nbsp;依前條而拆除或遷移之土地改良物，配合本府公告日期前自動<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 拆遷者，除依前條領取補償費外，得按土地改良物拆遷補償費<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 金額百分之六十發給土地改良物自動拆遷獎勵金。</span></span></p>
 </div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體"><span style="font-size: 1em">第六條 &nbsp; &nbsp;辦理都市更新拆遷土地改良物時，應遷移之動力機具、生產原<br>
+		<td><div class="ClearCss"><span class="csp-s10"><span class="csp-s11">第六條 &nbsp; &nbsp;辦理都市更新拆遷土地改良物時，應遷移之動力機具、生產原<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 料或經營設備等之各項費用，依據內政部訂頒之土地徵收遷移<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 費查估基準第七條規定發放。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體"><span style="font-size: 1em">第七條 &nbsp; &nbsp;合法營業用建物，因辦理都市更新應拆遷而致之營業損失，依<br>
+		<td><div class="ClearCss"><span class="csp-s12"><span class="csp-s13">第七條 &nbsp; &nbsp;合法營業用建物，因辦理都市更新應拆遷而致之營業損失，依<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 據內政部訂頒之建築改良物徵收營業損失補償基準辦理營業損<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 失補償費之發放。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體"><span style="font-size: 1em">第八條 &nbsp; &nbsp;因辦理都市更新應拆遷建築物而致之營業損失，不符合前條內<br>
+		<td><div class="ClearCss"><span class="csp-s14"><span class="csp-s15">第八條 &nbsp; &nbsp;因辦理都市更新應拆遷建築物而致之營業損失，不符合前條內<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 政部訂頒之基準，有營業事實且持有最近一期完繳營業稅據，<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 其營業物品並於本府公告日期前自動搬離者，得依前開基準第<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 六點規定金額百分之六十發給補助。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-size: 1em"><span style="font-family: 新細明體">第九條 &nbsp; &nbsp;都市更新單元核定發布實施日六個月前設有戶籍之人口，因辦<br>
+		<td><div class="ClearCss"><span class="csp-s16"><span class="csp-s17">第九條 &nbsp; &nbsp;都市更新單元核定發布實施日六個月前設有戶籍之人口，因辦<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 理都市更新必須遷移者，依下列規定發放人口遷移費。但因結<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 婚、出生、收養或認領而設籍者，不受六個月期限之限制：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、建物全部拆除之人口遷移費：<br>
@@ -311,14 +380,14 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體"><span style="font-size: 1em">第十條 &nbsp; &nbsp;依本自治條例申請發給土地改良物自動拆遷獎勵金、遷移動力<br>
+		<td><div class="ClearCss"><span class="csp-s18"><span class="csp-s19">第十條 &nbsp; &nbsp;依本自治條例申請發給土地改良物自動拆遷獎勵金、遷移動力<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 機具、生產原料或經營設備之費用及營業損失補償費者，應檢<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 附自動拆除前後之照片、斷水、斷電及斷瓦斯之相關證明後，<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 始得發給。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體"><span style="font-size: 1em">第十一條 &nbsp; &nbsp;本自治條例自公布日施行。</span></span></div></td>
+		<td><div class="ClearCss"><span class="csp-s20"><span class="csp-s21">第十一條 &nbsp; &nbsp;本自治條例自公布日施行。</span></span></div></td>
 	</tr>
 </table>
 
@@ -344,8 +413,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -355,7 +424,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,023</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,093</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -363,10 +432,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="G4OLHCvaWEWDlDtyq4B2XA=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="G4OLHCvaWEWDlDtyq4B2XA=="></script>
+<script src="/js/FYLS.js" nonce="G4OLHCvaWEWDlDtyq4B2XA=="></script>
+<script type="text/javascript" nonce="G4OLHCvaWEWDlDtyq4B2XA==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -439,8 +508,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="G4OLHCvaWEWDlDtyq4B2XA==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -461,5 +543,62 @@
         });
     });
 </script>
+
+
+    <style nonce="G4OLHCvaWEWDlDtyq4B2XA==">
+.csp-s0 { font-family: 新細明體 !important; } 
+.csp-s1 { font-size: 1em !important; } 
+</style>
+
+<style nonce="G4OLHCvaWEWDlDtyq4B2XA==">
+.csp-s2 { font-family: 新細明體 !important; } 
+.csp-s3 { font-size: 1em !important; } 
+</style>
+
+<style nonce="G4OLHCvaWEWDlDtyq4B2XA==">
+.csp-s4 { font-family: 新細明體 !important; } 
+.csp-s5 { font-size: 1em !important; } 
+</style>
+
+<style nonce="G4OLHCvaWEWDlDtyq4B2XA==">
+.csp-s6 { font-family: 新細明體 !important; } 
+.csp-s7 { font-size: 1em !important; } 
+</style>
+
+<style nonce="G4OLHCvaWEWDlDtyq4B2XA==">
+.csp-s8 { font-family: 新細明體 !important; } 
+.csp-s9 { font-size: 1em !important; } 
+</style>
+
+<style nonce="G4OLHCvaWEWDlDtyq4B2XA==">
+.csp-s10 { font-family: 新細明體 !important; } 
+.csp-s11 { font-size: 1em !important; } 
+</style>
+
+<style nonce="G4OLHCvaWEWDlDtyq4B2XA==">
+.csp-s12 { font-family: 新細明體 !important; } 
+.csp-s13 { font-size: 1em !important; } 
+</style>
+
+<style nonce="G4OLHCvaWEWDlDtyq4B2XA==">
+.csp-s14 { font-family: 新細明體 !important; } 
+.csp-s15 { font-size: 1em !important; } 
+</style>
+
+<style nonce="G4OLHCvaWEWDlDtyq4B2XA==">
+.csp-s16 { font-size: 1em !important; } 
+.csp-s17 { font-family: 新細明體 !important; } 
+</style>
+
+<style nonce="G4OLHCvaWEWDlDtyq4B2XA==">
+.csp-s18 { font-family: 新細明體 !important; } 
+.csp-s19 { font-size: 1em !important; } 
+</style>
+
+<style nonce="G4OLHCvaWEWDlDtyq4B2XA==">
+.csp-s20 { font-family: 新細明體 !important; } 
+.csp-s21 { font-size: 1em !important; } 
+</style>
+
 
 

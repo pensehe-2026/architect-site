@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-臺中市廣告物整齊化街區設置及廣告物補助要點
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="4XX1WMuy4ESM4xqEoc24CQ=="></script>
+    <script type="text/javascript" nonce="4XX1WMuy4ESM4xqEoc24CQ==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="4XX1WMuy4ESM4xqEoc24CQ==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL000180" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="4XX1WMuy4ESM4xqEoc24CQ==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -245,51 +314,51 @@
                 <table id="ctl00_cp_content_tableLawArticleBasic" class="table tab-list tab-nobg tab-law law-content">
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">一、臺中市政府（以下簡稱本府）為美化市容觀瞻，鼓勵廣告物設立整齊化，特訂定本要點。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s0">一、臺中市政府（以下簡稱本府）為美化市容觀瞻，鼓勵廣告物設立整齊化，特訂定本要點。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">二、本要點之主管機關為本府都市發展局。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s1">二、本要點之主管機關為本府都市發展局。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">三、本要點之補助對象為本府逕為指定及民眾申請經本府核定之廣告物整齊化街區之廣告物設置人。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s2">三、本要點之補助對象為本府逕為指定及民眾申請經本府核定之廣告物整齊化街區之廣告物設置人。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">四、本要點所稱廣告物，係指招牌廣告及樹立廣告。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s3">四、本要點所稱廣告物，係指招牌廣告及樹立廣告。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">五、本府認定廣告物需改善之街區、社區或建築物，得逕指定為廣告物整齊化街區。</div><div style="line-height: 1.917em; margin: 0 0 0 24pt">符合下列情形之ㄧ者，得申請本府核定為廣告物整齊化街區：</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（一）具有完整街廓。</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（二）面臨都市計畫道路兩側，長度達一百公尺以上或長度達五十公尺以上且起迄點具明顯界限。</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（三）依公寓大廈管理條例成立管理組織並向本府完成報備程序之公寓大廈面臨計畫道路部分。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s4">五、本府認定廣告物需改善之街區、社區或建築物，得逕指定為廣告物整齊化街區。</div><div class="csp-s5">符合下列情形之ㄧ者，得申請本府核定為廣告物整齊化街區：</div><div class="csp-s6">（一）具有完整街廓。</div><div class="csp-s6">（二）面臨都市計畫道路兩側，長度達一百公尺以上或長度達五十公尺以上且起迄點具明顯界限。</div><div class="csp-s6">（三）依公寓大廈管理條例成立管理組織並向本府完成報備程序之公寓大廈面臨計畫道路部分。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">六、前點廣告物整齊化街區之廣告物應符合下列規定：</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（一）招牌廣告物應以戶或營業場所為單位。</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（二）廣告物應以新設置或以舊有廣告物修改至符合相關法令規定之離地高度、突出牆面距離、不得覆蓋開口、正面式不得低於樑底線、側懸式厚度及突出建築線等之相關規定。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s7">六、前點廣告物整齊化街區之廣告物應符合下列規定：</div><div class="csp-s8">（一）招牌廣告物應以戶或營業場所為單位。</div><div class="csp-s8">（二）廣告物應以新設置或以舊有廣告物修改至符合相關法令規定之離地高度、突出牆面距離、不得覆蓋開口、正面式不得低於樑底線、側懸式厚度及突出建築線等之相關規定。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">七、申請核定為廣告物整齊化街區，應由申請人填具申請書並檢附下列文件向本府提出：</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（一）全體廣告物設置人達三分之二以上之委任書及相關權利證明文件影印本。</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（二）申請範圍位置圖及廣告物現況照片。</div><div style="line-height: 1.917em; margin: 0 0 0 24pt">前項申請人應具下列資格之一：</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（一）全體廣告物設置人達三分之二以上推舉之代表人。</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（二）依法登記之公寓大廈管理組織之代表人。</div><div style="line-height: 1.917em; margin: 0 0 0 24pt">前項之代表人以一人為限。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s9">七、申請核定為廣告物整齊化街區，應由申請人填具申請書並檢附下列文件向本府提出：</div><div class="csp-s10">（一）全體廣告物設置人達三分之二以上之委任書及相關權利證明文件影印本。</div><div class="csp-s10">（二）申請範圍位置圖及廣告物現況照片。</div><div class="csp-s11">前項申請人應具下列資格之一：</div><div class="csp-s10">（一）全體廣告物設置人達三分之二以上推舉之代表人。</div><div class="csp-s10">（二）依法登記之公寓大廈管理組織之代表人。</div><div class="csp-s11">前項之代表人以一人為限。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">八、廣告物整齊化街區之申請，由本府組成之廣告物整齊化街區審查小組審查通過後，由本府發給核准函。</div><div style="line-height: 1.917em; margin: 0 0 0 24pt">前項審查小組置委員七人，其中一人為召集人，由本府都市發展局局長兼任，一人為副召集人，由本府都市發展局副局長或主任秘書兼任；其餘委員五人，由本府就下列人員派兼之：</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（一）本府財政局代表一人。</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（二）本府主計處代表一人。</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（三）本府都市發展局總工程司或副總工程司。</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（四）本府都市發展局廣告物管理科科長。</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（五）本府都市發展局都市更新科科長。</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">審查小組委員為無給職。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s12">八、廣告物整齊化街區之申請，由本府組成之廣告物整齊化街區審查小組審查通過後，由本府發給核准函。</div><div class="csp-s13">前項審查小組置委員七人，其中一人為召集人，由本府都市發展局局長兼任，一人為副召集人，由本府都市發展局副局長或主任秘書兼任；其餘委員五人，由本府就下列人員派兼之：</div><div class="csp-s14">（一）本府財政局代表一人。</div><div class="csp-s14">（二）本府主計處代表一人。</div><div class="csp-s14">（三）本府都市發展局總工程司或副總工程司。</div><div class="csp-s14">（四）本府都市發展局廣告物管理科科長。</div><div class="csp-s14">（五）本府都市發展局都市更新科科長。</div><div class="csp-s14">審查小組委員為無給職。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">九、廣告物所有人於領得廣告物整齊化街區核准函後，應於本府核准屆滿後三個月內，填具申請書並檢附下列文件向本府申請補助：</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（一）由民眾主動申請成為廣告物整齊化街區者：</div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 66pt">1、廣告物示範街區核准函。</div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 66pt">2、受補助人之具領清冊及委託書。</div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 66pt">3、廣告物製作費憑證影本。</div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 66pt">4、廣告物施作後相片。</div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 66pt">5、非經本府許可，五年內不得擅自變更、遷移或拆除之切結書。</div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 66pt">6、廣告物施工責任保證書。</div><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（二）由本府指定為廣告物整齊化街區或由民眾主動申請成為廣告物整齊化街區內未加入原申請組織者：</div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 66pt">1、廣告物製作費憑證影本。</div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 66pt">2、廣告物施作前、後相片。</div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 66pt">3、非經本府許可，五年內不得擅自變更、遷移或拆除之切結書。</div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 66pt">4、廣告物施工責任保證書。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s15">九、廣告物所有人於領得廣告物整齊化街區核准函後，應於本府核准屆滿後三個月內，填具申請書並檢附下列文件向本府申請補助：</div><div class="csp-s16">（一）由民眾主動申請成為廣告物整齊化街區者：</div><div class="csp-s17">1、廣告物示範街區核准函。</div><div class="csp-s17">2、受補助人之具領清冊及委託書。</div><div class="csp-s17">3、廣告物製作費憑證影本。</div><div class="csp-s17">4、廣告物施作後相片。</div><div class="csp-s17">5、非經本府許可，五年內不得擅自變更、遷移或拆除之切結書。</div><div class="csp-s17">6、廣告物施工責任保證書。</div><div class="csp-s16">（二）由本府指定為廣告物整齊化街區或由民眾主動申請成為廣告物整齊化街區內未加入原申請組織者：</div><div class="csp-s17">1、廣告物製作費憑證影本。</div><div class="csp-s17">2、廣告物施作前、後相片。</div><div class="csp-s17">3、非經本府許可，五年內不得擅自變更、遷移或拆除之切結書。</div><div class="csp-s17">4、廣告物施工責任保證書。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">十、廣告物之補助，以每一營業單位以正面式及側懸式各一面或樹立廣告物一座為限，補助額度依實際製作費用核計之，每面（座）不得超過新臺幣一萬五千元；舊有廣告物修改者每面（座）不得超過新臺幣三千元。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s18">十、廣告物之補助，以每一營業單位以正面式及側懸式各一面或樹立廣告物一座為限，補助額度依實際製作費用核計之，每面（座）不得超過新臺幣一萬五千元；舊有廣告物修改者每面（座）不得超過新臺幣三千元。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">十一、本要點核定補助設置之廣告物，除廣告物內容外，非經本府許可，於五年內不得擅自變更、遷移或拆除，違反者本府得向領取補助人追繳已核發之補助金。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s19">十一、本要點核定補助設置之廣告物，除廣告物內容外，非經本府許可，於五年內不得擅自變更、遷移或拆除，違反者本府得向領取補助人追繳已核發之補助金。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">十二、本要點之補助受理期間，由本府公告之。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s20">十二、本要點之補助受理期間，由本府公告之。</div></div></td>
 	</tr>
 </table>
 
@@ -315,8 +384,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -326,7 +395,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,458</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,505</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -334,10 +403,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="4XX1WMuy4ESM4xqEoc24CQ=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="4XX1WMuy4ESM4xqEoc24CQ=="></script>
+<script src="/js/FYLS.js" nonce="4XX1WMuy4ESM4xqEoc24CQ=="></script>
+<script type="text/javascript" nonce="4XX1WMuy4ESM4xqEoc24CQ==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -410,8 +479,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="4XX1WMuy4ESM4xqEoc24CQ==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -432,5 +514,64 @@
         });
     });
 </script>
+
+
+    <style nonce="4XX1WMuy4ESM4xqEoc24CQ==">
+.csp-s0 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+</style>
+
+<style nonce="4XX1WMuy4ESM4xqEoc24CQ==">
+.csp-s1 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+</style>
+
+<style nonce="4XX1WMuy4ESM4xqEoc24CQ==">
+.csp-s2 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+</style>
+
+<style nonce="4XX1WMuy4ESM4xqEoc24CQ==">
+.csp-s3 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+</style>
+
+<style nonce="4XX1WMuy4ESM4xqEoc24CQ==">
+.csp-s4 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s5 { line-height: 1.917em !important; margin: 0 0 0 24pt !important; } 
+.csp-s6 { line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 60pt !important; } 
+</style>
+
+<style nonce="4XX1WMuy4ESM4xqEoc24CQ==">
+.csp-s7 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s8 { line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 60pt !important; } 
+</style>
+
+<style nonce="4XX1WMuy4ESM4xqEoc24CQ==">
+.csp-s9 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s10 { line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 60pt !important; } 
+.csp-s11 { line-height: 1.917em !important; margin: 0 0 0 24pt !important; } 
+</style>
+
+<style nonce="4XX1WMuy4ESM4xqEoc24CQ==">
+.csp-s12 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s13 { line-height: 1.917em !important; margin: 0 0 0 24pt !important; } 
+.csp-s14 { line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 60pt !important; } 
+</style>
+
+<style nonce="4XX1WMuy4ESM4xqEoc24CQ==">
+.csp-s15 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s16 { line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 60pt !important; } 
+.csp-s17 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 66pt !important; } 
+</style>
+
+<style nonce="4XX1WMuy4ESM4xqEoc24CQ==">
+.csp-s18 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+</style>
+
+<style nonce="4XX1WMuy4ESM4xqEoc24CQ==">
+.csp-s19 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+</style>
+
+<style nonce="4XX1WMuy4ESM4xqEoc24CQ==">
+.csp-s20 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+</style>
+
 
 

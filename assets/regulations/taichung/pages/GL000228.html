@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-臺中市都市更新單元劃定基準(適用原臺中縣轄區)
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="odKjXN49HkyuKqTwMNrnJQ=="></script>
+    <script type="text/javascript" nonce="odKjXN49HkyuKqTwMNrnJQ==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="odKjXN49HkyuKqTwMNrnJQ==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL000228" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="odKjXN49HkyuKqTwMNrnJQ==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -245,19 +314,19 @@
                 <table id="ctl00_cp_content_tableLawArticleBasic" class="table tab-list tab-nobg tab-law law-content">
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em"><span style="font-family: 新細明體">一、臺中市政府(以下簡稱本府)<span style="color: rgba(0, 0, 0, 1)">為執行都市更新條例第十條及第十一條規定，</span>使更新單元之劃定原則明確化<span style="color: rgba(0, 0, 0, 1)">，特訂定本基準</span>。</span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s0"><span class="csp-s1"><span class="csp-s2">一、臺中市政府(以下簡稱本府)<span class="csp-s3">為執行都市更新條例第十條及第十一條規定，</span>使更新單元之劃定原則明確化<span class="csp-s3">，特訂定本基準</span>。</span></span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em"><span style="font-family: 新細明體">二、本基準適用範圍限於九十九年十二月二十五日改制前之臺中縣轄區內實施都市計畫地區。</span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s4"><span class="csp-s5"><span class="csp-s6">二、本基準適用範圍限於九十九年十二月二十五日改制前之臺中縣轄區內實施都市計畫地區。</span></span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-family: 新細明體"><span style="font-size: 1em">三、<span style="color: rgba(0, 0, 0, 1)">都市更新單元之劃定，在都市計畫或都市更新計畫中訂有規定者，依該規定辦理。自行劃定都市更新單元者，應以一完整之計畫街廓為原則，但因計畫街廓過大或其他特殊因素確難一次辦理者，得依下列基準劃定，申請主管機關核准後公告實施之：</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-family: 新細明體"><span style="font-size: 1em">(一)<span style="color: rgba(0, 0, 0, 1)">街廓內臨接計畫道路，且面積在一千平方公尺以上者。</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-family: 新細明體"><span style="font-size: 1em">(二)<span style="color: rgba(0, 0, 0, 1)">街廓內臨接二條以上之計畫道路，且面積在五百平方公尺以上者。</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-family: 新細明體"><span style="font-size: 1em">(三)<span style="color: rgba(0, 0, 0, 1)">街廓內部分土地上業已完成建築，確實無法合併更新而無礙建築設計及市容觀瞻，其未建築完成部分面積在五百平方公尺以上，且必須一次更新完成者。</span></span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s7"><span class="csp-s8"><span class="csp-s9">三、<span class="csp-s10">都市更新單元之劃定，在都市計畫或都市更新計畫中訂有規定者，依該規定辦理。自行劃定都市更新單元者，應以一完整之計畫街廓為原則，但因計畫街廓過大或其他特殊因素確難一次辦理者，得依下列基準劃定，申請主管機關核准後公告實施之：</span></span></span></div><div class="csp-s11"><span class="csp-s8"><span class="csp-s9">(一)<span class="csp-s10">街廓內臨接計畫道路，且面積在一千平方公尺以上者。</span></span></span></div><div class="csp-s11"><span class="csp-s8"><span class="csp-s9">(二)<span class="csp-s10">街廓內臨接二條以上之計畫道路，且面積在五百平方公尺以上者。</span></span></span></div><div class="csp-s11"><span class="csp-s8"><span class="csp-s9">(三)<span class="csp-s10">街廓內部分土地上業已完成建築，確實無法合併更新而無礙建築設計及市容觀瞻，其未建築完成部分面積在五百平方公尺以上，且必須一次更新完成者。</span></span></span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-family: 新細明體"><span style="font-size: 1em"><span style="color: rgba(0, 0, 0, 1)">四、未經劃定應實施都市更新之地區，土地及合法建築物所有權人得參照前點規定，自行劃定更新單元，向本府提出申請。</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; margin: 0 0 0 24pt"><span style="font-family: 新細明體"><span style="font-size: 1em"><span style="color: rgba(0, 0, 0, 1)">前項自行劃定之更新單元內，建築物及地區環境狀況，應符合下列各款中之任二款規定，並於更新事業概要內載明：</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-family: 新細明體"><span style="font-size: 1em"><span style="color: rgba(0, 0, 0, 1)">(</span><span style="color: rgba(0, 0, 0, 1)">一)更新單元內屬非防火建築物或非防火構造建築物之棟數比例達二分之一以上。</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-family: 新細明體"><span style="font-size: 1em"><span style="color: rgba(0, 0, 0, 1)">(</span><span style="color: rgba(0, 0, 0, 1)">二)更新單元內現有巷道彎曲狹小，其寬度小於四公尺之面積佔現有巷道總面積比例達二分之一以上。</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-family: 新細明體"><span style="font-size: 1em"><span style="color: rgba(0, 0, 0, 1)">(</span><span style="color: rgba(0, 0, 0, 1)">三)更新單元內各種構造建築物使用已逾下列年期之面積比例達二分之一以上：土磚造十年，木造二十年，磚造及石造三十五年，加強磚造及鋼鐵造四十年，鋼筋混凝土造、預鑄混凝土造及鋼骨混凝土造五十年。</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-family: 新細明體"><span style="font-size: 1em"><span style="color: rgba(0, 0, 0, 1)">(</span><span style="color: rgba(0, 0, 0, 1)">四)更新單元內建築物有基礎下陷、主要樑柱及牆壁等腐朽破損或變形，有危險之虞者之棟數比例達二分之一以上。</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-family: 新細明體"><span style="font-size: 1em"><span style="color: rgba(0, 0, 0, 1)">(</span><span style="color: rgba(0, 0, 0, 1)">五)更新單元內合法建築物底層土地使用，不符現行都市計畫分區使用之樓地板面積比例達二分之一以上。</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-family: 新細明體"><span style="font-size: 1em"><span style="color: rgba(0, 0, 0, 1)">(</span><span style="color: rgba(0, 0, 0, 1)">六)更新單元周邊距離改制前臺中縣轄區之重大建設、地區觀光據點及新闢公共設施一百公尺以內者。前述重大建設包括：輕軌運輸系統車站、公共運輸轉運站、面積達○‧五公頃以上之公園、基地面積達三千平方公尺以上之廣場、快速道路等。</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-family: 新細明體"><span style="font-size: 1em"><span style="color: rgba(0, 0, 0, 1)">(</span><span style="color: rgba(0, 0, 0, 1)">七)更新單元內建築物無污水處理設施之棟數，其比例達二分之一以上。</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-family: 新細明體"><span style="font-size: 1em"><span style="color: rgba(0, 0, 0, 1)">(</span><span style="color: rgba(0, 0, 0, 1)">八)更新單元內建築物耐震設計標準，不符<span style="letter-spacing: -0.058em">內政部七十八年五月五日台內營字第六九一七○一號</span>修正之建築技術規則規定之棟數比例達二分之一以上。</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-family: 新細明體"><span style="font-size: 1em"><span style="color: rgba(0, 0, 0, 1)">(</span><span style="color: rgba(0, 0, 0, 1)">九)更新單元內計畫道路未開闢之面積比例達二分一以上。</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt"><span style="font-family: 新細明體"><span style="font-size: 1em"><span style="color: rgba(0, 0, 0, 1)">(</span><span style="color: rgba(0, 0, 0, 1)">十)更新單元內都市計畫公共設施未開闢者。</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt"><span style="font-family: 新細明體"><span style="font-size: 1em"><span style="color: rgba(0, 0, 0, 1)">(</span><span style="color: rgba(0, 0, 0, 1)">十一)更新單元內現有建蔽率大於法定建蔽率，且現有容積未達法定容積之二分之一者。有關容積率之計算以合法建築物為限。</span></span></span></div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt"><span style="font-family: 新細明體"><span style="font-size: 1em"><span style="color: rgba(0, 0, 0, 1)">(</span><span style="color: rgba(0, 0, 0, 1)">十二)內政部及本府指定之古蹟、都市計畫劃定之保存區、本府指定之歷史性建築及推動保存之歷史街區，或其周邊距離一百公尺以內者。</span></span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s12"><span class="csp-s13"><span class="csp-s14"><span class="csp-s15">四、未經劃定應實施都市更新之地區，土地及合法建築物所有權人得參照前點規定，自行劃定更新單元，向本府提出申請。</span></span></span></div><div class="csp-s16"><span class="csp-s13"><span class="csp-s14"><span class="csp-s15">前項自行劃定之更新單元內，建築物及地區環境狀況，應符合下列各款中之任二款規定，並於更新事業概要內載明：</span></span></span></div><div class="csp-s17"><span class="csp-s13"><span class="csp-s14"><span class="csp-s15">(</span><span class="csp-s15">一)更新單元內屬非防火建築物或非防火構造建築物之棟數比例達二分之一以上。</span></span></span></div><div class="csp-s17"><span class="csp-s13"><span class="csp-s14"><span class="csp-s15">(</span><span class="csp-s15">二)更新單元內現有巷道彎曲狹小，其寬度小於四公尺之面積佔現有巷道總面積比例達二分之一以上。</span></span></span></div><div class="csp-s17"><span class="csp-s13"><span class="csp-s14"><span class="csp-s15">(</span><span class="csp-s15">三)更新單元內各種構造建築物使用已逾下列年期之面積比例達二分之一以上：土磚造十年，木造二十年，磚造及石造三十五年，加強磚造及鋼鐵造四十年，鋼筋混凝土造、預鑄混凝土造及鋼骨混凝土造五十年。</span></span></span></div><div class="csp-s17"><span class="csp-s13"><span class="csp-s14"><span class="csp-s15">(</span><span class="csp-s15">四)更新單元內建築物有基礎下陷、主要樑柱及牆壁等腐朽破損或變形，有危險之虞者之棟數比例達二分之一以上。</span></span></span></div><div class="csp-s17"><span class="csp-s13"><span class="csp-s14"><span class="csp-s15">(</span><span class="csp-s15">五)更新單元內合法建築物底層土地使用，不符現行都市計畫分區使用之樓地板面積比例達二分之一以上。</span></span></span></div><div class="csp-s17"><span class="csp-s13"><span class="csp-s14"><span class="csp-s15">(</span><span class="csp-s15">六)更新單元周邊距離改制前臺中縣轄區之重大建設、地區觀光據點及新闢公共設施一百公尺以內者。前述重大建設包括：輕軌運輸系統車站、公共運輸轉運站、面積達○‧五公頃以上之公園、基地面積達三千平方公尺以上之廣場、快速道路等。</span></span></span></div><div class="csp-s17"><span class="csp-s13"><span class="csp-s14"><span class="csp-s15">(</span><span class="csp-s15">七)更新單元內建築物無污水處理設施之棟數，其比例達二分之一以上。</span></span></span></div><div class="csp-s17"><span class="csp-s13"><span class="csp-s14"><span class="csp-s15">(</span><span class="csp-s15">八)更新單元內建築物耐震設計標準，不符<span class="csp-s18">內政部七十八年五月五日台內營字第六九一七○一號</span>修正之建築技術規則規定之棟數比例達二分之一以上。</span></span></span></div><div class="csp-s17"><span class="csp-s13"><span class="csp-s14"><span class="csp-s15">(</span><span class="csp-s15">九)更新單元內計畫道路未開闢之面積比例達二分一以上。</span></span></span></div><div class="csp-s17"><span class="csp-s13"><span class="csp-s14"><span class="csp-s15">(</span><span class="csp-s15">十)更新單元內都市計畫公共設施未開闢者。</span></span></span></div><div class="csp-s19"><span class="csp-s13"><span class="csp-s14"><span class="csp-s15">(</span><span class="csp-s15">十一)更新單元內現有建蔽率大於法定建蔽率，且現有容積未達法定容積之二分之一者。有關容積率之計算以合法建築物為限。</span></span></span></div><div class="csp-s19"><span class="csp-s13"><span class="csp-s14"><span class="csp-s15">(</span><span class="csp-s15">十二)內政部及本府指定之古蹟、都市計畫劃定之保存區、本府指定之歷史性建築及推動保存之歷史街區，或其周邊距離一百公尺以內者。</span></span></span></div></div></td>
 	</tr>
 </table>
 
@@ -283,8 +352,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -294,7 +363,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,462</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,509</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -302,10 +371,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="odKjXN49HkyuKqTwMNrnJQ=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="odKjXN49HkyuKqTwMNrnJQ=="></script>
+<script src="/js/FYLS.js" nonce="odKjXN49HkyuKqTwMNrnJQ=="></script>
+<script type="text/javascript" nonce="odKjXN49HkyuKqTwMNrnJQ==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -378,8 +447,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="odKjXN49HkyuKqTwMNrnJQ==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -400,5 +482,39 @@
         });
     });
 </script>
+
+
+    <style nonce="odKjXN49HkyuKqTwMNrnJQ==">
+.csp-s0 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s1 { font-size: 1em !important; } 
+.csp-s2 { font-family: 新細明體 !important; } 
+.csp-s3 { color: rgba(0, 0, 0, 1) !important; } 
+</style>
+
+<style nonce="odKjXN49HkyuKqTwMNrnJQ==">
+.csp-s4 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s5 { font-size: 1em !important; } 
+.csp-s6 { font-family: 新細明體 !important; } 
+</style>
+
+<style nonce="odKjXN49HkyuKqTwMNrnJQ==">
+.csp-s7 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s8 { font-family: 新細明體 !important; } 
+.csp-s9 { font-size: 1em !important; } 
+.csp-s10 { color: rgba(0, 0, 0, 1) !important; } 
+.csp-s11 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 48pt !important; } 
+</style>
+
+<style nonce="odKjXN49HkyuKqTwMNrnJQ==">
+.csp-s12 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s13 { font-family: 新細明體 !important; } 
+.csp-s14 { font-size: 1em !important; } 
+.csp-s15 { color: rgba(0, 0, 0, 1) !important; } 
+.csp-s16 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; margin: 0 0 0 24pt !important; } 
+.csp-s17 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 48pt !important; } 
+.csp-s18 { letter-spacing: -0.058em !important; } 
+.csp-s19 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 60pt !important; } 
+</style>
+
 
 

@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-臺中市畸零地調處及徵收作業要點
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="YmLcrK+5X0ip7JT4mhE8DQ=="></script>
+    <script type="text/javascript" nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL000153" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="5tJN1o8j1pyB6OC/VSzGC1tG5MNfRYxQ31cpGpf0ZpjmMGO7Q4wRYGSWkypt70GA0gaD0ZMv1DgIX6QhLaSIa6kxkZvRjqsUvqwpQ0HiI9S1tQKBz1dp1bfbUpVlDSf6JQ9m0wY7Fvy4qjwPHA1rg4y4SubHJf9cM56RRNGbf7uv+LgdY9cVdyzQmIrOpTA8ydv3RpV718OBjZ83atEiiys37Oy2+PluRRhu6x5+ABjrS1GyyVjlcTkfU04Oyjz+txajby88rsshGpNVkLKGqg47lj1YDgvX9HJtnRfi5gEmW7NPJmrsEi9jckMJfQNknR3SkFVmZ8BrfOK3ZaQijITLjwT69kbYTsetarBHg1mahfg2Y/BMotpW1FeTwRqs22jv72L2WrrX7J94psduXptQ1YD1jRBoOxqco12YxZS1rwHJvtf8w4GxGf/rescoYBRSP1gYsKPIHJsvgglBFG+FnS1M+4Luz99Vv01TjMxFCmXF1a0qm5hR89h2/ykC1oS2XwGB1pbE2n83nZRCslX7jAfQL/twy1oxOtd5BA2Cu9YXCYCeFmEw7Bl8BJ/gvVtFcIBVu2UBCpax9yHzHeDmwiB6DX3UlhWPaKc5twrcZF8IffgoETnjdWkBK+R+JSQRYkb2iCDweTHIgzs4a0X4ok/mcfiQ44s9XMiJUj0Im1TGWOvVxNKKsU/7rC+7SPmGRHKfriJuBK82q6FGbF/wNAHz6tEShdhm2VEHGvag1H+k+VgrLTRNkWtLr33+U81lyccPKEvJoPHvOO2kUfvr+JujyCE6o2ccbMxkwyDdI0F0VA0bCi43yIcQoTQ42/IQYuvFeV4GFf6zAtI0vGP7kL64WKpkWMrE+czoMOQQdjC7eS67xAfMmla/EOMbK8hS/p7NhAyT2jEoHUFCH9SJ+FWqFgzlkQVDioaczI55ycTLas1rJBCHENquFc4HoXtSdpZB49NI+ROdmhqQVGd1TuHejXXi6vHFk/7Inqx0xLnZmh40hzhdMSiad59qw5L4SM3zmd8aaKJkRRtZ9gBTSWI/2bIZ/YSaghZakR6jK8uKJwaorG7LtsxU03BHFuhRWPIjns/ZbXbdy+vJ13gJnrP8s/jBS+HE+AveWROB6tKS0MCoAsWytOPBBKqzTAnrFZYDq2+FoAw4Yo/T2g5oCGxDAprTkGDXW1SnkOth527EGf5lUneOb5dPazPS+xAg7CGSdyBQV0SmHGtTi2xJrGLkIZGlcoc0OtkfM9czT5jrN97IVBxWn90uZGBR7BiPpmxDdfi9SBcKfzmzl2MMu+hxYBpsz93OXTmd5TzMeQhCQLH2FySZL3tBuMDoc0cmHyzfk7Vvzo0p7Lhe0LIcGwPl1LClV+X3EJ6Pbwl1SjsxfwGygK+09ZsAduS25TveX/0g0UJmQRX50g856vg623tCei6ogutmZUzXAuTCD3g9SnoY5f3sgcnmN8K/aLHehrGR2uso8Fd+0at6yhXsJtAA3Qo8YaZ7QpFKAX5ov4bYYpoznVTRlD55tCSyVeEL3as5JZaPKW3OOBeanSsXIqx5hI0fHkcXM2R0l5X7AgtUgxAcBs59VbHLniGeP+qKqM4BBHxtHtzMfxRKr/g+UlMH6a+Vl94tNxpNAeWENQxEnXKuTqBQMPbQYhEFLo9vHnpDl+j81FD0VMuOpVAWhqUR4gxt2TprizLhFJgf5vkHmwrbAt+gvPWeUoOxQV/wTaC3X65qu5aMz9SoF6FFyJkoyeEiAMkLPf4uWypckaVp09m83WF/gnWLkoFgTgPfY7Vav4GqjORs7WzBqa7tmpI2fqX8HmybAEIOGrNWUTMJ3E508Tpo1kbpodxMxYetEtJLQCVXHtOiTSvYzQ==" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="YmLcrK+5X0ip7JT4mhE8DQ==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -238,87 +307,87 @@
                 <table id="ctl00_cp_content_tableLawArticleBasic" class="table tab-list tab-nobg tab-law law-content">
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">一、臺中市政府（以下簡稱本府）為使畸零地調處及徵收標售作業順利進行，以增進土地合理利用，及執行建築法第四十五條規定，特訂定本作業要點。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s0">一、臺中市政府（以下簡稱本府）為使畸零地調處及徵收標售作業順利進行，以增進土地合理利用，及執行建築法第四十五條規定，特訂定本作業要點。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">二、畸零地調處案件受理機關為本府都市發展局，受理後依建築法第四十五條有關規定提請本府畸零地調處委員會（以下簡稱本委員會）進行調處。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s1">二、畸零地調處案件受理機關為本府都市發展局，受理後依建築法第四十五條有關規定提請本府畸零地調處委員會（以下簡稱本委員會）進行調處。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">三、本府受理調處畸零地合併時，於收到申請書之日起一個月內，通知有關土地所有權人、承租人及他項權利人進行調處，調處之程序如下：</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（一）審查合併土地之位置、形狀及申請人所有規劃合併土地最小面積、寬度及深度，必要時得酌予調處。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3.5em; margin: 0 0 0 66pt">（二）查估合併土地附近之買賣市價，徵詢參與調處人之意見，並由各土地所有權人協商合併建築或公開議價、互為買賣或合併建築。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 60pt">（三）調處時，雙方意見不一致或一方缺席經再次通知不到者，依畸零地調處委員會裁定，得視為調處一次不成立。</div><div style="line-height: 1.917em; text-indent: 2em">（四）調處二次不成立後，一年內不再受理調處申請。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s2">三、本府受理調處畸零地合併時，於收到申請書之日起一個月內，通知有關土地所有權人、承租人及他項權利人進行調處，調處之程序如下：</div><div class="csp-s3">（一）審查合併土地之位置、形狀及申請人所有規劃合併土地最小面積、寬度及深度，必要時得酌予調處。</div><div class="csp-s4">（二）查估合併土地附近之買賣市價，徵詢參與調處人之意見，並由各土地所有權人協商合併建築或公開議價、互為買賣或合併建築。</div><div class="csp-s3">（三）調處時，雙方意見不一致或一方缺席經再次通知不到者，依畸零地調處委員會裁定，得視為調處一次不成立。</div><div class="csp-s5">（四）調處二次不成立後，一年內不再受理調處申請。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">四、基地所有權人或鄰接土地所有權人，得於本委員會決議依規定申請徵收時，於文到三個月內申請辦理徵收、標售事宜。</div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 48pt">前項徵收土地，不包括公有畸零地。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s6">四、基地所有權人或鄰接土地所有權人，得於本委員會決議依規定申請徵收時，於文到三個月內申請辦理徵收、標售事宜。</div><div class="csp-s7">前項徵收土地，不包括公有畸零地。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">五、依前點規定申請案應檢附之書件如下：</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 2em">（一）申請書。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -1em; margin: 0 0 0 36pt">（二）土地登記簿謄本、地籍圖謄本。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -1em; margin: 0 0 0 36pt">（三）相關土地所有權人及他項權利人姓名、地址。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -1em; margin: 0 0 0 36pt">（四）地上物有關證明文件。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -1em; margin: 0 0 0 36pt">（五）地價：以當年期公告土地現值證明書、及建築物重建價格概估。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -1em; margin: 0 0 0 36pt">（六）畸零地調處委員會決議紀錄（得依規申請徵收函）。</div><div style="line-height: 1.917em; text-indent: 2em">（七）徵收土地範圍內現況彩色照片。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s8">五、依前點規定申請案應檢附之書件如下：</div><div class="csp-s9">（一）申請書。</div><div class="csp-s10">（二）土地登記簿謄本、地籍圖謄本。</div><div class="csp-s10">（三）相關土地所有權人及他項權利人姓名、地址。</div><div class="csp-s10">（四）地上物有關證明文件。</div><div class="csp-s10">（五）地價：以當年期公告土地現值證明書、及建築物重建價格概估。</div><div class="csp-s10">（六）畸零地調處委員會決議紀錄（得依規申請徵收函）。</div><div class="csp-s11">（七）徵收土地範圍內現況彩色照片。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">六、受理徵收申請經審查符合規定時，本府即核計鄰地之徵收補償價款及徵收作業費通知申請人於文到一個月內預繳，逾期註銷該申請案。土地所有權人及他項權利人應隨函副知。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; margin: 0 0 0 24pt">前項申請人之土地上如有他項權利時，應先行塗銷並預繳申請徵收土地之全部承買價款。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; margin: 0 0 0 24pt">徵收作業費每件預繳新臺幣六萬元，並依業務實際開銷為準，多退少補。</div><div style="line-height: 1.917em; text-indent: 2em">依第一項規定期限內預繳者，於辦理公開標售時，均有優先承購權。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s12">六、受理徵收申請經審查符合規定時，本府即核計鄰地之徵收補償價款及徵收作業費通知申請人於文到一個月內預繳，逾期註銷該申請案。土地所有權人及他項權利人應隨函副知。</div><div class="csp-s13">前項申請人之土地上如有他項權利時，應先行塗銷並預繳申請徵收土地之全部承買價款。</div><div class="csp-s13">徵收作業費每件預繳新臺幣六萬元，並依業務實際開銷為準，多退少補。</div><div class="csp-s14">依第一項規定期限內預繳者，於辦理公開標售時，均有優先承購權。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">七、前點承買價款之核計，以當期公告現值為辦理依據，並由本府都市發展局、建設局、財政局、地政局等單位實地勘估後，依相關法令規定核定補償費、補助費或救濟金。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s15">七、前點承買價款之核計，以當期公告現值為辦理依據，並由本府都市發展局、建設局、財政局、地政局等單位實地勘估後，依相關法令規定核定補償費、補助費或救濟金。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">八、<span style="letter-spacing: 0.017em">申請人預繳承買價款後，本府即擬具申請徵收基地之土地地價面積，參照土</span>地<span style="letter-spacing: 0.017em">法第二百二十四條及其施行法第五十條至第五十三條規定擬具徵收收土地計畫書、徵收土地圖說、土地使用配置圖各三份層報內政部准予徵收。</span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s16">八、<span class="csp-s17">申請人預繳承買價款後，本府即擬具申請徵收基地之土地地價面積，參照土</span>地<span class="csp-s17">法第二百二十四條及其施行法第五十條至第五十三條規定擬具徵收收土地計畫書、徵收土地圖說、土地使用配置圖各三份層報內政部准予徵收。</span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -1.5em; margin: 0 0 0 18pt">九、被徵收之畸零地需辦理分割者，由本府都市發展局受理後，填具土地複丈申請書，並檢附本委員會核定之徵收範圍圖說等文件，囑託土地所在地之地政事務所以逕行分割方式辦理，並繳納測量登記規費。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s18">九、被徵收之畸零地需辦理分割者，由本府都市發展局受理後，填具土地複丈申請書，並檢附本委員會核定之徵收範圍圖說等文件，囑託土地所在地之地政事務所以逕行分割方式辦理，並繳納測量登記規費。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt">十、奉內政部核准徵收後，應即依照土地法第二百二十七條及其施行法規定，除於本府及轄區公所公告欄公告三十天及刊登報紙二日外，並通知申請人及被徵收土地所有權人及土地他項權利人。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s19">十、奉內政部核准徵收後，應即依照土地法第二百二十七條及其施行法規定，除於本府及轄區公所公告欄公告三十天及刊登報紙二日外，並通知申請人及被徵收土地所有權人及土地他項權利人。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt">十一、本府都市發展局應將預繳之承買價款撥存銀行專戶並於公告期滿後十五日內發放，並得依土地法第二百三十七條規定辦理。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s20">十一、本府都市發展局應將預繳之承買價款撥存銀行專戶並於公告期滿後十五日內發放，並得依土地法第二百三十七條規定辦理。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt">十二、被徵收土地或地上物所有權人對補價款有爭議者，應於公告期滿前以書面提出送請本府都市發展局提請地價評議委員會評定之，並將評定結果報請內政部備查後，於十五日內通知所有權人領取。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s21">十二、被徵收土地或地上物所有權人對補價款有爭議者，應於公告期滿前以書面提出送請本府都市發展局提請地價評議委員會評定之，並將評定結果報請內政部備查後，於十五日內通知所有權人領取。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt">十三、徵收之土地已依規完成徵收補償程序後，由本府囑託轄區地政事務所辦理徵收登記。登記所有權人為臺中市，其管理機關為本府。<br><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; margin: 0 0 0 36pt">前項土地依建築法第四十五條規定不受土地法第二十五條之限制。</div></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s22">十三、徵收之土地已依規完成徵收補償程序後，由本府囑託轄區地政事務所辦理徵收登記。登記所有權人為臺中市，其管理機關為本府。<br><div class="csp-s23">前項土地依建築法第四十五條規定不受土地法第二十五條之限制。</div></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt">十四、徵收土地之出售、標售應辦理公告事宜並備妥標單、標封、投標須知等有關資料提供投標人索取。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -0.5em; margin: 0 0 0 35.9pt">（一）辦理出售之公告內容為：</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 5em">1.依據（建築法第四十五條）。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; margin: 0 0 0 59.9pt">2.土地標示。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; margin: 0 0 0 59.9pt">3.土地面積。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 1em; margin: 0 0 0 45.6pt">4.土地所屬都市計畫使用分區。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 1em; margin: 0 0 0 45.6pt">5.出售價格。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 1em; margin: 0 0 0 45.6pt">6.公告及接受異議起迄時間。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -1em; margin: 0 0 0 69.6pt">7.公告期滿無其他利害關係人聲明異議者，即出售予申請人，如有異議則公開標售之。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 1em; margin: 0 0 0 45.6pt">8.申請人之姓名、身分證字號、地址。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -0.5em; margin: 0 0 0 35.9pt">（二）辦理標售之內容為：</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 1em; margin: 0 0 0 45.6pt">1.依據。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 1em; margin: 0 0 0 45.6pt">2.土地標示。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 1em; margin: 0 0 0 45.6pt">3.土地面積。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 1em; margin: 0 0 0 45.6pt">4.土地所屬都市使用分區。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 1em; margin: 0 0 0 45.6pt">5.標售底價。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 1em; margin: 0 0 0 45.6pt">6.投標地點及截止日期（以郵戳為憑）。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 1em; margin: 0 0 0 45.6pt">7.開標日期及地點。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 1em; margin: 0 0 0 45.6pt">8.押標金數額及繳納方式、地點。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -1em; margin: 0 0 0 69.6pt">9.決標方式（並註明原申請人有優先承購權，若有二人以上時，比價決定），得標者應於規定時間內繳納價款。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: 1em; margin: 0 0 0 45.6pt">10.敘明違反投標規定之處理方式。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; margin: 0 0 0 36pt">公告期間為三十日，並以書面通知申請人並副知其他利害關係人。公告期滿無其他利害關係人聲明異議者，即出售予申請人，（但依規定辦理預繳者，有二人以上時，則依規標售之）並通知承購人於期限內依法逕向轄區地政事務所申辦所有權移轉登記。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s24">十四、徵收土地之出售、標售應辦理公告事宜並備妥標單、標封、投標須知等有關資料提供投標人索取。</div><div class="csp-s25">（一）辦理出售之公告內容為：</div><div class="csp-s26">1.依據（建築法第四十五條）。</div><div class="csp-s27">2.土地標示。</div><div class="csp-s27">3.土地面積。</div><div class="csp-s28">4.土地所屬都市計畫使用分區。</div><div class="csp-s28">5.出售價格。</div><div class="csp-s28">6.公告及接受異議起迄時間。</div><div class="csp-s29">7.公告期滿無其他利害關係人聲明異議者，即出售予申請人，如有異議則公開標售之。</div><div class="csp-s28">8.申請人之姓名、身分證字號、地址。</div><div class="csp-s25">（二）辦理標售之內容為：</div><div class="csp-s28">1.依據。</div><div class="csp-s28">2.土地標示。</div><div class="csp-s28">3.土地面積。</div><div class="csp-s28">4.土地所屬都市使用分區。</div><div class="csp-s28">5.標售底價。</div><div class="csp-s28">6.投標地點及截止日期（以郵戳為憑）。</div><div class="csp-s28">7.開標日期及地點。</div><div class="csp-s28">8.押標金數額及繳納方式、地點。</div><div class="csp-s29">9.決標方式（並註明原申請人有優先承購權，若有二人以上時，比價決定），得標者應於規定時間內繳納價款。</div><div class="csp-s28">10.敘明違反投標規定之處理方式。</div><div class="csp-s30">公告期間為三十日，並以書面通知申請人並副知其他利害關係人。公告期滿無其他利害關係人聲明異議者，即出售予申請人，（但依規定辦理預繳者，有二人以上時，則依規標售之）並通知承購人於期限內依法逕向轄區地政事務所申辦所有權移轉登記。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2.8em; margin: 0 0 0 33.6pt">十五、前點出售價格及標售底價以徵收補償金之總額（亦即預繳承買價款之數額）為出售價格，亦為標售底標。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s31">十五、前點出售價格及標售底價以徵收補償金之總額（亦即預繳承買價款之數額）為出售價格，亦為標售底標。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -2.954em; margin: 0 0 0 35.25pt">十六、押標金不得低於標售底價數額底數額四分之一，原已繳付預繳承買價款者，如再參與投標，以預繳承買價款之部份折抵押標金，免再另繳押標金。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; margin: 0 0 0 36pt">前項押標金之繳納依照會計事務處理規定辦理。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s32">十六、押標金不得低於標售底價數額底數額四分之一，原已繳付預繳承買價款者，如再參與投標，以預繳承買價款之部份折抵押標金，免再另繳押標金。</div><div class="csp-s33">前項押標金之繳納依照會計事務處理規定辦理。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt">十七、開標時以在底價以上之最高標得標，不於規定時間內辦理承購手續時，其押標金不予發還，並繳交公庫。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s34">十七、開標時以在底價以上之最高標得標，不於規定時間內辦理承購手續時，其押標金不予發還，並繳交公庫。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt">十八、辦理開標，應以雙掛號通知優先承購權人於開標十日後行使優先承購權。如有二人以上同時主張優先權者，另行以比價決定之。</div><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; margin: 0 0 0 36pt">前項比價以標定底價為比價底價。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s35">十八、辦理開標，應以雙掛號通知優先承購權人於開標十日後行使優先承購權。如有二人以上同時主張優先權者，另行以比價決定之。</div><div class="csp-s36">前項比價以標定底價為比價底價。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt">十九、開標後未得標之押標金及預繳承買價款於開標日或翌日之辦公時間內無息由投標人憑其本人國民身分證及投標單內所蓋相同之印章領回。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s37">十九、開標後未得標之押標金及預繳承買價款於開標日或翌日之辦公時間內無息由投標人憑其本人國民身分證及投標單內所蓋相同之印章領回。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -3em; margin: 0 0 0 36pt">二十、本府都市發展局應將開標日決標（或比價）情形簽報核定，並將得標人所繳納之押標金（得標人如為已依規定預繳者，則含前預繳之價款）抵繳得標款，並製發應補繳款之繳款單掛號檢送得標人於限期內繳清，標售（或比價）後超過預繳承買價款（即標售底價或押標金）之剩餘價款，按被徵收土地價值比例發給土地所有權人。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s38">二十、本府都市發展局應將開標日決標（或比價）情形簽報核定，並將得標人所繳納之押標金（得標人如為已依規定預繳者，則含前預繳之價款）抵繳得標款，並製發應補繳款之繳款單掛號檢送得標人於限期內繳清，標售（或比價）後超過預繳承買價款（即標售底價或押標金）之剩餘價款，按被徵收土地價值比例發給土地所有權人。</div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph; text-align: justify; line-height: 1.917em; text-indent: -0.5em; margin: 0 0 0 6pt">二十一、招標、比價依採購法規定辦理。</div></div></td>
+		<td><div class="ClearCss"><div class="csp-s39">二十一、招標、比價依採購法規定辦理。</div></div></td>
 	</tr>
 </table>
 
@@ -344,8 +413,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -355,7 +424,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,391</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,444</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -363,10 +432,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="YmLcrK+5X0ip7JT4mhE8DQ=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="YmLcrK+5X0ip7JT4mhE8DQ=="></script>
+<script src="/js/FYLS.js" nonce="YmLcrK+5X0ip7JT4mhE8DQ=="></script>
+<script type="text/javascript" nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -439,8 +508,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -461,5 +543,110 @@
         });
     });
 </script>
+
+
+    <style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s0 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s1 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s2 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s3 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 60pt !important; } 
+.csp-s4 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3.5em !important; margin: 0 0 0 66pt !important; } 
+.csp-s5 { line-height: 1.917em !important; text-indent: 2em !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s6 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s7 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 48pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s8 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s9 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: 2em !important; } 
+.csp-s10 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -1em !important; margin: 0 0 0 36pt !important; } 
+.csp-s11 { line-height: 1.917em !important; text-indent: 2em !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s12 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s13 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; margin: 0 0 0 24pt !important; } 
+.csp-s14 { line-height: 1.917em !important; text-indent: 2em !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s15 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s16 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s17 { letter-spacing: 0.017em !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s18 { line-height: 1.917em !important; text-indent: -1.5em !important; margin: 0 0 0 18pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s19 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s20 { line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s21 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s22 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+.csp-s23 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; margin: 0 0 0 36pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s24 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+.csp-s25 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -0.5em !important; margin: 0 0 0 35.9pt !important; } 
+.csp-s26 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: 5em !important; } 
+.csp-s27 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; margin: 0 0 0 59.9pt !important; } 
+.csp-s28 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: 1em !important; margin: 0 0 0 45.6pt !important; } 
+.csp-s29 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -1em !important; margin: 0 0 0 69.6pt !important; } 
+.csp-s30 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; margin: 0 0 0 36pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s31 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2.8em !important; margin: 0 0 0 33.6pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s32 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -2.954em !important; margin: 0 0 0 35.25pt !important; } 
+.csp-s33 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; margin: 0 0 0 36pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s34 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s35 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+.csp-s36 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; margin: 0 0 0 36pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s37 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s38 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -3em !important; margin: 0 0 0 36pt !important; } 
+</style>
+
+<style nonce="YmLcrK+5X0ip7JT4mhE8DQ==">
+.csp-s39 { text-justify: inter-ideograph !important; text-align: justify !important; line-height: 1.917em !important; text-indent: -0.5em !important; margin: 0 0 0 6pt !important; } 
+</style>
+
 
 

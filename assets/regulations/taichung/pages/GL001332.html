@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-臺中市建築物施工管制辦法
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="pAzill7+9E2fSaDHBTZD/Q=="></script>
+    <script type="text/javascript" nonce="pAzill7+9E2fSaDHBTZD/Q==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL001332" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="pAzill7+9E2fSaDHBTZD/Q==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -248,12 +317,12 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第一條　　本辦法依臺中市建築管理自治條例(以下簡稱本自治條例)第二<br>
+		<td><div class="ClearCss"><span class="csp-s0"><span class="csp-s1">第一條　　本辦法依臺中市建築管理自治條例(以下簡稱本自治條例)第二<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 十七條第四項規定訂定之。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二條　　本辦法之主管機關為臺中市政府都市發展局（以下簡稱都發局<br>
+		<td><div class="ClearCss"><span class="csp-s2"><span class="csp-s3">第二條　　本辦法之主管機關為臺中市政府都市發展局（以下簡稱都發局<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ）。</span></span></div></td>
 	</tr>
 	<tr>
@@ -261,7 +330,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三條　　起造人依建築法第五十四條規定申報開工應檢附下列書件：<br>
+		<td><div class="ClearCss"><span class="csp-s4"><span class="csp-s5">第三條　　起造人依建築法第五十四條規定申報開工應檢附下列書件：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、建築工程開工申報書一份。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 二、建造執照或雜項執照正本。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 三、營造業承攬建築工程開工查報表一份。<br>
@@ -294,7 +363,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第四條　　前條第一項第四款之施工計畫書及圖說，於一定規模以上或特<br>
+		<td><div class="ClearCss"><span class="csp-s6"><span class="csp-s7">第四條　　前條第一項第四款之施工計畫書及圖說，於一定規模以上或特<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 殊結構建築物或經都發局認定有危害公共安全之虞者，應先送<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 經都發局指定之機關學校或專業團體提出諮詢意見。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 前項一定規模以上或特殊結構建築物及指定之機關學校或專業<br>
@@ -305,7 +374,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第五條 &nbsp; &nbsp;依建築法第七十八條規定申請拆除執照之建築物，其拆除工程<br>
+		<td><div class="ClearCss"><span class="csp-s8"><span class="csp-s9">第五條 &nbsp; &nbsp;依建築法第七十八條規定申請拆除執照之建築物，其拆除工程<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 申報開工應檢附下列書件：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、拆除工程開工申報書。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 二、拆除執照正本。<br>
@@ -318,7 +387,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第六條　　依建築法第五十六條規定申報放樣勘驗應檢附下列書件：<br>
+		<td><div class="ClearCss"><span class="csp-s10"><span class="csp-s11">第六條　　依建築法第五十六條規定申報放樣勘驗應檢附下列書件：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、建築工程勘驗申報書。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 二、建造執照或雜項執照正本。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 三、建築工程必須勘驗部分申報表。<br>
@@ -332,7 +401,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第七條　　依本自治條例第二十九條第一項規定必須勘驗之基礎勘驗、鋼<br>
+		<td><div class="ClearCss"><span class="csp-s12"><span class="csp-s13">第七條　　依本自治條例第二十九條第一項規定必須勘驗之基礎勘驗、鋼<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 骨鋼筋勘驗、屋架勘驗及現場構築式污水處理設施勘驗，應於<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 施工計畫書妥善規劃施工進度，並檢附下列書件申請勘驗：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、建築工程勘驗申報書。<br>
@@ -363,7 +432,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第八條　　建築工程屬鋼筋混凝土構造者，應於混凝土澆置二十一日後始<br>
+		<td><div class="ClearCss"><span class="csp-s14"><span class="csp-s15">第八條　　建築工程屬鋼筋混凝土構造者，應於混凝土澆置二十一日後始<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 得申報下一層樓板勘驗，但已滿十四日者，得檢附經中華民國<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 實驗室認證體系認可之實驗室出具之混凝土抗壓試驗合格證明<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 文件；採用雙層模板施作者，應檢附經由起造人、承造人、專<br>
@@ -383,7 +452,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第九條　　前條第一項所定期間屆滿之日適逢國定例假日者，非屬指定必<br>
+		<td><div class="ClearCss"><span class="csp-s16"><span class="csp-s17">第九條　　前條第一項所定期間屆滿之日適逢國定例假日者，非屬指定必<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 須派員勘驗之樓層，且距前次混凝土澆置逾十四日或核准縮短<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 工程進度勘驗期間者，得提前於例假日前一日，檢附註明混凝<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 土澆置時間之施工切結文件等相關資料，申報勘驗；或於該假<br>
@@ -392,7 +461,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第十條　　領有建造執照後未依建築法規定申報勘驗先行施工者，除依建<br>
+		<td><div class="ClearCss"><p><span class="csp-s18"><span class="csp-s19">第十條　　領有建造執照後未依建築法規定申報勘驗先行施工者，除依建<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 築法規定處分外，並依下列程序補辦手續：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、承造人及其專任工程人員應會同監造人出具該未申報樓層<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 部分之先行施作報告書，併同工程勘驗申報書等相關文件<br>
@@ -410,13 +479,13 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十一條　　建築工程期限三年以上者，應由承造人依本自治條例第三十<br>
+		<td><div class="ClearCss"><span class="csp-s20"><span class="csp-s21">第十一條　　建築工程期限三年以上者，應由承造人依本自治條例第三十<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 三條規定，於申報開工前向都發局繳納法定工程造價百分之<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一之環境維護保證金。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十二條　　承造人或起造人依本自治條例第三十四條第二項規定繳納之<br>
+		<td><div class="ClearCss"><span class="csp-s22"><span class="csp-s23">第十二條　　承造人或起造人依本自治條例第三十四條第二項規定繳納之<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 環境修復保證金金額，應依下列規定計算合計後，於請領使<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 用執照時向都發局繳納：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、建築基地面積每平方公尺新臺幣一百元。<br>
@@ -427,7 +496,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十三條　　前二條之環境維護保證金及修復保證金，都發局應設立專戶<br>
+		<td><div class="ClearCss"><span class="csp-s24"><span class="csp-s25">第十三條　　前二條之環境維護保證金及修復保證金，都發局應設立專戶<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 統一管理。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 依本自治條例第三十三條、第三十四條規定代執行之費用，<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 應於環境維護保證金或修復保證金結算時扣除之，不足部分<br>
@@ -435,7 +504,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十四條　　本自治條例第二十四條第一項第三款之安全圍籬，應於開工<br>
+		<td><div class="ClearCss"><span class="csp-s26"><span class="csp-s27">第十四條　　本自治條例第二十四條第一項第三款之安全圍籬，應於開工<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 申報經都發局備查後始得設置；使用道路範圍內有消防栓、<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 電燈桿座、電力系統箱、電信系統箱或類似公共設施時，得<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 向相關單位申請遷移，或安全圍籬應自公共設施外緣退縮八<br>
@@ -451,7 +520,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十五條　&nbsp; 建築工程於基地內設置工寮或臨時廁所時，應有簡易污水處<br>
+		<td><div class="ClearCss"><span class="csp-s28"><span class="csp-s29">第十五條　&nbsp; 建築工程於基地內設置工寮或臨時廁所時，應有簡易污水處<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 理設備或其他有效之處理措施。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 為改善工作環境，建築物總樓地板面積達一定規模以上之建<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 築工地應設置勞工用餐空間；其規模及面積，由都發局訂定<br>
@@ -459,7 +528,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第十六條　　承造人應於每月底前向營建賸餘土石方資訊服務中心申報營<br>
+		<td><div class="ClearCss"><p><span class="csp-s30"><span class="csp-s31">第十六條　　承造人應於每月底前向營建賸餘土石方資訊服務中心申報營<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 建賸餘土石方（以下簡稱餘土）種類、數量及去處；運至公<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 共工程之工地處理者，都發局應副知公共工程主辦單位。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 承造人應於每月五日前，檢附前月餘土處理完成證明文件報<br>
@@ -472,7 +541,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十七條　　安全圍籬應依下列規定施設：<br>
+		<td><div class="ClearCss"><span class="csp-s32"><span class="csp-s33">第十七條　　安全圍籬應依下列規定施設：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、材料：施工場所應於基地四週，以厚度一點二公釐以上<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 鋼鐵或金屬板為材料，設置高度二點四公尺以上、四點<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 五公尺以下，定著於基地上之密閉式安全圍籬。但道路<br>
@@ -510,7 +579,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十八條　　建築物施工時，其建築材料、施工機具及廢棄物應在其安全<br>
+		<td><div class="ClearCss"><span class="csp-s34"><span class="csp-s35">第十八條　　建築物施工時，其建築材料、施工機具及廢棄物應在其安全<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 圍籬內堆放。基地地下室全部開挖者，並應詳訂施工計畫，<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 採取分段施工或架設施工構臺。但基地情形特殊且無其他替<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 代方法可以施工時，其施工機具需臨時使用道路時，應報經<br>
@@ -518,7 +587,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第十九條　　建築工地施工時，應為下列各款措施，防止物體墜落及物料<br>
+		<td><div class="ClearCss"><span class="csp-s36"><span class="csp-s37">第十九條　　建築工地施工時，應為下列各款措施，防止物體墜落及物料<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 、灰塵向外飛散：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、設置施工架：六層以上建築物施工時，應使用鋼管施工<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 架，施工架柱腳底，應襯厚木底板或採取其他防沉陷措<br>
@@ -553,14 +622,14 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十條　　建築基地臨接人行道、重要道路或行人擁擠地區，其使用道<br>
+		<td><div class="ClearCss"><span class="csp-s38"><span class="csp-s39">第二十條　　建築基地臨接人行道、重要道路或行人擁擠地區，其使用道<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 路者應於安全圍籬外設置有頂蓋之行人安全走廊，以銜接基<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 地相鄰之騎樓或人行道。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 前項重要道路及行人擁擠地區，由都發局公告之。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十一條　　行人安全走廊之設置應依下列規定辦理：<br>
+		<td><div class="ClearCss"><span class="csp-s40"><span class="csp-s41">第二十一條　　行人安全走廊之設置應依下列規定辦理：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、安全走廊之材料應為鋼鐵料或其他金屬料，並應堅固<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 安全美觀。其寬度至少一點二公尺，供通行淨寬度至<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 少一公尺，淨高至少二點一公尺；其頂面應設置厚度<br>
@@ -582,14 +651,14 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十二條　　安全圍籬、安全走廊及帆布護籬等設施，不得設置與工程<br>
+		<td><div class="ClearCss"><span class="csp-s42"><span class="csp-s43">第二十二條　　安全圍籬、安全走廊及帆布護籬等設施，不得設置與工程<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 無關之任何廣告。但配合政府公益性活動並經都發局核准<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 者，不在此限。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 前項設施有破損時，應隨時修復整理。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十三條　　建築工程有污損周圍路段者，應即以混凝土或瀝青混凝土<br>
+		<td><div class="ClearCss"><span class="csp-s44"><span class="csp-s45">第二十三條　　建築工程有污損周圍路段者，應即以混凝土或瀝青混凝土<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 等材料暫時加以舖平並清除廢棄物；地下室開挖超過一點<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 五公尺以上工地，須設置固定沖洗設備。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 進出建築工程基地車輛之輪胎應刷洗乾淨後始得駛離工地<br>
@@ -601,20 +670,20 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 0.875em"><span style="font-size: 1em">第二十四條　　建築物施工場所應設置排水設施，基地四周原有排水溝除<br>
+		<td><div class="ClearCss"><span class="csp-s46"><span class="csp-s47"><span class="csp-s48">第二十四條　　建築物施工場所應設置排水設施，基地四周原有排水溝除<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 車輛出入口處應以適當材料覆蓋並避免車輛出入時產生噪<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 音，排水溝隨時疏濬保持暢通。</span></span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十五條　　在山坡地開挖整地，除應依水土保持法、山坡地保育利用<br>
+		<td><div class="ClearCss"><span class="csp-s49"><span class="csp-s50">第二十五條　　在山坡地開挖整地，除應依水土保持法、山坡地保育利用<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 條例及相關法令執行外，並應設置臨時性之排水、截流及<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 沉砂等設施，以防止沙石沖刷至公共排水溝、道路或其他<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 公共設施。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十六條　　建築物施工場所使用固定式起重機、移動式起重機作業或<br>
+		<td><div class="ClearCss"><span class="csp-s51"><span class="csp-s52">第二十六條　　建築物施工場所使用固定式起重機、移動式起重機作業或<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 車輛進出時，應考慮其安全性，並派員持紅色指揮旗或指<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 揮燈疏導交通。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 建築物施工場所可能發生跌落事故之處所，應揭示危險標<br>
@@ -622,7 +691,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十七條　　建築物施工場所周圍之道路、現有巷道、鄰近房屋、排水<br>
+		<td><div class="ClearCss"><span class="csp-s53"><span class="csp-s54">第二十七條　　建築物施工場所周圍之道路、現有巷道、鄰近房屋、排水<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 溝渠、下水道、人孔、給水管、止水栓、瓦斯管、消防栓<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 、電力電纜、電話線、軍用通訊電纜、交通號誌、公車站<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 牌、電桿、行道樹、人行地下道、陸橋、公共護欄、路燈<br>
@@ -633,7 +702,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十八條　　承造人於地下室開挖時，其擋土支撐作業除依相關規定外<br>
+		<td><div class="ClearCss"><span class="csp-s55"><span class="csp-s56">第二十八條　　承造人於地下室開挖時，其擋土支撐作業除依相關規定外<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ，應依下列規定辦理：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、擋土工法施作前應確認現場地質狀況及地下水情形，<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 並於施工時派專人隨時檢查改善擋土設施，以避免附<br>
@@ -663,7 +732,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十八條之一　　海上颱風警報第一次發布後一日內，承造人應做好防<br>
+		<td><div class="ClearCss"><span class="csp-s57"><span class="csp-s58">第二十八條之一　　海上颱風警報第一次發布後一日內，承造人應做好防<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 止施工物件飛落或傾倒等安全措施，並填具防颱作業<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 工地自主檢查表留存工地備查；經都發局以行動應用<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 軟體 (App)推播之一定規模工地，須另依限檢附現場<br>
@@ -680,7 +749,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第二十九條 &nbsp; &nbsp;起造人或承造人應依下列規定提出鄰房現況調查報告或鄰<br>
+		<td><div class="ClearCss"><span class="csp-s59"><span class="csp-s60">第二十九條 &nbsp; &nbsp;起造人或承造人應依下列規定提出鄰房現況調查報告或鄰<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 房損壞修復及安全鑑定報告（以下簡稱損鄰鑑定報告）：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、具地下室之建築物施工，應於放樣勘驗前，以基礎開<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 挖深度一倍以上距離內鄰房之各層為範圍，向符合第<br>
@@ -708,7 +777,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十條　　損鄰事件發生後，應由雙方自行協調，協調不成經受損房屋<br>
+		<td><div class="ClearCss"><span class="csp-s61"><span class="csp-s62">第三十條　　損鄰事件發生後，應由雙方自行協調，協調不成經受損房屋<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 所有權人(以下簡稱受損戶)向都發局請求處理時，都發局應<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 於文到七日內通知工程起造人、監造人、承造人、營造業之<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 專任工程人員及受損戶會同勘查損壞情形，經會勘認定係因<br>
@@ -733,7 +802,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十一條　　施工損鄰爭議事件，得向都發局申請損鄰爭議協調。<br>
+		<td><div class="ClearCss"><span class="csp-s63"><span class="csp-s64">第三十一條　　施工損鄰爭議事件，得向都發局申請損鄰爭議協調。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 損鄰事件之協調處理程序如下：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、現場會勘後七日內，爭議雙方未達成協議時，由雙方<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 合意擇定鑑定單位委託申請受損房屋損害鑑定；未達<br>
@@ -748,7 +817,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十二條　　建築爭議事件審議之程序如下：<br>
+		<td><div class="ClearCss"><span class="csp-s65"><span class="csp-s66">第三十二條　　建築爭議事件審議之程序如下：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、申請人應檢具申請文件、歷次協調紀錄、爭議當事人<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 之意見理由、鑑定報告及其他有關處理資料，向都發<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 局申請建築爭議事件審議或由都發局逕提建築爭議事<br>
@@ -771,7 +840,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十三條　　建築物施工中有下列情形之一者，應立即停工，並應為必<br>
+		<td><div class="ClearCss"><span class="csp-s67"><span class="csp-s68">第三十三條　　建築物施工中有下列情形之一者，應立即停工，並應為必<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 要之安全措施：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、經勘查認定因施工影響有危及公共安全之虞者。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 二、經地政機關鑑界後，確定建築物之主要結構物越界者<br>
@@ -781,7 +850,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十四條　　經列管之施工損鄰事件，應載明於該建築工程之建造執照<br>
+		<td><div class="ClearCss"><span class="csp-s69"><span class="csp-s70">第三十四條　　經列管之施工損鄰事件，應載明於該建築工程之建造執照<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 或拆除執照檔案備註欄，並暫緩核發使用執照或拆除竣工<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 證明。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 有下列情形之一者，得解除列管：<br>
@@ -800,7 +869,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十五條　　已申報屋頂板或屋頂構架勘驗逾三十日或已申請使用執照<br>
+		<td><div class="ClearCss"><span class="csp-s71"><span class="csp-s72">第三十五條　　已申報屋頂板或屋頂構架勘驗逾三十日或已申請使用執照<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 或建築物已拆除完竣，始提出施工損鄰事件請求者，不予<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 處理。但使用執照或拆除竣工證明核發前，受損戶已檢具<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 損鄰鑑定報告，其鑑定結果認為損壞情形係由施工所致者<br>
@@ -808,7 +877,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十六條　　符合下列規定之機構、學校或團體得辦理鄰房現況調查及<br>
+		<td><div class="ClearCss"><span class="csp-s73"><span class="csp-s74">第三十六條　　符合下列規定之機構、學校或團體得辦理鄰房現況調查及<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 鄰房損壞修復及安全鑑定業務：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、建築師公會及相關技師公會：其業務項目核准內容應<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 包括受理委託辦理各種建築、土木工程鑑定與估價。<br>
@@ -822,13 +891,13 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十七條　　鑑定單位應於受理申請後一個月內提出鄰房現況調查或損<br>
+		<td><div class="ClearCss"><span class="csp-s75"><span class="csp-s76">第三十七條　　鑑定單位應於受理申請後一個月內提出鄰房現況調查或損<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 鄰鑑定報告。但案情複雜或戶數眾多，經都發局核准延長<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 者，不在此限。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十八條　　施工前鄰房現況調查報告應包括下列項目：<br>
+		<td><div class="ClearCss"><span class="csp-s77"><span class="csp-s78">第三十八條　　施工前鄰房現況調查報告應包括下列項目：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、申請人姓名、地址、電話、身分證字號。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 二、申請日期及文號。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 三、現況調查標的物標示。<br>
@@ -847,7 +916,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第三十九條　　損鄰鑑定報告應包括下列項目：<br>
+		<td><div class="ClearCss"><span class="csp-s79"><span class="csp-s80">第三十九條　　損鄰鑑定報告應包括下列項目：<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 一、申請人姓名、地址、電話、身分證字號。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 二、申請日期及文號。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 三、鑑定標的物標示。<br>
@@ -878,12 +947,12 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第四十條　　建築工程之作業時間，以上午八時至下午七時為限。但具連<br>
+		<td><div class="ClearCss"><span class="csp-s81"><span class="csp-s82">第四十條　　建築工程之作業時間，以上午八時至下午七時為限。但具連<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 續性或有迫切需要之工程，經都發局核准者，不在此限。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><p><span style="font-family: 細明體"><span style="font-size: 1em">第四十一條　　本辦法所需書表格式，除其他法令另有規定者外，由都發<br>
+		<td><div class="ClearCss"><p><span class="csp-s83"><span class="csp-s84">第四十一條　　本辦法所需書表格式，除其他法令另有規定者外，由都發<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 局定之。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 依本辦法應向都發局申報之書表，得以網路(電子化)方式<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 申報，並以電子檔案歸檔。</span></span></p>
@@ -891,7 +960,7 @@
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">第四十二條　　本辦法自發布日施行。<br>
+		<td><div class="ClearCss"><span class="csp-s85"><span class="csp-s86">第四十二條　　本辦法自發布日施行。<br>
 &nbsp;</span></span></div></td>
 	</tr>
 </table>
@@ -918,8 +987,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -929,7 +998,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,067</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,133</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -937,10 +1006,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="pAzill7+9E2fSaDHBTZD/Q=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="pAzill7+9E2fSaDHBTZD/Q=="></script>
+<script src="/js/FYLS.js" nonce="pAzill7+9E2fSaDHBTZD/Q=="></script>
+<script type="text/javascript" nonce="pAzill7+9E2fSaDHBTZD/Q==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -1013,8 +1082,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="pAzill7+9E2fSaDHBTZD/Q==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -1035,5 +1117,223 @@
         });
     });
 </script>
+
+
+    <style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s0 { font-family: 細明體 !important; } 
+.csp-s1 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s2 { font-family: 細明體 !important; } 
+.csp-s3 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s4 { font-family: 細明體 !important; } 
+.csp-s5 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s6 { font-family: 細明體 !important; } 
+.csp-s7 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s8 { font-family: 細明體 !important; } 
+.csp-s9 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s10 { font-family: 細明體 !important; } 
+.csp-s11 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s12 { font-family: 細明體 !important; } 
+.csp-s13 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s14 { font-family: 細明體 !important; } 
+.csp-s15 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s16 { font-family: 細明體 !important; } 
+.csp-s17 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s18 { font-family: 細明體 !important; } 
+.csp-s19 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s20 { font-family: 細明體 !important; } 
+.csp-s21 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s22 { font-family: 細明體 !important; } 
+.csp-s23 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s24 { font-family: 細明體 !important; } 
+.csp-s25 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s26 { font-family: 細明體 !important; } 
+.csp-s27 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s28 { font-family: 細明體 !important; } 
+.csp-s29 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s30 { font-family: 細明體 !important; } 
+.csp-s31 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s32 { font-family: 細明體 !important; } 
+.csp-s33 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s34 { font-family: 細明體 !important; } 
+.csp-s35 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s36 { font-family: 細明體 !important; } 
+.csp-s37 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s38 { font-family: 細明體 !important; } 
+.csp-s39 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s40 { font-family: 細明體 !important; } 
+.csp-s41 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s42 { font-family: 細明體 !important; } 
+.csp-s43 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s44 { font-family: 細明體 !important; } 
+.csp-s45 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s46 { font-family: 細明體 !important; } 
+.csp-s47 { font-size: 0.875em !important; } 
+.csp-s48 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s49 { font-family: 細明體 !important; } 
+.csp-s50 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s51 { font-family: 細明體 !important; } 
+.csp-s52 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s53 { font-family: 細明體 !important; } 
+.csp-s54 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s55 { font-family: 細明體 !important; } 
+.csp-s56 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s57 { font-family: 細明體 !important; } 
+.csp-s58 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s59 { font-family: 細明體 !important; } 
+.csp-s60 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s61 { font-family: 細明體 !important; } 
+.csp-s62 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s63 { font-family: 細明體 !important; } 
+.csp-s64 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s65 { font-family: 細明體 !important; } 
+.csp-s66 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s67 { font-family: 細明體 !important; } 
+.csp-s68 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s69 { font-family: 細明體 !important; } 
+.csp-s70 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s71 { font-family: 細明體 !important; } 
+.csp-s72 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s73 { font-family: 細明體 !important; } 
+.csp-s74 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s75 { font-family: 細明體 !important; } 
+.csp-s76 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s77 { font-family: 細明體 !important; } 
+.csp-s78 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s79 { font-family: 細明體 !important; } 
+.csp-s80 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s81 { font-family: 細明體 !important; } 
+.csp-s82 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s83 { font-family: 細明體 !important; } 
+.csp-s84 { font-size: 1em !important; } 
+</style>
+
+<style nonce="pAzill7+9E2fSaDHBTZD/Q==">
+.csp-s85 { font-family: 細明體 !important; } 
+.csp-s86 { font-size: 1em !important; } 
+</style>
+
 
 

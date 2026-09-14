@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-臺中市推行建築基地綠化執行要點
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="RRXZSpnqmEiPC8yE7yZnCA=="></script>
+    <script type="text/javascript" nonce="RRXZSpnqmEiPC8yE7yZnCA==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="RRXZSpnqmEiPC8yE7yZnCA==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL000225" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="HBV9fg/vDciRkejSHrQEd+ZK/6xUYnOkmbqwe8TeS3o5ktAkOe8SSevuQM84XBb7PIU0ivxdvtFbcg4yJRjN3nt+ymfl7SVS14F+/JTbcIijUw5Frvip/KCxqemRvBXzujf17e957T62c+ZpD2BCONzok15j/BHKt5tWcQ3Vns5S/Kkk1RjBfymHwisjsByConmTUmKMiWGsuYfqdtsPfVRYke1wJGUDw55EvO4L4Z0RcpcKMWncCDd4xh4F7b+TKp5v+sySy2LA2rHoVYNCHGcokiW/a3idceV8SpJPlTUeuQqI9THYPvP6lb45/leEAP2+Wrn0Z7pfnDOSNUJdvpKCILQO16MbG/ecRmY2vKIyPe2Ick8WXQ1HGBD+xfVkbmz7jscLiLWttcH3MwNUweStOsud6RkExuNZ1Z1sIXgyspO447NvIByAFFYBWxUcDhQGUVOYAAjLtD1dDRTxxm0yIXtN6qkigQgwuB2mdodzqSvLbEksPwzJNIMqRBtxg75imz65VUJ8kKO9UOFtDz/IJzDU5nHaf4GeL1jYUiw1DOSxtVbSmENI3ITTc+XmRRt0V814T4rQn2i0FCNDFrhTT4e4go1PtfPx/cm1UDUb1AaEHXS8KzqKqUaJvpPA8Tyh95PTQhgKA4ol5wABBPUiGvvcAY/BvgNliruHCEX7gaUL8Cxk8Rs9bhAWA5C96vv5hSWksa1piplwKMfxKLTg7XW0ipbGjfqkdhYXWj1CZXl+Ouj1MZuS/dFx5/XpHrLQcN+Ilte61FRXY4zKLRGpL6GOUu9VWhSZ1xr14W3xaQZuvWewrslr06XS7ik52y4Fs4FrUDfWW6PnYfMMqSmjaCbGTx4h6pJs5hRm3Y+35B1RdJrrwwv9lpsP6Mm/fqvS2lvsPIRVVWUOSUwWvVNy77jmt7O8k3Gk1DjKmFt5d38WztfCXr23Cpvtxm88WMtbZMtatBL6bNEHqGyRH5NzMNqHp/7mdeS8AHLkp62MxWzNfmL9Rjbrgd1+U7qaOCbQdmJsuDe2OjLp2wVWNxKm4eW1vGJZAxyxJMeprypoZ34aV3aevQOa4U0a+dhGs1lVzH/NQtFeBrlLc+oDBbATWBPYYZoWe4mcvcC4p6H/UzYbJEb1Glz6XbAb20wPElT/+1GdpIE5goPHa9HT/LQQWLscHAMYzN53XIeZg5A9FFCSjP7g32s2QqL1l8d6JAft+lVGASVdpuIrGxX8LyWEfadjHa26VDcPnxam1d1ICilJj3DavW4BOZmK5kt5y240AuP34Mj0EgS53lBuEbwxr0Ipfv2OjZrXy8kcMqRQiUf/5VY4PCmlNsRvGq3VME5c7x2KBkiIRB/5ANG7xhVu+X0xpguXrJm/vbGsmlLoJRVRszRvxvweFQ3R3QsA5UQgkigMrKAiYlRrsTAok3nhoCc+4Y4dSMZ1GrANvaDZLqprwT3yz4gO9YYqSF+VPd52yXFanaxHa+gHu/SOUaf/8ur1sLa6j0JMeltnEJQdNuIjvIwZ57lEwp1d9Ok9++CxLMEtdFGvV3ajX/2nYtBBPOqLrYOYetATjePE/2NVGdwCon9wP/iRTSi2NaQioRaIB/kS5kytJPexLd5DFKGqgTPkRLyFA0h2wHVWDxaaAZsNg8xvHkVYgrUUmXMlCZLgdb/NDfu5mEL8FDowPbOJKNBp3rEivpwwHRxntiViwBQYKvTaLuLsW7idJ3KAlWbRomUEpO7L1ZBQjDDe0RNm+GLZ2UXYSxD3SklZb49HPfWtFy3WKK1A378kwJ/df1IOKzv4diHOiAQmlyamHhUDDPqOEGl8FKR5b7sXKn9KN3OWFK9IL6SSBD5Mkw1AAJiuiNe13X2FsrV8vKzZ5wXUiKZ8QXA5zIAfhQSZYeMRbQg8u68xMrcUd48JDydXzSrh7GsfFp8YK5p2xyzaAWIXDcQk6CSQc2Fsf6eQ9tozSnRPRh8lWtLrstlTB3VA1WDUHI7oobrE7H5dhpMsq5N8rFA19jPPQSPptD3r3s/7ERcQoXQ8rqxRO6nP42I8rMIULmD5cLqRzPrfl5zAQ68owd5AlKdSp/Ww8IymBfPqB9aiOaQ3T6chI4EGhSL6q7UjXA7hSS9skCdoGWgzVpkVgTF0F7qHxRfIh1dveVRYfpVvYI3voqRzLbGZ8iZyd5Pj5LHDIBilC320VZB14o+M/pGmb9SDKBKAqItXXDGwsQFYRtJ0gh3KELIKD5lZlo1+O+tgH+Qyuq+h0SUNyy93utEcEB8OmMqLxOb7+0NLK1S6DjCbt3TVdU3TkcbGv7YPb18B+u4dmRevGsrFLEz0Hg8LkGVZnCntXVcdvLLP3qwRw8eKoHkEtwmiYls1HPvaWeZ3GCr+/UOqEtOvR6V63AEOPk+77NQKCxUQOaNyXdiKSVAZ19ZV77rwToB/DB7SiwKq5gh0DeV8sGMOvUcWNSLFHkDYlfHnL21Hvryih1SiaPOaM5wHjHeihtxmZwGHHE1bg2ta7UxXBOaKHWWbAejsVvHiCnftFZbBag2REKFSAZ7ZVvXxopvv4/mYXCbjyjXkhmXsBLifviyusFOqTJxiAvdKJLErNiK8ynAdLEDgUysdKONT1YUjHuW5SAHR6WvI/i8qgFSh+9Thg74kD5iV/7xbM2CtXGELhLYZDLA9MUD9szTwS9m3qvv6R1yuViXO+PvGxkmNCptFLc6chfsUaPTsrzUdy5SA6mB3aIdlGpoqwXS2eciZ75JYCGjuj8pjlgiJLUas47wT6+BapqyqY16VQD6HixdBALMUzE+kIWIL7/CuplwUUTD7pef+ZQtpo+Nw176wuYcnsNNsIzfDhjOxDGRQ4JTXjVOhF3/Fk5aTqW+mlR1M9unKS3ZAKYc5Wn4xRKaC5OmBOR4T7xHG0e43CNM3ePwLXupGc3RMjjka0M7AyCfr7k3qvK0eW/f0ORysDws1+RBgkLyytEoM+fAYMRL4Ui3fnU8MXZmeRJf+u+Ga7+2MsAkr6Ur1zFE6wXKGfZjiwrs2EYVugIAMsJCoMjgPXVUcmlOzJJt0HrmPYjqOFBS0glUgVkYiksgG47hbWQ85Ji18nyYWWiOqdeYfi/2vovwowS6pd+BGmoMR6PuDcG0oYrhyHOzzrQZ25KvfKUHIDUu8JkaL5Yp0nnBHdpyz3If9eteCbqSv4wB7Amsk9srQuOGAnGbXFkC3pK7hct/h0OoHruUek0GPCd2l/1C2CWy2B1C53N26zLKO2OQdilqlvzsJBd0DzPmdmbbouFzInIfP6RnKhgr+nCTBACa88K5o7XFexb4MgCWTy1xsYkScjAgWj3sE+Pd2iNoGOAXo9lRyqqS6/ljHe7LawVJAEoIw9EjXzgF+tNSdk6g9FZrbgXrCZxCd26Vo8d6V/Nu+bxFZnrmtsHvJ33P6Zog8A6ixmfkQF9bZxqZDrL1s6Nur6cbC5bzbL987PopPUJ5bvJIV9Gr/YuVTfMI2a3/Ui/S/fFCdwWnkJMg6b5kWQmNQg55qSDiTnTCmCemcMZJyupBxRqQ6z9k3Pw/lRt00itozImG0iGcYvvTN+6CF3y5wMiefYE2hcZI2iM8kRnxmj2Vm+tSZyN/5E1AGDtbjuIbh2Esyt+IHmRO9SWNerSf0I/zqSzZKifaws5B3Hp3cYpm5n3BKmRJz2lijFnS1ugwP9m0RQdD6uWok6TiuKS1/VetGRw9yKYDMw2z8q1/gejnToEwuyGVf09x2vE9FRH/ywbY/Ov3qEiOzHyoZFkDN5BGB7+OVMQ3I6HcVzLbHEObwM3OyVefkks9fZ8zVf1REZEI2GZH8mmFiX7hlo8xWOmtL7/RlusC8zQ5tD2dqQV/B/APVo8lPu12Uklie9W1/s9qx1TNIqcu23JpiYykmVO9vvpK2fyqE7ya00JFVjKp5ZRGK3iedJz0V2dzv7W1ZBptZikV2oqqoaaPlNKyp0ag0PsBKSkZmuDjzheRxF1UsIBTmwaNjsWd4T9xvSCHQFfZvphmjDQ74byH78xAyfFkwjLpyra02Ao/V1L/Y8/XZMNRjlhQOqHS4E6K9dUxLuE9WG3RUKUqsodjVz1hwmXeh0Cd0L82IcYZezOzeutrH4qI4zv1t2ep2rrzdp6MLDQWBjRJhdmDzHEcZ955LmXoYn2KUb6faIBiW3Z8kcX8YH++Yd1YBRZIkxiUooQg84KVjTp+ft5+dZCHvj21Ks+rmuhEtmshqTb6Ah+bEX9sPbo997LCAuopP3ULhwBcGFB1d4M+Dx5VDYPgJCLJO1NoKIV1lVkEF72tF0XxJQ5lJiV8ouAtEmYguDgbx8BJOs0GNsHOPfm5+IorHfRl9aFEygP8ezuT59VDjtAMovfcEQGuTT1Wi0ED7KYVsyZW7fm0w1wQqOKf11hqBxzXOU06x05e6R0p/Xc4PW9FM5ozDosdwtJtGxC3K9Sd+eGZ/mAM5YH8r3mk2/TtaHn85frePi4mPjBQJBuTL/fJqrQMj7BPV9crXtO9AseaDrdDdSPvRgeP7Hb5M4d78wvnbnbZHWXej751w+RwC+9MMByIulTaDS91bRF0vqUusU6j1nBgdj26Y8FYJja7epytHScZNYYKRW1H3rGA9MPeDPK4JXzAreg50Zrlq+JaOegL4ETj8tO+J61j97lbnKVEimMnRzuP4LWv9oqaoKslRbky5tBHu97g3OYscrcNxgfJ8ktjjjNWFfG8Ty15mBVwcfxbfLpmE6H04cKbvUzL/j2Mbxazl0Td2+NAr8QO0Oxi0A2JqHxKOrDfqtGEfAldkOYM9Ba4eVJyNPokmxEXoES34Pgtm2n2sQWmkCoM7PAzWGlK928Ua6o/ARz3kVme+4ISQ56rPKfkluIUXbY5aYPCB0l5sfygmwUHFFaP08NncPu0ObO3BAzQmuOJDahZsfbgzOf/Zflh2YGX/vMgh6DAE9PGeW8G/038rbrp3BTiNYEr+Zuw/GkaNSX3mPJuxGvPMyfjhSfJeuvaA2Sgt+3vjr46eV/rMXLXaC/gpbKnLukqvuE544xzB9hE4BlYbBY3u7nOOnU4eVJMBTTl8Y9YTvMU5HgOlyfpz17ffJp0zjs8y/b6QjMpgEol9BC0IZ0bhNeenq/30nr/waEOyM+rI99qRd4WoGCuyfqy0H+ckOxYdJyhELig0tWlCuO+zTKXBv5xU3C6/CiAC2/LC1sak7jUEU60uQYtL4WywCjN7ELOgUu9G1fSJ0BsbXQY+cnUIpKNrgpzkiL8gu+en8PgFF90DQQPEau9STp4BMSV2nWZfwTory8rMFYlBDym1mVQLsZN/RQdOH53+zhqMzDQg7ymcCuluMya7xvvwftSr35WNxOjFRuS9y0YH4VpnT9TcxrKKqSHLQL0/beVgOV2SiOvWgB/j0C/hSZMuvl5M0Df82mdu6gPgNZs50UvMnOJDfd8fhiqXq0GtlOiXgCcihZqdt41QdxCspim+w2wv2Kad5BJjl7c1rxsM/ojQCbIMwOO0ErlDzLkK0+UtZkY7SBFZs0uWKs2t6vGj/PhD3We/rUFa8yF/x7NSnTKIWeTRL8kujQDA4pu/2zXn41ucKwissxjUoftZtp1rcH10h+ZO/BhPPx52ngwyt2CTPINi95xfCc+qFIlrzNqRNgwP95q+veOCWe1aJ5amMabNnGECRy04hp3WNzLfWYIicTZU/965rpjFHu6Ek4OfgAiXEwPilc4c21BnMkv9TyKPYxEkAjWJgi/GsApM4UjWNWN/4hiTixAgoGa/l5+5H81u2OMYt6PG01sySxMKnCn999RzwXTeWmc5iTDh81yQvaE9CHC8SlDXRPygx1lT/64FICpBn080VJXV/Cem61w1+4fZ+KfgkHb0fSU/OzJXj2cEy4YO5W5GGsUZdLhKePaoLbC1MNYukw7CR95oh56Pm546m9A9sC146HoWP8PJJRjnH9LygnVbhhy2J2NarcEuhKJTftGWFlqOyzeP5xq6JioTJpiAvSp3HyJb+ybyTvAUrxTsfPYSgpJ4gmY3hGmcGDIlz0ulvzcOHcVDWQUtr8gnGHGTB2yR5WrSjNZ696GSvWBQ5r9hpgumiOJWV5h+X4jxd9keIQOxPZhpJpcLMapvRn4S9dTu5ezjMm59A8X6iH97fPHyOpf/2xuUQNz68lheSuC+CU/ojoTqcztqoSNMddJ415TQJ+2vxIS0gcU1wk2y7Iup7ryvWJ7Yg3359lxiC5iF3FiVmxkvVWK+WFvXIT0PFcE61X+xy7Kh4WnA/u6GHPPK6hpzbZRxeTWRtqiAtDvafYvE/kgB6SjkIkdxvEPW8/miZecUxGXoNg377u1GLYD0k6jqoegGpfwVPxBWJZ8e2PNr2IjoaKuAbmUgzk7imbtMzxKuBL3ZdQSzHycv1V4YMJ3TGqW1Fw8XphVNvCJIftTwA+mFGwcxCMXdoVpBxeu8NtXO4DTiBLd5OZVUF0q8IgCjRRcBaE09ArPIRXWXra0Kk9ZInFOnFLJ1WMnSuYU/F6z4okgDEA6mWT9qdbEocHX6YzSEZddGjDaNM4tOIwpwPjx/M/iP8yNc4AQ5G9/tv9em1Gwpb9fjopIqALxu8OtB7j1+NEPvcZnTFK9YwXDPyUtI+4jtKMhCNemI85KO0MuhefSJFZSQVfm5QQuk7SKYjuyzCjZc/WgQd7WFhE8GKDks9OvXNfXNtvOhnzNpJQPZ7CkVhVH3Ziy0dlMsy2arLFRbxrNnx56EdmuJXsiz4ha75JFdHovU+a8qo23FElsRBzX7IdJfa7jHAe1zPraTEzdo6aKRpcYCHZ21UzhOo8DVRK2speE3zdT3v+5mAr6kKqapcr4MJ1OL+/oGfLgdcEeqGtin9tRq6aRc12u9eXc4Pr3Wr3jRDYZGGXiP11MxeFGiIAGgXpAJX03MGwWs+zFc2m4K4CAk/U9NRQ77VKe5casaMBRjmof+stTO6AkHJYybZ2enuDqIqP8vhcU5k9XLeRht5aqOiSbPPMMC8dh0nGVLx882FBMuh1TMbDYyEHw/bt581gO/YnM/pOWd+irZE1qbW938PG7sEIxSOHxZIaUb6NmIs4L1KeiSLwIFciISkg0hG7oEj6awjcOZhnX8VVbECQ==" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="RRXZSpnqmEiPC8yE7yZnCA==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -245,39 +314,39 @@
                 <table id="ctl00_cp_content_tableLawArticleBasic" class="table tab-list tab-nobg tab-law law-content">
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em"><span style="font-family: 新細明體"><span style="font-size: 1em">一、臺中市政府(以下簡稱本府)為促進都市綠化，增進市容觀瞻，特訂定本要點。</span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s0"><span class="csp-s1"><span class="csp-s2">一、臺中市政府(以下簡稱本府)為促進都市綠化，增進市容觀瞻，特訂定本要點。</span></span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em"><span style="font-family: 新細明體">二、本要點適用範圍為九十九年十二月二十五日改制前之臺中縣轄區內之下列建築基地：</span></span></div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 36pt"><span style="font-size: 1em"><span style="font-family: 新細明體">(一)高層建築物基地及山坡地建築基地內之空地。</span></span></div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 36pt"><span style="font-size: 1em"><span style="font-family: 新細明體">(二)實施容積管制地區依綜合設計鼓勵規定留設之開放空間及法定空地。</span></span></div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 36pt"><span style="font-size: 1em"><span style="font-family: 新細明體">(三)實施都市計畫地區依當地都市計畫土地使用管制要點規定留設之前、後、側院。</span></span></div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 36pt"><span style="font-size: 1em"><span style="font-family: 新細明體">(四)都市計畫範圍內面積在一千五百平方公尺以上之建築基地，整體規劃建築所留設之空地。</span></span></div><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 36pt"><span style="font-size: 1em"><span style="font-family: 新細明體">(五)新開闢之學校及機關用地。</span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s3"><span class="csp-s4"><span class="csp-s5">二、本要點適用範圍為九十九年十二月二十五日改制前之臺中縣轄區內之下列建築基地：</span></span></div><div class="csp-s6"><span class="csp-s4"><span class="csp-s5">(一)高層建築物基地及山坡地建築基地內之空地。</span></span></div><div class="csp-s6"><span class="csp-s4"><span class="csp-s5">(二)實施容積管制地區依綜合設計鼓勵規定留設之開放空間及法定空地。</span></span></div><div class="csp-s6"><span class="csp-s4"><span class="csp-s5">(三)實施都市計畫地區依當地都市計畫土地使用管制要點規定留設之前、後、側院。</span></span></div><div class="csp-s6"><span class="csp-s4"><span class="csp-s5">(四)都市計畫範圍內面積在一千五百平方公尺以上之建築基地，整體規劃建築所留設之空地。</span></span></div><div class="csp-s6"><span class="csp-s4"><span class="csp-s5">(五)新開闢之學校及機關用地。</span></span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em"><span style="font-family: 新細明體">三、第二點之開放空間、庭院及空地，應栽植花、草，樹木予以綠化，其綠化工程應納入建築設計圖說於請領建造執造時一併核定之。</span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s7"><span class="csp-s8"><span class="csp-s9">三、第二點之開放空間、庭院及空地，應栽植花、草，樹木予以綠化，其綠化工程應納入建築設計圖說於請領建造執造時一併核定之。</span></span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em"><span style="font-family: 新細明體">四、綠化工程之設計，其栽植花、木及地被植物之種類由起造人及設計人參考附表自由選定之。</span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s10"><span class="csp-s11"><span class="csp-s12">四、綠化工程之設計，其栽植花、木及地被植物之種類由起造人及設計人參考附表自由選定之。</span></span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em"><span style="font-family: 新細明體">五、本府都市發展局為增進市容觀瞻，得視當地之實際需要，整體規劃後選定栽植花、木及地被植物之種類供起造人及設計人參考。</span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s13"><span class="csp-s14"><span class="csp-s15">五、本府都市發展局為增進市容觀瞻，得視當地之實際需要，整體規劃後選定栽植花、木及地被植物之種類供起造人及設計人參考。</span></span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-size: 1em"><span style="font-family: 新細明體">六、應予綠化之開放空間、庭院及空地，其不透水舖面所占之面積應在二分之一以下，但屋頂、室內及地下開放空間不在此限。</span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s16"><span class="csp-s17"><span class="csp-s18">六、應予綠化之開放空間、庭院及空地，其不透水舖面所占之面積應在二分之一以下，但屋頂、室內及地下開放空間不在此限。</span></span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -2em; margin: 0 0 0 24pt"><span style="font-family: 新細明體"><span style="font-size: 1em">七、開放空間應於出入口之明顯處所設置標示牌，載明其位置、範圍及提供公眾使用等文字。標示牌應採用耐久、美觀之材料製作，尺寸為寬度六十公分，長度九十公分。</span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s19"><span class="csp-s20"><span class="csp-s21">七、開放空間應於出入口之明顯處所設置標示牌，載明其位置、範圍及提供公眾使用等文字。標示牌應採用耐久、美觀之材料製作，尺寸為寬度六十公分，長度九十公分。</span></span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="line-height: 1.917em; text-indent: -1.95em; margin: 0 0 0 23.5pt"><span style="font-size: 1em"><span style="font-family: 新細明體">八、下列各款建築物經本府核定後，得不適用本要點全部或一部之規定：</span></span></div><div style="line-height: 1.917em; text-indent: 0.008em; margin: 0 0 0 23.4pt"><span style="font-size: 1em"><span style="font-family: 新細明體">(一)紀念性之建築物。</span></span></div><div style="line-height: 1.917em; text-indent: 0.008em; margin: 0 0 0 23.4pt"><span style="font-size: 1em"><span style="font-family: 新細明體">(二)地面下之建築物。</span></span></div><div style="line-height: 1.917em; text-indent: 0.008em; margin: 0 0 0 23.4pt"><span style="font-size: 1em"><span style="font-family: 新細明體">(三)臨時性之建築物。</span></span></div><div style="line-height: 1.917em; text-indent: 0.008em; margin: 0 0 0 23.4pt"><span style="font-size: 1em"><span style="font-family: 新細明體">(四)海港、碼頭、鐵路車站、航空站等範圍內之雜項工作物。</span></span></div><div style="line-height: 1.917em; text-indent: 0.008em; margin: 0 0 0 23.4pt"><span style="font-size: 1em"><span style="font-family: 新細明體">(五)興闢公共設施，在拆除剩餘建築基地內依規定期限改建或增建之建築物。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></div><div style="line-height: 1.917em; text-indent: 2em"><span style="font-size: 1em"><span style="font-family: 新細明體">(六)其他類似前五款之建築物或雜項工作物。</span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s22"><span class="csp-s23"><span class="csp-s24">八、下列各款建築物經本府核定後，得不適用本要點全部或一部之規定：</span></span></div><div class="csp-s25"><span class="csp-s23"><span class="csp-s24">(一)紀念性之建築物。</span></span></div><div class="csp-s25"><span class="csp-s23"><span class="csp-s24">(二)地面下之建築物。</span></span></div><div class="csp-s25"><span class="csp-s23"><span class="csp-s24">(三)臨時性之建築物。</span></span></div><div class="csp-s25"><span class="csp-s23"><span class="csp-s24">(四)海港、碼頭、鐵路車站、航空站等範圍內之雜項工作物。</span></span></div><div class="csp-s25"><span class="csp-s23"><span class="csp-s24">(五)興闢公共設施，在拆除剩餘建築基地內依規定期限改建或增建之建築物。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></div><div class="csp-s26"><span class="csp-s23"><span class="csp-s24">(六)其他類似前五款之建築物或雜項工作物。</span></span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><div style="text-justify: inter-ideograph"><span style="font-size: 1em"><span style="font-family: 新細明體">附表 建築物開放空間、庭院、空地栽種植物參考表</span></span></div><table border="1" cellspacing="0" cellpadding="0" style="border: 3px none; border-collapse: collapse"><tbody><tr><td valign="top" width="103" style="border: 1pt solid rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 6.45em"><div align="center"><span style="font-size: 1em"><span style="font-family: 新細明體">種&nbsp;類</span></span></div></td><td valign="top" width="456" style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(192, 192, 192, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 28.5em; border-top: 1pt solid rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)"><div align="center"><span style="font-size: 1em"><span style="font-family: 新細明體">名&nbsp;稱</span></span></div></td></tr><tr><td valign="top" width="103" style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: 1pt solid rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 6.45em; border-top: rgba(192, 192, 192, 1); border-right: 1pt solid rgba(0, 0, 0, 1)"><div style="text-justify: inter-ideograph"><span style="font-size: 1em"><span style="font-family: 新細明體">１喬&nbsp;&nbsp;&nbsp; 木</span></span></div></td><td valign="top" width="456" style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(192, 192, 192, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 28.5em; border-top: rgba(192, 192, 192, 1); border-right: 1pt solid rgba(0, 0, 0, 1)"><div style="text-justify: inter-ideograph"><span style="font-size: 1em"><span style="font-family: 新細明體">榕樹、樟樹、楓香、黑板樹、大葉山欖、第倫桃、福木、台灣欒樹、厚皮香、水黃皮、小葉山欖、梳蘇樹、茄冬、麵包樹、龍柏、椰子、黑松、玉蘭花、茶花……等(其規格應標示樹高、樹冠、米高直徑)。</span></span></div></td></tr><tr><td valign="top" width="103" style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: 1pt solid rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 6.45em; border-top: rgba(192, 192, 192, 1); border-right: 1pt solid rgba(0, 0, 0, 1)"><div style="text-justify: inter-ideograph"><span style="font-size: 1em"><span style="font-family: 新細明體">２灌&nbsp;&nbsp;&nbsp; 木</span></span></div></td><td valign="top" width="456" style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(192, 192, 192, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 28.5em; border-top: rgba(192, 192, 192, 1); border-right: 1pt solid rgba(0, 0, 0, 1)"><div style="text-justify: inter-ideograph"><span style="font-size: 1em"><span style="font-family: 新細明體">杜鵑、茶梅、七里香、桂花、樹蘭、六月雪、黃葉榕、仙丹、變葉木、紅葉鐵莧、玉葉金花、迎春花、黃蟬、台灣連翹、扶桑、蘇鐵……等(其規格應標示樹高、樹冠)。</span></span></div></td></tr><tr><td valign="top" width="103" style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: 1pt solid rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 6.45em; border-top: rgba(192, 192, 192, 1); border-right: 1pt solid rgba(0, 0, 0, 1)"><div style="text-justify: inter-ideograph"><span style="font-size: 1em"><span style="font-family: 新細明體">３蔓 藤 類</span></span></div></td><td valign="top" width="456" style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(192, 192, 192, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 28.5em; border-top: rgba(192, 192, 192, 1); border-right: 1pt solid rgba(0, 0, 0, 1)"><div style="text-justify: inter-ideograph"><span style="font-size: 1em"><span style="font-family: 新細明體">九重葛、旭日藤、使君子、炮矢紅、龍吐珠、鄧伯花、紫藤、凌霄花、光耀藤……等(其規格應標示長度、分支)。</span></span></div></td></tr><tr><td valign="top" width="103" style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: 1pt solid rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 6.45em; border-top: rgba(192, 192, 192, 1); border-right: 1pt solid rgba(0, 0, 0, 1)"><div style="text-justify: inter-ideograph"><span style="font-size: 1em"><span style="font-family: 新細明體">４花&nbsp;&nbsp;&nbsp; 卉</span></span></div></td><td valign="top" width="456" style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(192, 192, 192, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 28.5em; border-top: rgba(192, 192, 192, 1); border-right: 1pt solid rgba(0, 0, 0, 1)"><div style="text-justify: inter-ideograph"><span style="font-size: 1em"><span style="font-family: 新細明體">四季海棠、孔雀草、菊花、百日草、千日紅、大理花、黃波斯菊、雁來紅、一串紅、牽牛花、雞冠花、石竹、金魚草……等（其規格應標示盆之大小，正開花中)。</span></span></div></td></tr><tr><td valign="top" width="103" style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: 1pt solid rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 6.45em; border-top: rgba(192, 192, 192, 1); border-right: 1pt solid rgba(0, 0, 0, 1)"><div style="text-justify: inter-ideograph"><span style="font-size: 1em"><span style="font-family: 新細明體">５地被植物</span></span></div></td><td valign="top" width="456" style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(192, 192, 192, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 28.5em; border-top: rgba(192, 192, 192, 1); border-right: 1pt solid rgba(0, 0, 0, 1)"><div style="text-justify: inter-ideograph"><span style="font-size: 1em"><span style="font-family: 新細明體">蜈蚣草、狗牙根、韓國草、菲莉賓草、蟛蜞菊、長春藤……等（其規格應標示密舖或密植)。</span></span></div></td></tr></tbody></table><div style="text-justify: inter-ideograph"><span style="font-size: 1em"><span style="font-family: 新細明體">&nbsp;</span></span></div></div></td>
+		<td><div class="ClearCss"><div class="csp-s27"><span class="csp-s28"><span class="csp-s29">附表 建築物開放空間、庭院、空地栽種植物參考表</span></span></div><table border="1" cellspacing="0" cellpadding="0" class="csp-s30"><tbody><tr><td valign="top" width="103" class="csp-s31"><div align="center"><span class="csp-s28"><span class="csp-s29">種&nbsp;類</span></span></div></td><td valign="top" width="456" class="csp-s32"><div align="center"><span class="csp-s28"><span class="csp-s29">名&nbsp;稱</span></span></div></td></tr><tr><td valign="top" width="103" class="csp-s33"><div class="csp-s27"><span class="csp-s28"><span class="csp-s29">１喬&nbsp;&nbsp;&nbsp; 木</span></span></div></td><td valign="top" width="456" class="csp-s34"><div class="csp-s27"><span class="csp-s28"><span class="csp-s29">榕樹、樟樹、楓香、黑板樹、大葉山欖、第倫桃、福木、台灣欒樹、厚皮香、水黃皮、小葉山欖、梳蘇樹、茄冬、麵包樹、龍柏、椰子、黑松、玉蘭花、茶花……等(其規格應標示樹高、樹冠、米高直徑)。</span></span></div></td></tr><tr><td valign="top" width="103" class="csp-s33"><div class="csp-s27"><span class="csp-s28"><span class="csp-s29">２灌&nbsp;&nbsp;&nbsp; 木</span></span></div></td><td valign="top" width="456" class="csp-s34"><div class="csp-s27"><span class="csp-s28"><span class="csp-s29">杜鵑、茶梅、七里香、桂花、樹蘭、六月雪、黃葉榕、仙丹、變葉木、紅葉鐵莧、玉葉金花、迎春花、黃蟬、台灣連翹、扶桑、蘇鐵……等(其規格應標示樹高、樹冠)。</span></span></div></td></tr><tr><td valign="top" width="103" class="csp-s33"><div class="csp-s27"><span class="csp-s28"><span class="csp-s29">３蔓 藤 類</span></span></div></td><td valign="top" width="456" class="csp-s34"><div class="csp-s27"><span class="csp-s28"><span class="csp-s29">九重葛、旭日藤、使君子、炮矢紅、龍吐珠、鄧伯花、紫藤、凌霄花、光耀藤……等(其規格應標示長度、分支)。</span></span></div></td></tr><tr><td valign="top" width="103" class="csp-s33"><div class="csp-s27"><span class="csp-s28"><span class="csp-s29">４花&nbsp;&nbsp;&nbsp; 卉</span></span></div></td><td valign="top" width="456" class="csp-s34"><div class="csp-s27"><span class="csp-s28"><span class="csp-s29">四季海棠、孔雀草、菊花、百日草、千日紅、大理花、黃波斯菊、雁來紅、一串紅、牽牛花、雞冠花、石竹、金魚草……等（其規格應標示盆之大小，正開花中)。</span></span></div></td></tr><tr><td valign="top" width="103" class="csp-s33"><div class="csp-s27"><span class="csp-s28"><span class="csp-s29">５地被植物</span></span></div></td><td valign="top" width="456" class="csp-s34"><div class="csp-s27"><span class="csp-s28"><span class="csp-s29">蜈蚣草、狗牙根、韓國草、菲莉賓草、蟛蜞菊、長春藤……等（其規格應標示密舖或密植)。</span></span></div></td></tr></tbody></table><div class="csp-s27"><span class="csp-s28"><span class="csp-s29">&nbsp;</span></span></div></div></td>
 	</tr>
 </table>
 
@@ -303,8 +372,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -314,7 +383,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,435</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,484</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -322,10 +391,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="RRXZSpnqmEiPC8yE7yZnCA=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="RRXZSpnqmEiPC8yE7yZnCA=="></script>
+<script src="/js/FYLS.js" nonce="RRXZSpnqmEiPC8yE7yZnCA=="></script>
+<script type="text/javascript" nonce="RRXZSpnqmEiPC8yE7yZnCA==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -398,8 +467,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="RRXZSpnqmEiPC8yE7yZnCA==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -420,5 +502,69 @@
         });
     });
 </script>
+
+
+    <style nonce="RRXZSpnqmEiPC8yE7yZnCA==">
+.csp-s0 { line-height: 1.917em !important; } 
+.csp-s1 { font-family: 新細明體 !important; } 
+.csp-s2 { font-size: 1em !important; } 
+</style>
+
+<style nonce="RRXZSpnqmEiPC8yE7yZnCA==">
+.csp-s3 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s4 { font-size: 1em !important; } 
+.csp-s5 { font-family: 新細明體 !important; } 
+.csp-s6 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 36pt !important; } 
+</style>
+
+<style nonce="RRXZSpnqmEiPC8yE7yZnCA==">
+.csp-s7 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s8 { font-size: 1em !important; } 
+.csp-s9 { font-family: 新細明體 !important; } 
+</style>
+
+<style nonce="RRXZSpnqmEiPC8yE7yZnCA==">
+.csp-s10 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s11 { font-size: 1em !important; } 
+.csp-s12 { font-family: 新細明體 !important; } 
+</style>
+
+<style nonce="RRXZSpnqmEiPC8yE7yZnCA==">
+.csp-s13 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s14 { font-size: 1em !important; } 
+.csp-s15 { font-family: 新細明體 !important; } 
+</style>
+
+<style nonce="RRXZSpnqmEiPC8yE7yZnCA==">
+.csp-s16 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s17 { font-size: 1em !important; } 
+.csp-s18 { font-family: 新細明體 !important; } 
+</style>
+
+<style nonce="RRXZSpnqmEiPC8yE7yZnCA==">
+.csp-s19 { line-height: 1.917em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+.csp-s20 { font-family: 新細明體 !important; } 
+.csp-s21 { font-size: 1em !important; } 
+</style>
+
+<style nonce="RRXZSpnqmEiPC8yE7yZnCA==">
+.csp-s22 { line-height: 1.917em !important; text-indent: -1.95em !important; margin: 0 0 0 23.5pt !important; } 
+.csp-s23 { font-size: 1em !important; } 
+.csp-s24 { font-family: 新細明體 !important; } 
+.csp-s25 { line-height: 1.917em !important; text-indent: 0.008em !important; margin: 0 0 0 23.4pt !important; } 
+.csp-s26 { line-height: 1.917em !important; text-indent: 2em !important; } 
+</style>
+
+<style nonce="RRXZSpnqmEiPC8yE7yZnCA==">
+.csp-s27 { text-justify: inter-ideograph !important; } 
+.csp-s28 { font-size: 1em !important; } 
+.csp-s29 { font-family: 新細明體 !important; } 
+.csp-s30 { border: 3px none !important; border-collapse: collapse !important; } 
+.csp-s31 { border: 1pt solid rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 6.45em !important; } 
+.csp-s32 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: rgba(192, 192, 192, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 28.5em !important; border-top: 1pt solid rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s33 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: 1pt solid rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 6.45em !important; border-top: rgba(192, 192, 192, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s34 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: rgba(192, 192, 192, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 28.5em !important; border-top: rgba(192, 192, 192, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+</style>
+
 
 

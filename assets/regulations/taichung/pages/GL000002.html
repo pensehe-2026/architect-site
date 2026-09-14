@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-臺中市建築管理業務委託辦法(原繼續適用)
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="iu53Vbzsn0mXRFY1XE91ag=="></script>
+    <script type="text/javascript" nonce="iu53Vbzsn0mXRFY1XE91ag==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL000002" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="xBrHmMC8Bc1TWVDUGQXAo8a7JEPlKp1QXlFaVNFNdKJ4yliCIT4mo+bE1Zq/yQegXB84gjHyeK2PJfmgqwUalZbC+kS70Dg+wxxaLGHnbgsakA24VK9JQBtGQ+m3AzTYi+WpVEX7pxHYD4N9mXV8vuIgW8hhSJ9PAkQg9ZFqhG69impduHKINYOtkptfzHHXMmRKKwQFYq/gBJGy/FMoPdzdc71ZS/mqTe4Ekc1V+JU54tZXq9mHl67L8GJFutlxwhtYvQueOiF69BkaEOheQDmyqgerHsaL6LxqvPk8yDLpuiOViNActCa7z192QJC3BhgEg9cvWruf7Tgz1WIJEyaKfFTGHY6GhI78/KmL06HFZct1b7t/7Wo4l1cMDbpsXcP7HvoNp2h6VLV0ApIgd7Psf8culTEQ2nmhDYqRxKWiv3PhWHdexPoO2Qm6nl+ZfhZ9wcvSqbImXyBvUBG8vuZM9v1E01dXaSss337wgXVLtraMH6H3vdFGvcbIlbWfMGCqwfkxf0Fo3EEo95p0QDRGghT2lSFb3JbJqydSDPlbMUM2IVL9DIHPoiq8+Vb4kdgvdP9HXOEmg/ksZsd2Q62QVeOAKW4fdXFrmiO5x+uKk2aW1fv0nQOaqp1Grz+to4Gp/zuwb/XG8mTo0PmCwvEkA0V7HGZZuKKGt2A9IXZFvrlO91jUra5oDUw0x2pKxHreYfXeEBHzpeitOnIqYmDZ3zv4n60TA0/6Ka8DEFA0Za392AgdWwlDIE4S2tdvnFwlXA3yJintRyjmYvqZVgrHfVSoz97j8ysoQdtrvyjCUYWR0DJuiAkOFJYD7Er2tfmIbaglhUlZJZ55OBkizcXU9jfcChKfFnKb0ZBp/jgbQoZsbCiX+unrY/GmCNJRI5cfx1wtxxvcpAa3hRac893jcJYvsFQTNrhxxN7BphYohUwjpL7xEIP1Yqfghby3WmWyq6RjIiS8LwMVjrMtdNx9pFqfAjM39NdJBwIEqmdvfq/X52myAdTCqNm10XeIFObMp2oc8NJsniKv3wnDnGXG42Hyu/X2fFHQ8ly5/psj7zd4yFeU2wYm/uxkIvkac1bnuSGUg+Qdwj8rUVJ+BAPT97lrfMVRYrq/oWjr+efmxV2ie3j9uftsrNaDrNtcI/BXdvQcqCkhXM2PIFxBo6L7/KSTF+tk1qOQeUA2G2C2ICaRjRqxme0IkmcTwnXqfqKrQawX7/CiNWFe7WWRZFLxbno4s0SC9VqdfmH5xYqT4RipWt2GjGJz8vuOI19M8XT8KPtoiQ9c7acMGRJJpUDtd1W5DFNmAuO2W51zWitocX5eu7SiHNWdYeSSQoLeHlFrJruuEqQm3l9nPT3YmDhH0+MBUvv5UnWfb7OHGFJW+UgCrCa16e2Pzl1bVwJ95lUwGQ/2KuS907A3CnCNKQjVLIpo37Eu5CmDvoTbYd6J+i3QUZH+h2sg05M16CsapJA3DIKia3W43kgxtfezjYgV8ooRRCmdbt4aAkJXiyxk6/2LelhkFMS11OKwpqjaNByaut7bcGijiCdEXVEYMcqAe1QcZrR3oKIdwzBEacpI601hs7VlhICmrt/f3HIvwEVobZ9P9aO2IdLxhlOCzL8/gwdlDwJIbj2XiK7BsZksdFzVJT8JWq/fcGiBhvQOy54G0ot5Mkxn6w/Wc9wVtYcOnHXrTQKG0mWN3xOY0s4OEuNllTMh1Vt57Zahs/qzdaESLZqSvzk2WjYWvw+GJn/EbRNOI3EYMmgoCZn6xXfTmyUrgWl6L22szyr4BCWwm3XJ9X8PgvNxflO5cuwkg1qS221ZkuGiUV9A2vrhy+CU0lEgvFMg4f23kA0qM0JlFllmiAo5DVTAfn4ETKBZMYgNbYVNqMAXo18k2VWbaSzYLEKFy95sP1W6k8ANKwBw65qfjQzCVfHGzx8opw+qXPZmTAzYFZtN93MWP8r3b0CD4cBVAXmC0x2Ph8leqMJiWVG1CJJoDCMAhdLwqMcLGZ44KhuLRjCM1cjZouVPvQvIayTazH1h8DblDOMfFUzLdH+pHbthBGosKkXK/hWeKC7f7/QddvF/PpF7NicvzTqtnQWgKwhchnFdNkNT4jNGPU44Rur9b2jErBXHxN23+TXG5xg2CGn9o4XLJtZPlbnh7rWvKh2/vdaUVlLM5EsSrlCmFnEQso/UuQmfJCywlyqTGBKrMHgutfpYuChtqZMB2NHkmcwlRz2TXAdYQtSkzVvOpruCJKw7RnJqmZakZ9ep7bQPaLg78HP8tjMc9uUAbeUSME9YSVv+C0He2HyjdVxc7fO4xSmwIAHMtyaJPNirQOJ/vATkO/fJPrtQ9AC36ffaluyg8bDOcVWzRcGpQfrnm/mAxLFh24UWyxueOwtyyRK+MYE1/JTgVGMCzA5seTS20NuLUdjxgnK10Skus6rEUGoFYMEIzYYeJeBh7cVRi2Ng9zi329VPZFDhGABPHdIEYG+AWFcYH59Nq0XEuN33T1dE+76DSoCRm3aMezBwRjXDeO1NAANRX81YvSVhot16aWpEfQg7/aa52pnIlOuf6zPhaqk2DyIIGQKS2EDx101IUHGSqjbuh6jfvzMFlIZ5ZrezOHaxod8+ySxp4GS6Pv1vq9qrZpCP2v+rppIZs7FJaxprChrkHXCQyV3IfCNpbG0dDGoE54gAvlL0NSjKmt+0CgnE1edZq/7UCkYnUGnoSIY2aACm8U5Nyky5LpRxvagoFtEBfIJpaimjOTZjQxes3Z76tNJOEcsFd8dPzjzrEZdybM/HQMyglSu8cSeafAHiVgD1/C+sk9dSUbUk7DZE4eG0Z3v5SQ6vryu87GEu/KPWWuQHH4rLG6Gh+9q8EVUMZqSyFaPfXGpBN9oFjYy3rUKLWj/hZs2XsoNqyfQAiU1L4lJOtbfI/dtcA6ESV+QHu2FyG6j34YcoirOFg2k2P8wM7Sq4Hyu8wcLZuGHC8ZYeUIUQCvNXBj3aLPk+Ldm6i9GTW7dZdwpQTB/y230H7owrJVu61PIyT9ELJtg6Vy+UurqRv225UvDIGLD0GjDq+efZ8tVucrFNX1kZD0Ejtg4E5mZ9k/M1+k18UdekiYdczy1mz37zPkLwFcx7wKPSS2x3QhW5GWWlJ9HmlFoaVinAyec3I3h+en9PEYrgP6kpD/RFnsLwVaKrrENg6duu6kBjPDT0X21qwdb6sI/NlmTcZdV6CSpmGXzPmibCTmPoo8ptyLORQ2o1Zk+uIr9lVUiCTFISf+ZU7sTTQxK6dn96ZmsWGgSV4flA3QlJQTnV2QZi6676S5Ji9KAZyYM72xwNGDo7K00R3tFPYvVs16Day3NLY/WXr5mx8DgwmCYBHhR+EAyalD4pixgOsOfGH0YwDjXyGrBNJLMOw+W0Bp8uqMBQJ1R4SugJJ8ZDMAZ6l4PoS2ieanf6CacuO0MLkdhHVtZv6LLZ7GDRLpsYwewSkTq2FwvuEAAQFIvD2/LEaHrXRuN4z5kxLx6jPs4pgY55vs58Q84LLfEt8DoAtgvm+5lQTstnClYtuod4yHkuGE5KyCZrToYBNfug4kjoa1xDHKeQwbm9fKR22xQDe1WhX0vMczZta6nGdsRWzyAkRRIFWI5+Aa9ojJEdYLXOBiQV6qfneYPR7RRNWCgMg5403rCI7M8KS0/5okvBlVixkIU/VC+EQArAtVZDf6hbX3Q78S+Y9KNuSBuEG+EBcVyU2B26JJ2MXM/eY8PqP2qGbURDlxUMVlDbN0n0ac5UIz97BPT1VAkLiE4dKXymcXlmsatf5TLbcVvm6Jdi7L7JzypQO7NV57X6QIuRRh/jCsvve/O1H7dGiIr+Yd7RxLmCaEogF4mwTuHfdxTMBLfUm01ZZsVo3gZQ02YQP3Yuhaew1QtPt492wQykXWBylf/SO51r6fvTCfN81HSrApo9CqRRhS5fwsRPZc2odqQamGDbAYtIGyYrTSRSo6N9twDoXpgA2pz5zKeVKDyuvuukfimbsz1e79n/Y14OpOzLCTQUTcKZfQy6CRxoih01NAmi8ZxYCnAIlEqfBtDF0f+Tc6JRWKTxpAqbb+pmHWDNd5vjFyyfbsaLHEOjDFwTcIP/xFxMXy5u/nGvJE9CEV49mXEmLNhjZzOwwAKsnJeKsWPDC6y5dXexC1XWxXmKXSVRqHuJG6BrRb0TQyICr/8AGVyudRGj1BD2OC7xGNzHxP1NLcYF4p9ZQ6FgOHya28TnzErrUrLcBpGJlGHTJZOx44VFBYPeb06eMpauNZH6DlnFNwcBE3zAekqPZj6IY9gpeqwAft5ik4cYG1bJY05T07p2nCszitm6OQ+PUcPRpQ0AO/DeDYnpUBT+JCRIzHCNLo4TxyLz0+9RB8bLjejZ6FbrWY/Fho18RGJ3Req6k9ZXhyk3iLJO+NR4k/TTFIzqTZctndO8eA0CMN6BCMh+33Mh9DtSuVjxFaa5ofrD7P9QKWKwV135i3aWPpjv83943ZmmViWigB/pbIbS/tTVJeFrNK8fdY1rTaT0VXwwX31s48+0YR2AOjB9E3e+nj8iLAjINIKHjECftwug+yMPQ3KcomnubojTgn7FAiMYCRKokGc//8Zk7FEQixVKtYrW/LkZ3jb1GH9ZXDs4L/tzO/Zby5Vc57zSU8XavDg4gcxGWdVqxoi9IboYsBtbJjUN/5g9MWf+013IFWzc3v5V+TLFbRoUpPAKm/d82ll5OsFqURaGBQiuqS3W41TrKDk+kjv2rwkRPWHUNa6f0SGTPE4uNhsWxJb4tHyDFEmW8gY8geUTMY05+ZKqkVStpCS8mCL4aqjVtRaEJcx1KCJn+TsZC7mvP973pRutvuwhzPbdkpg4AhqTwIrZJbXFqwgpepE6yB/TQkohQuMJjB3ekVCxLKPWV5qMoc4VoocYp1yw8Gid5uyaC1MLM2mPzfakjLbSecHU5eAYWfIPNfLGolUIACc7fo/QnHxQac79QfVLswcD1FUWwXGxO3mPtSpLlsHkYN3LdpJfACvlAULoNlEPs0MPKLcO8dC+Zk+elng5FNo8Vm5yVxehsvnogdp5ycYvEFx/KX4wYlj2WIWSoh97raEAPvtsy7DLQYey3DkoKV0qMhq9CbSzahdrAMy4xHXYYSx05QzvrEomuFCJzmrnhER0mp08fU2c1jjs8kMoePpI8mGyROnGat2LmwPlMex2ask7PPOqxUkyeGiigmkVAYVtWZjcFr3dhAyFKxgU43gRWdkylhgWDbDkrDXu8AZy+43FuC3ogWHxOK2slCexjsyhMHO02ICoJjrtae1FXTwqJfT/P30YWKwbUaw54RmlbQH7BP4tmRjs7nSUfmrxH/aijptrE8kcSsKjaIuWwBIkCleZ3jgmdmMRof7YytLXAIQdLAl00mQOhbl46JGK2XjrKz3cKUzogEUwlJCXafBKTkMJD/wXJ7RKdQasJ4Ks102dIGM0KYkj/S33GtWJeXNj7Je21J7CcUj5vJjk7ty98zP086k9lCrTA7ff20Jd7c67T2kQHbVHFfSnvwIMasFe6a6saFfnjwytzzshzBoX2UIRvqWwwui6kstNbftYWSP8o5wiYxAm/b89xwMk0uB6KQAK7LYBMnL1W4wMLci0hPgyfSOAK0zoO7aA52Xf8Vkuxc6w7kxtKureUib9hxTIbJNdxZ7mBO8laLXWWOvIXgvcNaqjP3gN+W83sv2oZyZqaAtscpXwCpmYZHVtGM82DcCobPitvdzzrkBYEZspIE09rVFVPkaEPssqWirrszrDjCNOSGUkhLTBWkwYsXFzCpB1FYykQyj1yN+k3FrEHw2KiTg0Dyefz4Y4d/XOjqyylHCOltwrmhx7BtvFLPzdOnOyHO9c1lH6Pt5jE/sC80kbjsRaQF2eLKI4sUIweq/2morKj6y9U4U00HLAo7KH7urwNnIXQ0jfABYGZfUpwZR43qmvnQU9rOzntGxheelFc+NwrGel4+r4pCVKSPG979DDbrwoiuMpGRsoQQasbtIdeZ4lz2yp7t1CWPn9D4VKyLDwfXPzxBFVqbGSwFB2qeD409k7QTfuB383GOGjd37PHqNCv5BLosf7Ttaz87bhipB+OVK1DdUd4qKjK0onn0KsO3/PodNZdF1ha/kwT2RsH6PT+zuixYZwhAiseW7LxbS/0qVpTZ/6eSD9xIO8svkk+u4nyY845dJ0WIF3oUdSCCrSsUH6VrkBmJNbOR/2NFTYz30CQ/5rC0VJXsj9CwGJ9gqYur5LoWYdsysYrw/CbdfT6asLUwPmJDRPifP7FvtyPsKQdC+TP3K9jtzTfZc96dNg1TeEM+KbzViU2Y5NQWXaughaKNkgO9zRaCG48j2qU9cceK/r19cwAA3kz3uSkCK6K5CP1n8OxyaOTr7VskcpVoNdFFGDzQfcayg8OzyouHjLvulkDVHkGR8C38xIIh7q2quM8PMMp77y/XJaD9a+34Hjx54MgfepPniDwk5Yjo5XugWvQbK8Po4aCZgrO+l7bm5CtmXii5/Khkae85AK7n+q5dMdwFXtYNsNZ3czIffrg2LXjqtk6YzH970CgCpKNVKI4yUstH/HZnNycnKyX7Kgq6Gwt/MR8Nb7DMY0laheALcJRFFo2v98cC0O3KpfIe6ssd9rjaB/WTxOLp8ba0tIkEJBNl7vSacipuAxDcDz8tuYZNNhXw72ywFsngsLY0zJfqtk4/vt0T+zSbyV0sbhN67ykUHZ8ilH0Z3zj3fMYd8opk5Jup7rehtu+0HvjBo7DDMZYgOglr29RH+pobpzJdDvaFqGl+pLPc/8fnt9fL67ptMVmMLaBOw/WlPBDxCqOaW+cHLvere9G2G6M1XEXLVySOB8T2ifTsGwR2PTlIC8gchHqdZruDaiHVcmW98qDn76Rl+KdavpFAxZ2VcJKajRoAQ1CJgv05cAWdP51q8ckLXXted+IQ4E08Lee+ee5rw9OU7U42nWLQ0a/aHgwMuz5ooYiTcy/CNquBStOEdrUuGU8Ppf+/QaMzUrBiZJMagE5vlaILW6XRvP/gDCNAGZ8boJvP3keRY9w0+zej27dN5eEr0UQ5F2SBNK4g5UEs4oA0GiVwAZloCOixrQxfBmwJNVEXgOg6Se7dcs7Vl7zfrBZMRlahvix+6nsPHVXxgSdJp04q0B6sktU8dPYn1Eu/r+rQANr4J+RCJQTly9qdWZzzNmhyd8RMALvxRHgx3qia5KfvZysNcn3T0hKJLTv+U6oFVvLiXLI3uGlGP1hylJxSn51C0EtAcCWX9f1SU3TqapCMoRYTWXJZsJeYZUpeNIlW6a7FvI8LQYchg/ir9ayuoI8rROrvoPMmoiCOI2Er7h4Ua+JmH5BNx9LJV8UB3hxO37UPGHz55kLJ4kg8Aa5GrF1oLGFiAdS6R6ytuzzgpUv1oJHeDSZKbol3QvuvcOg24/NFdsRDhuKLqo6fyVtXuL3po1IaJAeQF1xpGFxiu2H+KQEYPzmDI5anrkZKKQqhOii4qM4Hv15NC3YLyR0kaQFVl41U4vib5PjUvB4QftsLPxicwT17491l1MUbZNgW1u0eSepbqHqJeFwOd2zD3E+YtowhyWZ7pyn23u+cZIimlchCqdEzPYU0t7Z0CiaStqoo92IRLhevjMqhgJk914U6h8w+m1EGgf8FVBBaAjMHP2WueZ2PHMBW3Sb/UtyTeXt9t5AwzD54+H2LmgptdTN82HVkxLTCtGfx6qKEFGYXXRBiXBwuCf1DnFXPOKLOJ44Sg2K/ixx4+Vs0YQqb2By4x9rgxk4j1jp9ugfwnE1+61Nj6JqnopdSx3+8IQLL/jfhLoBQbRyT0blQkCgU3pRIMEKnjnHojaQ/xtVGG9p4/gS1jkiJ9PbjRRgYooueZSa3fzkq2Vn3GCHODKXkyKGRp9flqFkL+jmYWGKuRREoom3vBRCUabU9MFqVagCuDF9zOM22KD0zvKLJrz4XLP2F2OM4zf5IuIsgidOnreKPPDULr3WP5WB85BxqYle6ZGE6AdBcl06+eA9fPpNsqDBr4j+6Ue6aygcsj0i+UXId02P7QRmIOkRlHbZ0WeuyXMkzsQPRtoh1CaP0KL36NoSmlK+XUNA7RgY/JNVjipXFUIzZ7a06DJT1heTnwCs0Qq6CggNJq5gIp60UBJe2ykGKzZQEdd6webaTgbEakkSH7P7rZ9dIaQUPGVMqlmIwNN9YbIfxcUkr5LQIUfYm9iAVIOJIiZGskewnmIiJwBDP6bNOMNla77/LBpJwiM03/W6BH0UjnNqahOq404EwHt0GU=" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="iu53Vbzsn0mXRFY1XE91ag==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -245,83 +314,83 @@
                 <table id="ctl00_cp_content_tableLawArticleBasic" class="table tab-list tab-nobg tab-law law-content">
 	<tr>
 		<td scope="row" class="th">第一條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　本辦法依據臺中市建築管理自治條例（以下簡稱本自治條例）第四十四條之二第三項規定訂定之。</span></div></td>
+		<td><div class="ClearCss"><span class="csp-s0">　　本辦法依據臺中市建築管理自治條例（以下簡稱本自治條例）第四十四條之二第三項規定訂定之。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第二條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　本辦法之主管機關為臺中市政府（以下簡稱本府），管理單位為本府都市發展處。</span></div></td>
+		<td><div class="ClearCss"><span class="csp-s1">　　本辦法之主管機關為臺中市政府（以下簡稱本府），管理單位為本府都市發展處。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第三條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　本府得委託辦理建築管理之業務項目如下：<br>　　<span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">一、申請建築許可案件之審查：<br>　　　　<span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">（一）建築物建造執照之審查。<br>　　　　<span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">（二）建築物使用執照之審查及查驗。<br>　　<span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">二、施工勘驗。<br>　　<span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">三、申請變更使用執照案件之審查。<br>　　<span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">四、變更使用執照竣工勘驗。</span></span></span></span></span></span></span></div></td>
+		<td><div class="ClearCss"><span class="csp-s2">　　本府得委託辦理建築管理之業務項目如下：<br>　　<span class="csp-s2">一、申請建築許可案件之審查：<br>　　　　<span class="csp-s2">（一）建築物建造執照之審查。<br>　　　　<span class="csp-s2">（二）建築物使用執照之審查及查驗。<br>　　<span class="csp-s2">二、施工勘驗。<br>　　<span class="csp-s2">三、申請變更使用執照案件之審查。<br>　　<span class="csp-s2">四、變更使用執照竣工勘驗。</span></span></span></span></span></span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第四條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　前條第一款、第三款及第四款業務，以委託<span>建築師公會為限，其審驗人員資格應符合下列各款規定：<br><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　一、登記建築師開業三年以上。但曾取得建築法第三十四條第二項審查或鑑定人員任用資格者，不受開業年限限制。<br><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　二、受委託擔任建築物設計人或監造人經驗達十件以上。<br><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　三、未受建築師法懲戒申誡二次以上之處分。<br><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　四、未受聘於營造業擔任專任工程人員。<br><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　五、無建築師法第四條規定不得充任建築師情形。<br><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　前條第二款業務，以委託建築師公會、土木技師公會或結構技師公會為限。由建築師公會辦理時，其勘驗人員資格應符合前項規定；由技師公會辦理時，其勘驗人員資格應符合下列各款規定：<br><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　一、領得技師執業執照三年以上。但曾取得建築法第三十四條第二項審查或鑑定人員任用資格者，不受執業年限限制。<br><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　二、執行土木、結構技師簽證業務達十件以上。<br><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　三、未受技師法懲戒申誡二次以上之處分。<br><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　四、未受聘於營造業擔任專任工程人員。<br><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　五、無技師法第三條規定不得充任技師情形。</span></span></span></span></span></span></span></span></span></span></span></span></span></div></td>
+		<td><div class="ClearCss"><span class="csp-s3">　　前條第一款、第三款及第四款業務，以委託<span>建築師公會為限，其審驗人員資格應符合下列各款規定：<br><span class="csp-s3">　　一、登記建築師開業三年以上。但曾取得建築法第三十四條第二項審查或鑑定人員任用資格者，不受開業年限限制。<br><span class="csp-s3">　　二、受委託擔任建築物設計人或監造人經驗達十件以上。<br><span class="csp-s3">　　三、未受建築師法懲戒申誡二次以上之處分。<br><span class="csp-s3">　　四、未受聘於營造業擔任專任工程人員。<br><span class="csp-s3">　　五、無建築師法第四條規定不得充任建築師情形。<br><span class="csp-s3">　　前條第二款業務，以委託建築師公會、土木技師公會或結構技師公會為限。由建築師公會辦理時，其勘驗人員資格應符合前項規定；由技師公會辦理時，其勘驗人員資格應符合下列各款規定：<br><span class="csp-s3">　　一、領得技師執業執照三年以上。但曾取得建築法第三十四條第二項審查或鑑定人員任用資格者，不受執業年限限制。<br><span class="csp-s3">　　二、執行土木、結構技師簽證業務達十件以上。<br><span class="csp-s3">　　三、未受技師法懲戒申誡二次以上之處分。<br><span class="csp-s3">　　四、未受聘於營造業擔任專任工程人員。<br><span class="csp-s3">　　五、無技師法第三條規定不得充任技師情形。</span></span></span></span></span></span></span></span></span></span></span></span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第五條</td>
-		<td><div class="ClearCss"><div><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　前條受託之專業公會不得指派審驗人員審驗</span><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">涉及下列各款情形之一之案件：</span></div><div><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">&nbsp; <p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">一、本人或其配偶、前配偶、四親等內之血親或三親等內之姻親或同財共居之親屬或曾有此關係者為該受審驗案件之當事人時。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">二、本人或其配偶、前配偶，就該受審驗案件與當事人有共同權利人或共同義務人之關係者。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">三、現為或曾為該受審驗案件當事人之代理人、輔佐人者。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">四、於該受審驗案件，曾為證人、鑑定人者。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">五、於該受審驗案件，曾為建築行為之承攬、雇傭、合夥關係人者。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: 1.979em; margin-left: 2.971em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">受託之專業公會指派審驗人員有前項各款情形之一者，該受指派之審驗人員應自行迴避。<span lang="EN-US"></span></span></p><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　　　　違反前二項規定而涉及刑事責任者，移送法辦。</span></span></div></div></td>
+		<td><div class="ClearCss"><div><span class="csp-s4">　　前條受託之專業公會不得指派審驗人員審驗</span><span class="csp-s4">涉及下列各款情形之一之案件：</span></div><div><span class="csp-s4">&nbsp; <p class="MsoNormal csp-s5"><span class="csp-s6">一、本人或其配偶、前配偶、四親等內之血親或三親等內之姻親或同財共居之親屬或曾有此關係者為該受審驗案件之當事人時。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s5"><span class="csp-s6">二、本人或其配偶、前配偶，就該受審驗案件與當事人有共同權利人或共同義務人之關係者。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s5"><span class="csp-s6">三、現為或曾為該受審驗案件當事人之代理人、輔佐人者。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s5"><span class="csp-s6">四、於該受審驗案件，曾為證人、鑑定人者。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s5"><span class="csp-s6">五、於該受審驗案件，曾為建築行為之承攬、雇傭、合夥關係人者。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s7"><span class="csp-s6">受託之專業公會指派審驗人員有前項各款情形之一者，該受指派之審驗人員應自行迴避。<span lang="EN-US"></span></span></p><span class="csp-s4">　　　　　違反前二項規定而涉及刑事責任者，移送法辦。</span></span></div></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第六條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　本府委託辦理建築管理業務時，應將委託業務範圍、委託期間、工作項目、法令依據、評選程序及相關事項公告之，公告期間不得少於十五日。</span></div></td>
+		<td><div class="ClearCss"><span class="csp-s8">　　本府委託辦理建築管理業務時，應將委託業務範圍、委託期間、工作項目、法令依據、評選程序及相關事項公告之，公告期間不得少於十五日。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第七條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　符合第四條規定之專業公會申請受託辦理建築管理業務時應填具申請書並檢附執行計畫書等相關文件向本府提出。<br>　　<span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">前項申請本府應依其專業能力、審驗品質、檔案管理方式或其他事項評選決定受委託單位，並應以書面方式簽訂委託契約。<br>　　<span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">本府辦理評選時，得邀集專家學者組成評選小組為之。</span></span></span></div></td>
+		<td><div class="ClearCss"><span class="csp-s9">　　符合第四條規定之專業公會申請受託辦理建築管理業務時應填具申請書並檢附執行計畫書等相關文件向本府提出。<br>　　<span class="csp-s9">前項申請本府應依其專業能力、審驗品質、檔案管理方式或其他事項評選決定受委託單位，並應以書面方式簽訂委託契約。<br>　　<span class="csp-s9">本府辦理評選時，得邀集專家學者組成評選小組為之。</span></span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第八條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　申請單位提出前條執行計畫書應記載下列事項：<br><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">一、申請單位之屬性介紹（檢附審驗資格文件）。<span lang="EN-US"></span></span></p> <p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">二、申請單位之受託業務項目。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">三、人員配置計畫。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">四、電腦軟硬體及場所地點、設備規劃：包含審查作業資訊公開化之電子化環境、可提供之會議場所等硬體設備、可提供之資訊電子化設備等。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">五、辦理受託審查作業之流程規劃：包含詳細之作業程序及作業時程之管制、審查人員利益迴避原則等。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">六、查核認定基準說明。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">七、審驗品質管控機制：包含內部稽核及管理能力、定期之自我評量及作業執行績效評估等機制。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">八、檔案文書管理制度：包含索引、編號及文書處理基準，相關文件、作業紀錄之保存方式及保存年限之說明。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">九、計費方式說明。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">十、過失責任賠償之風險管理機制。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">十一、相關行政作業及為民服務項目規劃：包含可提供之諮詢服務方式。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">十二、有無專案審驗機制之說明。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">十三、教育訓練計畫。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">十四、其他本府規定有關事項。<span lang="EN-US"></span></span></p><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　前項第十二款所稱專案審驗機制，係指申請人因時效上之需求，於繳交一定之審查費用後，直接予以專案審驗，免於一般掛號候審之機制，受託單位應於收到申請書件起五日內審查完竣。但供公眾使用或構造複雜者，得延長至二十日內審查完竣。</span></span></div></td>
+		<td><div class="ClearCss"><span class="csp-s10">　　申請單位提出前條執行計畫書應記載下列事項：<br><p class="MsoNormal csp-s11"><span class="csp-s12">一、申請單位之屬性介紹（檢附審驗資格文件）。<span lang="EN-US"></span></span></p> <p class="MsoNormal csp-s11"><span class="csp-s12">二、申請單位之受託業務項目。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s11"><span class="csp-s12">三、人員配置計畫。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s11"><span class="csp-s12">四、電腦軟硬體及場所地點、設備規劃：包含審查作業資訊公開化之電子化環境、可提供之會議場所等硬體設備、可提供之資訊電子化設備等。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s11"><span class="csp-s12">五、辦理受託審查作業之流程規劃：包含詳細之作業程序及作業時程之管制、審查人員利益迴避原則等。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s11"><span class="csp-s12">六、查核認定基準說明。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s11"><span class="csp-s12">七、審驗品質管控機制：包含內部稽核及管理能力、定期之自我評量及作業執行績效評估等機制。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s11"><span class="csp-s12">八、檔案文書管理制度：包含索引、編號及文書處理基準，相關文件、作業紀錄之保存方式及保存年限之說明。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s11"><span class="csp-s12">九、計費方式說明。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s11"><span class="csp-s12">十、過失責任賠償之風險管理機制。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s11"><span class="csp-s12">十一、相關行政作業及為民服務項目規劃：包含可提供之諮詢服務方式。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s11"><span class="csp-s12">十二、有無專案審驗機制之說明。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s11"><span class="csp-s12">十三、教育訓練計畫。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s11"><span class="csp-s12">十四、其他本府規定有關事項。<span lang="EN-US"></span></span></p><span class="csp-s10">　　前項第十二款所稱專案審驗機制，係指申請人因時效上之需求，於繳交一定之審查費用後，直接予以專案審驗，免於一般掛號候審之機制，受託單位應於收到申請書件起五日內審查完竣。但供公眾使用或構造複雜者，得延長至二十日內審查完竣。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第九條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　本府應將受託單位之名稱、執行業務地點、業務範圍、工作項目及其他有關事項公告之；其有變更者亦同。<br>　　<span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">前項公告期間不得少於十五日。</span></span></div></td>
+		<td><div class="ClearCss"><span class="csp-s13">　　本府應將受託單位之名稱、執行業務地點、業務範圍、工作項目及其他有關事項公告之；其有變更者亦同。<br>　　<span class="csp-s13">前項公告期間不得少於十五日。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第十條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　受託單位應遵守下列規定：<br><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">一、不得將受託業務複委託他人辦理。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">二、審驗人員名單應報本府備查，異動時亦同。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">三、訂定服務作業標準報本府核准。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">四、依本府所訂各類書表執行審驗或查核。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -1.921em; margin-left: 4.95em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">五、統計執行成果，並按月、半年及年報本府備查。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: 1.979em; margin-left: 2.971em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">前項第五款月報應於每月結束後十日內提報，半年報應於每半年結束後二十日內提報，年報應於每年結束後三十日內提報。<span lang="EN-US"></span></span></p><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　　　　違反第一項第二款、第四款及第五款規定者，本府得限期改善。</span></span></div></td>
+		<td><div class="ClearCss"><span class="csp-s14">　　受託單位應遵守下列規定：<br><p class="MsoNormal csp-s15"><span class="csp-s16">一、不得將受託業務複委託他人辦理。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s15"><span class="csp-s16">二、審驗人員名單應報本府備查，異動時亦同。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s15"><span class="csp-s16">三、訂定服務作業標準報本府核准。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s15"><span class="csp-s16">四、依本府所訂各類書表執行審驗或查核。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s15"><span class="csp-s16">五、統計執行成果，並按月、半年及年報本府備查。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s17"><span class="csp-s16">前項第五款月報應於每月結束後十日內提報，半年報應於每半年結束後二十日內提報，年報應於每年結束後三十日內提報。<span lang="EN-US"></span></span></p><span class="csp-s14">　　　　　違反第一項第二款、第四款及第五款規定者，本府得限期改善。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第十一條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　受託單位審驗案件時，應依中央及本府所訂相關法令辦理，如有法規疑義或爭議事項，應由本府都市發展處送本府<span>建築法規小組或本府都市發展處復</span>核<span>會議審議。</span></span></div></td>
+		<td><div class="ClearCss"><span class="csp-s18">　　受託單位審驗案件時，應依中央及本府所訂相關法令辦理，如有法規疑義或爭議事項，應由本府都市發展處送本府<span>建築法規小組或本府都市發展處復</span>核<span>會議審議。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第十二條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　<span>受託單位於案件審驗期間應逐案建檔，並指派專人負責管理。</span></span></div></td>
+		<td><div class="ClearCss"><span class="csp-s19">　　<span>受託單位於案件審驗期間應逐案建檔，並指派專人負責管理。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第十三條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　第三條業務項目之申請案件</span><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">，申請人得向本府或受託單位申請。<br><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　申請人向受託單位申請辦理時，除依建築法規定繳交規費外，並應依附表向受託單位繳交費用。<br>　　<span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">申請人向受託單位申請辦理第三條第二款業務時，應申請同一受託單位辦理完成，不得變更受託單位。</span></span></span></div></td>
+		<td><div class="ClearCss"><span class="csp-s20">　　第三條業務項目之申請案件</span><span class="csp-s20">，申請人得向本府或受託單位申請。<br><span class="csp-s20">　　申請人向受託單位申請辦理時，除依建築法規定繳交規費外，並應依附表向受託單位繳交費用。<br>　　<span class="csp-s20">申請人向受託單位申請辦理第三條第二款業務時，應申請同一受託單位辦理完成，不得變更受託單位。</span></span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第十四條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　受託單位應將經審驗人員簽署符合規定之審驗案件，於審驗完成二日內併同檔案列冊送本府核發許可文件。</span></div></td>
+		<td><div class="ClearCss"><span class="csp-s21">　　受託單位應將經審驗人員簽署符合規定之審驗案件，於審驗完成二日內併同檔案列冊送本府核發許可文件。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第十五條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　本府應稽核受託單位業務執行情形，受託單位應予配合，不得規避、妨礙或拒絕；經稽核有缺失者，本府應限期改善。</span></div></td>
+		<td><div class="ClearCss"><span class="csp-s22">　　本府應稽核受託單位業務執行情形，受託單位應予配合，不得規避、妨礙或拒絕；經稽核有缺失者，本府應限期改善。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第十六條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　受託單位有下列情形之一者，本府得暫停其辦理受委託業務，並限期命其改善：<br><p class="MsoNormal" style="line-height: 1.917em; text-indent: -2.029em; margin-left: 6em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">一、審驗人員未具第四條規定之資格條件。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -2.029em; margin-left: 6em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">二、違反第十條第一項第一款及第三款規定。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -2.029em; margin-left: 6em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">三、違反第十條第一項第二款、第四款、第五款及第十五條規定，經限期改善逾期未改善。<span lang="EN-US"></span></span></p><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　受託單位依前項規定期限改善完成並經本府核准者，始得繼續辦理受託業務。</span></span></div></td>
+		<td><div class="ClearCss"><span class="csp-s23">　　受託單位有下列情形之一者，本府得暫停其辦理受委託業務，並限期命其改善：<br><p class="MsoNormal csp-s24"><span class="csp-s25">一、審驗人員未具第四條規定之資格條件。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s24"><span class="csp-s25">二、違反第十條第一項第一款及第三款規定。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s24"><span class="csp-s25">三、違反第十條第一項第二款、第四款、第五款及第十五條規定，經限期改善逾期未改善。<span lang="EN-US"></span></span></p><span class="csp-s23">　　受託單位依前項規定期限改善完成並經本府核准者，始得繼續辦理受託業務。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第十七條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　受託單位有下列情形之一者，本府得終止契約：<br>&nbsp; <p class="MsoNormal" style="line-height: 1.917em; text-indent: -2.029em; margin-left: 6em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">一、違反或怠於執行委託契約之業務範圍、工作項目。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -2.029em; margin-left: 6em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">二、違反第五條迴避之規定。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -2.029em; margin-left: 6em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">三、違反第十五條規避、妨礙或拒絕稽核規定。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -2.029em; margin-left: 6em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">四、依第十六條規定暫停辦理受託業務，經限期改善逾期未改善。<span lang="EN-US"></span></span></p><p class="MsoNormal" style="line-height: 1.917em; text-indent: -2.029em; margin-left: 6em"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1)">五、執行受託業務經檢核不符契約要求品質。<span lang="EN-US"></span></span></p><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　　　六、其他委託契約約定終止之事由。</span></span></div></td>
+		<td><div class="ClearCss"><span class="csp-s26">　　受託單位有下列情形之一者，本府得終止契約：<br>&nbsp; <p class="MsoNormal csp-s27"><span class="csp-s28">一、違反或怠於執行委託契約之業務範圍、工作項目。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s27"><span class="csp-s28">二、違反第五條迴避之規定。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s27"><span class="csp-s28">三、違反第十五條規避、妨礙或拒絕稽核規定。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s27"><span class="csp-s28">四、依第十六條規定暫停辦理受託業務，經限期改善逾期未改善。<span lang="EN-US"></span></span></p><p class="MsoNormal csp-s27"><span class="csp-s28">五、執行受託業務經檢核不符契約要求品質。<span lang="EN-US"></span></span></p><span class="csp-s26">　　　　六、其他委託契約約定終止之事由。</span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第十八條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　本府終止或解除委託契約後，一年內不受理該受託單位辦理建築管理業務委託之申請。但終止或解除契約之事由不可歸責於受託單位者，不在此限。</span></div></td>
+		<td><div class="ClearCss"><span class="csp-s29">　　本府終止或解除委託契約後，一年內不受理該受託單位辦理建築管理業務委託之申請。但終止或解除契約之事由不可歸責於受託單位者，不在此限。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th">第十九條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　本辦法所需書表格式由本府另定之。</span></div></td>
+		<td><div class="ClearCss"><span class="csp-s30">　　本辦法所需書表格式由本府另定之。</span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"><span class="glyphicon glyphicon-paperclip"></span>第二十條</td>
-		<td><div class="ClearCss"><span style="font-family: 新細明體; color: rgba(0, 0, 0, 1); font-size: 1em">　　本辦法自發布日施行。</span></div><div class="FileList"><b>圖表附件：</b><ul><li><a href="Download.ashx?FileID=703&id=GL000002&type=LAW" title="下載 7-2-29-00-附件.doc 檔案">7-2-29-00-附件.doc</a></li></ul></div></td>
+		<td><div class="ClearCss"><span class="csp-s31">　　本辦法自發布日施行。</span></div><div class="FileList"><b>圖表附件：</b><ul><li><a href="Download.ashx?FileID=703&id=GL000002&type=LAW" title="下載 7-2-29-00-附件.doc 檔案">7-2-29-00-附件.doc</a></li></ul></div></td>
 	</tr>
 </table>
 
@@ -347,8 +416,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -358,7 +427,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,128</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,194</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -366,10 +435,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="iu53Vbzsn0mXRFY1XE91ag=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="iu53Vbzsn0mXRFY1XE91ag=="></script>
+<script src="/js/FYLS.js" nonce="iu53Vbzsn0mXRFY1XE91ag=="></script>
+<script type="text/javascript" nonce="iu53Vbzsn0mXRFY1XE91ag==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -442,8 +511,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="iu53Vbzsn0mXRFY1XE91ag==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -464,5 +546,99 @@
         });
     });
 </script>
+
+
+    <style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s0 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s1 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s2 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s3 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s4 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+.csp-s5 { line-height: 1.917em !important; text-indent: -1.921em !important; margin-left: 4.95em !important; } 
+.csp-s6 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; } 
+.csp-s7 { line-height: 1.917em !important; text-indent: 1.979em !important; margin-left: 2.971em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s8 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s9 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s10 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+.csp-s11 { line-height: 1.917em !important; text-indent: -1.921em !important; margin-left: 4.95em !important; } 
+.csp-s12 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s13 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s14 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+.csp-s15 { line-height: 1.917em !important; text-indent: -1.921em !important; margin-left: 4.95em !important; } 
+.csp-s16 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; } 
+.csp-s17 { line-height: 1.917em !important; text-indent: 1.979em !important; margin-left: 2.971em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s18 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s19 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s20 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s21 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s22 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s23 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+.csp-s24 { line-height: 1.917em !important; text-indent: -2.029em !important; margin-left: 6em !important; } 
+.csp-s25 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s26 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+.csp-s27 { line-height: 1.917em !important; text-indent: -2.029em !important; margin-left: 6em !important; } 
+.csp-s28 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s29 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s30 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
+<style nonce="iu53Vbzsn0mXRFY1XE91ag==">
+.csp-s31 { font-family: 新細明體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1em !important; } 
+</style>
+
 
 

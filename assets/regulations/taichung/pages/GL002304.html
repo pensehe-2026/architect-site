@@ -6,18 +6,14 @@
     <!-- 響應式網頁設定：若後端設定不開啟響應式網頁效果，則不顯示以下這一行 -->
     <meta id="ctl00_RWDSetup" name="viewport" content="width=590" /><title>
 	臺中市政府主管法規共用系統-法規內容-臺中市政府處理違反都市計畫法案件裁罰基準
-</title>
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css" rel="stylesheet" type="text/css" media="screen" />
+</title><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" /><link href="css/layout.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" /><link href="css/table.css?v=202607031054" rel="stylesheet" type="text/css" media="screen" />
     <!-- 網站樣式設定：依據後端設定樣式編號，讀取對應的CSS檔 -->
     <link id="ctl00_TemplateID" href="/css/02.css" rel="stylesheet" type="text/css" media="all" /><link href="css/printweb.css" rel="stylesheet" type="text/css" media="print" />
     <!-- 網頁背景圖設定：若後端自行上傳背景圖，則顯示以下這一行 -->
     
 
-    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript" nonce="OSfCXAC8+Um4YaXav3tRvQ=="></script>
+    <script type="text/javascript" nonce="OSfCXAC8+Um4YaXav3tRvQ==">
         $(function () {
             //避免XFS攻擊
             if (top != self) { top.location = self.location; }
@@ -25,12 +21,76 @@
             //$("pre").attr("title", "內容");
         });
     </script>
-    <noscript><span style="color: #fff;">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
-    </head>
+    <noscript><span class="text-white">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</span></noscript>
+    
+    <style nonce="OSfCXAC8+Um4YaXav3tRvQ==">
+        #dvContent, #dvContent p, #dvContent div {
+            white-space: pre-wrap !important;
+        }
+
+        /* 補上 Quill 客製化字型尺寸 (10pt~24pt) */
+        .ql-size-10pt, .x_ql-size-10pt { font-size: 0.833em; }
+        .ql-size-12pt, .x_ql-size-12pt { font-size: 1.0em; }
+        .ql-size-14pt, .x_ql-size-14pt { font-size: 1.167em; }
+        .ql-size-16pt, .x_ql-size-16pt { font-size: 1.333em; }
+        .ql-size-18pt, .x_ql-size-18pt { font-size: 1.5em; }
+        .ql-size-20pt, .x_ql-size-20pt { font-size: 1.667em; }
+        .ql-size-24pt, .x_ql-size-24pt { font-size: 2.0em; }
+
+        /* 定義字型套用至編輯區的 Class 規則 */
+.ql-font-kai, .x_ql-font-kai {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-font-pmingliu, .x_ql-font-pmingliu {
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-font-mingliu, .x_ql-font-mingliu {
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-font-times, .x_ql-font-times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 設定下拉選單預設顯示名稱 */
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+    content: '預設字型' !important;
+}
+
+/* 將各個字型代碼精準對映為「中文/英文顯示名稱」（在選單內也會以該字型呈現） */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="kai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="kai"]::before {
+    content: '標楷體' !important;
+    font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="pmingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="pmingliu"]::before {
+    content: '新細明體' !important;
+    font-family: "新細明體", "PMingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mingliu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mingliu"]::before {
+    content: '細明體' !important;
+    font-family: "細明體", "MingLiU", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    content: 'Times New Roman' !important;
+    font-family: "Times New Roman", Times, serif;
+}
+    </style>
+
+</head>
 <body>
     <form name="aspnetForm" method="post" action="./LawContent.aspx?id=GL002304" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="yU9MKogtpk1hXcIS9a4CZ01p2gDc12q4Z9aVp4u90MFR6ltfhQkqp88GANrFU1wFMhxDE1xC7AC2XAwjFAroZCWcISRE6hfxD8MxqNWqwpVHmwDKQJt/GQflsNln7C0NQHzCkUo3lWMRR14t99pok/c3U5k03yvR40m3ZkrYuMS6qjzwOnn4O1xtoA7KhFW59QbJQqT3EYTxPZa9kCwpLT1XcVUiWfSfqAvy7tw9TbqE9MdTZLmi4s0g87ZSNw/auPndVJMqXBbRgM6bhCHEYT2kJe9fBowGSqwzL12Gp9rKxIKHdrYDXntd6kkjN6SEPM5b0jTVhbJHyn0epyi84yvLjSQXx1sPIrBbdMJRVYro6nUR1dwPrWah/vWoyUM0Q1x/VBhKk0SZV7saguTYPhndabKE1C+y2BSU+nugsoIX2TN5QLzyZGYMc6ebhjAYLUV5/ySYMysd+Zt7rA3liIwig0kyD5TE+zF2UTj7FKhNS7PCf1Jn9PiYnm323DoAXtbAuxvVGclBIzh3czRpgQIoiRpXtRIzJsqj0JeCHY24uVeFZ8qaEUKBJcnrkxwZ4L/+VQux2uB1igBT3CLpGo/yGGS9JEyPr74tQF4YiQOyxkVlbPs4+zFS4D2+XtlwIuTXTATpfF9IG/LA5EkPwnMtV24MU4/E1qlWnNHjyWf8hdE8b3T4VKIwIMbNHZdrV3IozzdJlTHf+lyb2kw/kHROGdeVddgaO4CeaQX9qu7BKvvD+JffCv93VE+jXDeopbxDwTjw9EI6Jcy6HB1YV7COb6neou7wTJor3Dyjnl0k/S1/mjov/HD3uR7wMKSfkrX32eEu3C0YkUoqRTFlQQm6koWsZ/+TfnTlmVXsJrb3/DTVrqQ/22lNEqgJOMsWLeA10+5sYNt/Dh0d/2pea2uMsXtDQKGqUjb+W4KhZZEfvEVetR6dr7LjiY0AizqmJiCItdzKmx7vAUjZOsbanR+0O0+LqwsCMSJYp4lTlSkrchPzDSRsS8GNa4NIrAHuqPHVDoPA81evNfGxFfxHk1+M6TMzMHTPaYMKey9x/qfg64co2s5z7nTn+nm2rIUlslsA7dPm8koOogjrI+L4kYGM6C7Wo7tAZ/Tvfy+2+5KfOwIQ01qvBYYuO6Gl3RCYyTnRCCMF/O3DMSbcIUIXjlrRF9WHTq5AyDYWaJB/4xRsnXyMI+LJGxCLSPl6vSGxloSXVDUyii0peTL7tQ61UjK50j+VZ/pMswZAZ6Z5q0MirAwoiRbgQus/uXJjcfRP0yhS/MGloauwAmGY4eTkGIjdYffrv5G6xj6M+Zuc6FqmmOP9GFlRAwLB/8Dw2KT9x5QzP9x0OlfqF+gKtYig5ipNyKmvOYOzFXSgdAkomzTLP1IcpmfDq9JFuCipJoSJ/51LgBQOTNnHnClfdTP/5+wX3zipGUaIzCTqrIL2m9H8P77udgMVtidVPJAMllYd1AE2BAvz2pwjybaaZJYUn9rjWUejrtVaR937xwmw8+FqlaCSvQm7iHwTO3VU6wM/RBOZqcl6DgYMg2A8k/316tJAVhseP9ui49W6g2ZGKK9h9fUAmjvMNVmbzKAISP6ogkb3lGCoUlJVRwHJ0fUjrTBaK8Z68vP+0TvrZwMOkkHs6X5VlR465ftyZNyoNHsVVuIRNqZ1GbW1s7TiqBcMmb5FEcfLqJrs4xGQLipbPdBupDcFu1br6XltNXwo78ef+rfKJXXbVzTzeLLwvpIfZe3ivgT/3GBqTWfew+P338IIrly6VVewEWyw1LcR8lfVOpXGoW2Ga39NEVVMmW6hGkB9IG9c7osvbUrg6GgYeguytbx10v2760fgfN3AV3RFZnnXdsBZoRcksDWgxwGZoKR+aIRuO5dhxBvYqZXsq3F8oZU63dXMYq4lUYEkROmt0et9OnX/vYjU26RDm0KbDQLA+FMJn71jwYmCXlDJWbu1b+WYpmnvpTFxfSlIv26h" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div>
@@ -70,7 +130,7 @@
                         </ul>
                         <!-- 領用機關Logo 圖片-->
                         <h1 class="logo">
-                            <a href="index.aspx" id="ctl00_aUCName">
+                            <a href="index.aspx" id="ctl00_aUCName" title="臺中市政府主管法規查詢系統：回首頁">
                                 <img src="ImageHandler.ashx?Field=Logo" id="ctl00_imgUCName" width="320" height="90" alt="臺中市政府logo：回主管法規查詢系統首頁" />
                             </a>
                         </h1>
@@ -85,7 +145,7 @@
                                     <label for="keyword1" class="sr-only">請輸入關鍵字</label>
                                     <input id="keyword1" type="text" class="form-control" accesskey="S" placeholder="請輸入關鍵字" aria-label="整合查詢">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" onclick="GlobalCheckForm1();return false;">整合查詢</button>
+                                        <button type="button" class="btn btn-default" id="btn_searchForm" >整合查詢</button>
                                     </span>
                                 </div>
                             </div>
@@ -136,7 +196,7 @@
                             <div class="input-group">
                                 <label for="keyword2" class="sr-only">請輸入關鍵字</label>
                                 <input id="keyword2" type="text" class="form-control" placeholder="請輸入關鍵字">
-                                <button type="button" class="btn btn-default" onclick="GlobalCheckForm2();return false;">
+                                <button type="button" id="btn_searchForm2" class="btn btn-default" >
                                     <i class="bi bi-search"><span class="sr-only">整合查詢</span></i>
                                 </button>
                             </div>
@@ -165,6 +225,15 @@
                 法規內容</h2>
         </div>
         
+<style  nonce="OSfCXAC8+Um4YaXav3tRvQ==" >
+    .ld-ann {
+        color:#ff5b00; 
+        margin-bottom:20px; 
+        font-weight:bold; 
+        font-size:105%;
+    }
+</style>
+
 <table class="table table-bordered tab-edit">
     <tr>
         <th>法規名稱：</th>
@@ -238,153 +307,153 @@
                 <table id="ctl00_cp_content_tableLawArticleBasic" class="table tab-list tab-nobg tab-law law-content">
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 0.875em"><span style="font-size: 1em">一、臺中市政府(以下簡稱本府)為處理違反都市計畫法(以下簡稱本法)<br>
+		<td><div class="ClearCss"><span class="csp-s0"><span class="csp-s1"><span class="csp-s2">一、臺中市政府(以下簡稱本府)為處理違反都市計畫法(以下簡稱本法)<br>
 &nbsp;&nbsp;&nbsp; 裁罰事件，提昇行政效能，建立公平性並減少爭議，特訂定本基準。</span></span></span></div></td>
 	</tr>
 	<tr>
 		<td scope="row" class="th"></td>
-		<td><div class="ClearCss"><span style="font-family: 細明體"><span style="font-size: 1em">二、本府為執行本法第七十九條之處分，並考量違規使用類別對於公共<br>
+		<td><div class="ClearCss"><span class="csp-s3"><span class="csp-s4">二、本府為執行本法第七十九條之處分，並考量違規使用類別對於公共<br>
 &nbsp;&nbsp;&nbsp; 安全危害情形程度及違反次數，訂定統一裁罰基準，其規定如附表。</span></span><br>
 <br>
 <br>
-<p class="MsoNormal" style="line-height: 1.917em; margin: 0">
- <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體; color: rgba(0, 0, 0, 1); font-size: 1.167em">附表<span lang="EN-US"></span></span></span></span></p>
-<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border: 3px none; margin: auto auto auto -1.7pt; border-collapse: collapse">
+<p class="MsoNormal csp-s5">
+ <span class="csp-s3"><span class="csp-s4"><span class="csp-s6">附表<span lang="EN-US"></span></span></span></span></p>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable csp-s7">
  <tbody>
   <tr>
-   <td style="border: 1pt solid rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 3.546em" valign="top" width="71">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">項次<span lang="EN-US"></span></span></span></span></p>
+   <td valign="top" width="71" class="csp-s8">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">項次<span lang="EN-US"></span></span></span></span></p>
    </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 2cm; border-top: 1pt solid rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="95">
-    <p align="center" class="MsoNormal" style="text-align: center; margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">種類<span lang="EN-US"></span></span></span></span></p>
+   <td valign="top" width="95" class="csp-s11">
+    <p align="center" class="MsoNormal csp-s12">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">種類<span lang="EN-US"></span></span></span></span></p>
    </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.908em; border-top: 1pt solid rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="118">
-    <p align="center" class="MsoNormal" style="text-align: center; margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">第一次<span lang="EN-US"></span></span></span></span></p>
+   <td valign="top" width="118" class="csp-s13">
+    <p align="center" class="MsoNormal csp-s12">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">第一次<span lang="EN-US"></span></span></span></span></p>
    </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.904em; border-top: 1pt solid rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="118">
-    <p align="center" class="MsoNormal" style="text-align: center; margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">第二次<span lang="EN-US"></span></span></span></span></p>
+   <td valign="top" width="118" class="csp-s14">
+    <p align="center" class="MsoNormal csp-s12">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">第二次<span lang="EN-US"></span></span></span></span></p>
    </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.908em; border-top: 1pt solid rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="118">
-    <p align="center" class="MsoNormal" style="text-align: center; margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">第三次<span lang="EN-US"></span></span></span></span></p>
+   <td valign="top" width="118" class="csp-s13">
+    <p align="center" class="MsoNormal csp-s12">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">第三次<span lang="EN-US"></span></span></span></span></p>
    </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.904em; border-top: 1pt solid rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="118">
-    <p align="center" class="MsoNormal" style="text-align: center; margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">第四次<span lang="EN-US"></span></span></span></span></p>
+   <td valign="top" width="118" class="csp-s14">
+    <p align="center" class="MsoNormal csp-s12">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">第四次<span lang="EN-US"></span></span></span></span></p>
    </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.758em; border-top: 1pt solid rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="115">
-    <p align="center" class="MsoNormal" style="text-align: center; margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">第五次<span lang="EN-US"></span></span></span></span></p>
-    <p align="center" class="MsoNormal" style="text-align: center; margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">及以後<span lang="EN-US"></span></span></span></span></p>
+   <td valign="top" width="115" class="csp-s15">
+    <p align="center" class="MsoNormal csp-s12">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">第五次<span lang="EN-US"></span></span></span></span></p>
+    <p align="center" class="MsoNormal csp-s12">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">及以後<span lang="EN-US"></span></span></span></span></p>
    </td>
   </tr>
   <tr>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: 1pt solid rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 3.546em; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="71">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">一<span lang="EN-US"></span></span></span></span></p>
+   <td valign="top" width="71" class="csp-s16">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">一<span lang="EN-US"></span></span></span></span></p>
    </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 2cm; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="95">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">戲院、電影業、旅館、視聽歌唱業、三溫暖業、舞場業、舞廳業、酒家業、酒吧業、特種咖啡茶室業、飲酒店業、資訊休閒業及其他類似場所。<span lang="EN-US"></span></span></span></span></p>
+   <td valign="top" width="95" class="csp-s17">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">戲院、電影業、旅館、視聽歌唱業、三溫暖業、舞場業、舞廳業、酒家業、酒吧業、特種咖啡茶室業、飲酒店業、資訊休閒業及其他類似場所。<span lang="EN-US"></span></span></span></span></p>
    </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.908em; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="118">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">一、處使用人或管理人新臺幣六萬元罰鍰，並勒令停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">二、同時副知建築物或土地所有權人。<span lang="EN-US"></span></span></span></span></p>
+   <td valign="top" width="118" class="csp-s18">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">一、處使用人或管理人新臺幣六萬元罰鍰，並勒令停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">二、同時副知建築物或土地所有權人。<span lang="EN-US"></span></span></span></span></p>
    </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.904em; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="118">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">一、處使用人或管理人新臺幣六萬元罰鍰，並勒令停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">二、同時副知建築物或土地所有權人，並告知如再經查報該建築物或土地供人違規使用，依規裁處。<span lang="EN-US"></span></span></span></span></p>
+   <td valign="top" width="118" class="csp-s19">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">一、處使用人或管理人新臺幣六萬元罰鍰，並勒令停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">二、同時副知建築物或土地所有權人，並告知如再經查報該建築物或土地供人違規使用，依規裁處。<span lang="EN-US"></span></span></span></span></p>
    </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.908em; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="118">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">一、處使用人或管理人新臺幣十二萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">二、併處建築物或土地所有權人新臺幣六萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+   <td valign="top" width="118" class="csp-s18">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">一、處使用人或管理人新臺幣十二萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">二、併處建築物或土地所有權人新臺幣六萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
    </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.904em; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="118">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">一、處使用人或管理人新臺幣十二萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">二、併處建築物或土地所有權人新臺幣六萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+   <td valign="top" width="118" class="csp-s19">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">一、處使用人或管理人新臺幣十二萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">二、併處建築物或土地所有權人新臺幣六萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
    </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.758em; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="115">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">一、處使用人或管理人新臺幣十八萬元以上三十萬元以下罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">二、併處建築物或土地所有權人新臺幣六萬元以上三十萬元以下罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span lang="EN-US" style="font-family: 標楷體"></span></span></span></p>
-   </td>
-  </tr>
-  <tr style="height: 23.967em">
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: 1pt solid rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 3.546em; height: 23.967em; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="71">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">二<span lang="EN-US"></span></span></span></span></p>
-   </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 2cm; height: 23.967em; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="95">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">其他<span lang="EN-US"></span></span></span></span></p>
-   </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.908em; height: 23.967em; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="118">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">一、處使用人或管理人新臺幣六萬元罰鍰，並勒令停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">二、同時副知建築物或土地所有權人。<span lang="EN-US"></span></span></span></span></p>
-   </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.904em; height: 23.967em; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="118">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">一、處使用人或管理人新臺幣六萬元罰鍰，並勒令停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">二、同時副知建築物或土地所有權人，並告知如再經查報該建築物或土地供人違規使用，依規裁處。<span lang="EN-US"></span></span></span></span></p>
-   </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.908em; height: 23.967em; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="118">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">一、處使用人或管理人新臺幣九萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">二、併處建築物或土地所有權人新臺幣六萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
-   </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.904em; height: 23.967em; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="118">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">一、處使用人或管理人新臺幣九萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">二、併處建築物或土地所有權人新臺幣六萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
-   </td>
-   <td style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 5.758em; height: 23.967em; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="115">
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">一、處使用人或管理人新臺幣十二萬元以上三十萬元以下罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
-    <p class="MsoNormal" style="margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">二、併處建築物或土地所有權人新臺幣六萬元以上三十萬元以下罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+   <td valign="top" width="115" class="csp-s20">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">一、處使用人或管理人新臺幣十八萬元以上三十萬元以下罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">二、併處建築物或土地所有權人新臺幣六萬元以上三十萬元以下罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span lang="EN-US" class="csp-s10"></span></span></span></p>
    </td>
   </tr>
-  <tr style="height: 7.046em">
-   <td colspan="7" style="border-bottom: 1pt solid rgba(0, 0, 0, 1); border-left: 1pt solid rgba(0, 0, 0, 1); padding: 0 0.45em; background-color: rgba(0, 0, 0, 0); width: 37.654em; height: 7.046em; border-top: rgba(0, 0, 0, 1); border-right: 1pt solid rgba(0, 0, 0, 1)" valign="top" width="753">
-    <p class="MsoNormal" style="line-height: 1em; margin: 0">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span style="font-family: 標楷體">備註：</span><span lang="EN-US"></span></span></span></p>
-    <p class="MsoNormal" style="line-height: 1em; text-indent: -2em; margin: 0 0 0 24pt">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span lang="EN-US"><span>一、</span></span><span style="font-family: 標楷體">以上經查報違規使用案件，本府除依上開表列裁罰基準裁處外，並得視案件情況敘明理由，以其影響公共安全程度，如有特別輕微或嚴重情形者，得於法定罰鍰額度內，依下列方式辦理：（一）處新臺幣六萬元以上三十萬元以下罰鍰，並勒令拆除、改建、停止使用或恢復原狀。（二）不拆除、改建、停止使用或恢復原狀者，得按次處罰，並停止供水、供電、封閉、強制拆除或採取其他恢復原狀之措施。</span><span lang="EN-US"></span></span></span></p>
-    <p class="MsoNormal" style="line-height: 1em; text-indent: -2em; margin: 0 0 0 24pt">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span lang="EN-US"><span>二、</span></span><span style="font-family: 標楷體">同一地址如經連續查獲違規使用，並已通知其同一建築物或土地所有權人在案者，視同違規一次紀錄，對於該同一建築物或土地所有權人之處分，以查獲違規累積之次數加重處分。</span><span lang="EN-US"></span></span></span></p>
-    <p class="MsoNormal" style="line-height: 1em; text-indent: -2em; margin: 0 0 0 24pt">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span lang="EN-US"><span>三、</span></span><span style="font-family: 標楷體">違規行為經裁處二次以上者，如經相關目的事業主管機關基於目的事業管理需要，審認有採取停止供水、供電、封閉、強制拆除或採取其他恢復原狀之措施，得依或準用「臺中市特定目的事業停止供水供電及強制拆除作業要點」第十一點規定，簽奉市長核可後，由本府都市發展局依本法第七十九條第一項規定辦理執行建築物停止供水、供電、封閉、強制拆除或採取其他恢復原狀之措施。</span><span lang="EN-US"></span></span></span></p>
-    <p class="MsoNormal" style="line-height: 1em; text-indent: -2em; margin: 0 0 0 24pt">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span lang="EN-US"><span>四、</span></span><span style="font-family: 標楷體">有關違規使用行為或事實或行業種類，有認定疑義者，由各目的事業主管機關依所轄管目的事業法令認定實際使用類別或內容。</span><span lang="EN-US"></span></span></span></p>
-    <p class="MsoNormal" style="line-height: 1em; text-indent: -2em; margin: 0 0 0 24pt">
-     <span style="font-family: 細明體"><span style="font-size: 1em"><span lang="EN-US"><span>五、</span></span><span style="font-family: 標楷體">經本府依本法第七十九條及本裁罰基準裁處，同時副知目的事業主管機關。如涉及各目的事業法規權責事項部分，由各該目的事業主管機關本權責查處。</span><span lang="EN-US"></span></span></span></p>
+  <tr class="csp-s21">
+   <td valign="top" width="71" class="csp-s22">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">二<span lang="EN-US"></span></span></span></span></p>
+   </td>
+   <td valign="top" width="95" class="csp-s23">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">其他<span lang="EN-US"></span></span></span></span></p>
+   </td>
+   <td valign="top" width="118" class="csp-s24">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">一、處使用人或管理人新臺幣六萬元罰鍰，並勒令停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">二、同時副知建築物或土地所有權人。<span lang="EN-US"></span></span></span></span></p>
+   </td>
+   <td valign="top" width="118" class="csp-s25">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">一、處使用人或管理人新臺幣六萬元罰鍰，並勒令停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">二、同時副知建築物或土地所有權人，並告知如再經查報該建築物或土地供人違規使用，依規裁處。<span lang="EN-US"></span></span></span></span></p>
+   </td>
+   <td valign="top" width="118" class="csp-s24">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">一、處使用人或管理人新臺幣九萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">二、併處建築物或土地所有權人新臺幣六萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+   </td>
+   <td valign="top" width="118" class="csp-s25">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">一、處使用人或管理人新臺幣九萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">二、併處建築物或土地所有權人新臺幣六萬元罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+   </td>
+   <td valign="top" width="115" class="csp-s26">
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">一、處使用人或管理人新臺幣十二萬元以上三十萬元以下罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+    <p class="MsoNormal csp-s9">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">二、併處建築物或土地所有權人新臺幣六萬元以上三十萬元以下罰鍰，並勒令拆除、改建、停止使用或恢復原狀。<span lang="EN-US"></span></span></span></span></p>
+   </td>
+  </tr>
+  <tr class="csp-s27">
+   <td colspan="7" valign="top" width="753" class="csp-s28">
+    <p class="MsoNormal csp-s29">
+     <span class="csp-s3"><span class="csp-s4"><span class="csp-s10">備註：</span><span lang="EN-US"></span></span></span></p>
+    <p class="MsoNormal csp-s30">
+     <span class="csp-s3"><span class="csp-s4"><span lang="EN-US"><span>一、</span></span><span class="csp-s10">以上經查報違規使用案件，本府除依上開表列裁罰基準裁處外，並得視案件情況敘明理由，以其影響公共安全程度，如有特別輕微或嚴重情形者，得於法定罰鍰額度內，依下列方式辦理：（一）處新臺幣六萬元以上三十萬元以下罰鍰，並勒令拆除、改建、停止使用或恢復原狀。（二）不拆除、改建、停止使用或恢復原狀者，得按次處罰，並停止供水、供電、封閉、強制拆除或採取其他恢復原狀之措施。</span><span lang="EN-US"></span></span></span></p>
+    <p class="MsoNormal csp-s30">
+     <span class="csp-s3"><span class="csp-s4"><span lang="EN-US"><span>二、</span></span><span class="csp-s10">同一地址如經連續查獲違規使用，並已通知其同一建築物或土地所有權人在案者，視同違規一次紀錄，對於該同一建築物或土地所有權人之處分，以查獲違規累積之次數加重處分。</span><span lang="EN-US"></span></span></span></p>
+    <p class="MsoNormal csp-s30">
+     <span class="csp-s3"><span class="csp-s4"><span lang="EN-US"><span>三、</span></span><span class="csp-s10">違規行為經裁處二次以上者，如經相關目的事業主管機關基於目的事業管理需要，審認有採取停止供水、供電、封閉、強制拆除或採取其他恢復原狀之措施，得依或準用「臺中市特定目的事業停止供水供電及強制拆除作業要點」第十一點規定，簽奉市長核可後，由本府都市發展局依本法第七十九條第一項規定辦理執行建築物停止供水、供電、封閉、強制拆除或採取其他恢復原狀之措施。</span><span lang="EN-US"></span></span></span></p>
+    <p class="MsoNormal csp-s30">
+     <span class="csp-s3"><span class="csp-s4"><span lang="EN-US"><span>四、</span></span><span class="csp-s10">有關違規使用行為或事實或行業種類，有認定疑義者，由各目的事業主管機關依所轄管目的事業法令認定實際使用類別或內容。</span><span lang="EN-US"></span></span></span></p>
+    <p class="MsoNormal csp-s30">
+     <span class="csp-s3"><span class="csp-s4"><span lang="EN-US"><span>五、</span></span><span class="csp-s10">經本府依本法第七十九條及本裁罰基準裁處，同時副知目的事業主管機關。如涉及各目的事業法規權責事項部分，由各該目的事業主管機關本權責查處。</span><span lang="EN-US"></span></span></span></p>
    </td>
   </tr>
  </tbody>
 </table>
-<p class="MsoNormal" style="line-height: 1.917em; margin: 0">
- <span style="font-family: 細明體"><span style="font-size: 1em"><span lang="EN-US"></span></span></span></p>
+<p class="MsoNormal csp-s5">
+ <span class="csp-s3"><span class="csp-s4"><span lang="EN-US"></span></span></span></p>
 </div></td>
 	</tr>
 </table>
@@ -411,8 +480,8 @@
                             <li>電話總機：
                                 04-22289111
                                 傳真電話：04-22544215</li>
-                            <li>系統版本：<span id="ctl00_lblVersionDate">114.11.28</span></li>
-                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">114.12.04</span></li>
+                            <li>系統版本：<span id="ctl00_lblVersionDate">115.09.10</span></li>
+                            <li>系統更新日期：<span id="ctl00_lblUpdateDate">115.09.14</span></li>
                             
                         </ul>
 
@@ -422,7 +491,7 @@
                             <li id="ctl00_liAccessibilityUrl2_1_AA"><a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20260810084712" id="ctl00_aAccessibilityUrl2_1_AA" title="通過AA優先等級無障礙網頁檢測（另開新視窗）" target="_blank" rel="noopener noreferrer">
                                 <img src="images/無障礙標章2.1/accessabilityAA.png" id="ctl00_imgAccessibilityDis2_1_AA" width="88" height="31" alt="通過AA優先等級無障礙網頁檢測" /></a></li>
                         </ul>
-                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,685,412</div>
+                        <div id="ctl00_divBrowsingPeople" class="visitors">瀏覽人數：97,733,462</div>
                     </div>
                 
             <p id="gotop"><a role="button" href="#">回上方</a></p>
@@ -430,10 +499,10 @@
     </form>
 </body>
 </html>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/app.js" type="text/javascript"></script>
-<script src="/js/FYLS.js"></script>
-<script type="text/javascript">
+<script src="/js/bootstrap.min.js" type="text/javascript" nonce="OSfCXAC8+Um4YaXav3tRvQ=="></script>
+<script src="/js/app.js" type="text/javascript" nonce="OSfCXAC8+Um4YaXav3tRvQ=="></script>
+<script src="/js/FYLS.js" nonce="OSfCXAC8+Um4YaXav3tRvQ=="></script>
+<script type="text/javascript" nonce="OSfCXAC8+Um4YaXav3tRvQ==">
     $(function () {
         ChangeFunUrl();
         $(window).resize(function () {
@@ -506,8 +575,21 @@
         window.open("SearchAllResultList.aspx?KW=" + encodeURIComponent(keyword), "_self");
     }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" nonce="OSfCXAC8+Um4YaXav3tRvQ==">
     $(document).ready(function () {
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm").on("click", function (e) {
+            GlobalCheckForm1();
+            e.preventDefault();
+            return false;
+        });
+
+        //註冊整合查詢按鈕2事件
+        $("#btn_searchForm2").on("click", function (e) {
+            GlobalCheckForm2();
+            e.preventDefault();
+            return false; 
+        });
         $(document).on("keydown", function (e) {
             if (e.key === "Enter") {
                 var active = document.activeElement;
@@ -528,5 +610,44 @@
         });
     });
 </script>
+
+
+    <style nonce="OSfCXAC8+Um4YaXav3tRvQ==">
+.csp-s0 { font-family: 細明體 !important; } 
+.csp-s1 { font-size: 0.875em !important; } 
+.csp-s2 { font-size: 1em !important; } 
+</style>
+
+<style nonce="OSfCXAC8+Um4YaXav3tRvQ==">
+.csp-s3 { font-family: 細明體 !important; } 
+.csp-s4 { font-size: 1em !important; } 
+.csp-s5 { line-height: 1.917em !important; margin: 0 !important; } 
+.csp-s6 { font-family: 標楷體 !important; color: rgba(0, 0, 0, 1) !important; font-size: 1.167em !important; } 
+.csp-s7 { border: 3px none !important; margin: auto auto auto -1.7pt !important; border-collapse: collapse !important; } 
+.csp-s8 { border: 1pt solid rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 3.546em !important; } 
+.csp-s9 { margin: 0 !important; } 
+.csp-s10 { font-family: 標楷體 !important; } 
+.csp-s11 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 2cm !important; border-top: 1pt solid rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s12 { text-align: center !important; margin: 0 !important; } 
+.csp-s13 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 5.908em !important; border-top: 1pt solid rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s14 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 5.904em !important; border-top: 1pt solid rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s15 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 5.758em !important; border-top: 1pt solid rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s16 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: 1pt solid rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 3.546em !important; border-top: rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s17 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 2cm !important; border-top: rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s18 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 5.908em !important; border-top: rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s19 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 5.904em !important; border-top: rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s20 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 5.758em !important; border-top: rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s21 { height: 23.967em !important; } 
+.csp-s22 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: 1pt solid rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 3.546em !important; height: 23.967em !important; border-top: rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s23 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 2cm !important; height: 23.967em !important; border-top: rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s24 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 5.908em !important; height: 23.967em !important; border-top: rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s25 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 5.904em !important; height: 23.967em !important; border-top: rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s26 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 5.758em !important; height: 23.967em !important; border-top: rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s27 { height: 7.046em !important; } 
+.csp-s28 { border-bottom: 1pt solid rgba(0, 0, 0, 1) !important; border-left: 1pt solid rgba(0, 0, 0, 1) !important; padding: 0 0.45em !important; background-color: rgba(0, 0, 0, 0) !important; width: 37.654em !important; height: 7.046em !important; border-top: rgba(0, 0, 0, 1) !important; border-right: 1pt solid rgba(0, 0, 0, 1) !important; } 
+.csp-s29 { line-height: 1em !important; margin: 0 !important; } 
+.csp-s30 { line-height: 1em !important; text-indent: -2em !important; margin: 0 0 0 24pt !important; } 
+</style>
+
 
 
