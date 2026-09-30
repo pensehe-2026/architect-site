@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CAD 版本轉換｜何中揚建築師事務所</title>
+    <meta name="description" content="將新版 DWG 檢查並轉為舊版 CAD 或 CNC 可使用的 2D DXF。先驗證，成功後才付款。" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="styles.css?v=20260930-1" />
+    <script src="config.js?v=20260930-1" defer></script>
+    <script src="app.js?v=20260930-1" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="回到何中揚建築師事務所首頁">
+        <span class="brand-mark" aria-hidden="true">H</span>
+        <span><strong>何中揚建築師事務所</strong><small>CAD FILE SERVICE</small></span>
+      </a>
+      <a class="back-link" href="../index.html">返回事務所網站</a>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="pageTitle">
+        <div>
+          <p class="preview-badge">安全預覽版｜尚未開放上傳或付款</p>
+          <p class="eyebrow">DWG → VERIFIED 2D DXF</p>
+          <h1 id="pageTitle">舊版 CAD 開不了？先免費檢查。</h1>
+          <p class="lead">選擇你使用的軟體年份或 CNC／雷切用途。系統只在轉換與驗證都通過後，才會提供付款下載。</p>
+        </div>
+        <div class="price-card" aria-label="服務價格">
+          <span>成功檔案</span>
+          <strong>NT$29</strong>
+          <small>檢查失敗不收費</small>
+        </div>
+      </section>
+
+      <section class="workspace" aria-labelledby="uploadTitle">
+        <form id="conversionForm" novalidate>
+          <div class="step-heading">
+            <span>01</span>
+            <div><h2 id="uploadTitle">選擇圖檔</h2><p>接受單一 DWG，或包含一張主圖與合法隨附資源的 ZIP。</p></div>
+          </div>
+
+          <label class="drop-zone" id="dropZone" for="cadFile">
+            <input id="cadFile" name="cadFile" type="file" accept=".dwg,.zip" />
+            <span class="drop-icon" aria-hidden="true">＋</span>
+            <strong>選擇 DWG 或 ZIP</strong>
+            <small>單檔上限 100 MB｜原始檔不會在瀏覽器中開啟</small>
+          </label>
+          <div class="file-summary" id="fileSummary" hidden aria-live="polite"></div>
+          <p class="field-error" id="fileError" role="alert" hidden></p>
+
+          <fieldset>
+            <legend><span>02</span><b>選擇使用情境</b></legend>
+            <div class="target-grid">
+              <label><input type="radio" name="target" value="R2018" /><span><b>AutoCAD 2018–2027</b><small>輸出 R2018 2D DXF</small></span></label>
+              <label><input type="radio" name="target" value="R2013" /><span><b>AutoCAD 2013–2017</b><small>輸出 R2013 2D DXF</small></span></label>
+              <label><input type="radio" name="target" value="R2010" /><span><b>AutoCAD 2010–2012</b><small>輸出 R2010 2D DXF</small></span></label>
+              <label><input type="radio" name="target" value="R2007" /><span><b>AutoCAD 2007–2009</b><small>輸出 R2007 2D DXF</small></span></label>
+              <label><input type="radio" name="target" value="R2000" /><span><b>AutoCAD 2000–2006</b><small>輸出 R2000 2D DXF</small></span></label>
+              <label><input type="radio" name="target" value="R12" /><span><b>CNC／雷切／舊設備</b><small>R12 Model Space 2D DXF</small></span></label>
+            </div>
+            <p class="field-error" id="targetError" role="alert" hidden></p>
+          </fieldset>
+
+          <label class="consent-row">
+            <input id="rightsConsent" type="checkbox" />
+            <span>我確認有權處理這份圖檔，並了解正式服務的檔案最長於 24 小時內刪除。</span>
+          </label>
+
+          <button class="primary-action" type="submit" id="submitButton">建立免費檢查摘要</button>
+          <p class="service-note" id="serviceNote">目前為安全預覽：在轉檔主機正式連線前，檔案不會離開你的裝置。</p>
+        </form>
+
+        <aside aria-label="處理流程與限制">
+          <div class="status-panel" id="statusPanel" aria-live="polite">
+            <p class="status-label">目前狀態</p>
+            <h2>等待選擇圖檔</h2>
+            <p>完成左側資料後，先在本機確認檔案類型、大小與輸出目標。</p>
+          </div>
+          <ol class="process-list">
+            <li><span>1</span><div><b>免費檢查</b><small>辨識版本、內容風險與可轉換性</small></div></li>
+            <li><span>2</span><div><b>隔離轉換與驗證</b><small>重新解析輸出，不以程式退出碼當作成功</small></div></li>
+            <li><span>3</span><div><b>綠燈才付款</b><small>黃燈或紅燈不開放付費下載</small></div></li>
+            <li><span>4</span><div><b>短效下載</b><small>下載權限單次使用，檔案最長 24 小時刪除</small></div></li>
+          </ol>
+          <div class="boundary-card">
+            <b>首發服務邊界</b>
+            <p>輸出為 2D DXF，不承諾低版本 DWG。R12 僅支援 Model Space；動態圖塊可能靜態化，任何無法可靠驗證的圖檔都會拒絕收費。</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="trust-row" aria-label="服務原則">
+        <article><b>不必先註冊</b><p>以工作編號查詢，不建立不必要的會員資料。</p></article>
+        <article><b>成功後才付款</b><p>先完成轉換與重讀驗證，再顯示付款。</p></article>
+        <article><b>最少保存</b><p>圖檔與帳務紀錄分離，原檔與成果限時刪除。</p></article>
+      </section>
+    </main>
+
+    <footer>
+      <p>何中揚建築師事務所｜CAD 版本轉換測試服務</p>
+      <nav aria-label="頁尾連結"><a href="../privacy.html">隱私政策</a><a href="mailto:Hodesign2013@gmail.com">問題回報</a></nav>
+      <small>AutoCAD 與 DWG 為其各自權利人的商標或格式名稱；本服務未宣稱獲其背書。</small>
+    </footer>
+  </body>
+</html>
