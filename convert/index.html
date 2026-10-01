@@ -6,9 +6,9 @@
     <title>CAD 版本轉換｜何中揚建築師事務所</title>
     <meta name="description" content="將新版 DWG 檢查並轉為舊版 CAD 或 CNC 可使用的 2D DXF。先驗證，成功後才付款。" />
     <meta name="robots" content="noindex, nofollow" />
-    <link rel="stylesheet" href="styles.css?v=20260930-1" />
-    <script src="config.js?v=20260930-1" defer></script>
-    <script src="app.js?v=20260930-1" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261001-4" />
+    <script src="config.js?v=20261001-4" defer></script>
+    <script src="app.js?v=20261001-4" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -22,15 +22,15 @@
     <main>
       <section class="intro" aria-labelledby="pageTitle">
         <div>
-          <p class="preview-badge">安全預覽版｜尚未開放上傳或付款</p>
+          <p class="preview-badge">單主機封閉測試｜請勿上傳真實或機密圖檔</p>
           <p class="eyebrow">DWG → VERIFIED 2D DXF</p>
           <h1 id="pageTitle">舊版 CAD 開不了？先免費檢查。</h1>
-          <p class="lead">選擇你使用的軟體年份或 CNC／雷切用途。系統只在轉換與驗證都通過後，才會提供付款下載。</p>
+          <p class="lead">不知道原始圖檔是哪個版本沒關係，系統會自動辨識。你只要選擇需要的輸出格式；轉換與驗證都通過後，才會提供下載或付款。</p>
         </div>
         <div class="price-card" aria-label="服務價格">
-          <span>成功檔案</span>
-          <strong>NT$29</strong>
-          <small>檢查失敗不收費</small>
+          <span>小檔免費</span>
+          <strong>10 MiB</strong>
+          <small>單一 DWG；批次方案完成預檢後顯示</small>
         </div>
       </section>
 
@@ -38,27 +38,28 @@
         <form id="conversionForm" novalidate>
           <div class="step-heading">
             <span>01</span>
-            <div><h2 id="uploadTitle">選擇圖檔</h2><p>接受單一 DWG，或包含一張主圖與合法隨附資源的 ZIP。</p></div>
+            <div><h2 id="uploadTitle">選擇圖檔</h2><p>接受單一 DWG，或包含多張 DWG 與合法隨附資源的 ZIP。</p></div>
           </div>
 
           <label class="drop-zone" id="dropZone" for="cadFile">
             <input id="cadFile" name="cadFile" type="file" accept=".dwg,.zip" />
             <span class="drop-icon" aria-hidden="true">＋</span>
             <strong>選擇 DWG 或 ZIP</strong>
-            <small>單檔上限 100 MB｜原始檔不會在瀏覽器中開啟</small>
+            <small>單次上限 200 MiB｜ZIP 解壓上限 512 MiB｜單一 DWG 10 MiB 以下可免費</small>
           </label>
           <div class="file-summary" id="fileSummary" hidden aria-live="polite"></div>
           <p class="field-error" id="fileError" role="alert" hidden></p>
 
           <fieldset>
-            <legend><span>02</span><b>選擇使用情境</b></legend>
+            <legend><span>02</span><b>選擇輸出格式</b></legend>
+            <p class="target-help">系統會自動判斷上傳檔案的來源版本，不需要你先知道。</p>
             <div class="target-grid">
-              <label><input type="radio" name="target" value="R2018" /><span><b>AutoCAD 2018–2027</b><small>輸出 R2018 2D DXF</small></span></label>
-              <label><input type="radio" name="target" value="R2013" /><span><b>AutoCAD 2013–2017</b><small>輸出 R2013 2D DXF</small></span></label>
-              <label><input type="radio" name="target" value="R2010" /><span><b>AutoCAD 2010–2012</b><small>輸出 R2010 2D DXF</small></span></label>
-              <label><input type="radio" name="target" value="R2007" /><span><b>AutoCAD 2007–2009</b><small>輸出 R2007 2D DXF</small></span></label>
-              <label><input type="radio" name="target" value="R2000" /><span><b>AutoCAD 2000–2006</b><small>輸出 R2000 2D DXF</small></span></label>
-              <label><input type="radio" name="target" value="R12" /><span><b>CNC／雷切／舊設備</b><small>R12 Model Space 2D DXF</small></span></label>
+              <label><input type="radio" name="target" value="R2018" /><span><b>DXF R2018</b><small>較新格式，適合 2018 版以上 CAD</small></span></label>
+              <label><input type="radio" name="target" value="R2013" /><span><b>DXF R2013</b><small>適合 2013–2017 版 CAD</small></span></label>
+              <label><input type="radio" name="target" value="R2010" /><span><b>DXF R2010</b><small>適合 2010–2012 版 CAD</small></span></label>
+              <label><input type="radio" name="target" value="R2007" /><span><b>DXF R2007</b><small>適合 2007–2009 版 CAD</small></span></label>
+              <label><input type="radio" name="target" value="R2000" /><span><b>DXF R2000</b><small>相容 2000–2006 版 CAD</small></span></label>
+              <label><input type="radio" name="target" value="R12" /><span><b>DXF R12</b><small>Model Space 2D，適合 CNC、雷切與舊設備</small></span></label>
             </div>
             <p class="field-error" id="targetError" role="alert" hidden></p>
           </fieldset>
@@ -69,7 +70,7 @@
           </label>
 
           <button class="primary-action" type="submit" id="submitButton">建立免費檢查摘要</button>
-          <p class="service-note" id="serviceNote">目前為安全預覽：在轉檔主機正式連線前，檔案不會離開你的裝置。</p>
+          <p class="service-note" id="serviceNote">封閉測試不收費；只有通過 GREEN_VERIFIED 的測試檔才提供成果下載。請勿上傳真實或機密圖檔。</p>
         </form>
 
         <aside aria-label="處理流程與限制">
@@ -82,7 +83,7 @@
             <li><span>1</span><div><b>免費檢查</b><small>辨識版本、內容風險與可轉換性</small></div></li>
             <li><span>2</span><div><b>隔離轉換與驗證</b><small>重新解析輸出，不以程式退出碼當作成功</small></div></li>
             <li><span>3</span><div><b>綠燈才付款</b><small>黃燈或紅燈不開放付費下載</small></div></li>
-            <li><span>4</span><div><b>短效下載</b><small>下載權限單次使用，檔案最長 24 小時刪除</small></div></li>
+            <li><span>4</span><div><b>私密查詢與下載</b><small>24 小時內可回查並重新取得單次下載連結，最多 5 次</small></div></li>
           </ol>
           <div class="boundary-card">
             <b>首發服務邊界</b>

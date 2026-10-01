@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>工作查詢｜CAD 版本轉換</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="styles.css?v=20261001-4" />
+    <script src="config.js?v=20261001-4" defer></script>
+    <script src="job.js?v=20261001-4" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="回到何中揚建築師事務所首頁">
+        <span class="brand-mark" aria-hidden="true">H</span>
+        <span><strong>何中揚建築師事務所</strong><small>CAD FILE SERVICE</small></span>
+      </a>
+      <a class="back-link" href="index.html">新增轉檔</a>
+    </header>
+
+    <main class="job-page">
+      <section class="job-card" aria-labelledby="jobTitle">
+        <p class="eyebrow">PRIVATE JOB LOOKUP</p>
+        <h1 id="jobTitle">工作查詢</h1>
+        <p class="lead">這條私密連結等同下載權限，請勿轉傳。工作編號本身不能取回檔案。</p>
+
+        <div class="job-reference">
+          <span>工作編號</span>
+          <strong id="jobReference">讀取中</strong>
+          <button type="button" class="secondary-action" id="copyLink">複製私密查詢連結</button>
+        </div>
+
+        <div class="job-status" id="jobStatus" aria-live="polite">
+          <p class="status-label">正在查詢</p>
+          <h2>確認工作狀態</h2>
+          <p>請保持此頁開啟。</p>
+        </div>
+
+        <dl class="job-details">
+          <div><dt>輸出格式</dt><dd id="jobTarget">—</dd></div>
+          <div><dt>保存期限</dt><dd id="jobExpiry">—</dd></div>
+          <div><dt>剩餘下載次數</dt><dd id="downloadRemaining">—</dd></div>
+        </dl>
+
+        <button type="button" class="primary-action" id="downloadButton" hidden>取得單次下載連結並下載</button>
+        <p class="service-note">每次下載票券僅能使用一次；成果保存期間內最多重新取得 5 次。期限到達後，原檔、成果與下載能力均失效。</p>
+      </section>
+    </main>
+  </body>
+</html>
