@@ -21,11 +21,13 @@ exports.handler = async (event) => {
   const gatewayToken = process.env.CAD_INTAKE_GATEWAY_TOKEN || "";
   const intakeOrigin = (process.env.CAD_INTAKE_ORIGIN || "").replace(/\/$/, "");
   const clientSecret = process.env.CAD_CLIENT_KEY_SECRET || "";
+  const betaAccessHash = (process.env.CAD_BETA_ACCESS_SHA256 || "").toLowerCase();
   const localIntakeAllowed = process.env.CAD_ALLOW_LOCAL_INTAKE === "1"
     && /^http:\/\/127\.0\.0\.1:\d+\/cad-intake$/.test(intakeOrigin);
   if (
     gatewayToken.length < 32
     || clientSecret.length < 32
+    || !/^[0-9a-f]{64}$/.test(betaAccessHash)
     || (!intakeOrigin.startsWith("https://") && !localIntakeAllowed)
   ) {
     return json(503, { status: "ERROR", code: "TEST_SERVICE_UNAVAILABLE" });
@@ -40,6 +42,11 @@ exports.handler = async (event) => {
   const filename = String(payload.filename || "");
   const target = String(payload.target || "");
   const idempotencyKey = String(payload.idempotency_key || "");
+  const accessCode = String(payload.access_code || "");
+  const suppliedAccessHash = crypto.createHash("sha256").update(accessCode, "utf8").digest("hex");
+  const accessAllowed = suppliedAccessHash.length === betaAccessHash.length
+    && crypto.timingSafeEqual(Buffer.from(suppliedAccessHash), Buffer.from(betaAccessHash));
+  if (!accessAllowed) return json(403, { status: "ERROR", code: "ACCESS_CODE_DENIED" });
   if (
     !ALLOWED_TARGETS.has(target)
     || !/^[^\\/\x00-\x1f]{1,255}\.(dwg|zip)$/i.test(filename)

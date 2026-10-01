@@ -12,6 +12,8 @@
   const statusPanel = document.querySelector("#statusPanel");
   const serviceNote = document.querySelector("#serviceNote");
   const submitButton = document.querySelector("#submitButton");
+  const accessCode = document.querySelector("#betaAccessCode");
+  const accessError = document.querySelector("#accessError");
   const allowedExtensions = new Set(["dwg", "zip"]);
 
   function formatBytes(bytes) {
@@ -48,6 +50,7 @@
       INPUT_TYPE_MISMATCH: "檔案內容與副檔名不符。",
       TICKET_FAILED: "目前無法建立安全上傳通行證。",
       UPLOAD_FAILED: "檔案未能完成上傳，請重新嘗試。",
+      ACCESS_CODE_DENIED: "封閉測試邀請碼不正確或已失效。",
     };
     return messages[code] || `服務暫時無法收件（${code || "UNAVAILABLE"}）。`;
   }
@@ -88,11 +91,14 @@
     const file = fileInput.files[0];
     const fileMessage = validateFile(file);
     const target = form.elements.target.value;
+    const accessMessage = accessCode.value.length >= 12 ? "" : "請輸入有效的封閉測試邀請碼。";
+    accessError.hidden = !accessMessage;
+    accessError.textContent = accessMessage;
     fileError.hidden = !fileMessage;
     fileError.textContent = fileMessage;
     targetError.hidden = Boolean(target);
     targetError.textContent = target ? "" : "請選擇需要的輸出格式。";
-    if (fileMessage || !target) return;
+    if (fileMessage || !target || accessMessage) return;
     if (!consent.checked) {
       statusPanel.innerHTML = '<p class="status-label">尚未完成</p><h2>請確認檔案處理權利</h2><p>勾選左側確認項目後才能建立檢查摘要。</p>';
       consent.focus();
@@ -113,7 +119,7 @@
       const ticketResponse = await fetch(`${config.apiBase}/cad-upload-ticket`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ filename: file.name, target, idempotency_key: idempotencyKey }),
+        body: JSON.stringify({ filename: file.name, target, idempotency_key: idempotencyKey, access_code: accessCode.value }),
       });
       const ticket = await ticketResponse.json();
       if (!ticketResponse.ok) throw new Error(ticket.code || "TICKET_FAILED");

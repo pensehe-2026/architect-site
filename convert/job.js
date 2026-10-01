@@ -16,6 +16,22 @@
   let statusEndpoint;
   let pollTimer;
 
+  function friendlyError(error, fallback) {
+    const message = String(error?.message || "");
+    if (/failed to fetch|networkerror|load failed/i.test(message)) {
+      return "目前無法連線到測試主機，請稍後重新整理頁面。";
+    }
+    const code = message.replace(/[^A-Z0-9_\-]/gi, "").toUpperCase().slice(0, 64);
+    const messages = {
+      JOB_NOT_FOUND: "私密連結無效、已到期，或工作不存在。",
+      JOB_EXPIRED: "保存期限已到，原檔、成果與下載權限均已刪除。",
+      DOWNLOAD_LIMIT_REACHED: "此工作的下載重新簽發次數已用完。",
+      DOWNLOAD_DENIED: "下載票券無效或已使用，請重新取得一次性票券。",
+      RESULT_NOT_READY: "成果仍在驗證中，請稍後再試。",
+    };
+    return messages[code] || fallback;
+  }
+
   function endpointAllowed(url) {
     const configured = new Set(config.jobApiOrigins || []);
     return configured.has(url.origin)
@@ -60,7 +76,7 @@
       if (!response.ok) throw new Error(data.code || "JOB_LOOKUP_FAILED");
       renderStatus(data);
     } catch (error) {
-      fail("私密連結無效或服務暫時無法連線", String(error.message || "JOB_LOOKUP_FAILED").replace(/[^A-Z0-9_\-]/gi, ""));
+      fail("私密連結無效或服務暫時無法連線", friendlyError(error, "目前無法完成工作查詢，請稍後重新整理頁面。"));
     }
   }
 
@@ -94,7 +110,7 @@
       window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
       await loadStatus();
     } catch (error) {
-      fail("下載未完成", String(error.message || "DOWNLOAD_FAILED").replace(/[^A-Z0-9_\-]/gi, ""));
+      fail("下載未完成", friendlyError(error, "下載暫時無法完成，請稍後重新整理頁面再試。"));
     } finally {
       downloadButton.disabled = false;
     }

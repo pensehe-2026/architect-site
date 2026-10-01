@@ -6,9 +6,9 @@
     <title>CAD 版本轉換｜何中揚建築師事務所</title>
     <meta name="description" content="將新版 DWG 檢查並轉為舊版 CAD 或 CNC 可使用的 2D DXF。先驗證，成功後才付款。" />
     <meta name="robots" content="noindex, nofollow" />
-    <link rel="stylesheet" href="styles.css?v=20261001-4" />
-    <script src="config.js?v=20261001-4" defer></script>
-    <script src="app.js?v=20261001-4" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261001-6" />
+    <script src="config.js?v=20261001-6" defer></script>
+    <script src="app.js?v=20261001-6" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -36,6 +36,11 @@
 
       <section class="workspace" aria-labelledby="uploadTitle">
         <form id="conversionForm" novalidate>
+          <div class="beta-access">
+            <label for="betaAccessCode"><b>封閉測試邀請碼</b><span>邀請碼只用於本次建立上傳票券，不會附在成果或查詢連結中。</span></label>
+            <input id="betaAccessCode" name="betaAccessCode" type="password" autocomplete="one-time-code" minlength="12" maxlength="128" required />
+            <p class="field-error" id="accessError" role="alert" hidden></p>
+          </div>
           <div class="step-heading">
             <span>01</span>
             <div><h2 id="uploadTitle">選擇圖檔</h2><p>接受單一 DWG，或包含多張 DWG 與合法隨附資源的 ZIP。</p></div>

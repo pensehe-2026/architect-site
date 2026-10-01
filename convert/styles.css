@@ -33,6 +33,11 @@ h1 { margin: 0; max-width: 760px; font: 700 clamp(2.2rem, 5vw, 4.75rem)/1.08 Geo
 .price-card strong { display: block; margin: 5px 0; font: 700 2.4rem/1 Georgia, serif; }
 .workspace { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(290px, .75fr); background: var(--white); border: 1px solid var(--line); box-shadow: 0 22px 55px rgba(21, 45, 51, .09); }
 form { padding: 38px; border-right: 1px solid var(--line); }
+.beta-access { margin-bottom: 30px; padding: 18px; background: #eef4f3; border-left: 4px solid var(--accent-dark); }
+.beta-access label { display: grid; gap: 4px; margin-bottom: 10px; }
+.beta-access label span { color: var(--muted); font-size: .9rem; }
+.beta-access input { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--line); background: white; font: inherit; }
+.beta-access input:focus { outline: 3px solid rgba(184, 74, 42, .2); border-color: var(--accent); }
 .step-heading, fieldset legend { display: flex; gap: 14px; align-items: flex-start; }
 .step-heading > span, fieldset legend > span { display: grid; place-items: center; min-width: 34px; height: 34px; background: var(--deep); color: white; font-weight: 800; font-size: .8rem; }
 h2, .step-heading p { margin: 0; }
