@@ -92,7 +92,7 @@
           </ol>
           <div class="boundary-card">
             <b>首發服務邊界</b>
-            <p>目前只開放簡單 2D DWG → R2000 DXF。動態圖塊、XREF、HATCH、INSERT、DIMENSION 與其他未列入首批白名單的內容均安全拒絕；任何無法可靠驗證的圖檔都不交付。</p>
+            <p>封閉測試支援常見 2D HATCH、一般 INSERT、DIMENSION，以及 Dynamic Block 目前可見狀態靜態化。XREF 請上傳 ZIP：主圖固定命名為 <code>main.dwg</code>，並保留所有參照 DWG 的原相對路徑。系統會自動驗證；依賴缺漏、路徑不安全、gradient／true-color 無法無損降成 R2000，或視覺證據不一致時才停止交付。</p>
           </div>
         </aside>
       </section>
