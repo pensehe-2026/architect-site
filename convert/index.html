@@ -6,9 +6,9 @@
     <title>CAD 版本轉換｜何中揚建築師事務所</title>
     <meta name="description" content="將新版 DWG 檢查並轉為舊版 CAD 或 CNC 可使用的 2D DXF。先驗證，成功後才付款。" />
     <meta name="robots" content="noindex, nofollow" />
-    <link rel="stylesheet" href="styles.css?v=20261001-6" />
-    <script src="config.js?v=20261001-6" defer></script>
-    <script src="app.js?v=20261001-6" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261001-7" />
+    <script src="config.js?v=20261001-7" defer></script>
+    <script src="app.js?v=20261001-7" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -59,12 +59,12 @@
             <legend><span>02</span><b>選擇輸出格式</b></legend>
             <p class="target-help">系統會自動判斷上傳檔案的來源版本，不需要你先知道。</p>
             <div class="target-grid">
-              <label><input type="radio" name="target" value="R2018" /><span><b>DXF R2018</b><small>較新格式，適合 2018 版以上 CAD</small></span></label>
-              <label><input type="radio" name="target" value="R2013" /><span><b>DXF R2013</b><small>適合 2013–2017 版 CAD</small></span></label>
-              <label><input type="radio" name="target" value="R2010" /><span><b>DXF R2010</b><small>適合 2010–2012 版 CAD</small></span></label>
-              <label><input type="radio" name="target" value="R2007" /><span><b>DXF R2007</b><small>適合 2007–2009 版 CAD</small></span></label>
-              <label><input type="radio" name="target" value="R2000" /><span><b>DXF R2000</b><small>相容 2000–2006 版 CAD</small></span></label>
-              <label><input type="radio" name="target" value="R12" /><span><b>DXF R12</b><small>Model Space 2D，適合 CNC、雷切與舊設備</small></span></label>
+              <label class="is-disabled"><input type="radio" name="target" value="R2018" disabled /><span><b>DXF R2018</b><small>封閉 Beta 尚未開放</small></span></label>
+              <label class="is-disabled"><input type="radio" name="target" value="R2013" disabled /><span><b>DXF R2013</b><small>封閉 Beta 尚未開放</small></span></label>
+              <label class="is-disabled"><input type="radio" name="target" value="R2010" disabled /><span><b>DXF R2010</b><small>封閉 Beta 尚未開放</small></span></label>
+              <label class="is-disabled"><input type="radio" name="target" value="R2007" disabled /><span><b>DXF R2007</b><small>封閉 Beta 尚未開放</small></span></label>
+              <label><input type="radio" name="target" value="R2000" checked /><span><b>DXF R2000</b><small>目前封閉 Beta 支援；相容 2000–2006 版 CAD</small></span></label>
+              <label class="is-disabled"><input type="radio" name="target" value="R12" disabled /><span><b>DXF R12</b><small>封閉 Beta 尚未開放</small></span></label>
             </div>
             <p class="field-error" id="targetError" role="alert" hidden></p>
           </fieldset>
@@ -92,7 +92,7 @@
           </ol>
           <div class="boundary-card">
             <b>首發服務邊界</b>
-            <p>輸出為 2D DXF，不承諾低版本 DWG。R12 僅支援 Model Space；動態圖塊可能靜態化，任何無法可靠驗證的圖檔都會拒絕收費。</p>
+            <p>目前只開放簡單 2D DWG → R2000 DXF。動態圖塊、XREF、HATCH、INSERT、DIMENSION 與其他未列入首批白名單的內容均安全拒絕；任何無法可靠驗證的圖檔都不交付。</p>
           </div>
         </aside>
       </section>
