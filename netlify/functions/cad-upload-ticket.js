@@ -10,7 +10,7 @@ const json = (statusCode, body) => ({
   body: JSON.stringify(body),
 });
 
-const ALLOWED_TARGETS = new Set(["R12", "R2000", "R2007", "R2010", "R2013", "R2018"]);
+const ALLOWED_TARGETS = new Set(["R2000"]);
 
 exports.handler = async (event) => {
   if (event.httpMethod !== "POST") return json(405, { status: "ERROR", code: "METHOD_NOT_ALLOWED" });
