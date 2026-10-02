@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>工作查詢｜CAD 版本轉換</title>
     <meta name="robots" content="noindex, nofollow" />
-    <link rel="stylesheet" href="styles.css?v=20261001-4" />
+    <link rel="stylesheet" href="styles.css?v=20261002-1" />
     <script src="config.js?v=20261001-4" defer></script>
-    <script src="job.js?v=20261001-5" defer></script>
+    <script src="job.js?v=20261002-1" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -35,6 +35,24 @@
           <h2>確認工作狀態</h2>
           <p>請保持此頁開啟。</p>
         </div>
+
+        <section class="job-progress" id="jobProgress" aria-labelledby="progressTitle" hidden>
+          <div class="job-progress-heading">
+            <div>
+              <p class="status-label">即時完成度</p>
+              <h2 id="progressTitle">準備處理</h2>
+            </div>
+            <strong id="progressPercent">0%</strong>
+          </div>
+          <div class="progress-track" role="progressbar" aria-label="轉檔與驗證完成度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <span id="progressFill"></span>
+          </div>
+          <div class="progress-meta">
+            <span id="progressElapsed">已等待 0 秒</span>
+            <span id="progressEta">正在估算剩餘時間</span>
+          </div>
+          <p class="progress-note">百分比依實際完成的驗證階段更新；複雜圖面可能停留較久，請保持此頁開啟。</p>
+        </section>
 
         <dl class="job-details">
           <div><dt>輸出格式</dt><dd id="jobTarget">—</dd></div>

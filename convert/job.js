@@ -13,8 +13,79 @@
   const remaining = document.querySelector("#downloadRemaining");
   const downloadButton = document.querySelector("#downloadButton");
   const copyButton = document.querySelector("#copyLink");
+  const progressBox = document.querySelector("#jobProgress");
+  const progressTitle = document.querySelector("#progressTitle");
+  const progressPercent = document.querySelector("#progressPercent");
+  const progressTrack = progressBox.querySelector(".progress-track");
+  const progressFill = document.querySelector("#progressFill");
+  const progressElapsed = document.querySelector("#progressElapsed");
+  const progressEta = document.querySelector("#progressEta");
   let statusEndpoint;
   let pollTimer;
+  let clockTimer;
+  let createdAtMs;
+  let currentProgress;
+
+  function formatElapsed(seconds) {
+    const safeSeconds = Math.max(0, Math.floor(seconds));
+    if (safeSeconds < 60) return `${safeSeconds} 秒`;
+    const minutes = Math.floor(safeSeconds / 60);
+    const remainder = safeSeconds % 60;
+    return remainder ? `${minutes} 分 ${remainder} 秒` : `${minutes} 分鐘`;
+  }
+
+  function etaCopy(progress) {
+    const eta = Number(progress?.estimated_remaining_seconds);
+    const updatedAt = Date.parse(progress?.updated_at || "");
+    if (!Number.isFinite(eta) || eta <= 0) return "即將完成";
+    if (Number.isFinite(updatedAt) && Date.now() - updatedAt > eta * 1500) {
+      return "此階段比平常久，仍持續驗證中";
+    }
+    if (eta >= 120) return "預估尚需約 2–3 分鐘";
+    if (eta >= 60) return "預估尚需約 1–2 分鐘";
+    return "預估尚需少於 1 分鐘";
+  }
+
+  function updateClock() {
+    if (!currentProgress || !Number.isFinite(createdAtMs)) return;
+    progressElapsed.textContent = `已等待 ${formatElapsed((Date.now() - createdAtMs) / 1000)}`;
+    progressEta.textContent = etaCopy(currentProgress);
+  }
+
+  function renderProgress(data) {
+    const active = ["PENDING", "RUNNING"].includes(data.state);
+    const complete = data.state === "SUCCEEDED";
+    if (!active && !complete) {
+      progressBox.hidden = true;
+      return;
+    }
+    const fallback = complete
+      ? { percent: 100, label: "成果已準備完成", estimated_remaining_seconds: 0 }
+      : { percent: data.state === "PENDING" ? 5 : 10, label: "正在準備安全處理", estimated_remaining_seconds: 180 };
+    currentProgress = data.progress || fallback;
+    createdAtMs = Date.parse(data.created_at || "");
+    const percent = Math.max(0, Math.min(100, Number(currentProgress.percent) || 0));
+    progressBox.hidden = false;
+    progressBox.classList.toggle("is-active", active);
+    progressBox.classList.toggle("is-complete", complete);
+    progressTitle.textContent = currentProgress.label || "正在處理";
+    progressPercent.textContent = `${percent}%`;
+    progressFill.style.width = `${percent}%`;
+    progressTrack.setAttribute("aria-valuenow", String(percent));
+    if (complete) {
+      const completedAtMs = Date.parse(data.state_updated_at || "");
+      const duration = Number.isFinite(completedAtMs) && Number.isFinite(createdAtMs)
+        ? (completedAtMs - createdAtMs) / 1000
+        : 0;
+      progressElapsed.textContent = `總處理時間 ${formatElapsed(duration)}`;
+      progressEta.textContent = "已完成";
+      if (clockTimer) window.clearInterval(clockTimer);
+      clockTimer = undefined;
+    } else {
+      updateClock();
+      if (!clockTimer) clockTimer = window.setInterval(updateClock, 1000);
+    }
+  }
 
   function friendlyError(error, fallback) {
     const message = String(error?.message || "");
@@ -42,6 +113,9 @@
     statusBox.innerHTML = `<p class="status-label">無法查詢</p><h2>${title}</h2><p>${detail}</p>`;
     downloadButton.hidden = true;
     if (pollTimer) window.clearTimeout(pollTimer);
+    progressBox.hidden = true;
+    if (clockTimer) window.clearInterval(clockTimer);
+    clockTimer = undefined;
   }
 
   function renderStatus(data) {
@@ -77,9 +151,10 @@
     const copy = states[data.state] || ["狀態更新", "系統正在確認工作狀態"];
     const warnings = warningText.map((message) => `<p class="status-warning">${message}</p>`).join("");
     statusBox.innerHTML = `<p class="status-label">${copy[0]}</p><h2>${copy[1]}</h2><p>工作編號 ${data.reference}</p>${warnings}`;
+    renderProgress(data);
     downloadButton.hidden = !(data.state === "SUCCEEDED" && data.download?.available && data.download.remaining > 0);
     if (["PENDING", "RUNNING"].includes(data.state) || (data.state === "SUCCEEDED" && !data.download?.available)) {
-      pollTimer = window.setTimeout(loadStatus, 10000);
+      pollTimer = window.setTimeout(loadStatus, 5000);
     }
   }
 
