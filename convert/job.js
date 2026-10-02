@@ -142,6 +142,7 @@
       GREEN_PACKAGE_BINDING_MISMATCH: "成果與驗證收據的雜湊或工作綁定不一致，因此停止交付。",
       FAIL_CLOSED_CONVERTER_MANIFEST_MISSING: "轉換程序沒有產生完整且可驗證的轉換清單。",
       FAIL_CLOSED_DYNAMIC_BLOCK_REQUIRES_AUTOCAD_CURRENT_STATE_STATICIZATION: "圖面含 Dynamic Block，但目前可見狀態未能完成可信的靜態化。",
+      FAIL_CLOSED_UNEXPECTED_EXCEPTION: "轉換器發生內部例外；系統已停止交付並留下可比對的診斷指紋，技術人員可依此修復。",
       INPUT_PAYLOAD_MISSING: "工作開始時找不到完整的原始上傳內容。",
       XREF_MAIN_DWG_REQUIRED: "ZIP 必須在根目錄提供且只提供一個 main.dwg 主圖。",
       XREF_DEPENDENCY_REQUIRED: "此 ZIP 未包含主圖所需的 DWG 外部參照。",
@@ -205,6 +206,8 @@
     const diagnosticHtml = diagnostic ? `<section class="failure-diagnostic" aria-label="失敗診斷">
       <p><strong>失敗階段：</strong>${escapeHtml(stageLabels[diagnostic.stage] || diagnostic.stage)}</p>
       <p><strong>追蹤代碼：</strong><code>${escapeHtml(diagnostic.code)}</code></p>
+      ${diagnostic.exception_type ? `<p><strong>例外分類：</strong><code>${escapeHtml(diagnostic.exception_type)}</code></p>` : ""}
+      ${diagnostic.fingerprint ? `<p><strong>診斷指紋：</strong><code>${escapeHtml(diagnostic.fingerprint.slice(0, 16))}</code></p>` : ""}
       ${failedChecks.length ? `<p><strong>未通過檢查：</strong>${failedChecks.map((check) => escapeHtml(checkLabels[check] || check)).join("、")}</p>` : ""}
     </section>` : "";
     statusBox.innerHTML = `<p class="status-label">${copy[0]}</p><h2>${copy[1]}</h2><p>工作編號 ${escapeHtml(data.reference)}</p>${diagnosticHtml}${warnings}`;
