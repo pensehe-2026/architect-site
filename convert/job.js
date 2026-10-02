@@ -136,6 +136,8 @@
       BATCH_NOT_SUPPORTED: "這個壓縮包目前無法辨識主圖或必要依賴。",
       VALIDATION_NOT_PASSED: "圖面未通過其中一項安全、結構或視覺一致性驗證。",
       DECODER_FAILED: "DWG 解碼後的 DXF 控制結構不完整；系統未交付可能損壞的成果。",
+      FAIL_CLOSED_LIBREDWG_DWGREAD_FAILED: "主要與備援 LibreDWG 解碼程序皆未能產生可用成果。",
+      FAIL_CLOSED_LIBREDWG_DWGREAD_PARSE_FAILED: "備援 LibreDWG 已產生資料，但仍無法建立安全、完整的 DXF 結構。",
       DXF_STRUCTURE_BINARY_NUL: "解碼結果不是可安全解析的 ASCII DXF。",
       DXF_STRUCTURE_ODD_LINE_COUNT: "DXF group code 與資料列無法完整配對。",
       DXF_STRUCTURE_GROUP_CODE_INVALID: "DXF 含無法辨識的 group code。",
