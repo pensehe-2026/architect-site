@@ -83,6 +83,9 @@ aside { padding: 38px 30px; background: #f8faf9; }
 .status-panel h2 { margin-bottom: 10px; font-size: 1.45rem; }
 .status-panel p:last-child { margin-bottom: 0; color: #d7e4e1; }
 .status-panel p.status-warning { margin-top: 14px; padding: 12px 14px; border-left: 4px solid #d36b35; background: #fff4eb; color: #713513; font-weight: 700; }
+.failure-diagnostic { margin-top: 16px; padding: 14px 16px; border-left: 4px solid #c94f3d; background: #fff2ef; color: #3a1712; }
+.failure-diagnostic p { margin: 5px 0; }
+.failure-diagnostic code { overflow-wrap: anywhere; font-size: .86em; }
 .status-action { display: inline-block; margin-top: 16px; padding: 10px 14px; color: var(--deep); background: white; font-weight: 800; text-decoration: none; }
 .job-progress { margin: 20px 0; padding: 22px; border: 1px solid var(--line); background: var(--white); }
 .job-progress[hidden] { display: none; }

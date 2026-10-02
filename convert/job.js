@@ -26,6 +26,12 @@
   let createdAtMs;
   let currentProgress;
 
+  function escapeHtml(value) {
+    return String(value).replace(/[&<>"']/g, (character) => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+    })[character]);
+  }
+
   function formatElapsed(seconds) {
     const safeSeconds = Math.max(0, Math.floor(seconds));
     if (safeSeconds < 60) return `${safeSeconds} 秒`;
@@ -129,6 +135,47 @@
       R2000_TRUECOLOR_OR_GRADIENT_UNSUPPORTED: "原圖含 R2000 無法無損保存的 True Color 或漸層填色；系統沒有擅自改色，因此停止交付。",
       BATCH_NOT_SUPPORTED: "這個壓縮包目前無法辨識主圖或必要依賴。",
       VALIDATION_NOT_PASSED: "圖面未通過其中一項安全、結構或視覺一致性驗證。",
+      AUTOCAD_VALIDATION_FAILED: "轉換檔未通過 AutoCAD 開啟、AUDIT、REGEN 或列印驗證。",
+      VISUAL_VALIDATION_FAILED: "來源與成果的 Model Space 或 Paper Space 視覺比對未達安全門檻。",
+      FINAL_ADJUDICATION_FAILED: "個別驗證已執行，但最終證據綁定或綜合判定未通過。",
+      GREEN_PACKAGE_EVIDENCE_MISSING: "轉換完成後缺少必要的成果或驗證收據，因此沒有封裝交付。",
+      GREEN_PACKAGE_BINDING_MISMATCH: "成果與驗證收據的雜湊或工作綁定不一致，因此停止交付。",
+      FAIL_CLOSED_CONVERTER_MANIFEST_MISSING: "轉換程序沒有產生完整且可驗證的轉換清單。",
+      FAIL_CLOSED_DYNAMIC_BLOCK_REQUIRES_AUTOCAD_CURRENT_STATE_STATICIZATION: "圖面含 Dynamic Block，但目前可見狀態未能完成可信的靜態化。",
+      INPUT_PAYLOAD_MISSING: "工作開始時找不到完整的原始上傳內容。",
+      XREF_MAIN_DWG_REQUIRED: "ZIP 必須在根目錄提供且只提供一個 main.dwg 主圖。",
+      XREF_DEPENDENCY_REQUIRED: "此 ZIP 未包含主圖所需的 DWG 外部參照。",
+    };
+    const stageLabels = {
+      PREPARING: "檔案與依賴準備",
+      CONVERSION: "內容解析與版本轉換",
+      CAD_VALIDATION: "AutoCAD 開啟／AUDIT／REGEN／列印",
+      VISUAL_VALIDATION: "Model Space／Paper Space 視覺一致性",
+      FINAL_ADJUDICATION: "最終證據綁定與綜合判定",
+      PACKAGING: "成果封裝與完整性綁定",
+      WORKER: "隔離 worker 執行",
+    };
+    const checkLabels = {
+      manifest_schema: "轉換清單格式",
+      case_binding: "工作編號綁定",
+      target_binding: "輸出版本綁定",
+      converter_completed: "轉換程序完成",
+      runtime_within_30_minutes: "30 分鐘執行上限",
+      source_hash_binding: "來源雜湊綁定",
+      output_hash_binding: "成果雜湊綁定",
+      ascii_dxf_structure: "DXF 結構與版本",
+      nonempty_2d_content: "2D 內容非空",
+      writer_readback: "writer 回讀",
+      writer_audit: "writer 稽核",
+      semantic_reconciliation: "語意指紋比對",
+      second_parser: "獨立第二解析器",
+      third_parser: "ACadSharp 第三解析器",
+      autocad_open_audit_regen_plot: "AutoCAD 開啟／AUDIT／REGEN／列印",
+      capture_policy_binding: "視覺擷取證據綁定",
+      model_visual_parity: "Model Space 視覺一致性",
+      paperspace_visual_parity: "Paper Space 各 Layout 視覺一致性",
+      dynamic_state: "Dynamic Block 目前狀態靜態化",
+      receipt_hashes_present: "驗證收據雜湊",
     };
     const warningText = (data.warnings || []).map((warning) => {
       if (warning.code === "EXTERNAL_IMAGE_MISSING") {
@@ -139,18 +186,28 @@
       }
       return "轉換成果包含需要留意的外部資源警示。";
     });
+    const diagnostic = data.failure && typeof data.failure === "object" ? data.failure : null;
+    const diagnosticMessage = diagnostic
+      ? (failureDetails[diagnostic.code] || failureDetails[data.failure_reason] || failureDetails.VALIDATION_NOT_PASSED)
+      : (failureDetails[data.failure_reason] || failureDetails.VALIDATION_NOT_PASSED);
     const states = {
       PENDING: ["已收件", "等待安全處理與轉換"],
       RUNNING: ["處理中", "正在隔離環境進行轉換與驗證"],
       SUCCEEDED: data.download?.available
         ? ["驗證完成", "成果已準備完成，可取得單次下載票券"]
         : ["準備交付", "轉換已完成，正在完成成果封裝與完整性核對"],
-      DEAD: ["無法完成", failureDetails[data.failure_reason] || "此工作未通過安全或轉換驗證，不會開放付款與下載"],
+      DEAD: ["無法完成", diagnosticMessage],
       EXPIRED: ["已到期", "檔案與下載權限已依保存政策刪除"],
     };
     const copy = states[data.state] || ["狀態更新", "系統正在確認工作狀態"];
     const warnings = warningText.map((message) => `<p class="status-warning">${message}</p>`).join("");
-    statusBox.innerHTML = `<p class="status-label">${copy[0]}</p><h2>${copy[1]}</h2><p>工作編號 ${data.reference}</p>${warnings}`;
+    const failedChecks = diagnostic?.failed_checks instanceof Array ? diagnostic.failed_checks : [];
+    const diagnosticHtml = diagnostic ? `<section class="failure-diagnostic" aria-label="失敗診斷">
+      <p><strong>失敗階段：</strong>${escapeHtml(stageLabels[diagnostic.stage] || diagnostic.stage)}</p>
+      <p><strong>追蹤代碼：</strong><code>${escapeHtml(diagnostic.code)}</code></p>
+      ${failedChecks.length ? `<p><strong>未通過檢查：</strong>${failedChecks.map((check) => escapeHtml(checkLabels[check] || check)).join("、")}</p>` : ""}
+    </section>` : "";
+    statusBox.innerHTML = `<p class="status-label">${copy[0]}</p><h2>${copy[1]}</h2><p>工作編號 ${escapeHtml(data.reference)}</p>${diagnosticHtml}${warnings}`;
     renderProgress(data);
     downloadButton.hidden = !(data.state === "SUCCEEDED" && data.download?.available && data.download.remaining > 0);
     if (["PENDING", "RUNNING"].includes(data.state) || (data.state === "SUCCEEDED" && !data.download?.available)) {
