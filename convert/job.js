@@ -46,7 +46,9 @@
 
   function renderStatus(data) {
     reference.textContent = `CAD-${data.reference}`;
-    target.textContent = `DXF ${data.target}`;
+    target.textContent = data.target === "R2000_ACI"
+      ? "DXF R2000（已同意 ACI 近似色）"
+      : `DXF ${data.target}`;
     expiry.textContent = new Intl.DateTimeFormat("zh-TW", { dateStyle: "medium", timeStyle: "short" }).format(new Date(data.expires_at));
     remaining.textContent = String(data.download?.remaining ?? 0);
     const failureDetails = {
@@ -57,6 +59,9 @@
     const warningText = (data.warnings || []).map((warning) => {
       if (warning.code === "EXTERNAL_IMAGE_MISSING") {
         return `偵測到 ${Number(warning.count) || 1} 個外部圖片未隨圖檔提供；轉換成果可能缺少該底圖或照片。`;
+      }
+      if (warning.code === "R2000_MTEXT_DEFINED_HEIGHT_DEGRADED") {
+        return `R2000 無法保存 ${Number(warning.count) || 1} 個 MTEXT 的 defined-height 欄位；文字內容與主要幾何驗證已通過，但版面仍可能有細微差異。`;
       }
       return "轉換成果包含需要留意的外部資源警示。";
     });

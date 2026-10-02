@@ -8,6 +8,9 @@
   const fileSummary = document.querySelector("#fileSummary");
   const fileError = document.querySelector("#fileError");
   const targetError = document.querySelector("#targetError");
+  const aciConsentRow = document.querySelector("#aciConsentRow");
+  const aciConsent = document.querySelector("#aciConsent");
+  const aciConsentError = document.querySelector("#aciConsentError");
   const consent = document.querySelector("#rightsConsent");
   const statusPanel = document.querySelector("#statusPanel");
   const serviceNote = document.querySelector("#serviceNote");
@@ -66,6 +69,19 @@
     }
   }
 
+  function updateTargetPolicy() {
+    const isR2000 = form.elements.target.value === "R2000";
+    aciConsentRow.hidden = !isR2000;
+    if (!isR2000) {
+      aciConsent.checked = false;
+      aciConsentError.hidden = true;
+      aciConsentError.textContent = "";
+    }
+  }
+
+  form.querySelectorAll('input[name="target"]').forEach((input) => input.addEventListener("change", updateTargetPolicy));
+  updateTargetPolicy();
+
   fileInput.addEventListener("change", () => renderFile(fileInput.files[0]));
   ["dragenter", "dragover"].forEach((eventName) => dropZone.addEventListener(eventName, (event) => {
     event.preventDefault();
@@ -91,6 +107,9 @@
     const file = fileInput.files[0];
     const fileMessage = validateFile(file);
     const target = form.elements.target.value;
+    const aciMessage = target === "R2000" && !aciConsent.checked
+      ? "輸出 R2000 前，請勾選同意 True Color 轉為 ACI 近似色。"
+      : "";
     const accessMessage = accessCode.value.length >= 12 ? "" : "請輸入有效的封閉測試邀請碼。";
     accessError.hidden = !accessMessage;
     accessError.textContent = accessMessage;
@@ -98,7 +117,13 @@
     fileError.textContent = fileMessage;
     targetError.hidden = Boolean(target);
     targetError.textContent = target ? "" : "請選擇需要的輸出格式。";
-    if (fileMessage || !target || accessMessage) return;
+    aciConsentError.hidden = !aciMessage;
+    aciConsentError.textContent = aciMessage;
+    if (fileMessage || !target || accessMessage || aciMessage) {
+      if (aciMessage) aciConsent.focus();
+      return;
+    }
+    const routedTarget = target === "R2000" ? "R2000_ACI" : target;
     if (!consent.checked) {
       statusPanel.innerHTML = '<p class="status-label">尚未完成</p><h2>請確認檔案處理權利</h2><p>勾選左側確認項目後才能建立檢查摘要。</p>';
       consent.focus();
@@ -119,7 +144,7 @@
       const ticketResponse = await fetch(`${config.apiBase}/cad-upload-ticket`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ filename: file.name, target, idempotency_key: idempotencyKey, access_code: accessCode.value }),
+        body: JSON.stringify({ filename: file.name, target: routedTarget, idempotency_key: idempotencyKey, access_code: accessCode.value }),
       });
       const ticket = await ticketResponse.json();
       if (!ticketResponse.ok) throw new Error(ticket.code || "TICKET_FAILED");
@@ -134,7 +159,7 @@
           Authorization: `Upload ${ticket.upload_ticket}`,
           "Content-Type": "application/octet-stream",
           "X-CAD-Filename": transportFilename,
-          "X-CAD-Target": target,
+          "X-CAD-Target": routedTarget,
           "X-Idempotency-Key": idempotencyKey,
         },
         body: file,
@@ -153,6 +178,7 @@
       statusPanel.innerHTML = `<p class="status-label">封閉測試已收件</p><h2>工作編號 CAD-${result.job_id.slice(0, 8).toUpperCase()}</h2><p>入口檢查已通過，${tier}。請保存私密查詢連結；尚未達 GREEN_VERIFIED 前不會顯示付款或下載。</p><a class="status-action" href="${lookupUrl.toString()}">開啟工作查詢頁</a>`;
       serviceNote.textContent = "封閉測試：已上傳至單一測試主機；不收費，通過 GREEN_VERIFIED 才提供下載，圖檔最長 24 小時刪除。";
       form.reset();
+      updateTargetPolicy();
       fileSummary.hidden = true;
     } catch (error) {
       statusPanel.innerHTML = `<p class="status-label">安全停止</p><h2>測試主機目前無法收件</h2><p>檔案未取得成功收件確認，也不會產生費用。${friendlyUploadError(error)}</p>`;

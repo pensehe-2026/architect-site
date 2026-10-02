@@ -62,11 +62,16 @@
               <label class="is-disabled"><input type="radio" name="target" value="R2018" disabled /><span><b>DXF R2018</b><small>封閉 Beta 尚未開放</small></span></label>
               <label class="is-disabled"><input type="radio" name="target" value="R2013" disabled /><span><b>DXF R2013</b><small>封閉 Beta 尚未開放</small></span></label>
               <label class="is-disabled"><input type="radio" name="target" value="R2010" disabled /><span><b>DXF R2010</b><small>封閉 Beta 尚未開放</small></span></label>
-              <label class="is-disabled"><input type="radio" name="target" value="R2007" disabled /><span><b>DXF R2007</b><small>封閉 Beta 尚未開放</small></span></label>
-              <label><input type="radio" name="target" value="R2000" checked /><span><b>DXF R2000</b><small>目前封閉 Beta 支援；相容 2000–2006 版 CAD</small></span></label>
+              <label><input type="radio" name="target" value="R2007" checked /><span><b>DXF R2007（建議）</b><small>保留 True Color；相容 2007–2009 版 CAD</small></span></label>
+              <label><input type="radio" name="target" value="R2000" /><span><b>DXF R2000</b><small>相容 2000–2006 版 CAD；True Color 需近似為 ACI</small></span></label>
               <label class="is-disabled"><input type="radio" name="target" value="R12" disabled /><span><b>DXF R12</b><small>封閉 Beta 尚未開放</small></span></label>
             </div>
             <p class="field-error" id="targetError" role="alert" hidden></p>
+            <label class="aci-consent" id="aciConsentRow" hidden>
+              <input id="aciConsent" type="checkbox" />
+              <span><b>我同意 R2000 ACI 近似色</b><small>R2000 無法保存 True Color；系統會逐物件轉為最接近的 ACI 1–255，顏色可能略有差異。漸層 HATCH 仍會停止交付。</small></span>
+            </label>
+            <p class="field-error" id="aciConsentError" role="alert" hidden></p>
           </fieldset>
 
           <label class="consent-row">
@@ -92,7 +97,7 @@
           </ol>
           <div class="boundary-card">
             <b>首發服務邊界</b>
-            <p>封閉測試支援常見 2D HATCH、一般 INSERT、DIMENSION，以及 Dynamic Block 目前可見狀態靜態化。XREF 請上傳 ZIP：主圖固定命名為 <code>main.dwg</code>，並保留所有參照 DWG 的原相對路徑。系統會自動驗證；依賴缺漏、路徑不安全、gradient／true-color 無法無損降成 R2000，或視覺證據不一致時才停止交付。</p>
+            <p>封閉測試支援常見 2D HATCH、一般 INSERT、DIMENSION，以及 Dynamic Block 目前可見狀態靜態化。R2007 保留 True Color；R2000 只有勾選同意後才轉為最近 ACI 色。XREF 請上傳 ZIP：主圖固定命名為 <code>main.dwg</code>，並保留所有參照 DWG 的原相對路徑。依賴缺漏、路徑不安全、gradient HATCH 或視覺證據不一致時會停止交付。</p>
           </div>
         </aside>
       </section>
