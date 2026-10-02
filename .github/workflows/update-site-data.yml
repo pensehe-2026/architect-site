@@ -2,6 +2,15 @@ name: Update website data
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/update-site-data.yml"
+      - "scripts/fetch_taichung_laws.py"
+      - "scripts/fetch_building_practice_files.py"
+      - "scripts/update_taichung_site_data.py"
+      - "scripts/sync_json_to_js.py"
+      - "scripts/generate_seo_assets.py"
   schedule:
     # 03:00 Asia/Taipei
     - cron: "0 19 * * *"
