@@ -49,6 +49,7 @@
     const code = message.replace(/[^A-Z0-9_-]/gi, "").toUpperCase().slice(0, 64);
     const messages = {
       TEST_SERVICE_UNAVAILABLE: "測試主機目前未連線，請稍後再試。",
+      STORAGE_CAPACITY_UNAVAILABLE: "測試主機暫時沒有足夠的安全處理空間，請稍後再試。",
       BODY_SIZE_INVALID: "檔案超過目前允許的大小。",
       INPUT_TYPE_MISMATCH: "檔案內容與副檔名不符。",
       TICKET_FAILED: "目前無法建立安全上傳通行證。",
