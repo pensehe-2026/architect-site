@@ -135,6 +135,13 @@
       R2000_TRUECOLOR_OR_GRADIENT_UNSUPPORTED: "原圖含 R2000 無法無損保存的 True Color 或漸層填色；系統沒有擅自改色，因此停止交付。",
       BATCH_NOT_SUPPORTED: "這個壓縮包目前無法辨識主圖或必要依賴。",
       VALIDATION_NOT_PASSED: "圖面未通過其中一項安全、結構或視覺一致性驗證。",
+      DECODER_FAILED: "DWG 解碼後的 DXF 控制結構不完整；系統未交付可能損壞的成果。",
+      DXF_STRUCTURE_BINARY_NUL: "解碼結果不是可安全解析的 ASCII DXF。",
+      DXF_STRUCTURE_ODD_LINE_COUNT: "DXF group code 與資料列無法完整配對。",
+      DXF_STRUCTURE_GROUP_CODE_INVALID: "DXF 含無法辨識的 group code。",
+      DXF_STRUCTURE_EOF_INVALID: "DXF 結尾標記不完整或重複。",
+      DXF_STRUCTURE_ACADVER_MISSING: "DXF 缺少版本宣告。",
+      DXF_STRUCTURE_ENTITIES_MISSING: "DXF 缺少 ENTITIES 圖面內容區段。",
       AUTOCAD_VALIDATION_FAILED: "轉換檔未通過 AutoCAD 開啟、AUDIT、REGEN 或列印驗證。",
       VISUAL_VALIDATION_FAILED: "來源與成果的 Model Space 或 Paper Space 視覺比對未達安全門檻。",
       FINAL_ADJUDICATION_FAILED: "個別驗證已執行，但最終證據綁定或綜合判定未通過。",
@@ -177,6 +184,7 @@
       paperspace_visual_parity: "Paper Space 各 Layout 視覺一致性",
       dynamic_state: "Dynamic Block 目前狀態靜態化",
       receipt_hashes_present: "驗證收據雜湊",
+      converter_completed: "轉換程序完成",
     };
     const warningText = (data.warnings || []).map((warning) => {
       if (warning.code === "EXTERNAL_IMAGE_MISSING") {
