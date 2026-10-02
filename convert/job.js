@@ -49,17 +49,29 @@
     target.textContent = `DXF ${data.target}`;
     expiry.textContent = new Intl.DateTimeFormat("zh-TW", { dateStyle: "medium", timeStyle: "short" }).format(new Date(data.expires_at));
     remaining.textContent = String(data.download?.remaining ?? 0);
+    const failureDetails = {
+      R2000_TRUECOLOR_OR_GRADIENT_UNSUPPORTED: "原圖含 R2000 無法無損保存的 True Color 或漸層填色；系統沒有擅自改色，因此停止交付。",
+      BATCH_NOT_SUPPORTED: "這個壓縮包目前無法辨識主圖或必要依賴。",
+      VALIDATION_NOT_PASSED: "圖面未通過其中一項安全、結構或視覺一致性驗證。",
+    };
+    const warningText = (data.warnings || []).map((warning) => {
+      if (warning.code === "EXTERNAL_IMAGE_MISSING") {
+        return `偵測到 ${Number(warning.count) || 1} 個外部圖片未隨圖檔提供；轉換成果可能缺少該底圖或照片。`;
+      }
+      return "轉換成果包含需要留意的外部資源警示。";
+    });
     const states = {
       PENDING: ["已收件", "等待安全處理與轉換"],
       RUNNING: ["處理中", "正在隔離環境進行轉換與驗證"],
       SUCCEEDED: data.download?.available
         ? ["驗證完成", "成果已準備完成，可取得單次下載票券"]
         : ["準備交付", "轉換已完成，正在完成成果封裝與完整性核對"],
-      DEAD: ["無法完成", "此工作未通過安全或轉換驗證，不會開放付款與下載"],
+      DEAD: ["無法完成", failureDetails[data.failure_reason] || "此工作未通過安全或轉換驗證，不會開放付款與下載"],
       EXPIRED: ["已到期", "檔案與下載權限已依保存政策刪除"],
     };
     const copy = states[data.state] || ["狀態更新", "系統正在確認工作狀態"];
-    statusBox.innerHTML = `<p class="status-label">${copy[0]}</p><h2>${copy[1]}</h2><p>工作編號 ${data.reference}</p>`;
+    const warnings = warningText.map((message) => `<p class="status-warning">${message}</p>`).join("");
+    statusBox.innerHTML = `<p class="status-label">${copy[0]}</p><h2>${copy[1]}</h2><p>工作編號 ${data.reference}</p>${warnings}`;
     downloadButton.hidden = !(data.state === "SUCCEEDED" && data.download?.available && data.download.remaining > 0);
     if (["PENDING", "RUNNING"].includes(data.state) || (data.state === "SUCCEEDED" && !data.download?.available)) {
       pollTimer = window.setTimeout(loadStatus, 10000);
