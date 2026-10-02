@@ -151,6 +151,8 @@
       GREEN_PACKAGE_BINDING_MISMATCH: "成果與驗證收據的雜湊或工作綁定不一致，因此停止交付。",
       FAIL_CLOSED_CONVERTER_MANIFEST_MISSING: "轉換程序沒有產生完整且可驗證的轉換清單。",
       FAIL_CLOSED_DYNAMIC_BLOCK_REQUIRES_AUTOCAD_CURRENT_STATE_STATICIZATION: "圖面含 Dynamic Block，但目前可見狀態未能完成可信的靜態化。",
+      FAIL_CLOSED_AUTOCAD_NATIVE_RESAVE: "來源結構需要 AutoCAD 原生重存，但重存或重存前後的視覺一致性驗證未通過。",
+      FAIL_CLOSED_DYNAMIC_STATICIZATION: "圖面已確認含 Dynamic Block，但逐 INSERT 目前狀態靜態化或其視覺證據未通過。",
       FAIL_CLOSED_UNEXPECTED_EXCEPTION: "轉換器發生內部例外；系統已停止交付並留下可比對的診斷指紋，技術人員可依此修復。",
       INPUT_PAYLOAD_MISSING: "工作開始時找不到完整的原始上傳內容。",
       XREF_MAIN_DWG_REQUIRED: "ZIP 必須在根目錄提供且只提供一個 main.dwg 主圖。",
