@@ -28,21 +28,29 @@ jobs:
           python-version: "3.11"
 
       - name: Fetch Taichung regulations
+        id: taichung-regulations
+        continue-on-error: true
         run: python scripts/fetch_taichung_laws.py
 
       - name: Fetch building practice files
+        id: building-practice
+        continue-on-error: true
         run: python scripts/fetch_building_practice_files.py
 
       - name: Sync latest announcements to site content
+        if: always()
         run: python scripts/update_taichung_site_data.py
 
       - name: Sync JSON data to browser scripts
+        if: always()
         run: python scripts/sync_json_to_js.py
 
       - name: Regenerate SEO assets
+        if: always()
         run: python scripts/generate_seo_assets.py
 
       - name: Commit changes
+        if: always()
         shell: bash
         run: |
           if [[ -z "$(git status --porcelain)" ]]; then
@@ -55,3 +63,12 @@ jobs:
           git add assets/regulations data old-house-life-extension.html search-index.html sitemap.xml robots.txt
           git commit -m "Update fetched website data"
           git push
+
+      - name: Report degraded sources
+        if: always()
+        shell: bash
+        run: |
+          echo "### Daily website update" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Taichung regulations: ${{ steps.taichung-regulations.outcome }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Building practice files: ${{ steps.building-practice.outcome }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Available sources were still synchronized and published." >> "$GITHUB_STEP_SUMMARY"

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 
@@ -8,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE_JSON = ROOT / "data" / "site-content.json"
 SITE_JS = ROOT / "data" / "site-content.js"
 TAICHUNG_JSON = ROOT / "data" / "taichung-regulations.json"
+TAIPEI = timezone(timedelta(hours=8))
 
 
 def main() -> None:
@@ -38,8 +40,8 @@ def main() -> None:
             regulation["description"] = "依臺中市政府主管法規查詢系統都市發展類整理自治條例、自治規則、行政規則、公告與實質意義法規命令。"
             regulation["href"] = "taichung-regulations.html"
 
-    site["version"] = "2026.06.02-taichung-laws"
-    site["lastUpdated"] = "2026-06-02T17:30:00+08:00"
+    site["version"] = datetime.now(TAIPEI).strftime("%Y.%m.%d-auto")
+    site["lastUpdated"] = datetime.now(TAIPEI).replace(microsecond=0).isoformat()
 
     text = json.dumps(site, ensure_ascii=False, indent=4)
     SITE_JSON.write_text(text + "\n", encoding="utf-8")

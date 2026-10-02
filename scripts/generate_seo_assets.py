@@ -207,6 +207,7 @@ def write_old_house_page(site: dict) -> None:
     <meta name="twitter:description" content="資格初判、住戶共識、結構安全性能評估、修繕項目、申請文件與施工請款流程。" />
     <link rel="stylesheet" href="styles.css?v=20260716-old-house-seo" />
     <script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>
+    <script src="analytics.js?v=20260910-ga4-direct" defer></script>
   </head>
   <body class="detail-page old-house-page">
     <header class="site-header detail-header" aria-label="網站導覽">
@@ -426,6 +427,7 @@ def write_urban_renewal_page(site: dict) -> None:
     <meta name="twitter:description" content="中央與臺中市補助比較、資格初判、住戶共識、事業計畫、審議、設計施工與文件下載。" />
     <link rel="stylesheet" href="styles.css?v=20260730-urban-renewal" />
     <script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>
+    <script src="analytics.js?v=20260910-ga4-direct" defer></script>
   </head>
   <body class="detail-page urban-renewal-page">
     <header class="site-header detail-header" aria-label="網站導覽">
