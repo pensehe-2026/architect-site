@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>築法｜建築與都市發展資料庫</title>
+  <style>
+    :root{--ink:#213c3a;--muted:#687572;--paper:#f5f5ee;--white:#fff;--line:#dce2d9;--green:#216653;--pale:#eaf2e9;--orange:#94651f;--orange-bg:#fff3d8;--red:#a3463b;--shadow:0 8px 32px #263e2b08;--radius:16px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;font-size:14px;line-height:1.65}button,input,select{font:inherit}button,a,input,select,summary{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}button{cursor:pointer}a{color:var(--green);text-underline-offset:3px}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #90bfa9;outline-offset:3px}button:disabled{cursor:default;opacity:.38}h1,h2,h3,p{margin:0}button{color:inherit}svg{flex:none}header{background:#1e3f39;color:#fbfff8;border-bottom:5px solid #bacb8e}.wrap{max-width:1600px;padding:0 38px;margin:auto}.masthead{display:flex;align-items:center;gap:17px;padding-top:26px;padding-bottom:27px}.brand-icon{height:48px;width:48px;border:1px solid #ffffff52;display:grid;place-items:center;border-radius:12px}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:10px;color:#bcd0c4;margin-bottom:2px}.masthead h1{font-weight:650;font-size:25px;letter-spacing:.06em}.masthead h1 span{font-weight:400;font-size:15px;letter-spacing:.03em;margin-left:13px;color:#d4e2d9}.masthead-note{margin-left:auto;text-align:right;color:#c7d7ce;font-size:12px;max-width:390px}.masthead-note strong{display:block;font-weight:500;color:#f7fbf5;font-size:13px}.topline{padding-top:24px;display:flex;gap:16px;justify-content:space-between;align-items:flex-start}.scope{max-width:920px;color:var(--muted);font-size:13px}.tag{display:inline-flex;align-items:center;border:1px solid var(--line);background:white;padding:3px 9px;border-radius:20px;font-size:11px;white-space:nowrap;color:var(--muted)}.tag.green{background:var(--pale);color:var(--green);border-color:#d3e3d6}.tag.amber{background:var(--orange-bg);color:var(--orange);border-color:#eddba8}.tag.red{background:#fcf0ec;color:var(--red);border-color:#efcfc8}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}.stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:19px 22px;box-shadow:var(--shadow)}.stat-top{display:flex;justify-content:space-between;align-items:center;gap:5px;color:var(--muted);font-size:12px}.stat-number{font-size:29px;line-height:1.25;font-weight:650;letter-spacing:-.03em;margin-top:8px;font-variant-numeric:tabular-nums}.stat-note{font-size:11px;color:var(--muted);margin-top:4px}.small-symbol{color:#91a899}.layout{display:grid;grid-template-columns:238px minmax(0,1fr);gap:22px;align-items:start}.sidebar{position:sticky;top:18px}.panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.filters{padding:22px 18px}.panel-title{font-size:14px;font-weight:650;display:flex;align-items:center;gap:9px;margin-bottom:19px}.tiny-caps{font-size:10px;letter-spacing:.12em;color:var(--muted);margin-left:auto}.field{margin:17px 0}.field label{display:block;font-size:12px;font-weight:600;margin-bottom:7px}.field select{width:100%;padding:10px 9px;border-radius:8px;background:#fafbf8;border:1px solid var(--line);color:var(--ink);font-size:12px}.reset{width:100%;background:white;border:1px solid var(--line);padding:8px 10px;border-radius:8px;margin-top:4px;font-size:12px}.reset:hover{background:var(--pale)}.side-note{font-size:12px;color:var(--muted);padding:18px 7px}.side-note strong{display:block;color:var(--ink);font-weight:600;margin-bottom:6px}.side-note p+p{margin-top:9px}.source-section{margin-top:12px}.source-section>summary{padding:15px 17px;font-size:12px;font-weight:600;cursor:pointer}.source-list{padding:0 15px 8px}.source-item{padding:12px 0;border-top:1px solid var(--line);font-size:11px;overflow-wrap:anywhere}.source-item strong{display:block;font-size:12px;margin-bottom:5px}.source-item .tag{font-size:10px;margin-bottom:5px}.source-item p{color:var(--muted);margin-top:3px}.workspace{min-width:0}.search-bar{position:relative;display:flex;align-items:center;background:white;border:1px solid #bbc9bc;border-radius:12px;padding:0 17px;gap:12px;box-shadow:var(--shadow)}.search-bar svg{color:var(--green)}.search-bar input{width:100%;height:54px;border:0;outline:none;background:transparent;font-size:14px;color:var(--ink);min-width:0}.search-bar input::placeholder{color:#8d9690}.search-bar:focus-within{box-shadow:0 0 0 3px #b3d3bd55}.keyhint{white-space:nowrap;font-size:10px;border:1px solid var(--line);padding:0 5px;color:#939c95;border-radius:4px}.search-help{font-size:11px;color:var(--muted);margin:7px 3px 16px}.results-bar{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:0 2px;margin-bottom:12px;font-size:12px;color:var(--muted)}.results-bar strong{color:var(--ink);font-size:15px;font-weight:600}.reader-grid{display:grid;grid-template-columns:minmax(275px,.85fr) minmax(350px,1.4fr);gap:16px;align-items:start}.law-list{overflow:hidden}.law-row{display:block;width:100%;border:none;text-align:left;background:white;padding:18px 17px;border-bottom:1px solid var(--line);position:relative}.law-row:last-child{border-bottom:none}.law-row:hover{background:#f8faf5}.law-row.selected{background:#edf3e8;box-shadow:inset 4px 0 0 var(--green)}.row-tags{display:flex;gap:5px;align-items:center;margin-bottom:7px;flex-wrap:wrap}.row-tags .tag{font-size:10px;padding:1px 6px}.law-name{font-size:14px;font-weight:600;line-height:1.65}.row-meta{font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;margin-top:9px}.excerpt{font-size:11px;color:#66736a;margin-top:8px;line-height:1.7;overflow-wrap:anywhere}.pagination{display:flex;align-items:center;justify-content:center;gap:16px;padding:17px 4px;font-size:11px;color:var(--muted)}.pagination button{border:1px solid var(--line);background:white;border-radius:7px;padding:5px 10px;font-size:12px}.detail{overflow:hidden;min-width:0}.detail-top{padding:23px 24px 20px;background:linear-gradient(135deg,#fff,#f6f9ef);border-bottom:1px solid var(--line)}.detail-title{font-size:21px;font-weight:650;line-height:1.55;letter-spacing:.01em;margin:12px 0}.detail-authority{font-size:12px;color:var(--muted);margin:3px 0 15px}.source-link{display:inline-flex;align-items:center;gap:8px;color:white;background:var(--green);border-radius:7px;padding:7px 12px;text-decoration:none;font-size:12px}.source-link:hover{background:#164d3d}.detail-meta{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;padding:20px 24px;border-bottom:1px solid var(--line);margin:0}.detail-meta div{min-width:0}.detail-meta dt{font-size:11px;color:var(--muted);margin-bottom:3px}.detail-meta dd{margin:0;font-size:12px;overflow-wrap:anywhere}.quality-note{margin:19px 24px 0;background:#fbf7e8;border:1px solid #eae1bd;border-radius:9px;padding:12px 13px;font-size:11px;line-height:1.8;color:#766128}.content-nav{display:flex;gap:14px;align-items:center;justify-content:space-between;margin:21px 24px 0;padding-bottom:13px;border-bottom:1px solid var(--line)}.content-nav h3{font-size:14px;font-weight:600}.content-nav span{font-size:11px;color:var(--muted)}.article-search{margin:12px 24px 0;font-size:11px;color:var(--muted)}.article-body{padding:2px 24px 25px;max-height:780px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#cad4c6 transparent}.article{padding-top:20px}.article h3{font-size:13px;color:var(--green);font-weight:650;margin-bottom:6px}.article p,.raw-content{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;line-height:1.9}.raw-content{padding-top:19px}.article.hit{border-left:3px solid #a7bd79;margin-left:-11px;padding-left:8px}mark{background:#f1df99;border-radius:2px;color:inherit;padding:0 1px}.empty-text{padding:23px 0;color:var(--muted);font-size:13px;line-height:1.9}.attachments,.history{border-top:1px solid var(--line);padding:18px 24px}.attachments h3{font-size:13px;margin-bottom:7px}.attachment{display:block;font-size:12px;margin-top:7px;overflow-wrap:anywhere}.history summary{cursor:pointer;font-size:13px;font-weight:600}.history-list{padding:3px 0 0;margin:0;list-style:none}.history-list li{padding:13px 0;border-top:1px solid var(--line);font-size:12px}.history-list li:first-child{border-top:0}.history-list time{color:var(--muted);font-size:11px}.history-list small{display:block;color:var(--muted);font-size:10px;overflow-wrap:anywhere;margin-top:4px}.history-notice{font-size:11px;color:var(--muted);margin-top:10px}.empty-state{text-align:center;padding:48px 24px;color:var(--muted)}.empty-state strong{display:block;font-size:16px;color:var(--ink);margin:8px 0}.empty-state p{font-size:12px}.observations{margin-top:28px;padding:22px 25px}.observations-head{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:14px}.observations h2{font-size:16px;font-weight:600}.observations-head span{font-size:11px;color:var(--muted)}.change-list{list-style:none;margin:0;padding:0}.change-list li{display:flex;gap:15px;align-items:flex-start;border-top:1px solid var(--line);padding:13px 0}.change-list time{font-size:11px;color:var(--muted);flex:0 0 123px;margin-top:2px}.change-text{font-size:12px;min-width:0}.change-text p{font-size:11px;color:var(--muted);margin-top:3px}.change-text button{background:transparent;border:none;text-align:left;padding:0;font-weight:600;font-size:12px;color:var(--green)}.run-info{padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);line-height:1.9}.fatal{border:1px solid #ecc69b;background:#fff7e6;padding:20px 25px;margin:22px 0;border-radius:12px}.fatal h2{font-size:17px;margin-bottom:8px}.fatal p{font-size:13px}.fatal code{background:#eee9df;border-radius:3px;padding:1px 5px}footer{display:flex;justify-content:space-between;gap:20px;padding:29px 0 35px;color:var(--muted);font-size:11px}footer a{color:inherit}.hidden,[hidden]{display:none!important}.sr-only{position:absolute;height:1px;width:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.mobile-detail-back{display:none}.view-caption{font-size:10px;letter-spacing:.1em;color:var(--muted)}
+    @media(min-width:1400px){.reader-grid{grid-template-columns:minmax(310px,.8fr) minmax(450px,1.4fr)}}
+    @media(max-width:1150px){.wrap{padding-left:24px;padding-right:24px}.layout{grid-template-columns:210px minmax(0,1fr);gap:17px}.reader-grid{grid-template-columns:minmax(235px,.8fr) minmax(300px,1.1fr);gap:12px}.detail-top,.detail-meta,.attachments,.history{padding-left:19px;padding-right:19px}.quality-note{margin-left:19px;margin-right:19px}.content-nav{margin-left:19px;margin-right:19px}.article-body{padding-left:19px;padding-right:19px}.article-search{margin-left:19px;margin-right:19px}.stat{padding:16px}.masthead-note{max-width:290px}}
+    @media(max-width:960px){.layout{grid-template-columns:1fr}.sidebar{position:static;display:grid;grid-template-columns:1fr 260px;gap:16px}.filters{display:grid;grid-template-columns:repeat(3,1fr) 80px;gap:10px;align-items:end;padding:14px}.panel-title{grid-column:1/-1;margin:0 0 1px}.field{margin:0}.reset{margin:0;height:41px}.side-note{display:none}.source-section{margin:0;max-height:205px;overflow:auto}.reader-grid{grid-template-columns:minmax(265px,.8fr) minmax(370px,1.3fr)}.masthead-note{font-size:11px}.masthead-note strong{font-size:12px}}
+    @media(max-width:700px){.wrap{padding-left:17px;padding-right:17px}.masthead{gap:12px;padding-top:21px;padding-bottom:21px}.brand-icon{height:40px;width:40px}.masthead h1{font-size:24px}.masthead h1 span{display:block;margin-left:0;font-size:12px;margin-top:0}.masthead-note{display:none}.eyebrow{font-size:8px}.topline{padding-top:17px}.scope{font-size:12px}.topline>.tag{display:none}.stats{grid-template-columns:repeat(2,1fr);gap:9px;margin:16px 0}.stat{padding:13px 15px;border-radius:11px}.stat-number{font-size:26px;margin-top:5px}.stat-note{font-size:10px}.stat-top{font-size:11px}.sidebar{display:block}.filters{grid-template-columns:repeat(3,minmax(0,1fr));padding:13px;gap:10px}.panel-title{margin-bottom:2px}.field label{font-size:11px}.field select{font-size:11px;padding-left:5px;padding-right:4px}.reset{grid-column:1/-1;height:33px}.source-section{margin-top:10px;max-height:260px}.source-section>summary{padding:10px 14px;font-size:11px}.layout{gap:16px}.search-bar{padding:0 12px}.search-bar input{height:48px;font-size:13px}.keyhint{display:none}.search-help{font-size:10px;margin-bottom:12px}.results-bar strong{font-size:14px}.reader-grid{display:block}.detail{margin-top:16px;scroll-margin-top:14px}.law-row{padding:15px}.law-list{max-height:490px;overflow:auto}.detail-top{padding-top:18px}.detail-title{font-size:20px}.article-body{max-height:650px}.detail-meta{gap:11px 16px}.mobile-detail-back{display:inline-flex;font-size:11px;margin-top:12px}.observations{padding:18px 17px;margin-top:22px}.observations-head{align-items:flex-start}.observations-head span{font-size:10px;text-align:right;max-width:135px}.change-list li{display:block;padding:12px 0}.change-list time{display:block;margin:0 0 5px}.change-text{font-size:12px}footer{display:block;padding:22px 0}footer p+p{margin-top:7px}}
+    .detail-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.worksheet-add{border:1px solid #b9cdbd;background:white;color:var(--green);border-radius:7px;padding:7px 12px;font-size:12px}.worksheet-add:hover{background:var(--pale)}.checklist{margin-top:22px;padding:23px 25px}.checklist-head{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}.checklist h2{font-size:17px;font-weight:600}.checklist-intro{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.85}.checklist-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 10px;align-items:end}.checklist-toolbar .field{flex:1;min-width:180px;margin:0 7px 0 0}.checklist input,.checklist textarea{font:inherit;color:var(--ink);width:100%;background:#fff;border:1px solid var(--line);border-radius:7px;padding:8px 9px;font-size:12px;min-width:0}.checklist textarea{resize:vertical;min-height:72px;line-height:1.8}.checklist input::placeholder,.checklist textarea::placeholder{color:#98a197}.checklist-action{border:1px solid var(--line);border-radius:7px;background:#fff;padding:8px 11px;font-size:12px;white-space:nowrap}.checklist-action:hover{background:var(--pale)}.checklist-summary{display:flex;gap:6px;flex-wrap:wrap;padding:10px 0}.checklist-storage{font-size:11px;color:var(--muted);margin-top:5px}.checklist-storage.error{color:var(--red)}.checklist-item{margin-top:16px;border:1px solid var(--line);border-radius:11px;overflow:hidden;background:#fff}.checklist-item-head{padding:15px 17px;background:#f5f8f0;display:flex;gap:10px;justify-content:space-between;align-items:flex-start}.checklist-item-head h3{font-size:13px;font-weight:600;line-height:1.8}.checklist-item-head p{font-size:10px;color:var(--muted);margin-top:3px}.checklist-remove{border:none;background:transparent;color:var(--muted);font-size:11px;padding:4px 0 4px 7px;white-space:nowrap}.checklist-fields{padding:15px 17px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.checklist-fields .field{margin:0}.checklist-fields .wide{grid-column:1/-1}.checklist-fields label{font-size:11px;font-weight:500}.checklist-fields select{padding:8px 9px;background:#fff}.checklist-reference{padding:0 17px 15px;font-size:11px;color:var(--muted);overflow-wrap:anywhere}.checklist-reference summary{cursor:pointer}.checklist-reference p{margin:5px 0}.checklist-updated{margin:0 17px 15px;border:1px solid #eaddb3;border-radius:6px;padding:8px 10px;background:#fff8e7;color:#84631b;font-size:11px}.checklist-notice{min-height:22px;font-size:12px;color:var(--green);margin-top:9px}.snapshot-link{display:inline-block;font-size:11px;margin-top:6px}.extraction-note{font-size:11px;color:var(--muted);margin:4px 0 10px}.print-document{display:none}.checklist-count{font-size:11px;color:var(--muted);white-space:nowrap;padding-top:3px}
+    @media(max-width:700px){.checklist{padding:18px 17px}.checklist-fields{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:13px}.checklist-toolbar .field{flex-basis:100%;margin:0 0 3px}.checklist-item-head{padding:12px 13px}.checklist-reference{padding-left:13px;padding-right:13px}.checklist-updated{margin-left:13px;margin-right:13px}}
+    @media print{@page{size:A4;margin:17mm}body{background:#fff;color:#222;font-size:10pt}body>header,body>main{display:none!important}.print-document{display:block!important}.print-document h1{font-size:20pt;margin:0 0 8mm}.print-document>.print-note{font-size:9pt;color:#555;line-height:1.7;margin-bottom:7mm}.print-item{border-top:1px solid #999;padding:5mm 0;break-inside:avoid}.print-item h2{font-size:12pt;margin-bottom:3mm}.print-item p{font-size:9pt;line-height:1.65;margin:2mm 0;white-space:pre-wrap;overflow-wrap:anywhere}.print-item .print-reference{font-size:8pt;color:#555}.print-document a{color:inherit;text-decoration:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<nav style="padding:10px 24px;background:#eaf2e9"><a href="/">何中揚建築師事務所</a> ／ 建築與都市發展整合查詢</nav>
+  <header><div class="wrap masthead">
+    <div class="brand-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 24h20M7 24V9h14v15M4 9l10-5 10 5M11 13h2m3 0h2m-7 4h2m3 0h2m-7 4h2m3 0h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div><div class="eyebrow">Building law observatory</div><h1>築法<span>建築與都市發展資料庫</span></h1></div>
+    <div class="masthead-note"><strong>從官方來源，建立可追溯的法規紀錄</strong><span id="generatedAt">資料時間讀取中</span></div>
+  </div></header>
+  <main class="wrap">
+    <div class="topline"><div><p class="scope" id="scopePriority" style="color:var(--ink);font-weight:600;margin-bottom:6px">優先蒐集臺中市都市發展局全部公開業務，不限建築管理：都市計畫、都市設計、都市更新、行政文件、各層級會議與公開報告。</p><p class="scope" id="scopeNote">收錄範圍與資料狀態載入中。</p><p class="scope" style="margin-top:7px">目錄或分頁核對完成，不代表附件原檔、全文、圖表及掃描頁辨識已完整；請分別查看各項狀態。</p></div><span class="tag green">本機查詢・官方來源追溯</span></div>
+    <div id="fatal" class="fatal" hidden role="alert"><h2>尚未找到資料目錄</h2><p>請先完成資料更新，並確認 <code>data/catalog.js</code> 與本頁位於同一個專案資料夾，再重新開啟本頁。</p></div>
+    <section class="stats" aria-label="資料收錄概況">
+      <div class="stat"><div class="stat-top">收錄文件<span class="small-symbol" aria-hidden="true">▤</span></div><div class="stat-number" id="statTotal">—</div><p class="stat-note">法規、行政文件與設計參考資料</p></div>
+      <div class="stat"><div class="stat-top">可搜尋內容<span class="small-symbol" aria-hidden="true">⌕</span></div><div class="stat-number" id="statFull">—</div><p class="stat-note">已保存條文或擷取文字，完整性依註記</p></div>
+      <div class="stat"><div class="stat-top">待補資料<span class="small-symbol" aria-hidden="true">◌</span></div><div class="stat-number" id="statUnverified">—</div><p class="stat-note">全文未取得、未核對或更新異常</p></div>
+      <div class="stat"><div class="stat-top">最近檢查<span class="small-symbol" aria-hidden="true">↻</span></div><div class="stat-number" id="statChecked" style="font-size:22px;margin-top:13px">—</div><p class="stat-note" id="statCheckedNote">檢查時間不等於法規施行日期</p></div>
+    </section>
+    <section id="attachmentCoverage" class="panel" hidden aria-label="附件取得與文字擷取涵蓋" style="padding:14px 19px;margin-bottom:20px"><strong style="font-size:13px">附件取得與文字擷取</strong><div id="attachmentCoverageCounts" class="checklist-summary"></div><p id="attachmentCoverageNote" class="extraction-note" style="margin-bottom:0">原檔下載與文字擷取分別計算；已擷取文字不代表附件已完整辨識或已完成法規檢核。</p></section>
+    <div class="layout" id="databaseUI">
+      <aside class="sidebar" aria-label="篩選與資料品質">
+        <section class="panel filters"><h2 class="panel-title">篩選資料<span class="tiny-caps">FILTER</span></h2>
+          <div class="field"><label for="jurisdiction">管轄範圍</label><select id="jurisdiction"><option value="">全部範圍</option></select></div>
+          <div class="field"><label for="category">業務分類</label><select id="category"><option value="">全部分類</option></select></div>
+          <div class="field"><label for="verification">查證狀態</label><select id="verification"><option value="">全部狀態</option></select></div>
+          <div class="field" id="documentTypeField" hidden><label for="documentType">文件類型</label><select id="documentType"><option value="">全部文件類型</option></select></div>
+          <div class="field" id="stageField" hidden><label for="stage">設計／申請階段</label><select id="stage"><option value="">全部階段</option></select></div>
+          <div class="field" id="businessUnitField" hidden><label for="businessUnit">業務單位</label><select id="businessUnit"><option value="">全部業務單位</option></select></div>
+          <button type="button" class="reset" id="resetFilters">清除篩選</button>
+        </section>
+        <div class="side-note"><strong>閱讀資料時，請留意</strong><p>「最後檢查」表示來源查詢時間，不代表法規已全面核對或全部條文均已施行。</p><p>會議紀錄、公開報告與行政文件的效力及用途各異；請依文件性質與個案適用範圍引用。</p><p id="coverageNote">來源登錄與文件收錄量分別呈現，不代表已涵蓋所有公開資料。</p></div>
+        <details class="panel source-section"><summary>官方來源與更新狀態 <span id="sourceCount"></span></summary><div class="source-list" id="sourceList"></div></details>
+      </aside>
+      <section class="workspace" aria-label="法規搜尋與閱讀">
+        <div class="search-bar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><label for="search" class="sr-only">搜尋法規、函釋、會議紀錄或報告全文</label><input id="search" type="search" placeholder="搜尋法規、函釋、會議紀錄或報告全文…" autocomplete="off"><span class="keyhint" aria-hidden="true">Ctrl K</span></div>
+        <p class="search-help">可輸入多個關鍵字，以空白分隔；所有關鍵字皆須符合。搜尋包含已保存的條文與附件擷取文字。</p>
+        <div class="results-bar"><strong id="resultCount" aria-live="polite">法規目錄</strong><span id="pageRange"></span></div>
+        <div class="reader-grid">
+          <div><div class="panel law-list" id="lawList"></div><nav class="pagination" aria-label="法規清單分頁"><button id="prevPage" type="button">上一頁</button><span id="pageInfo">—</span><button id="nextPage" type="button">下一頁</button></nav></div>
+          <article class="panel detail" id="lawDetail" aria-label="文件詳情"><div class="empty-state"><strong>選擇一份文件</strong><p>查閱保存內容、官方來源與版本觀測紀錄。</p></div></article>
+        </div>
+        <section class="panel observations" aria-label="最近觀測異動"><div class="observations-head"><h2>最近觀測異動</h2><span>來源內容變動，待依官方公告判讀</span></div><ul class="change-list" id="changeList"></ul><div class="run-info" id="runInfo"></div></section>
+        <section class="panel checklist" id="checklistPanel" aria-labelledby="checklistTitle">
+          <div class="checklist-head"><h2 id="checklistTitle">圖說檢核工作表</h2><span class="checklist-count" id="checklistCount">0 筆</span></div>
+          <p class="checklist-intro">在文件上按「加入圖說檢核」，保存引用來源，再由你填寫圖號、條文／頁碼與檢核結果。所有項目預設為「未檢核」；本工作表不會自動判定符合法規。</p>
+          <div class="checklist-toolbar">
+            <div class="field"><label for="checklistProject">新增項目的預設專案名稱</label><input id="checklistProject" type="text" maxlength="200" placeholder="例如：○○集合住宅新建工程"></div>
+            <button class="checklist-action" id="exportChecklist" type="button">匯出 JSON</button>
+            <button class="checklist-action" id="printChecklist" type="button">列印工作表</button>
+            <button class="checklist-action" id="undoChecklist" type="button" hidden>復原移除</button>
+          </div>
+          <p class="checklist-storage" id="checklistStorage">只保存於目前裝置的瀏覽器，不會傳送到伺服器。清除瀏覽器資料或移動檔案可能影響存取，請匯出備份。</p>
+          <div class="checklist-summary" id="checklistSummary" aria-label="人工檢核狀態統計"></div>
+          <div class="checklist-notice" id="checklistNotice" role="status" aria-live="polite"></div>
+          <div id="checklistItems"></div>
+          <datalist id="checkTopics"><option value="用途"><option value="基地退縮"><option value="防火避難"><option value="無障礙"><option value="都審"><option value="景觀"></datalist>
+        </section>
+      </section>
+    </div>
+    <footer><p>築法 · 建築與都市發展資料庫｜本頁可離線搜尋已保存內容</p><p id="footerNote">檢查與更新由資料更新程式執行，本頁呈現最近一次產生的資料。</p></footer>
+  </main>
+  <section id="checklistPrintRoot" class="print-document" aria-label="圖說檢核列印內容"></section>
+  <script src="./data/catalog-9e0cbf03dca2d882.js"></script>
+  <script src="./data/records-0-b9491db66112df1f.js"></script>
+  <script src="./data/records-1-a568a4ed46d485ca.js"></script>
+  <script src="./data/records-2-136dfb164fae1a52.js"></script>
+  <script src="./data/records-3-0d8f83aacb8e82e5.js"></script>
+  <script src="./data/records-4-a0aba3016723e4a4.js"></script>
+  <script src="./data/records-5-8792c01af5b07028.js"></script>
+  <script src="./data/records-6-8e2985bf117dc971.js"></script>
+  <script src="./data/records-7-961c2b8e170c528d.js"></script>
+  <script src="./data/records-8-ea0b78a2238ea754.js"></script>
+  <script src="./data/records-9-04dcf0b1895a7706.js"></script>
+  <script src="./data/records-10-b15f70edfad662bd.js"></script>
+  <script src="./data/records-11-a99a61612523a6e8.js"></script>
+  <script src="./data/records-12-18eec92edbbac0da.js"></script>
+  <script src="./data/records-13-027e12b3982a167a.js"></script>
+  <script src="./data/records-14-bad3d4b547859426.js"></script>
+  <script src="./data/records-15-e8c539c9da400fe2.js"></script>
+  <script src="./data/records-16-a428982957784684.js"></script>
+  <script src="./data/records-17-d2cf44c38c98cbbb.js"></script>
+  <script src="./data/records-18-1df695fb24a58f17.js"></script>
+  <script src="./data/records-19-6e260eda75a1f7d7.js"></script>
+  <script src="./data/records-20-88f9dd0329d93cc8.js"></script>
+  <script src="./data/records-21-f5044612c16e0e07.js"></script>
+  <script src="./data/records-22-7726bbddeb637e73.js"></script>
+  <script src="./data/records-23-c5db8c314217e788.js"></script>
+  <script src="./data/records-24-f86a713fca7f7c2d.js"></script>
+  <script src="./data/records-25-c45c2af64fb5c6d8.js"></script>
+  <script src="./data/records-26-eaf1eb9cc36bab48.js"></script>
+  <script src="./data/records-27-b76830bbb972dbb7.js"></script>
+  <script src="./data/records-28-274c7c75ba74f93f.js"></script>
+  <script src="./data/records-29-4bbc402467c20800.js"></script>
+  <script src="./data/records-30-2e20be9296085322.js"></script>
+  <script src="./data/records-31-7d298821f62bdca2.js"></script>
+  <script src="./data/records-32-d33e5f127dfa1d47.js"></script>
+  <script src="./data/records-33-70916edefbaa15f5.js"></script>
+  <script src="./data/records-34-32c7992f674649f7.js"></script>
+  <script src="./data/records-35-83bb6d07b7d62b67.js"></script>
+  <script src="./data/records-36-b1294ed35213947e.js"></script>
+  <script src="./data/records-37-fbae64ddfbf374fe.js"></script>
+  <script src="./data/records-38-db34186b144fbe8e.js"></script>
+  <script src="./data/records-39-1c12da91a8ded9f3.js"></script>
+  <script src="./data/records-40-dbeabb27dd4196b9.js"></script>
+  <script src="./data/records-41-5e94b658c84fc2b2.js"></script>
+  <script src="./data/records-42-65a71c4b8ec7f15e.js"></script>
+  <script src="./data/records-43-72c034f876c8b9f6.js"></script>
+  <script src="./data/records-44-5ef693bebbbf4824.js"></script>
+  <script src="./data/records-45-55409070d3304fed.js"></script>
+  <script src="./data/records-46-eec89407dcbc0d53.js"></script>
+  <script src="./data/records-47-4ec4e6cfc4a109ac.js"></script>
+  <script>
+  'use strict';
+  (() => {
+    const $ = id => document.getElementById(id);
+    const catalog = window.LAW_CATALOG;
+    const str = value => value == null ? '' : String(value);
+    const arr = value => Array.isArray(value) ? value : [];
+    const el = (tag, className, text) => { const n = document.createElement(tag); if(className)n.className=className; if(text!==undefined)n.textContent=str(text); return n; };
+    const date = value => {
+      if(!value) return '未確認';
+      const raw = str(value);
+      if(/^\d{4}-\d{2}-\d{2}T/.test(raw)) { const d = new Date(raw); if(!isNaN(d))return new Intl.DateTimeFormat('zh-TW',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(d); }
+      return raw;
+    };
+    const shortDate = value => date(value).split(' ')[0];
+    const safeLink = (url,label,className) => { const a = el('a',className,label); try{ const parsed=new URL(str(url)); if(!['http:','https:'].includes(parsed.protocol))return el('span',className,label+'（無可用連結）'); a.href=parsed.href; a.target='_blank'; a.rel='noopener noreferrer'; }catch{return el('span',className,label+'（無可用連結）');} return a; };
+    const safeSnapshot = (url,label='開啟保存快照') => {const path=str(url);if(!/^(?:\.\/)?data\/versions\/[a-f0-9]{64}\.json$/i.test(path))return el('span','extraction-note','快照路徑未通過檢查');const a=el('a','snapshot-link',label+' ↗');a.href=path;a.target='_blank';a.rel='noopener noreferrer';return a;};
+    const attachmentPath = value => /^(?:\.\/)?data\/attachments\/[a-f0-9]{64}\.(?:pdf|docx?|odt|xlsx?|ods|pptx?|odp|rtf|txt|csv|zip|7z|rar|png|jpe?g|tiff?|bmp|gif|dwg|dxf|dgn)$/i.test(str(value));
+    const pdfPage = value => {const match=str(value).match(/第\s*(\d+)\s*頁/);const page=match?Number(match[1]):0;return Number.isInteger(page)&&page>0&&page<=100000?page:null;};
+    const safeAttachment = (url,label='開啟本機原檔',page=null) => {const path=str(url);if(!attachmentPath(path))return el('span','extraction-note','本機原檔路徑或格式未通過檢查');const a=el('a','snapshot-link',label+' ↗');a.href=path+(/\.pdf$/i.test(path)&&Number.isInteger(page)&&page>0&&page<=100000?'#page='+page:'');a.target='_blank';a.rel='noopener noreferrer';return a;};
+    const safeExtracted = url => {const path=str(url);if(!/^(?:\.\/)?data\/extracted\/[a-f0-9]{64}\.json$/i.test(path))return el('span','extraction-note','文字快照路徑未通過檢查');const a=el('a','snapshot-link','開啟擷取文字與頁碼 JSON ↗');a.href=path;a.target='_blank';a.rel='noopener noreferrer';return a;};
+    const badge = (text,tone) => el('span','tag'+(tone?' '+tone:''),text);
+    const verificationLabels = {verified:'來源已核對',verified_official:'官方來源已核對',official_verified:'官方來源已核對',verified_fulltext:'官方全文已保存',official_fulltext:'官方全文已保存',fetched:'官方來源已取得',imported_unverified:'已匯入・待查證',index_only:'僅有索引',reference_only:'僅有引用連結',attachment_pending:'附件待取得／辨識',refresh_failed:'更新失敗',unverified:'待查證',pending:'待查證',pending_verification:'待查證',metadata_only:'僅有索引',seed_only:'僅有索引',source_unavailable:'來源暫不可用',access_failed:'來源存取失敗',failed:'檢查失敗',fetch_failed:'檢查失敗',error:'檢查失敗',stale:'需重新確認',partial:'部分內容'};
+    const verificationLabel = value => verificationLabels[str(value)] || str(value) || '待查證';
+    const extractionLabel = value => ({pending:'待擷取',not_started:'尚未擷取',text_extracted:'文字已擷取',extracted:'文字已擷取',success:'文字已擷取',partial:'部分文字已擷取',image_only_or_empty:'影像或未取得文字',no_text:'未取得文字',needs_ocr:'待文字辨識',ocr_pending:'待文字辨識',unsupported:'格式尚未支援',failed:'擷取失敗',download_failed:'原檔取得失敗',not_applicable:'不適用'})[str(value)]||str(value)||'未確認';
+    const hasFulltext = r => !!(str(r.content).trim() || arr(r.articles).some(a=>str(a.text).trim()));
+    const isVerified = r => hasFulltext(r) && /^(fetched|verified|verified_official|official_verified|verified_fulltext|official_fulltext)$/.test(str(r.verification_status));
+    const tone = r => isVerified(r)?'green':/error|failed|unavailable/.test(str(r.verification_status))?'red':'amber';
+    const changeLabel = value => ({initial:'初次收錄',initial_import:'初次收錄',added:'新增收錄',new:'新增收錄',content_changed:'來源內容異動',changed:'來源內容異動',metadata_changed:'索引資訊異動',unchanged:'來源內容未變',revision_changed:'修正資訊異動'})[str(value)] || str(value) || '觀測紀錄';
+    const normalize = value => str(value).normalize('NFKC').toLocaleLowerCase('zh-TW');
+    if(!catalog || !Array.isArray(catalog.records)) { $('fatal').hidden=false; $('databaseUI').hidden=true; $('scopeNote').textContent='目前沒有可讀取的資料目錄。'; $('generatedAt').textContent='尚未產生資料'; return; }
+    const records = catalog.records.filter(r=>r && typeof r==='object');
+    const collator = new Intl.Collator('zh-Hant');
+    const index = new Map(records.map(r=>[r,normalize([r.title,r.id,r.authority,r.jurisdiction,r.category,r.document_type,r.stage,r.business_unit,r.content,...arr(r.articles).map(a=>str(a.number)+' '+str(a.text))].join('\n'))]));
+    let terms=[], filtered=records, page=1, selected=null;
+    const pageSize=30;
+    $('generatedAt').textContent='目錄產生：'+date(catalog.generated_at)+'（臺北時間）';
+    $('scopeNote').textContent=str(catalog.scope_note)||'以臺中市都市發展局公開資料為優先，並追蹤中央及全臺地方政府來源，供建築師事務所進行設計查詢與異動追蹤；以實際收錄項目為準。';
+    $('statTotal').textContent=records.length.toLocaleString('zh-TW');
+    $('statFull').textContent=records.filter(hasFulltext).length.toLocaleString('zh-TW');
+    $('statUnverified').textContent=records.filter(r=>!isVerified(r)).length.toLocaleString('zh-TW');
+    if(catalog.attachment_coverage&&typeof catalog.attachment_coverage==='object'){
+      const coverage=catalog.attachment_coverage;$('attachmentCoverage').hidden=false;
+      const labels={total:'附件來源數',downloaded:'原檔已保存',text_extracted:'文字已擷取',extracted:'文字已擷取',pending:'尚待處理',failed:'取得失敗',fulltext:'已完成文字擷取',partial:'部分文字',unsupported:'格式待支援',needs_ocr:'待文字辨識',no_text:'未取得文字',discovered:'已發現附件',queued:'待下載'};
+      let displayed=0;Object.entries(coverage).forEach(([key,value])=>{if(typeof value==='number'&&Number.isFinite(value)&&labels[key]){$('attachmentCoverageCounts').append(badge(labels[key]+' '+value.toLocaleString('zh-TW')));displayed++;}});
+      [['by_status','原檔'],['by_text_status','文字']].forEach(([key,prefix])=>{if(coverage[key]&&typeof coverage[key]==='object')Object.entries(coverage[key]).forEach(([status,count])=>{if(typeof count==='number'&&Number.isFinite(count)){$('attachmentCoverageCounts').append(badge(prefix+' · '+(labels[status]||extractionLabel(status))+' '+count.toLocaleString('zh-TW')));displayed++;}});});
+      if(!displayed)$('attachmentCoverageCounts').append(badge('數量尚未確認','amber'));
+      if(coverage.coverage_note||coverage.note)$('attachmentCoverageNote').append(document.createTextNode(' '+str(coverage.coverage_note||coverage.note)));
+    }
+    const runs=arr(catalog.runs).slice().sort((a,b)=>str(b.started_at).localeCompare(str(a.started_at)));
+    const lastRun=runs[0];
+    const latestCheck=lastRun?.finished_at||lastRun?.started_at||records.map(r=>str(r.last_checked_at)).filter(Boolean).sort().pop();
+    $('statChecked').textContent=shortDate(latestCheck);
+    if(lastRun)$('statCheckedNote').textContent='最近一輪：成功 '+(lastRun.succeeded??'未確認')+'／失敗 '+(lastRun.failed??'未確認');
+    const fillSelect=(id,values,labeler) => { [...new Set(values.filter(Boolean).map(str))].sort(collator.compare).forEach(v=>{const o=el('option','',labeler?labeler(v):v);o.value=v;$(id).append(o);}); };
+    fillSelect('jurisdiction',records.map(r=>r.jurisdiction)); fillSelect('category',records.map(r=>r.category)); fillSelect('verification',records.map(r=>r.verification_status||'unverified'),verificationLabel);
+    const extraFilters=[['documentType','document_type'],['stage','stage'],['businessUnit','business_unit']];
+    extraFilters.forEach(([id,key])=>{const values=records.flatMap(r=>Array.isArray(r[key])?r[key]:[r[key]]).filter(Boolean);if(values.length){$(id+'Field').hidden=false;fillSelect(id,values);}});
+    const highlight=(parent,text) => {
+      text=str(text);
+      if(!terms.length){parent.textContent=text;return;}
+      // Match against the original text to preserve offsets for full-width characters.
+      const pattern=terms.map(t=>t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|');
+      const re=new RegExp(pattern,'gi'); let m,last=0,count=0;
+      while((m=re.exec(text))!==null && count++<1500){parent.append(document.createTextNode(text.slice(last,m.index)),el('mark','',m[0]));last=m.index+m[0].length;}
+      parent.append(document.createTextNode(text.slice(last)));
+    };
+    const snippet=r=>{if(!terms.length)return '';const text=str(r.content)||arr(r.articles).map(a=>str(a.number)+' '+str(a.text)).join(' ');const norm=normalize(text);const matches=terms.map(t=>norm.indexOf(t)).filter(i=>i>=0);if(!matches.length)return '';const start=Math.max(0,Math.min(...matches)-24),end=Math.min(text.length,start+115);return (start?'…':'')+text.slice(start,end).replace(/\s+/g,' ')+(end<text.length?'…':'');};
+    const renderList=()=>{
+      const root=$('lawList');root.replaceChildren();
+      const start=(page-1)*pageSize, current=filtered.slice(start,start+pageSize);
+      $('resultCount').textContent='符合條件 '+filtered.length.toLocaleString('zh-TW')+' 份文件';
+      $('pageRange').textContent=filtered.length?(start+1)+'–'+(start+current.length)+' / '+filtered.length:'';
+      $('pageInfo').textContent=page+' / '+Math.max(1,Math.ceil(filtered.length/pageSize));
+      $('prevPage').disabled=page<=1; $('nextPage').disabled=page>=Math.ceil(filtered.length/pageSize);
+      if(!current.length){const empty=el('div','empty-state');empty.append(el('strong','','沒有符合條件的文件'),el('p','','請縮短關鍵字，或清除部分篩選條件。'));root.append(empty);return;}
+      current.forEach(r=>{const row=el('button','law-row'+(selected===r?' selected':''));row.type='button';row.setAttribute('aria-pressed',selected===r?'true':'false');const tags=el('div','row-tags');tags.append(badge(r.jurisdiction||'範圍待確認'),badge(r.document_type||r.category||'未分類'));const name=el('div','law-name');highlight(name,r.title||'未命名文件');const meta=el('div','row-meta');meta.append(el('span','','修正／發布 '+date(r.revision_date||r.published_date)),el('span','',hasFulltext(r)?(r.document_type==='附件'&&r.verification_status!=='fetched'?'部分文字已保存':'內容已保存'):'內容待取得'));row.append(tags,name,meta);const match=snippet(r);if(match){const excerpt=el('p','excerpt');highlight(excerpt,match);row.append(excerpt);}row.addEventListener('click',()=>selectRecord(r,true));root.append(row);});
+    };
+    const addMeta=(dl,label,value)=>{const box=el('div');box.append(el('dt','',label),el('dd','',value||'未確認'));dl.append(box);};
+    const renderDetail=()=>{
+      const root=$('lawDetail');root.replaceChildren();const r=selected;
+      if(!r){const empty=el('div','empty-state');empty.append(el('strong','','選擇一份文件'),el('p','','查閱保存內容、官方來源與版本觀測紀錄。'));root.append(empty);return;}
+      const top=el('div','detail-top');const tags=el('div','row-tags');tags.append(badge(r.jurisdiction||'範圍待確認'),badge(r.category||'未分類'),badge(verificationLabel(r.verification_status),tone(r)));const title=el('h2','detail-title');highlight(title,r.title||'未命名文件');top.append(tags,title,el('p','detail-authority','主管機關：'+(r.authority||'未確認')));const actions=el('div','detail-actions');const add=el('button','worksheet-add','＋ 加入圖說檢核');add.type='button';add.addEventListener('click',()=>addChecklist(r));actions.append(safeLink(r.source_url,'開啟官方原文 ↗','source-link'),add);if(r.local_file)actions.append(safeAttachment(r.local_file));if(r.extracted_url)actions.append(safeExtracted(r.extracted_url));top.append(actions);root.append(top);
+      const dl=el('dl','detail-meta');addMeta(dl,'修正／發布日期',date(r.revision_date||r.published_date));addMeta(dl,'施行／適用日期',date(r.effective_date));addMeta(dl,'最後檢查',date(r.last_checked_at));addMeta(dl,'最後成功取得',date(r.last_success_at));addMeta(dl,'來源更新日期',date(r.source_updated_at));addMeta(dl,'來源標示狀態',({active:'現行（依來源標示）',repealed:'已廢止',unknown:'未確認',current:'現行（依來源標示）'})[str(r.status)]||r.status||'未確認');if(r.document_type)addMeta(dl,'文件類型',r.document_type);if(r.stage)addMeta(dl,'設計／申請階段',Array.isArray(r.stage)?r.stage.join('、'):r.stage);if(r.business_unit)addMeta(dl,'業務單位',r.business_unit);if(r.extraction_status)addMeta(dl,'內容擷取狀態',extractionLabel(r.extraction_status));if(Number.isInteger(r.page_count)&&r.page_count>0)addMeta(dl,'原附件頁數',r.page_count+' 頁');root.append(dl);
+      const parents=arr(r.parents);if(parents.length){const parentSection=el('section','attachments');parentSection.append(el('h3','','刊載來源'));parents.forEach(parent=>{const target=records.find(record=>str(record.id)===str(parent.id));if(target){const button=el('button','checklist-action',parent.title||target.title);button.type='button';button.addEventListener('click',()=>openRecord(target));parentSection.append(button);}else parentSection.append(el('p','extraction-note',parent.title||parent.id||'來源未確認'));});root.append(parentSection);}const quality=el('div','quality-note');quality.textContent=(r.effective_note?str(r.effective_note)+' ':'')+'保存內容與檢查時間僅供追溯。法規、函釋、會議紀錄與報告的效力各異；引用前請核對官方文件、施行日期與個案適用範圍。';if(r.coverage_note)quality.append(el('p','',str(r.coverage_note)));root.append(quality);
+      const articles=arr(r.articles);const nav=el('div','content-nav');nav.append(el('h3','','保存內容'),el('span','',articles.length?'保存 '+articles.length+(r.document_type==='附件'?' 頁／段':' 則條文'):hasFulltext(r)?'已保存文字':'尚未取得文字'));root.append(nav);
+      if(terms.length&&articles.length){const hitCount=articles.filter(a=>terms.some(t=>normalize(a.text).includes(t)||normalize(a.number).includes(t))).length;root.append(el('p','article-search','關鍵字出現在 '+hitCount+' 段內容；下方保留已保存的前後文。'));}
+      const body=el('div','article-body');body.tabIndex=0;body.setAttribute('aria-label','保存的文件全文，可捲動閱讀');
+      if(articles.length){articles.forEach(a=>{const hit=terms.length&&terms.some(t=>normalize(a.text).includes(t)||normalize(a.number).includes(t));const section=el('section','article'+(hit?' hit':''));section.append(el('h3','',a.number||'內容'));const pageNumber=pdfPage(a.number);if(r.local_file&&/\.pdf$/i.test(r.local_file)&&pageNumber&&(!r.page_count||pageNumber<=r.page_count))section.append(safeAttachment(r.local_file,'查看原 PDF 第 '+pageNumber+' 頁',pageNumber));const p=el('p');highlight(p,a.text);section.append(p);body.append(section);});}
+      else if(str(r.content).trim()){const p=el('p','raw-content');highlight(p,r.content);body.append(p);}
+      else{body.append(el('p','empty-text','目前僅保存索引或來源資料，尚無可供離線閱讀的全文。請使用上方官方原文連結或下方來源附件查閱。'));}
+      root.append(body);
+      const attachments=arr(r.attachments);if(attachments.length){const section=el('section','attachments');section.append(el('h3','','來源附件'));attachments.forEach((a,i)=>{section.append(safeLink(a.url,a.name||'附件 '+(i+1),'attachment'));const links=el('div','detail-actions');if(a.local_file)links.append(safeAttachment(a.local_file));if(a.extracted_url)links.append(safeExtracted(a.extracted_url));const attachmentRecord=records.find(record=>record.document_type==='附件'&&str(record.source_url)===str(a.url));if(attachmentRecord){const read=el('button','checklist-action','查閱附件文字');read.type='button';read.addEventListener('click',()=>openRecord(attachmentRecord));links.append(read);}if(links.children.length)section.append(links);const state=a.text_status||a.extraction_status;const download=({downloaded:'原檔已保存',pending:'原檔待取得',queued:'原檔待取得',failed:'原檔取得失敗',download_failed:'原檔取得失敗'})[str(a.status)]||str(a.status);const note=[download,state?'文字：'+extractionLabel(state):'',Number.isInteger(a.page_count)&&a.page_count>0?'原附件 '+a.page_count+' 頁':'',str(a.coverage_note)].filter(Boolean).join(' · ');if(note)section.append(el('p','extraction-note',note));});root.append(section);}
+      const history=el('details','history');history.append(el('summary','','觀測版本紀錄（'+(r.version_count??arr(r.history).length)+'）'),el('p','history-notice','版本為本資料庫取得的來源快照；不等同官方修法沿革或正式更正紀錄。'));
+      const versions=arr(r.history).slice().sort((a,b)=>str(b.observed_at).localeCompare(str(a.observed_at)));if(!versions.length)history.append(el('p','history-notice','尚無可供顯示的版本觀測紀錄。'));
+      else{const list=el('ul','history-list');versions.forEach(v=>{const li=el('li');li.append(el('time','',date(v.observed_at)),el('p','',changeLabel(v.change_kind)+' · 修正日期 '+date(v.revision_date)));if(v.content_hash)li.append(el('small','','內容指紋 '+str(v.content_hash)));if(v.snapshot_url)li.append(safeSnapshot(v.snapshot_url));list.append(li);});history.append(list);}root.append(history);
+      const back=el('a','mobile-detail-back','↑ 返回搜尋清單');back.href='#search';const box=el('div');box.style.cssText='padding:0 19px 16px';box.append(back);root.append(box);
+    };
+    const selectRecord=(r,scroll)=>{selected=r;renderList();renderDetail();try{history.replaceState(null,'','#law='+encodeURIComponent(str(r.id)));}catch{}if(scroll&&matchMedia('(max-width:700px)').matches)$('lawDetail').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'});};
+    const openRecord=r=>{$('resetFilters').click();const index=filtered.indexOf(r);if(index>=0)page=Math.floor(index/pageSize)+1;selectRecord(r,true);};
+    const filter=()=>{terms=normalize($('search').value).trim().split(/\s+/).filter(Boolean).slice(0,20);const j=$('jurisdiction').value,c=$('category').value,v=$('verification').value;filtered=records.filter(r=>(!j||str(r.jurisdiction)===j)&&(!c||str(r.category)===c)&&(!v||str(r.verification_status||'unverified')===v)&&extraFilters.every(([id,key])=>!$(id).value||(Array.isArray(r[key])?r[key].map(str):[str(r[key])]).includes($(id).value))&&terms.every(t=>index.get(r).includes(t)));page=1;if(!filtered.includes(selected))selected=filtered[0]||null;renderList();renderDetail();};
+    let debounce; $('search').addEventListener('input',()=>{clearTimeout(debounce);debounce=setTimeout(filter,130);});['jurisdiction','category','verification',...extraFilters.map(([id])=>id)].forEach(id=>$(id).addEventListener('change',filter));
+    $('resetFilters').addEventListener('click',()=>{$('search').value='';['jurisdiction','category','verification',...extraFilters.map(([id])=>id)].forEach(id=>$(id).value='');filter();});
+    $('prevPage').addEventListener('click',()=>{if(page>1){page--;renderList();$('lawList').scrollTop=0;}});$('nextPage').addEventListener('click',()=>{if(page<Math.ceil(filtered.length/pageSize)){page++;renderList();$('lawList').scrollTop=0;}});
+    document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('search').focus();}});
+    const sources=arr(catalog.source_status);$('sourceCount').textContent='('+sources.length+')';
+    if(!sources.length)$('sourceList').append(el('p','source-item','尚無來源檢查紀錄。'));
+    sources.forEach(s=>{const item=el('div','source-item');const name=el('strong');name.append(safeLink(s.url,s.name||s.id||'官方來源'));const state=str(s.status);const ok=/^(ok|success|healthy|verified|fetched)$/.test(state);item.append(name,badge(({registered_only:'已登錄・待檢查',portal_checked:'入口已檢查',fetched:'文件來源已取得',access_failed:'來源存取失敗',ok:'取得成功',success:'取得成功',healthy:'取得成功',verified:'已核對',failed:'檢查失敗',error:'檢查失敗',pending:'待檢查',partial:'部分取得',unavailable:'來源暫不可用'})[state]||state||'待檢查',ok?'green':/error|fail|unavailable/.test(state)?'red':'amber'),el('p','','最後成功：'+date(s.last_success_at)));if(s.coverage_note)item.append(el('p','','涵蓋說明：'+str(s.coverage_note)));const manifest=s.manifest||{};if(typeof manifest.public_lists_discovery_complete==='boolean')item.append(el('p','',manifest.public_lists_discovery_complete?'公開清單已核對；附件完整性另驗。':'公開清單核對仍有缺漏。'));if(typeof manifest.public_layer_discovery_complete==='boolean')item.append(el('p','',manifest.public_layer_discovery_complete?'公開圖層清單已核對；不代表所有歷年計畫及附件完整。':'公開圖層清單尚未完整核對。'));if(arr(manifest.errors).length)item.append(el('p','','來源盤點缺漏／錯誤：'+manifest.errors.length+' 項。'));if(s.error)item.append(el('p','','原因：'+str(s.error)));$('sourceList').append(item);});
+    const changes=arr(catalog.changes).slice().sort((a,b)=>str(b.observed_at).localeCompare(str(a.observed_at))).slice(0,10);
+    if(!changes.length)$('changeList').append(el('li','empty-text','目前沒有已記錄的異動。沒有異動紀錄不代表所有來源均已完成檢查。'));
+    changes.forEach(c=>{const li=el('li');li.append(el('time','',date(c.observed_at)));const text=el('div','change-text');const law=records.find(r=>str(r.id)===str(c.law_id));if(law){const button=el('button','',c.title||law.title);button.type='button';button.addEventListener('click',()=>{$('resetFilters').click();const i=filtered.indexOf(law);page=Math.floor(i/pageSize)+1;selectRecord(law,false);$('lawDetail').scrollIntoView({block:'start'});});text.append(button);}else text.append(el('strong','',c.title||c.law_id||'來源異動'));text.append(el('p','',changeLabel(c.change_kind)+(c.summary?' · '+str(c.summary):'')));li.append(text);$('changeList').append(li);});
+    if(lastRun){$('runInfo').textContent='最近更新作業 '+date(lastRun.started_at)+' · 狀態 '+(({success:'完成',completed:'完成',partial:'部分完成',failed:'失敗',error:'失敗',running:'進行中'})[str(lastRun.status)]||lastRun.status||'未確認')+' · 檢查 '+(lastRun.checked??'未確認')+' 筆 · 成功 '+(lastRun.succeeded??'未確認')+' 筆 · 失敗 '+(lastRun.failed??'未確認')+' 筆 · 觀測異動 '+(lastRun.changed??'未確認')+' 筆。';if(arr(lastRun.errors).length){const errors=el('details');errors.append(el('summary','','查看最近更新錯誤（'+lastRun.errors.length+'）'));lastRun.errors.forEach(error=>errors.append(el('p','',typeof error==='object'?JSON.stringify(error):error)));$('runInfo').append(errors);}}else $('runInfo').textContent='尚無更新作業紀錄；請先執行資料更新程式。';
+    const checklistStatuses=['未檢核','待釐清','符合','不符合','不適用'];
+    const checklistKey='building-law-db:design-checklist:v1';
+    const validAttachmentHash=value=>/^[a-f0-9]{64}$/i.test(str(value))?str(value).toLowerCase():null;
+    const copyAttachmentHashes=value=>value&&typeof value==='object'&&!Array.isArray(value)?Object.fromEntries(Object.entries(value).map(([url,hash])=>[url,validAttachmentHash(hash)])):null;
+    const recordAttachmentHashes=record=>{const hashes=copyAttachmentHashes(record.attachment_hashes)||{};arr(record.attachments).forEach(attachment=>{const url=str(attachment.url);if(url&&!Object.prototype.hasOwnProperty.call(hashes,url))Object.defineProperty(hashes,url,{value:validAttachmentHash(attachment.raw_hash),enumerable:true,writable:true,configurable:true});});return hashes;};
+    const bindingLabel=item=>item.source.document_type==='附件'?'原附件檔案位元組':item.source.attachment_hashes===null||item.source.attachment_hashes===undefined?'網頁正文／中繼資料（舊項目未保存附件指紋）':'網頁正文／中繼資料＋附件指紋紀錄';
+    const bodyHashLabel=item=>item.source.document_type==='附件'?'原檔 SHA-256':'正文／中繼資料指紋';
+    let worksheet={schema_version:1,default_project_name:'',items:[]},storageWritable=true,removedItem=null;
+    const storageMessage='只保存於目前裝置的瀏覽器，不會傳送到伺服器。清除瀏覽器資料或移動檔案可能影響存取，請匯出備份。';
+    const storageFailure=message=>{storageWritable=false;$('checklistStorage').className='checklist-storage error';$('checklistStorage').textContent=message+' 本次編輯只保留在目前頁面，關閉前請匯出 JSON。';};
+    try{
+      const saved=window.localStorage.getItem(checklistKey);
+      if(saved){const data=JSON.parse(saved);if(data.schema_version!==1||!Array.isArray(data.items)||data.items.some(i=>!i||typeof i!=='object'||!i.source||typeof i.source!=='object'))throw new Error('invalid schema');worksheet={schema_version:1,default_project_name:str(data.default_project_name),items:data.items.map(i=>({id:str(i.id),project_name:str(i.project_name),drawing_number:str(i.drawing_number),drawing_revision:str(i.drawing_revision),topic:str(i.topic),reference:str(i.reference),notes:str(i.notes),status:checklistStatuses.includes(i.status)?i.status:'未檢核',created_at:str(i.created_at),updated_at:str(i.updated_at),source:{document_id:str(i.source.document_id),title:str(i.source.title),url:str(i.source.url),content_hash:str(i.source.content_hash),attachment_hashes:copyAttachmentHashes(i.source.attachment_hashes),revision_date:str(i.source.revision_date),document_type:str(i.source.document_type),snapshot_url:str(i.source.snapshot_url),local_file:str(i.source.local_file),extracted_url:str(i.source.extracted_url),captured_at:str(i.source.captured_at)}}))};}
+    }catch{storageFailure('無法讀取本機保存資料；既有資料不會被覆寫。');}
+    $('checklistProject').value=worksheet.default_project_name;
+    const persistChecklist=()=>{if(!storageWritable)return;try{window.localStorage.setItem(checklistKey,JSON.stringify(worksheet));$('checklistStorage').textContent=storageMessage;}catch{storageFailure('瀏覽器無法保存工作表。');}};
+    const citationNotices=item=>{
+      const current=records.find(r=>str(r.id)===item.source.document_id);if(!current)return ['目前目錄找不到此引用來源，無法比較已保存的指紋。'];
+      const notices=[];
+      if(current.content_hash&&item.source.content_hash&&str(current.content_hash)!==item.source.content_hash)notices.push((item.source.document_type==='附件'?'原附件檔案':'網頁正文／中繼資料')+'指紋與引用時不同，請人工核對。');
+      const currentHashes=recordAttachmentHashes(current),frozen=item.source.attachment_hashes;
+      if(frozen===null||frozen===undefined){if(item.source.document_type!=='附件'&&Object.keys(currentHashes).length)notices.push('此舊項目未保存附件指紋；引用附件前請人工補核對。');return notices;}
+      let changed=0,available=0,unavailable=0;
+      Object.entries(frozen).forEach(([url,oldHash])=>{const currentHash=Object.prototype.hasOwnProperty.call(currentHashes,url)?currentHashes[url]:null;if(oldHash&&currentHash&&oldHash!==currentHash)changed++;else if(!oldHash&&currentHash)available++;else if(oldHash&&!currentHash)unavailable++;});
+      if(changed)notices.push(changed+' 份同一網址的附件原檔指紋與引用時不同，請人工核對檔案內容。');
+      if(available)notices.push(available+' 份引用時尚無指紋的附件現已取得，請補核對；此提示不代表法規修正。');
+      if(unavailable)notices.push(unavailable+' 份原已保存指紋的附件目前無可用指紋，暫時無法比較；此提示不代表檔案已變更。');
+      return notices;
+    };
+    const updateChecklistSummary=()=>{
+      $('checklistCount').textContent=worksheet.items.length+' 筆';$('exportChecklist').disabled=!worksheet.items.length;$('printChecklist').disabled=!worksheet.items.length;
+      const root=$('checklistSummary');root.replaceChildren();checklistStatuses.forEach(status=>root.append(badge(status+' '+worksheet.items.filter(i=>i.status===status).length,status==='不符合'?'red':status==='待釐清'?'amber':'')));
+    };
+    const updateItem=(item,key,value)=>{item[key]=str(value);item.updated_at=new Date().toISOString();persistChecklist();if(key==='status')updateChecklistSummary();};
+    const checklistField=(item,key,label,kind,idx)=>{
+      const wrapper=el('div','field'+(key==='notes'||key==='reference'?' wide':''));const id='check-field-'+idx+'-'+key;const labelNode=el('label','',label);labelNode.htmlFor=id;
+      const input=el(kind==='notes'?'textarea':kind==='status'?'select':'input');input.id=id;
+      if(kind==='status'){checklistStatuses.forEach(status=>{const option=el('option','',status);option.value=status;input.append(option);});}
+      else if(kind==='notes'){input.rows=3;input.maxLength=8000;input.placeholder='記錄實際圖說條件、疑義與判斷依據；請自行填寫。';}
+      else{input.type='text';input.maxLength=key==='reference'?500:200;if(key==='topic'){input.setAttribute('list','checkTopics');input.placeholder='選擇或自行輸入檢核主題';}if(key==='reference')input.placeholder='例如：第 12 條第 2 項／附件第 8 頁';}
+      input.value=item[key];input.addEventListener(kind==='status'?'change':'input',()=>updateItem(item,key,input.value));wrapper.append(labelNode,input);return wrapper;
+    };
+    const renderChecklist=()=>{
+      const root=$('checklistItems');root.replaceChildren();updateChecklistSummary();
+      if(!worksheet.items.length){const empty=el('div','empty-state');empty.append(el('strong','','開始建立圖說檢核依據'),el('p','','先搜尋並開啟文件，再按「加入圖說檢核」。每次加入均保存正文指紋與當時已取得的附件指紋。'));root.append(empty);return;}
+      worksheet.items.forEach((item,idx)=>{
+        const card=el('article','checklist-item');const head=el('div','checklist-item-head');const heading=el('div');heading.append(el('h3','',(idx+1)+'. '+(item.source.title||'未命名來源')),el('p','','加入時間 '+date(item.created_at)+' · 結果由使用者填寫'));
+        const remove=el('button','checklist-remove','移除');remove.type='button';remove.setAttribute('aria-label','移除檢核項目 '+(idx+1));remove.addEventListener('click',()=>{removedItem={item,index:worksheet.items.indexOf(item)};worksheet.items=worksheet.items.filter(i=>i!==item);persistChecklist();renderChecklist();$('undoChecklist').hidden=false;$('checklistNotice').textContent='已移除項目。可按「復原移除」還原最近一筆；離開頁面後無法復原。';});head.append(heading,remove);card.append(head);
+        const fields=el('div','checklist-fields');fields.append(checklistField(item,'project_name','專案名稱','text',idx),checklistField(item,'drawing_number','圖號','text',idx),checklistField(item,'drawing_revision','圖說版次','text',idx),checklistField(item,'topic','檢核主題','text',idx),checklistField(item,'status','人工檢核結果','status',idx),checklistField(item,'reference','引用條文／附件頁碼','text',idx),checklistField(item,'notes','檢核筆記與依據','notes',idx));card.append(fields);
+        const reference=el('details','checklist-reference');reference.append(el('summary','','引用來源快照（加入當時）'),el('p','','文件類型：'+(item.source.document_type||'未確認')+' · 修正／發布日期：'+date(item.source.revision_date)),safeLink(item.source.url,'查看官方來源 ↗'),el('p','','綁定範圍：'+bindingLabel(item)),el('p','',bodyHashLabel(item)+'：'+(item.source.content_hash||'未取得')),el('p','','引用資訊保存時間：'+date(item.source.captured_at)));if(item.source.attachment_hashes!==null&&item.source.attachment_hashes!==undefined){Object.entries(item.source.attachment_hashes).forEach(([url,hash])=>{const line=el('p');line.append(safeLink(url,'引用附件來源 ↗'),document.createTextNode(' · '+(hash?'原檔 SHA-256：'+hash:'引用時未取得原檔指紋')));reference.append(line);});}if(item.source.snapshot_url)reference.append(safeSnapshot(item.source.snapshot_url));if(item.source.local_file)reference.append(el('p',''),safeAttachment(item.source.local_file,'開啟引用的本機原檔'));if(item.source.extracted_url)reference.append(el('p',''),safeExtracted(item.source.extracted_url));card.append(reference);
+        const notices=citationNotices(item);if(notices.length)card.append(el('p','checklist-updated',notices.join(' ')+' 原引用及人工檢核結果均保留。'));
+        root.append(card);
+      });
+    };
+    const addChecklist=r=>{
+      const now=new Date().toISOString();const version=arr(r.history).find(v=>v.content_hash&&str(v.content_hash)===str(r.content_hash));
+      worksheet.items.push({id:'check-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,9),project_name:worksheet.default_project_name,drawing_number:'',drawing_revision:'',topic:'',reference:'',notes:'',status:'未檢核',created_at:now,updated_at:now,source:{document_id:str(r.id),title:str(r.title),url:str(r.source_url),content_hash:str(r.content_hash),attachment_hashes:recordAttachmentHashes(r),revision_date:str(r.revision_date||r.published_date),document_type:str(r.document_type),snapshot_url:str(r.snapshot_url||version?.snapshot_url),local_file:str(r.local_file),extracted_url:str(r.extracted_url),captured_at:now}});
+      persistChecklist();renderChecklist();$('checklistNotice').textContent='已加入「'+str(r.title)+'」，檢核結果為未檢核。';$('checklistPanel').scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});
+    };
+    $('checklistProject').addEventListener('input',()=>{worksheet.default_project_name=$('checklistProject').value;persistChecklist();});
+    $('undoChecklist').addEventListener('click',()=>{if(!removedItem)return;worksheet.items.splice(Math.min(removedItem.index,worksheet.items.length),0,removedItem.item);removedItem=null;$('undoChecklist').hidden=true;persistChecklist();renderChecklist();$('checklistNotice').textContent='已復原最近移除的項目。';});
+    const exportPayload=()=>({schema_version:1,exported_at:new Date().toISOString(),catalog_generated_at:catalog.generated_at||null,default_project_name:worksheet.default_project_name,notice:'本工作表為使用者填寫的圖說檢核紀錄，系統未自動判定法規符合性。引用來源為加入當時保存的資訊，請核對官方文件與個案適用。',items:worksheet.items});
+    $('exportChecklist').addEventListener('click',()=>{
+      const blob=new Blob([JSON.stringify(exportPayload(),null,2)],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const link=el('a');link.href=url;link.download='建築圖說檢核_'+new Date().toISOString().slice(0,10)+'.json';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);$('checklistNotice').textContent='已產生 JSON 備份下載，請確認瀏覽器的下載結果。';
+    });
+    const renderPrint=()=>{
+      const root=$('checklistPrintRoot');root.replaceChildren();root.append(el('h1','','圖說檢核工作表'),el('p','print-note','產生時間：'+date(new Date().toISOString())+'（臺北時間）\n共 '+worksheet.items.length+' 筆。檢核結果均由使用者填寫；系統未自動判定法規符合性。引用來源為加入當時保存的資訊，請核對官方文件與個案適用。'));
+      if(!worksheet.items.length)root.append(el('p','','尚無檢核項目。'));
+      worksheet.items.forEach((item,idx)=>{const section=el('section','print-item');section.append(el('h2','',(idx+1)+'. '+(item.topic||'檢核主題未填')+'｜'+item.status),el('p','','專案：'+(item.project_name||'未填')+'\n圖號：'+(item.drawing_number||'未填')+'　版次：'+(item.drawing_revision||'未填')),el('p','','引用文件：'+(item.source.title||'未確認')+'\n條文／頁碼：'+(item.reference||'未填')),el('p','','檢核筆記：\n'+(item.notes||'未填')),el('p','print-reference','來源：'+(item.source.url||'未確認')+'\n修正／發布日期：'+date(item.source.revision_date)+'\n綁定範圍：'+bindingLabel(item)+'\n'+bodyHashLabel(item)+'：'+(item.source.content_hash||'未取得')+'\n加入時間：'+date(item.created_at)+'　最後編輯：'+date(item.updated_at)));if(item.source.local_file&&attachmentPath(item.source.local_file)){const sourceFile=el('p','print-reference');sourceFile.append(safeAttachment(item.source.local_file,'引用的本機原檔'+(pdfPage(item.reference)?' · 第 '+pdfPage(item.reference)+' 頁':''),pdfPage(item.reference)));section.append(sourceFile);}if(item.source.attachment_hashes!==null&&item.source.attachment_hashes!==undefined)Object.entries(item.source.attachment_hashes).forEach(([url,hash])=>section.append(el('p','print-reference','引用附件：'+url+'\n原檔 SHA-256：'+(hash||'引用時未取得'))));const notices=citationNotices(item);if(notices.length)section.append(el('p','print-reference','引用核對提示：'+notices.join(' ')+' 原引用及人工檢核結果均保留。'));root.append(section);});
+    };
+    $('printChecklist').addEventListener('click',()=>{renderPrint();window.print();});window.addEventListener('beforeprint',renderPrint);
+    renderChecklist();
+    let hashId='';try{hashId=decodeURIComponent(location.hash.replace(/^#law=/,''));}catch{}
+    selected=records.find(r=>str(r.id)===hashId)||records[0]||null;filter();if(selected){const i=filtered.indexOf(selected);if(i>=0)page=Math.floor(i/pageSize)+1;renderList();}
+  })();
+  </script>
+</body>
+</html>
