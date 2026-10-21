@@ -2,7 +2,7 @@ window.BUILDING_PRACTICE = {
   "title": "建管實務",
   "source": "臺中市政府都市發展局",
   "sourceUrl": "https://www.ud.taichung.gov.tw/28928/29030/29033/349764",
-  "updatedAt": "2026-10-21T06:12:01+08:00",
+  "updatedAt": "2026-10-22T06:10:03+08:00",
   "categories": [
     {
       "slug": "taichung",
